@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "track",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    }
+  }
+}
