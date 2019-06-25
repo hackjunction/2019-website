@@ -1,0 +1,14 @@
+@import 'colors';
+@import 'fonts';
+@import 'sizes';
+
+%button-purple {
+    @extend %font-button;
+    @extend %size-button;
+    @extend %purple-button;
+}
+%button-brown {
+    @extend %font-button;
+    @extend %size-button;
+    @extend %brown-button;
+}

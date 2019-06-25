@@ -13,6 +13,10 @@ import EditorTools from './components/EditorTools';
 import BasicSection from './components/BasicSection';
 import Markdown from './components/Markdown';
 
+import TracksService from './services/tracks';
+import TracksGrid from './components/TracksGrid';
+import SingleColumnSection from './components/SingleColumnSection';
+
 class App extends Component {
     async componentDidMount() {
         this.props.updateStaticContent();
@@ -29,16 +33,30 @@ class App extends Component {
                             <HeroCTA
                                 image={getMedia('homePageHeroCtaLogo')}
                                 subtitle={getText('homePageHeroCtaSubtitle')}
-                                ctaText={getText('leevinJuttu')}
+                                ctaText={getText('homePageHeroCtaText')}
                                 ctaLink={getText('homePageHeroCtaLink')}
                             />
                         </HeroImage>
+                        <button className="App--main-applyButton">
+                            {getText('homePageApplyButton')}
+                        </button>
+                        <SingleColumnSection
+                            title={getText('junctionComingSlogan')}
+                        />
                         <BasicSection
-                            title="This is Junction."
-                            subtitle="Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet"
+                            title={getText('junctionMainTitle')}
+                            subtitle={getText('junctionMainSubtitle')}
                         >
-                            <Markdown source={getText('homePageIntroText')} />
+                            <span className="App--main-introText">
+                                {getText('homePageIntroText')}
+                            </span>
                         </BasicSection>
+
+                        <SingleColumnSection
+                            title={getText('tracksTitle')}
+                            subtitle={getText('tracksSubtitle')}
+                        />
+                        <TracksGrid />
                     </main>
                     <EditorTools />
                 </div>

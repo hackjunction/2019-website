@@ -40,3 +40,18 @@ $font-body: 'Lato', sans-serif;
     cursor: pointer;
     text-decoration: none;
 }
+%font-button {
+    color: rgba(#ffffffff, 1);
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+}
+%font-lato {
+    font-family: Lato;
+    font-size: 18px;
+}
+%font-lato-italic {
+    @extend %font-lato;
+    font-style: italic;
+}

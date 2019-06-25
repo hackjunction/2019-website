@@ -1,0 +1,21 @@
+.StatBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    width: 50%;
+    min-width: 200px;
+
+    &--value {
+        font-size: 80px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    &--label {
+        font-size: 24px;
+        font-family: montserrat;
+        text-align: center;
+        text-transform: lowercase;
+    }
+}

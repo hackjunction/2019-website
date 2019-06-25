@@ -1,3 +1,4 @@
+@import './sizes';
 $black: #131313;
 $white: #fbfbfb;
 $lightgrey: #eaeaea;
@@ -14,3 +15,26 @@ $text-light-secondary: rgba($text-light, 0.8);
 $warning-orange: #ff6700;
 $error-red: #cc0000;
 $success-green: #a8ff00;
+
+$purple-gradient: linear-gradient(
+    136deg,
+    rgba(178, 0, 183, 0.3),
+    rgba(178, 0, 183, 0.2) 100%
+);
+$brown-gradient: linear-gradient(
+    128deg,
+    rgba(243, 129, 0, 0.23) 0%,
+    rgba(122, 65, 0, 0.22) 100%
+);
+
+%brown-button {
+    background: $brown-gradient;
+    border: none;
+    border-radius: $border-radius;
+}
+
+%purple-button {
+    background: $purple-gradient;
+    border: none;
+    border-radius: $border-radius;
+}

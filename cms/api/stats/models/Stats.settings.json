@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "track",
+  "collectionName": "stats",
   "info": {
-    "name": "track",
+    "name": "stats",
     "description": ""
   },
   "options": {
@@ -12,14 +12,11 @@
     ]
   },
   "attributes": {
-    "name": {
-      "required": true,
-      "unique": true,
+    "label": {
       "type": "string"
     },
-    "showInList": {
-      "default": true,
-      "type": "boolean"
+    "value": {
+      "type": "string"
     }
   }
 }
