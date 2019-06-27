@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "partner",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "required": true,
+      "unique": true,
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    }
+  }
+}

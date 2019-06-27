@@ -14,9 +14,43 @@ export const statsLoading = state => state.dynamicContent.stats.loading;
 export const statsError = state => state.dynamicContent.stats.error;
 export const statsUpdated = state => state.dynamicContent.stats.updated;
 
+export const faqs = state => state.dynamicContent.faqs.data;
+export const faqsLoading = state => state.dynamicContent.faqs.loading;
+export const faqsError = state => state.dynamicContent.faqs.error;
+export const faqsUpdated = state => state.dynamicContent.faqs.updated;
+
+export const partners = state => state.dynamicContent.partners.data;
+export const partnersLoading = state => state.dynamicContent.partners.loading;
+export const partnersError = state => state.dynamicContent.partners.error;
+export const partnersUpdated = state => state.dynamicContent.partners.updated;
+
 export const tracksShouldUpdate = createSelector(
     tracksUpdated,
     tracksLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+
+export const statsShouldUpdate = createSelector(
+    statsUpdated,
+    statsLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+
+export const faqsShouldUpdate = createSelector(
+    faqsUpdated,
+    faqsLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+
+export const partnersShouldUpdate = createSelector(
+    partnersUpdated,
+    partnersLoading,
     (updated, loading) => {
         return !loading && Date.now() - updated > 1000 * 10;
     }
@@ -40,13 +74,5 @@ export const tracksListAlphabetically = createSelector(
     tracksAlphabetically,
     data => {
         return filter(data, 'showInList');
-    }
-);
-
-export const statsShouldUpdate = createSelector(
-    statsUpdated,
-    statsLoading,
-    (updated, loading) => {
-        return !loading && Date.now() - updated > 1000 * 10;
     }
 );

@@ -2,8 +2,15 @@ import * as ActionTypes from './actionTypes';
 
 import TracksService from '../../services/tracks';
 import StatsService from '../../services/tracks';
+import FaqsService from '../../services/faqs';
+import PartnersService from '../../services/partners';
 
-import { tracksShouldUpdate, statsShouldUpdate } from './selectors';
+import {
+    tracksShouldUpdate,
+    statsShouldUpdate,
+    faqsShouldUpdate,
+    partnersShouldUpdate
+} from './selectors';
 
 export const updateTracks = () => (dispatch, getState) => {
     const state = getState();
@@ -30,6 +37,36 @@ export const updateStats = () => (dispatch, getState) => {
 
     dispatch({
         type: ActionTypes.UPDATE_STATS,
+        promise: StatsService.getAll(),
+        meta: {
+            onFailure: e => console.log('Error fetching stats', e)
+        }
+    });
+};
+
+export const updateFaqs = () => (dispatch, getState) => {
+    const state = getState();
+    if (!faqsShouldUpdate(state)) {
+        console.log('skipping faqs update');
+        return;
+    }
+    dispatch({
+        type: ActionTypes.UPDATE_FAQS,
+        promise: StatsService.getAll(),
+        meta: {
+            onFailure: e => console.log('Error fetching stats', e)
+        }
+    });
+};
+
+export const updatePartners = () => (dispatch, getState) => {
+    const state = getState();
+    if (!partnersShouldUpdate(state)) {
+        console.log('skipping faqs update');
+        return;
+    }
+    dispatch({
+        type: ActionTypes.UPDATE_PARTNERS,
         promise: StatsService.getAll(),
         meta: {
             onFailure: e => console.log('Error fetching stats', e)

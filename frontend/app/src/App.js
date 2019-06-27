@@ -12,8 +12,9 @@ import HeroCTA from './components/HeroCTA';
 import EditorTools from './components/EditorTools';
 import BasicSection from './components/BasicSection';
 import Markdown from './components/Markdown';
+import Divider from './components/Divider';
+import StatBlocks from './components/StatBlocks';
 
-import TracksService from './services/tracks';
 import TracksGrid from './components/TracksGrid';
 import SingleColumnSection from './components/SingleColumnSection';
 
@@ -40,9 +41,20 @@ class App extends Component {
                         <button className="App--main-applyButton">
                             {getText('homePageApplyButton')}
                         </button>
+                        <Divider lg />
+                        <div className="App--main-buttons">
+                            <button className="App--main-infoButton">
+                                {getText('homePageInfoButton')}
+                            </button>
+                            <button className="App--main-volunteerButton">
+                                {getText('homePageVolunteerButton')}
+                            </button>
+                        </div>
+                        <Divider md />
                         <SingleColumnSection
                             title={getText('junctionComingSlogan')}
                         />
+
                         <BasicSection
                             title={getText('junctionMainTitle')}
                             subtitle={getText('junctionMainSubtitle')}
@@ -50,13 +62,32 @@ class App extends Component {
                             <span className="App--main-introText">
                                 {getText('homePageIntroText')}
                             </span>
+                            <StatBlocks />
                         </BasicSection>
-
+                        <Divider md />
+                        <BasicSection
+                            title={getText('homePageJourneyTitle')}
+                            subtitle={getText('homePageJourneySubtitle')}
+                        />
+                        <Divider lg />
                         <SingleColumnSection
                             title={getText('tracksTitle')}
                             subtitle={getText('tracksSubtitle')}
                         />
                         <TracksGrid />
+                        <Divider md />
+                        <SingleColumnSection>
+                            <div className="App--main-videoContainer">
+                                <iframe
+                                    className="App--main-videoContainer-video"
+                                    src={getText('homePageVideoLink')}
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                />
+                            </div>
+                        </SingleColumnSection>
+                        <Divider lg />
                     </main>
                     <EditorTools />
                 </div>

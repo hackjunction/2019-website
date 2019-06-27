@@ -13,6 +13,18 @@ const initialState = {
         loading: false,
         error: false,
         updated: 0
+    },
+    faqs: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
+    },
+    partners: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
     }
 };
 
@@ -80,6 +92,74 @@ export default function reducer(state = initialState, action) {
                     ...prevState,
                     stats: {
                         ...prevState.stats,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_FAQS: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    faqs: {
+                        ...prevState.faqs,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    faqs: {
+                        ...prevState.faqs,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    faqs: {
+                        ...prevState.faqs,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    faqs: {
+                        ...prevState.faqs,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_PARTNERS: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    partners: {
+                        ...prevState.partners,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    partners: {
+                        ...prevState.partners,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    partners: {
+                        ...prevState.partners,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    partners: {
+                        ...prevState.partners,
                         data: action.payload,
                         updated: Date.now()
                     }
