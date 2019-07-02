@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.DropDown {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &--input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        -ms-apperance: none;
+        appearance: none;
+        display: block;
+
+        height: 38px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($white, 0.6);
+        color: rgba($white, 0.6);
+        font-size: 18px;
+        transition: all 0.2s ease;
+        border-radius: 0;
+
+        &:focus {
+            outline: none;
+            border-color: $white;
+            color: $white;
+        }
+
+        option {
+            color: $black;
+        }
+    }
+}

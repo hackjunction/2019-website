@@ -5,6 +5,7 @@ import './App.scss';
 
 import Header from './components/Header';
 import EditorTools from './components/EditorTools';
+//import Footer from './components/Footer';
 
 import HomePage from './Pages/Home';
 import Page2 from './Pages/Home';

@@ -1,0 +1,9 @@
+@import '../../../styles/variables';
+
+.InputError {
+    margin-top: 10px;
+    opacity: 1;
+    font-size: 14px;
+    line-height: 18px;
+    color: $error-red;
+}
