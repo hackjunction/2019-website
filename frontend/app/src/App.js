@@ -15,8 +15,13 @@ import Markdown from './components/Markdown';
 import Divider from './components/Divider';
 import StatBlocks from './components/StatBlocks';
 
+import PartnersGrid from './components/PartnersGrid';
+import FaqGrid from './components/FaqGrid';
+import ImageButton from './components/ImageButton';
 import TracksGrid from './components/TracksGrid';
 import SingleColumnSection from './components/SingleColumnSection';
+
+import JourneyGrid from './components/JourneyGrid';
 
 class App extends Component {
     async componentDidMount() {
@@ -81,13 +86,19 @@ class App extends Component {
                                 <iframe
                                     className="App--main-videoContainer-video"
                                     src={getText('homePageVideoLink')}
-                                    frameborder="0"
+                                    frameBorder="0"
                                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
+                                    allowFullScreen
                                 />
                             </div>
                         </SingleColumnSection>
+                        <PartnersGrid />
+                        <FaqGrid />
                         <Divider lg />
+
+                        <div className="imageButtons">
+                            <ImageButton />
+                        </div>
                     </main>
                     <EditorTools />
                 </div>

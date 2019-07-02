@@ -1,7 +1,7 @@
 import * as ActionTypes from './actionTypes';
 
 import TracksService from '../../services/tracks';
-import StatsService from '../../services/tracks';
+import StatsService from '../../services/stats';
 import FaqsService from '../../services/faqs';
 import PartnersService from '../../services/partners';
 
@@ -52,7 +52,7 @@ export const updateFaqs = () => (dispatch, getState) => {
     }
     dispatch({
         type: ActionTypes.UPDATE_FAQS,
-        promise: StatsService.getAll(),
+        promise: FaqsService.getAll(),
         meta: {
             onFailure: e => console.log('Error fetching stats', e)
         }
@@ -67,7 +67,7 @@ export const updatePartners = () => (dispatch, getState) => {
     }
     dispatch({
         type: ActionTypes.UPDATE_PARTNERS,
-        promise: StatsService.getAll(),
+        promise: PartnersService.getAll(),
         meta: {
             onFailure: e => console.log('Error fetching stats', e)
         }
