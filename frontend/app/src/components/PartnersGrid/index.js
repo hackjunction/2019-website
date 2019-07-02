@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { updatePartners } from '../../redux/dynamiccontent/selectors';
+import { updatePartners } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import './style.scss';
 
@@ -19,7 +19,7 @@ const PartnersGrid = props => {
 };
 
 const mapStateToProps = state => ({
-    partners: ContentSelectors.Partners(state)
+    partners: ContentSelectors.partners(state)
 });
 
 export default connect(

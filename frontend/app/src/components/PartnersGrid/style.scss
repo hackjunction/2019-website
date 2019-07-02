@@ -1,5 +1,3 @@
-@import '../../styles/main';
-
 .PartnersGrid {
     width: 100%;
     max-width: 980px;
@@ -8,18 +6,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    :nth-child(even) {
-        .PartnerGridItem {
-            background: linear-gradient(
-                124deg,
-                rgba(243, 129, 0, 0.23) 0%,
-                rgba(122, 65, 0, 0.22) 100%
-            );
-        }
-    }
 }
 
-.PartnerGridItem {
+.PartnersGrid-Partner {
     margin-top: 5px;
     z-index: 3;
     width: 50px;

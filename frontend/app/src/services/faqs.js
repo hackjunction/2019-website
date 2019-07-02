@@ -3,10 +3,10 @@ import config from '../config';
 
 const BASE_URL = config.API_BASE_URL + '/faqs';
 
-const StatsService = {
+const FaqsService = {
     getAll: () => {
         return axios.get(BASE_URL);
     }
 };
 
-export default StatsService;
+export default FaqsService;

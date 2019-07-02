@@ -3,10 +3,10 @@ import config from '../config';
 
 const BASE_URL = config.API_BASE_URL + '/partners';
 
-const StatsService = {
+const PartnersService = {
     getAll: () => {
         return axios.get(BASE_URL);
     }
 };
 
-export default StatsService;
+export default PartnersService;
