@@ -10,7 +10,7 @@ import EditorTools from './components/EditorTools';
 //import Footer from './components/Footer';
 
 import HomePage from './Pages/Home';
-import Page2 from './Pages/Home';
+import InfoPage from './Pages/Info';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 
@@ -35,7 +35,7 @@ class App extends Component {
                     <main className="App--main">
                         <Switch>
                             <Route exact path="/" component={HomePage} />
-                            <Route exact path="/other-page" component={Page2} />
+                            <Route exact path="/info" component={InfoPage} />
 
                             <Route component={NotFound} />
                         </Switch>
