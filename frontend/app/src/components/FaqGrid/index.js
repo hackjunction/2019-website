@@ -1,8 +1,11 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+
 import { updateFaqs } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
+
 import FaqGridItem from './FaqGridItem';
+
 import './style.scss';
 
 class FaqsGrid extends PureComponent {

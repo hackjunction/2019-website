@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+
 import Markdown from '../Markdown';
 import AnimateHeight from 'react-animate-height';
 
@@ -29,7 +30,7 @@ class FaqGridItem extends PureComponent {
                 <span className="FaqGridItem--question">
                     {question}
                     <i
-                        className="icon-right-open"
+                        className="icon-down-open"
                         onClick={this.setNextMarker}
                     />
                 </span>

@@ -4,12 +4,14 @@ import TracksService from '../../services/tracks';
 import StatsService from '../../services/stats';
 import FaqsService from '../../services/faqs';
 import PartnersService from '../../services/partners';
+import EventDatesService from '../../services/eventDates';
 
 import {
     tracksShouldUpdate,
     statsShouldUpdate,
     faqsShouldUpdate,
-    partnersShouldUpdate
+    partnersShouldUpdate,
+    eventDatesShouldUpdate
 } from './selectors';
 
 export const updateTracks = () => (dispatch, getState) => {
@@ -70,6 +72,22 @@ export const updatePartners = () => (dispatch, getState) => {
         promise: PartnersService.getAll(),
         meta: {
             onFailure: e => console.log('Error fetching stats', e)
+        }
+    });
+};
+
+export const updateEventDates = () => (dispatch, getState) => {
+    const state = getState();
+    if (!eventDatesShouldUpdate(state)) {
+        console.log('skipping EventDates update');
+        return;
+    }
+
+    dispatch({
+        type: ActionTypes.UPDATE_EVENTDATES,
+        promise: EventDatesService.getAll(),
+        meta: {
+            onFailure: e => console.log('Error fetching EventDates', e)
         }
     });
 };

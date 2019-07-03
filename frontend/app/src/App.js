@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
+
+import './fontello/css/fontello.css';
 import './App.scss';
 
 import Header from './components/Header';

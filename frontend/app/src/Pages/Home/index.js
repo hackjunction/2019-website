@@ -14,6 +14,8 @@ import StatBlocks from '../../components/StatBlocks';
 import TracksGrid from '../../components/TracksGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
+import DatesGrid from '../../components/DatesGrid';
+
 //import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';
@@ -60,7 +62,9 @@ class HomePage extends Component {
                 <BasicSection
                     title={getText('homePageJourneyTitle')}
                     subtitle={getText('homePageJourneySubtitle')}
-                />
+                >
+                    <DatesGrid />
+                </BasicSection>
                 <Divider lg />
                 <SingleColumnSection
                     title={getText('tracksTitle')}

@@ -25,6 +25,12 @@ const initialState = {
         loading: false,
         error: false,
         updated: 0
+    },
+    eventDates: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
     }
 };
 
@@ -160,6 +166,74 @@ export default function reducer(state = initialState, action) {
                     ...prevState,
                     partners: {
                         ...prevState.partners,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_TRACKS: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    tracks: {
+                        ...prevState.tracks,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    tracks: {
+                        ...prevState.tracks,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    tracks: {
+                        ...prevState.tracks,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    tracks: {
+                        ...prevState.tracks,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_EVENTDATES: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    eventDates: {
+                        ...prevState.eventDates,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    eventDates: {
+                        ...prevState.eventDates,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    eventDates: {
+                        ...prevState.eventDates,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    eventDates: {
+                        ...prevState.eventDates,
                         data: action.payload,
                         updated: Date.now()
                     }
