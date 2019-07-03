@@ -1,26 +1,26 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { updateEventDates } from '../../redux/dynamiccontent/actions';
+import { updateVolunteerDates } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 import './style.scss';
 
-const EventDateGrid = props => {
+const VolunteerSchedule = props => {
     useEffect(() => {
-        props.updateEventDates();
+        props.updateVolunteerDates();
     }, []);
 
-    const renderTimes = () => {
-        const length = props.EventDates.length;
+    const renderSchedules = () => {
+        const length = props.VolunteerDates.length;
         let counter = 1;
-        return props.EventDates.map(date => {
+        return props.VolunteerDates.map(date => {
             if (counter < length) {
                 counter += 1;
                 return (
-                    <div className="DatesGrid-itemContainer">
-                        <div className="DatesGrid-itemContainer-item">
-                            <span className="DatesGrid-itemContainer-item-date">
+                    <div className="VolunteerDatesGrid-itemContainer">
+                        <div className="VolunteerDatesGrid-itemContainer-item">
+                            <span className="VolunteerDatesGrid-itemContainer-item-date">
                                 {date.date}
                             </span>
                             {date.name}
@@ -30,9 +30,9 @@ const EventDateGrid = props => {
                 );
             } else if (counter === length) {
                 return (
-                    <div className="DatesGrid-itemContainer">
-                        <div className="DatesGrid-itemContainer-item">
-                            <span className="DatesGrid-itemContainer-item-date">
+                    <div className="VolunteerDatesGrid-itemContainer">
+                        <div className="VolunteerDatesGrid-itemContainer-item">
+                            <span className="VolunteerDatesGrid-itemContainer-item-date">
                                 {date.date}
                             </span>
                             {date.name}
@@ -44,15 +44,14 @@ const EventDateGrid = props => {
             }
         });
     };
-
-    return <div className="DatesGrid">{renderTimes()}</div>;
+    return <div className="VolunteerDatesGrid">{renderSchedules()}</div>;
 };
 
 const mapStateToProps = state => ({
-    EventDates: ContentSelectors.eventDates(state)
+    VolunteerDates: ContentSelectors.volunteerDates(state)
 });
 
 export default connect(
     mapStateToProps,
-    { updateEventDates }
-)(EventDateGrid);
+    { updateVolunteerDates }
+)(VolunteerSchedule);

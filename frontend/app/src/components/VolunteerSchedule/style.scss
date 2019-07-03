@@ -1,0 +1,60 @@
+.VolunteerDatesGrid {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    :nth-child(even) {
+        .VolunteerDatesGrid-itemContainer-item {
+            background: linear-gradient(
+                128deg,
+                rgba(243, 129, 0, 0.23) 0%,
+                rgba(122, 65, 0, 0.22) 100%
+            );
+        }
+    }
+}
+.VolunteerDatesGrid-itemContainer {
+    width: 100%;
+    i {
+        margin-left: 47%;
+        color: rgba(178, 0, 183, 1);
+        font-size: 30px;
+    }
+}
+
+.VolunteerDatesGrid-itemContainer-item {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 80px;
+    padding-top: 5px;
+    border: none;
+    border-radius: 10px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 20px;
+    background: linear-gradient(
+        142deg,
+        rgba(178, 0, 183, 0.3) 0%,
+        rgba(178, 0, 183, 0.2) 100%
+    );
+    color: #ffffff;
+
+    &-date {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-family: Lato;
+        font-weight: 100;
+    }
+}

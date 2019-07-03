@@ -31,6 +31,12 @@ const initialState = {
         loading: false,
         error: false,
         updated: 0
+    },
+    volunteerDates: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
     }
 };
 
@@ -172,40 +178,7 @@ export default function reducer(state = initialState, action) {
                 })
             });
         }
-        case ActionTypes.UPDATE_TRACKS: {
-            return handle(state, action, {
-                start: prevState => ({
-                    ...prevState,
-                    tracks: {
-                        ...prevState.tracks,
-                        loading: true,
-                        error: false
-                    }
-                }),
-                finish: prevState => ({
-                    ...prevState,
-                    tracks: {
-                        ...prevState.tracks,
-                        loading: false
-                    }
-                }),
-                failure: prevState => ({
-                    ...prevState,
-                    tracks: {
-                        ...prevState.tracks,
-                        error: true
-                    }
-                }),
-                success: prevState => ({
-                    ...prevState,
-                    tracks: {
-                        ...prevState.tracks,
-                        data: action.payload,
-                        updated: Date.now()
-                    }
-                })
-            });
-        }
+
         case ActionTypes.UPDATE_EVENTDATES: {
             return handle(state, action, {
                 start: prevState => ({
@@ -234,6 +207,40 @@ export default function reducer(state = initialState, action) {
                     ...prevState,
                     eventDates: {
                         ...prevState.eventDates,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_VOLUNTEERDATES: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    volunteerDates: {
+                        ...prevState.volunteerDates,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    volunteerDates: {
+                        ...prevState.volunteerDates,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    volunteerDates: {
+                        ...prevState.volunteerDates,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    volunteerDates: {
+                        ...prevState.volunteerDates,
                         data: action.payload,
                         updated: Date.now()
                     }

@@ -1,15 +1,12 @@
 {
   "connection": "default",
-  "collectionName": "eventdates",
+  "collectionName": "",
   "info": {
-    "name": "eventdates",
+    "name": "volunteerdate",
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "createdAt",
-      "updatedAt"
-    ]
+    "timestamps": true
   },
   "attributes": {
     "name": {
@@ -17,9 +14,6 @@
     },
     "date": {
       "type": "string"
-    },
-    "duringJunctionWeek": {
-      "type": "boolean"
     }
   }
 }

@@ -31,6 +31,14 @@ export const eventDatesError = state => state.dynamicContent.eventDates.error;
 export const eventDatesUpdated = state =>
     state.dynamicContent.eventDates.updated;
 
+export const volunteerDates = state => state.dynamicContent.volunteerDates.data;
+export const volunteerDatesLoading = state =>
+    state.dynamicContent.volunteerDates.loading;
+export const volunteerDatesError = state =>
+    state.dynamicContent.volunteerDates.error;
+export const volunteerDatesUpdated = state =>
+    state.dynamicContent.volunteerDates.updated;
+
 export const tracksShouldUpdate = createSelector(
     tracksUpdated,
     tracksLoading,
@@ -65,6 +73,13 @@ export const partnersShouldUpdate = createSelector(
 export const eventDatesShouldUpdate = createSelector(
     eventDatesUpdated,
     eventDatesLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+export const volunteerDatesShouldUpdate = createSelector(
+    volunteerDatesUpdated,
+    volunteerDatesLoading,
     (updated, loading) => {
         return !loading && Date.now() - updated > 1000 * 10;
     }

@@ -38,14 +38,24 @@ class Markdown extends PureComponent {
                                 );
                             }
 
-                            return <img className="Markdown--image" alt={alt} src={src} />;
+                            return (
+                                <img
+                                    className="Markdown--image"
+                                    alt={alt}
+                                    src={src}
+                                />
+                            );
                         },
                         paragraph: ({ children }) => {
                             const imgIndexes = [];
                             const result = [];
 
                             children.forEach((child, index) => {
-                                if (typeof child === 'object' && child.key && !!child.key.match(/image/g)) {
+                                if (
+                                    typeof child === 'object' &&
+                                    child.key &&
+                                    !!child.key.match(/image/g)
+                                ) {
                                     imgIndexes.push(index);
                                 }
                             });
@@ -58,15 +68,32 @@ class Markdown extends PureComponent {
                                 const childrenBefore = take(children, imgIndex);
                                 if (childrenBefore.length > 0) {
                                     result.push(
-                                        <p key={'startswith-' + children[0].key}>{take(children, imgIndex)}</p>
+                                        <p
+                                            key={
+                                                'startswith-' + children[0].key
+                                            }
+                                        >
+                                            {take(children, imgIndex)}
+                                        </p>
                                     );
                                 }
                                 result.push(children[imgIndex]);
                             });
 
-                            const restOfChildren = children.slice(imgIndexes[imgIndexes.length - 1] + 1);
+                            const restOfChildren = children.slice(
+                                imgIndexes[imgIndexes.length - 1] + 1
+                            );
                             if (restOfChildren.length > 0) {
-                                result.push(<p key={'startsWith-' + restOfChildren[0].key}>{restOfChildren}</p>);
+                                result.push(
+                                    <p
+                                        key={
+                                            'startsWith-' +
+                                            restOfChildren[0].key
+                                        }
+                                    >
+                                        {restOfChildren}
+                                    </p>
+                                );
                             }
 
                             return result;

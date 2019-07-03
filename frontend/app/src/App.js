@@ -11,16 +11,11 @@ import EditorTools from './components/EditorTools';
 
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
+import JunctionWeekPage from './Pages/Junction-week';
+import NotFound from './Pages/NotFound';
+import VolunteerPage from './Pages/Volunteer';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
-
-const NotFound = () => {
-    return (
-        <div style={{ marginTop: '100px' }}>
-            <h1>Not Found</h1>
-        </div>
-    );
-};
 
 class App extends Component {
     async componentDidMount() {
@@ -36,7 +31,16 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/info" component={InfoPage} />
-
+                            <Route
+                                exact
+                                path="/junction-week"
+                                component={JunctionWeekPage}
+                            />
+                            <Route
+                                exact
+                                path="/volunteer"
+                                component={VolunteerPage}
+                            />
                             <Route component={NotFound} />
                         </Switch>
                     </main>

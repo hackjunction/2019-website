@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/volunteerdates",
+      "handler": "Volunteerdate.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/volunteerdates/count",
+      "handler": "Volunteerdate.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/volunteerdates/:_id",
+      "handler": "Volunteerdate.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/volunteerdates",
+      "handler": "Volunteerdate.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/volunteerdates/:_id",
+      "handler": "Volunteerdate.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/volunteerdates/:_id",
+      "handler": "Volunteerdate.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
