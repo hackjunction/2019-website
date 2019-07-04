@@ -11,11 +11,7 @@ const PartnersGrid = props => {
     }, []);
     const renderPartners = () => {
         return props.partners.map(partner => {
-            return (
-                <div className="PartnersGrid-partner">
-                    <span>{partner.name}</span>
-                </div>
-            );
+            return <div className="PartnersGrid-partner">{partner.name}</div>;
         });
     };
 

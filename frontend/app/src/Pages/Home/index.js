@@ -88,8 +88,14 @@ class HomePage extends Component {
                     title={getText('partnersTitle')}
                     subtitle={getText('partnersSubtitle')}
                 >
+                    <Divider sm />
                     <PartnersGrid />
+                    <Divider sm />
+                    <button className="HomePage-partnerInfoButton">
+                        {getText('homePagePartnerInfoButton')}
+                    </button>
                 </SingleColumnSection>
+                <Divider lg />
             </Page>
         );
     }
