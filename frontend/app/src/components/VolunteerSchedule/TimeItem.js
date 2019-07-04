@@ -1,5 +1,14 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 
+const TimeItem = ({ name, date }) => {
+    return (
+        <div className="TimeTableGrid-item">
+            {name}
+            <span className="TimeTableGrid-item-date">{date}</span>
+        </div>
+    );
+};
+/*
 class TimeItem extends PureComponent {
     render() {
         const { name, date } = this.props;
@@ -10,5 +19,6 @@ class TimeItem extends PureComponent {
             </div>
         );
     }
-}
+}*/
+
 export default TimeItem;
