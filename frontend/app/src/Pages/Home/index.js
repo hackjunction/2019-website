@@ -28,7 +28,6 @@ class HomePage extends Component {
             <Page className="HomePage">
                 <HeroImage image={getMedia('homePageHeaderImage')}>
                     <HeroCTA
-                        image={getMedia('homePageHeroCtaLogo')}
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         ctaText={getText('homePageHeroCtaText')}
                         ctaLink={getText('homePageHeroCtaLink')}

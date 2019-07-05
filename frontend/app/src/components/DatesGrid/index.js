@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { updateEventDates } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
+import TimeItem from './TimeItem';
+
 import './style.scss';
 
 const EventDateGrid = props => {
@@ -13,34 +15,29 @@ const EventDateGrid = props => {
 
     const renderTimes = () => {
         const length = props.EventDates.length;
+        const { junction = false } = props;
         let counter = 1;
         return props.EventDates.map(date => {
-            if (counter < length) {
-                counter += 1;
-                return (
-                    <div className="DatesGrid-itemContainer">
-                        <div className="DatesGrid-itemContainer-item">
-                            <span className="DatesGrid-itemContainer-item-date">
-                                {date.date}
-                            </span>
-                            {date.name}
-                        </div>
-                        <i className="icon-down-open" />
-                    </div>
-                );
-            } else if (counter === length) {
-                return (
-                    <div className="DatesGrid-itemContainer">
-                        <div className="DatesGrid-itemContainer-item">
-                            <span className="DatesGrid-itemContainer-item-date">
-                                {date.date}
-                            </span>
-                            {date.name}
-                        </div>
-                    </div>
-                );
+            if (junction) {
+                if (date.duringJunctionWeek) {
+                    if (counter >= length) {
+                        return <TimeItem {...date} isLast />;
+                    } else {
+                        for (counter < length; counter++; ) {
+                            console.log('counter: ' + counter);
+                            return <TimeItem {...date} notLast />;
+                        }
+                    }
+                } else {
+                    return counter++;
+                }
+            } else if (counter >= length) {
+                return <TimeItem {...date} isLast />;
             } else {
-                return <h1>Error fetching dates</h1>;
+                for (counter < length; counter++; ) {
+                    console.log('counter: ' + counter);
+                    return <TimeItem {...date} notLast />;
+                }
             }
         });
     };

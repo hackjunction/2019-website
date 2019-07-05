@@ -1,10 +1,10 @@
-@import '../../styles/main';
+@import '../../styles/variables';
 
 .Footer {
     align-items: center;
     justify-content: flex-start;
     padding: 140px 50px;
-    background: $junction-white;
+    background: $white;
 
     .FooterInner {
         display: flex;
@@ -41,7 +41,7 @@
             }
 
             &__slogan {
-                color: $junction-black;
+                color: $black;
                 font-size: 18px;
                 text-align: center;
 
@@ -51,7 +51,7 @@
             }
 
             &__contact {
-                color: $junction-black;
+                color: $black;
                 text-decoration: none;
                 font-size: 18px;
                 text-align: center;
@@ -110,7 +110,7 @@
                 }
 
                 &-title {
-                    color: rgba($junction-black,0.4);
+                    color: rgba($black, 0.4);
                     margin-top: 0;
                     text-align: center;
                     font-size: 16px;
@@ -122,7 +122,7 @@
                 }
 
                 &-link {
-                    color: $junction-black;
+                    color: $black;
                     text-decoration: none;
                     font-size: 16px;
                     line-height: 22px;
@@ -145,7 +145,7 @@
 
         &--text {
             @extend %font-title;
-            color: rgba($junction-black, 0.4);
+            color: rgba($black, 0.4);
         }
     }
 }

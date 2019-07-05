@@ -8,17 +8,17 @@ import SocialMediaIcons from '../SocialMediaIcons';
 import Divider from '../Divider';
 
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
-import KEYS from '../../redux/staticcontent/keys';
+/*
 import {
     homePages,
     eventPages,
     communityPages
 } from '../../redux/pages/selectors';
 
-import { eventconceptsByPriority } from '../../redux/eventconcepts/selectors';
+import { eventconceptsByPriority } from '../../redux/eventconcepts/selectors';*/
 
 class Footer extends PureComponent {
-    renderConceptLinks(eventConcepts) {
+    /*renderConceptLinks(eventConcepts) {
         return eventConcepts.map(concept => {
             return (
                 <Link
@@ -44,35 +44,29 @@ class Footer extends PureComponent {
                 </Link>
             );
         });
-    }
+    }*/
 
     render() {
         const { getMedia, getText } = this.props;
-        const {
-            siteSlogan,
-            siteContactEmail,
-            eventConcepts,
-            homePages,
-            eventPages,
-            communityPages
-        } = this.props;
+        const { homePages, eventPages, communityPages } = this.props;
+
         return (
             <footer className="Footer">
                 <div className="FooterInner">
                     <div className="FooterInner--left">
                         <img
                             className="FooterInner--left__logo"
-                            src={require('../../assets/logos/text_black.png')}
+                            src={require('../../assets/logos/wordmark_black.png')}
                             alt="Junction logo"
                         />
                         <p className="FooterInner--left__slogan">
-                            {siteSlogan}
+                            {getText('siteSlogan')}
                         </p>
                         <a
                             className="FooterInner--left__contact"
-                            href={`mailto:${siteContactEmail}`}
+                            href={`mailto:${getText('siteContactEmail')}`}
                         >
-                            {siteContactEmail}
+                            {getText('siteContactEmail')}
                         </a>
                         <Divider sm />
                         <SocialMediaIcons />
@@ -93,42 +87,60 @@ class Footer extends PureComponent {
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/calendar"
+                                to="/junction-week"
                             >
-                                Calendar
+                                Junction Week
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/team"
+                                to="/info"
                             >
-                                Team
+                                Participant info
                             </Link>
-                            {this.renderExtraPageLinks(homePages)}
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/volunteer"
+                            >
+                                Volunteer Info
+                            </Link>
+                            {/*this.renderExtraPageLinks(homePages)*/}
                         </div>
                         <div className="FooterInner--right__section">
                             <Link to="/concepts">
                                 <h5 className="FooterInner--right__section-title">
-                                    Events & Concepts
+                                    Info
                                 </h5>
                             </Link>
-                            {this.renderConceptLinks(eventConcepts)}
-                            {this.renderExtraPageLinks(eventPages)}
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/tracks"
+                            >
+                                Tracks & Challenges
+                            </Link>
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/trasportation"
+                            >
+                                Transportation
+                            </Link>
+                            {/*this.renderConceptLinks(eventConcepts)*/}
+                            {/*this.renderExtraPageLinks(eventPages)*/}
                         </div>
                         <div className="FooterInner--right__section">
                             <h5 className="FooterInner--right__section-title">
-                                Community
+                                Live
                             </h5>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/partners"
+                                to="/schedule"
                             >
-                                For partners
+                                Schedule
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/participants"
+                                to="/submission"
                             >
-                                For participants
+                                Submission
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
@@ -142,7 +154,7 @@ class Footer extends PureComponent {
                             >
                                 For organizers
                             </Link>
-                            {this.renderExtraPageLinks(communityPages)}
+                            {/*this.renderExtraPageLinks(communityPages)*/}
                         </div>
                         <div className="FooterInner--right__section">
                             <a
@@ -207,17 +219,9 @@ class Footer extends PureComponent {
 }
 
 const mapStateToProps = state => {
-    const content = ContentSelectors(state);
-
     return {
         getText: ContentSelectors.buildGetText(state),
-        getMedia: ContentSelectors.buildGetMedia(state),
-        siteSlogan: content[getText('siteSlogan')],
-        siteContactEmail: content[getText('siteContactEmail')],
-        homePages: homePages(state),
-        eventPages: eventPages(state),
-        communityPages: communityPages(state),
-        eventConcepts: eventconceptsByPriority(state)
+        getMedia: ContentSelectors.buildGetMedia(state)
     };
 };
 

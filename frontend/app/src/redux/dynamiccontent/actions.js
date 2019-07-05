@@ -6,6 +6,8 @@ import FaqsService from '../../services/faqs';
 import PartnersService from '../../services/partners';
 import EventDatesService from '../../services/eventDates';
 import VolunteerDatesService from '../../services/volunteerDates';
+import VolunteerGuidelinesService from '../../services/volunteerGuidelines';
+import SocialMediasService from '../../services/socialMedias.js';
 
 import {
     tracksShouldUpdate,
@@ -13,7 +15,9 @@ import {
     faqsShouldUpdate,
     partnersShouldUpdate,
     eventDatesShouldUpdate,
-    volunteerDatesShouldUpdate
+    volunteerDatesShouldUpdate,
+    volunteerGuidelinesShouldUpdate,
+    socialMediasShouldUpdate
 } from './selectors';
 
 export const updateTracks = () => (dispatch, getState) => {
@@ -105,6 +109,36 @@ export const updateVolunteerDates = () => (dispatch, getState) => {
         promise: VolunteerDatesService.getAll(),
         meta: {
             onFailure: e => console.log('Error fetching VolunteerDates', e)
+        }
+    });
+};
+export const updateVolunteerGuidelines = () => (dispatch, getState) => {
+    const state = getState();
+    if (!volunteerGuidelinesShouldUpdate(state)) {
+        console.log('skipping EventGuidelines update');
+        return;
+    }
+
+    dispatch({
+        type: ActionTypes.UPDATE_VOLUNTEERGUIDELINES,
+        promise: VolunteerGuidelinesService.getAll(),
+        meta: {
+            onFailure: e => console.log('Error fetching VolunteerGuidelines', e)
+        }
+    });
+};
+export const updateSocialMedias = () => (dispatch, getState) => {
+    const state = getState();
+    if (!socialMediasShouldUpdate(state)) {
+        console.log('skipping EventGuidelines update');
+        return;
+    }
+
+    dispatch({
+        type: ActionTypes.UPDATE_SOCIALMEDIAS,
+        promise: SocialMediasService.getAll(),
+        meta: {
+            onFailure: e => console.log('Error fetching SocialMedias', e)
         }
     });
 };

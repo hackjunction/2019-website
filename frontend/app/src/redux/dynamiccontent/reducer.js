@@ -37,6 +37,18 @@ const initialState = {
         loading: false,
         error: false,
         updated: 0
+    },
+    volunteerGuidelines: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
+    },
+    socialMedias: {
+        data: [],
+        loading: false,
+        error: false,
+        updated: 0
     }
 };
 
@@ -178,7 +190,6 @@ export default function reducer(state = initialState, action) {
                 })
             });
         }
-
         case ActionTypes.UPDATE_EVENTDATES: {
             return handle(state, action, {
                 start: prevState => ({
@@ -241,6 +252,74 @@ export default function reducer(state = initialState, action) {
                     ...prevState,
                     volunteerDates: {
                         ...prevState.volunteerDates,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_VOLUNTEERGUIDELINES: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    volunteerGuidelines: {
+                        ...prevState.volunteerGuidelines,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    volunteerGuidelines: {
+                        ...prevState.volunteerGuidelines,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    volunteerGuidelines: {
+                        ...prevState.volunteerGuidelines,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    volunteerGuidelines: {
+                        ...prevState.volunteerGuidelines,
+                        data: action.payload,
+                        updated: Date.now()
+                    }
+                })
+            });
+        }
+        case ActionTypes.UPDATE_SOCIALMEDIAS: {
+            return handle(state, action, {
+                start: prevState => ({
+                    ...prevState,
+                    socialMedias: {
+                        ...prevState.socialMedias,
+                        loading: true,
+                        error: false
+                    }
+                }),
+                finish: prevState => ({
+                    ...prevState,
+                    socialMedias: {
+                        ...prevState.socialMedias,
+                        loading: false
+                    }
+                }),
+                failure: prevState => ({
+                    ...prevState,
+                    socialMedias: {
+                        ...prevState.socialMedias,
+                        error: true
+                    }
+                }),
+                success: prevState => ({
+                    ...prevState,
+                    socialMedias: {
+                        ...prevState.socialMedias,
                         data: action.payload,
                         updated: Date.now()
                     }

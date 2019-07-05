@@ -39,6 +39,22 @@ export const volunteerDatesError = state =>
 export const volunteerDatesUpdated = state =>
     state.dynamicContent.volunteerDates.updated;
 
+export const volunteerGuidelines = state =>
+    state.dynamicContent.volunteerGuidelines.data;
+export const volunteerGuidelinesLoading = state =>
+    state.dynamicContent.volunteerGuidelines.loading;
+export const volunteerGuidelinesError = state =>
+    state.dynamicContent.volunteerGuidelines.error;
+export const volunteerGuidelinesUpdated = state =>
+    state.dynamicContent.volunteerGuidelines.updated;
+
+export const socialMedias = state => state.dynamicContent.socialMedias.data;
+export const socialMediasLoading = state =>
+    state.dynamicContent.socialMedias.loading;
+export const socialMediasError = state =>
+    state.dynamicContent.socialMedias.error;
+export const socialMediasUpdated = state =>
+    state.dynamicContent.socialMedias.updated;
 export const tracksShouldUpdate = createSelector(
     tracksUpdated,
     tracksLoading,
@@ -84,6 +100,23 @@ export const volunteerDatesShouldUpdate = createSelector(
         return !loading && Date.now() - updated > 1000 * 10;
     }
 );
+export const volunteerGuidelinesShouldUpdate = createSelector(
+    volunteerGuidelinesUpdated,
+    volunteerGuidelinesLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+
+export const socialMediasShouldUpdate = createSelector(
+    socialMediasUpdated,
+    socialMediasLoading,
+    (updated, loading) => {
+        return !loading && Date.now() - updated > 1000 * 10;
+    }
+);
+
+//--------------------------------------------------------------------
 
 export const tracksAlphabetically = createSelector(
     tracks,

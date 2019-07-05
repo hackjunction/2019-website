@@ -10,6 +10,7 @@ import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
 import VolunteerSchedule from '../../components/VolunteerSchedule';
 import SingleColumnSection from '../../components/SingleColumnSection';
+import VolunteerGuidelines from '../../components/VolunteerGuidelines';
 
 import Page from '../PageHOC';
 
@@ -43,7 +44,22 @@ class VolunteerPage extends Component {
                     title={getText('volunteerPageInfoTitle')}
                     subtitle={getText('volunteerPageInfoSubtitle')}
                 >
-                    kaskask
+                    <Divider sm />
+                    <VolunteerGuidelines />
+                </SingleColumnSection>
+                <Divider md />
+
+                <SingleColumnSection>
+                    <div className="VolunteerPage-interested">
+                        <Markdown className="VolunteerPage-interested-img">
+                            {getMedia('volunteerPageInterestedImage')}
+                        </Markdown>
+
+                        <Markdown
+                            className="VolunteerPage-interested-text"
+                            source={getText('volunteerPageInterestedContent')}
+                        />
+                    </div>
                 </SingleColumnSection>
                 <Divider lg />
             </Page>

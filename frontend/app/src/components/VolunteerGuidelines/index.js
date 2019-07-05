@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { updateVolunteerGuidelines } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
+import Markdown from '../Markdown';
+
 import './style.scss';
 
 const VolunteerGuidelines = props => {
@@ -14,13 +16,16 @@ const VolunteerGuidelines = props => {
     const renderGuidelines = () => {
         return props.VolunteerGuidelines.map(guideline => {
             return (
-                <div className="VolunteerGuideline">
-                    <h5 className="VolunteerGuideline--title">
-                        {guideline.title}
-                    </h5>
-                    <span className="VolunteerGuideline--content">
-                        {guideline.content}
-                    </span>
+                <div className="VolunteerGuidelines-container">
+                    <div className="VolunteerGuidelines-container-guideline">
+                        <span className="VolunteerGuidelines-container-guideline-title">
+                            {guideline.title}
+                        </span>
+                        <Markdown
+                            source={guideline.content}
+                            className="VolunteerGuidelines-container-guideline-content"
+                        />
+                    </div>
                 </div>
             );
         });

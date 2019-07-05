@@ -12,6 +12,7 @@ import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
 import FaqGrid from '../../components/FaqGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
+import DatesGrid from '../../components/DatesGrid';
 //import HeaderImage from '../../components/HeaderImage';
 
 class JunctionWeekPage extends Component {
@@ -27,10 +28,12 @@ class JunctionWeekPage extends Component {
                     <Markdown source={getText('junctionWeekPageIntroText')} />
                 </HeaderImage>
                 */}
+                <Divider md />
                 <BasicSection
                     title={getText('junctionWeekPageWeekTitle')}
                     subtitle={getText('junctionWeekPageWeekSubtitle')}
                 >
+                    <DatesGrid junction />
                     <Markdown> yeetus cleetus </Markdown>
                 </BasicSection>
             </Page>
