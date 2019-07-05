@@ -1,7 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+
+import Image from '../Image';
+
 import { updatePartners } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
+
 import './style.scss';
 
 const PartnersGrid = props => {
@@ -11,7 +15,14 @@ const PartnersGrid = props => {
     }, []);
     const renderPartners = () => {
         return props.partners.map(partner => {
-            return <div className="PartnersGrid-partner">{partner.name}</div>;
+            return (
+                <div className="PartnersGrid-partner">
+                    <Image
+                        image={partner.logo}
+                        className="PartnersGrid-partner-img"
+                    />
+                </div>
+            );
         });
     };
 

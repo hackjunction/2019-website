@@ -1,6 +1,6 @@
 .PartnersGrid {
     width: 100%;
-    max-width: 980px;
+
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -10,11 +10,14 @@
 }
 
 .PartnersGrid-partner {
-    background-color: white;
     margin: 10px;
     z-index: 3;
-    width: 20%;
-    height: 150px;
+    width: 22%;
     display: flex;
     flex-direction: row;
+
+    &-img {
+        width: 100%;
+        height: 200px;
+    }
 }
