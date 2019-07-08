@@ -14,6 +14,7 @@ import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
 import FaqGrid from '../../components/FaqGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
+import ButtonLink from '../../components/ButtonLink';
 
 class InfoPage extends Component {
     render() {
@@ -42,9 +43,13 @@ class InfoPage extends Component {
                     subtitle={getText('infoPageTracksSubtitle')}
                 >
                     <Markdown source={getText('infoPageTracksContent')} />
-                    <button className="InfoPage-tracksButton">
-                        {getText('infoPageTracksButton')}
-                    </button>
+                    <ButtonLink
+                        text={getText('infoPageTracksButton')}
+                        link={getText('infoPageTracksButtonLink')}
+                        color="purple"
+                        size="md"
+                        align="left"
+                    />
                 </BasicSection>
                 <Divider md />
                 <BasicSection

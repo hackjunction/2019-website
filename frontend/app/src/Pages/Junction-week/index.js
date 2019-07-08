@@ -13,6 +13,7 @@ import Divider from '../../components/Divider';
 import FaqGrid from '../../components/FaqGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import DatesGrid from '../../components/DatesGrid';
+import ButtonLink from '../../components/ButtonLink';
 //import HeaderImage from '../../components/HeaderImage';
 
 class JunctionWeekPage extends Component {
@@ -43,11 +44,13 @@ class JunctionWeekPage extends Component {
                     <Markdown
                         source={getText('junctionWeekPageTerminalContent')}
                     />
-                    <button className="readMoreButton">
-                        <a href={getText('junctionWeekPageTerminalButtonLink')}>
-                            {getText('junctionWeekPageTerminalButton')}
-                        </a>
-                    </button>
+                    <ButtonLink
+                        text={getText('junctionWeekPageTerminalButton')}
+                        link={getText('junctionWeekPageTerminalButtonLink')}
+                        size="sm"
+                        color="purple"
+                        align="left"
+                    />
                 </BasicSection>
                 <BasicSection
                     title={getText('junctionWeekPageHeltechTitle')}

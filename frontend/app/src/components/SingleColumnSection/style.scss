@@ -1,8 +1,8 @@
+@import '../../styles/variables.scss';
 .SingleColumnSection {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     &--title {
         width: 100%;
         max-width: 900px;
@@ -15,7 +15,6 @@
         margin-left: 13%;
         margin-right: 13%;
     }
-
     &--content {
         max-width: 980px;
         width: 100%;
@@ -23,7 +22,11 @@
         flex-direction: column;
 
         &-center {
-            align-items: center;
+            flex-direction: column;
+            @include bp-custom(950px) {
+                align-items: center;
+                flex-direction: row;
+            }
         }
     }
 }

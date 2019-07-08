@@ -31,14 +31,13 @@ $padding-base: 10px;
 $padding-double: 20px;
 $padding-page: 30px;
 $content-max-width: 980px;
-
 $border-radius: 10px;
 
 %size-button {
-    max-width: 480px;
-    width: 35%;
-    z-index: 2;
-    height: 60px;
+    max-width: 600px;
+    width: 29rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
     &:hover {
         opacity: 0.9;
     }

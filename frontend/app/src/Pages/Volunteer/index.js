@@ -49,6 +49,8 @@ class VolunteerPage extends Component {
                 </SingleColumnSection>
                 <Divider md />
 
+                {/*----------------------------------------------*/}
+                {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
                 <SingleColumnSection>
                     <div className="VolunteerPage-interested">
                         <Markdown className="VolunteerPage-interested-img">
@@ -61,6 +63,9 @@ class VolunteerPage extends Component {
                         />
                     </div>
                 </SingleColumnSection>
+                {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
+                {/*----------------------------------------------*/}
+
                 <Divider lg />
             </Page>
         );

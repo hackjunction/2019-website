@@ -17,6 +17,7 @@ import FaqGrid from '../../components/FaqGrid';
 import DatesGrid from '../../components/DatesGrid';
 import PartnersGrid from '../../components/PartnersGrid';
 //import NewsLetterForm from '../../components/NewsLetterForm';
+import ButtonLink from '../../components/ButtonLink';
 
 import Page from '../PageHOC';
 
@@ -29,22 +30,30 @@ class HomePage extends Component {
                 <HeroImage image={getMedia('homePageHeaderImage')}>
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}
-                        ctaText={getText('homePageHeroCtaText')}
-                        ctaLink={getText('homePageHeroCtaLink')}
+                        image={getMedia('homePageHeroCtaImage')}
                     />
                 </HeroImage>
-                <button className="HomePage-applyButton">
-                    {getText('homePageApplyButton')}
-                </button>
+                <ButtonLink
+                    text={getText('homePageApplyButton')}
+                    link={getText('homePageApplyButtonLink')}
+                    size="lg"
+                    color="purple"
+                    align="center"
+                />
                 <Divider lg />
-                <div className="HomePage-buttons">
-                    <button className="HomePage-infoButton">
-                        {getText('homePageInfoButton')}
-                    </button>
-                    <button className="HomePage-volunteerButton">
-                        {getText('homePageVolunteerButton')}
-                    </button>
-                </div>
+                <SingleColumnSection center>
+                    <ButtonLink
+                        text={getText('homePageInfoButton')}
+                        link={getText('homePageInfoButtonLink')}
+                        color="brown"
+                        size="md"
+                        align="center"
+                    />
+                    <ButtonLink
+                        text={getText('homePageVolunteerButton')}
+                        link={getText('homePageVolunteerButtonLink')}
+                    />
+                </SingleColumnSection>
                 <Divider md />
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
 
@@ -52,9 +61,7 @@ class HomePage extends Component {
                     title={getText('junctionMainTitle')}
                     subtitle={getText('junctionMainSubtitle')}
                 >
-                    <span className="HomePage-introText">
-                        {getText('homePageIntroText')}
-                    </span>
+                    <Markdown source={getText('homePageIntroText')} />
                     <StatBlocks />
                 </BasicSection>
                 <Divider md />
@@ -90,9 +97,13 @@ class HomePage extends Component {
                     <Divider sm />
                     <PartnersGrid />
                     <Divider sm />
-                    <button className="HomePage-partnerInfoButton">
-                        {getText('homePagePartnerInfoButton')}
-                    </button>
+                    <ButtonLink
+                        text={getText('homePagePartnerInfoButton')}
+                        link={getText('homePagePartnerInfoButtonLink')}
+                        color="purple"
+                        size="md"
+                        align="center"
+                    />
                 </SingleColumnSection>
                 <Divider lg />
             </Page>

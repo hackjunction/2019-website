@@ -1,9 +1,0 @@
-@import '../../styles/variables.scss';
-.readMoreButton {
-    @extend %button-purple;
-    font-size: 20px;
-    width: 50%;
-    a {
-        color: inherit;
-    }
-}

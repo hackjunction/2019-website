@@ -26,4 +26,9 @@
         padding: 20px;
         text-transform: uppercase;
     }
+    &--subtitle {
+        font-family: $font-title;
+        font-size: 40px;
+        font-weight: bold;
+    }
 }
