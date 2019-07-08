@@ -34,7 +34,29 @@ class JunctionWeekPage extends Component {
                     subtitle={getText('junctionWeekPageWeekSubtitle')}
                 >
                     <DatesGrid junction />
-                    <Markdown> yeetus cleetus </Markdown>
+                </BasicSection>
+                <Divider md />
+                <BasicSection
+                    title={getText('junctionWeekPageTerminalTitle')}
+                    subtitle={getText('junctionWeekPageTerminalSubtitle')}
+                >
+                    <Markdown
+                        source={getText('junctionWeekPageTerminalContent')}
+                    />
+                    <button className="readMoreButton">
+                        <a href={getText('junctionWeekPageTerminalButtonLink')}>
+                            {getText('junctionWeekPageTerminalButton')}
+                        </a>
+                    </button>
+                </BasicSection>
+                <BasicSection
+                    title={getText('junctionWeekPageHeltechTitle')}
+                    subtitle={getText('junctionWeekPageHeltechSubtitle')}
+                >
+                    <Markdown
+                        source={getText('junctionWeekPageHeltechContent')}
+                    />
+                    <button className="readMoreButton" />
                 </BasicSection>
             </Page>
         );
