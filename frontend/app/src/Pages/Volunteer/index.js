@@ -11,6 +11,7 @@ import Divider from '../../components/Divider';
 import VolunteerSchedule from '../../components/VolunteerSchedule';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import VolunteerGuidelines from '../../components/VolunteerGuidelines';
+import ImageSection from '../../components/ImageSection';
 
 import Page from '../PageHOC';
 
@@ -51,7 +52,7 @@ class VolunteerPage extends Component {
 
                 {/*----------------------------------------------*/}
                 {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
-                <SingleColumnSection>
+                {/* <SingleColumnSection>
                     <div className="VolunteerPage-interested">
                         <Markdown className="VolunteerPage-interested-img">
                             {getMedia('volunteerPageInterestedImage')}
@@ -62,10 +63,13 @@ class VolunteerPage extends Component {
                             source={getText('volunteerPageInterestedContent')}
                         />
                     </div>
-                </SingleColumnSection>
+                </SingleColumnSection> */}
                 {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
                 {/*----------------------------------------------*/}
-
+                <ImageSection
+                    image={getMedia('volunteerPageInterestedImage')}
+                    content={getText('volunteerPageInterestedContent')}
+                />
                 <Divider lg />
             </Page>
         );

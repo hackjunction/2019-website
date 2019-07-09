@@ -1,0 +1,20 @@
+.ImageSection {
+    display: flex;
+    flex-direction: row;
+    &--container {
+        display: flex;
+        flex-direction: row;
+        &__image {
+            width: 100%;
+            max-width: 20rem;
+            object-fit: contain;
+            margin-right: 1rem;
+        }
+
+        &__content {
+            padding-left: 10px;
+            font-size: 18px;
+            font-family: 'Lato';
+        }
+    }
+}
