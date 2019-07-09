@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 .DatesGrid {
     width: 100%;
     max-width: 980px;
@@ -8,7 +9,7 @@
     flex-wrap: wrap;
     align-items: center;
     :nth-child(even) {
-        .DatesGrid-itemContainer-item {
+        .DatesGrid--itemContainer__item {
             background: linear-gradient(
                 128deg,
                 rgba(243, 129, 0, 0.23) 0%,
@@ -16,8 +17,14 @@
             );
         }
     }
+    :last-child {
+        i {
+            display: none;
+            font-size: 50px;
+        }
+    }
 }
-.DatesGrid-itemContainer {
+.DatesGrid--itemContainer {
     width: 100%;
     i {
         margin-left: 47%;
@@ -26,7 +33,7 @@
     }
 }
 
-.DatesGrid-itemContainer-item {
+.DatesGrid--itemContainer__item {
     width: 100%;
     max-width: 600px;
     display: flex;
@@ -38,22 +45,18 @@
     padding-top: 5px;
     border: none;
     border-radius: 10px;
-    font-family: Montserrat;
-    font-weight: bold;
-    font-size: 20px;
-    background: linear-gradient(
-        142deg,
-        rgba(178, 0, 183, 0.3) 0%,
-        rgba(178, 0, 183, 0.2) 100%
-    );
-    color: #ffffff;
 
+    background: $purple-gradient;
+    color: #ffffff;
+    &-name {
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 20px;
+    }
     &-date {
-        flex: 1;
         display: flex;
         justify-content: center;
         font-size: 18px;
         font-family: Lato;
-        font-weight: 100;
     }
 }

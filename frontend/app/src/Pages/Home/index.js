@@ -69,7 +69,7 @@ class HomePage extends Component {
                     title={getText('homePageJourneyTitle')}
                     subtitle={getText('homePageJourneySubtitle')}
                 >
-                    <DatesGrid />
+                    <DatesGrid all />
                 </BasicSection>
                 <Divider lg />
                 <SingleColumnSection

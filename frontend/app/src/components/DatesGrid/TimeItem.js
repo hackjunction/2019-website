@@ -1,34 +1,19 @@
 import React from 'react';
 
-const TimeItem = (
-    { name, date, notLast = false, isLast = false } = this.props
-) => {
-    if (notLast) {
-        return (
-            <div className="DatesGrid-itemContainer">
-                <div className="DatesGrid-itemContainer-item">
-                    <span className="DatesGrid-itemContainer-item-date">
-                        {date}
-                    </span>
+const TimeItem = ({ name, date } = this.props) => {
+    return (
+        <div className="DatesGrid--itemContainer">
+            <div className="DatesGrid--itemContainer__item">
+                <span className="DatesGrid--itemContainer__item-date">
+                    {date}
+                </span>
+                <span className="DatesGrid--itemContainer__item-name">
                     {name}
-                </div>
-                <i className="icon-down-open" />
+                </span>
             </div>
-        );
-    } else if (isLast) {
-        return (
-            <div className="DatesGrid-itemContainer">
-                <div className="DatesGrid-itemContainer-item">
-                    <span className="DatesGrid-itemContainer-item-date">
-                        {date}
-                    </span>
-                    {name}
-                </div>
-            </div>
-        );
-    } else {
-        return <h1>Error fetching dates</h1>;
-    }
+            <i className="icon-down-open" />
+        </div>
+    );
 };
 
 export default TimeItem;

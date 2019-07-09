@@ -8,48 +8,43 @@ import TimeItem from './TimeItem';
 
 import './style.scss';
 
-const EventDateGrid = props => {
+const DatesGrid = props => {
     useEffect(() => {
-        props.updateEventDates();
+        updateEventDates();
     }, []);
 
-    const renderTimes = () => {
-        const length = props.EventDates.length;
-        const { junction = false } = props;
-        let counter = 1;
-        return props.EventDates.map(date => {
-            if (junction) {
-                if (date.duringJunctionWeek) {
-                    if (counter >= length) {
-                        return <TimeItem {...date} isLast />;
-                    } else {
-                        for (counter < length; counter++; ) {
-                            console.log('counter: ' + counter);
-                            return <TimeItem {...date} notLast />;
-                        }
-                    }
-                } else {
-                    return counter++;
-                }
-            } else if (counter >= length) {
-                return <TimeItem {...date} isLast />;
-            } else {
-                for (counter < length; counter++; ) {
-                    console.log('counter: ' + counter);
-                    return <TimeItem {...date} notLast />;
-                }
-            }
+    const { junction = false, volunteer = false, all = true } = props;
+
+    const renderTimes = dates => {
+        return dates.map(date => {
+            return <TimeItem {...date} />;
         });
     };
 
-    return <div className="DatesGrid">{renderTimes()}</div>;
+    if (all) {
+        return <div className="DatesGrid">{renderTimes(props.eventDates)}</div>;
+    } else if (junction) {
+        return (
+            <div className="DatesGrid">
+                {renderTimes(props.eventDatesJunction)}
+            </div>
+        );
+    } else if (volunteer) {
+        return (
+            <div className="DatesGrid">
+                {renderTimes(props.eventDatesVolunteer)}
+            </div>
+        );
+    }
 };
 
 const mapStateToProps = state => ({
-    EventDates: ContentSelectors.eventDates(state)
+    eventDates: ContentSelectors.eventDates(state),
+    eventDatesJunction: ContentSelectors.eventDatesJunctionWeek(state),
+    eventDatesVolunteer: ContentSelectors.eventDatesVolunteer(state)
 });
 
 export default connect(
     mapStateToProps,
     { updateEventDates }
-)(EventDateGrid);
+)(DatesGrid);

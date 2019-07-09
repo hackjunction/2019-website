@@ -138,3 +138,17 @@ export const tracksListAlphabetically = createSelector(
         return filter(data, 'showInList');
     }
 );
+
+export const eventDatesJunctionWeek = createSelector(
+    eventDates,
+    data => {
+        return filter(data, 'duringJunctionWeek');
+    }
+);
+
+export const eventDatesVolunteer = createSelector(
+    eventDates,
+    data => {
+        return filter(data, 'isVolunteerDate');
+    }
+);
