@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './style.scss';
 
 import { connect } from 'react-redux';
 import SocialMediaIcon from './SocialmediaIcon';
 
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
-import { updateSocialMedias } from '../../redux/dynamiccontent/actions';
 
 const SocialMediaIcons = props => {
-    useEffect(() => {
-        props.updateSocialMedias();
-    }, []);
-
     const renderIcons = () => {
         return props.data.map(item => {
             return (
@@ -32,7 +27,4 @@ const mapStateToProps = state => ({
     data: ContentSelectors.socialMedias(state)
 });
 
-export default connect(
-    mapStateToProps,
-    { updateSocialMedias }
-)(SocialMediaIcons);
+export default connect(mapStateToProps)(SocialMediaIcons);

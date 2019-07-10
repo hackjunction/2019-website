@@ -10,15 +10,14 @@ import Page from '../PageHOC';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
-import FaqGrid from '../../components/FaqGrid';
-import SingleColumnSection from '../../components/SingleColumnSection';
+
 import DatesGrid from '../../components/DatesGrid';
 import ButtonLink from '../../components/ButtonLink';
 //import HeaderImage from '../../components/HeaderImage';
 
 class JunctionWeekPage extends Component {
     render() {
-        const { getMedia, getText } = this.props;
+        const { /*getMedia,*/ getText } = this.props;
 
         return (
             <Page className="JunctionWeekPage">
@@ -34,7 +33,7 @@ class JunctionWeekPage extends Component {
                     title={getText('junctionWeekPageWeekTitle')}
                     subtitle={getText('junctionWeekPageWeekSubtitle')}
                 >
-                    <DatesGrid junction />
+                    <DatesGrid type="junction" />
                 </BasicSection>
                 <Divider md />
                 <BasicSection

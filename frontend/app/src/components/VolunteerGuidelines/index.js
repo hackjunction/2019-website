@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-import { updateVolunteerGuidelines } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 import Markdown from '../Markdown';
@@ -9,14 +8,13 @@ import Markdown from '../Markdown';
 import './style.scss';
 
 const VolunteerGuidelines = props => {
-    useEffect(() => {
-        props.updateVolunteerGuidelines();
-    }, []);
-
     const renderGuidelines = () => {
-        return props.VolunteerGuidelines.map(guideline => {
+        return props.volunteerGuidelines.map(guideline => {
             return (
-                <div className="VolunteerGuidelines-container">
+                <div
+                    className="VolunteerGuidelines-container"
+                    key={guideline._id}
+                >
                     <div className="VolunteerGuidelines-container-guideline">
                         <span className="VolunteerGuidelines-container-guideline-title">
                             {guideline.title}
@@ -34,10 +32,7 @@ const VolunteerGuidelines = props => {
 };
 
 const mapStateToProps = state => ({
-    VolunteerGuidelines: ContentSelectors.volunteerGuidelines(state)
+    volunteerGuidelines: ContentSelectors.volunteerGuidelines(state)
 });
 
-export default connect(
-    mapStateToProps,
-    { updateVolunteerGuidelines }
-)(VolunteerGuidelines);
+export default connect(mapStateToProps)(VolunteerGuidelines);

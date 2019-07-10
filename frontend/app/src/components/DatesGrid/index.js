@@ -1,50 +1,49 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-import { updateEventDates } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 import TimeItem from './TimeItem';
 
 import './style.scss';
 
+/*
+--USAGE--
+<DatesGrid type="junction" />
+            OR
+type="volunteer"
+--USAGE-- 
+*/
+
 const DatesGrid = props => {
-    useEffect(() => {
-        updateEventDates();
-    }, []);
-
-    const { junction = false, volunteer = false, all = true } = props;
-
-    const renderTimes = dates => {
+    const renderDate = dates => {
         return dates.map(date => {
-            return <TimeItem {...date} />;
+            return <TimeItem {...date} key={date._id} />;
         });
     };
+    const renderTimes = () => {
+        switch (props.type) {
+            case 'junction': {
+                return renderDate(props.eventDatesJunction);
+            }
+            case 'volunteer': {
+                return renderDate(props.eventDatesVolunteer);
+            }
+            default:
+                return renderDate(props.eventDates);
+        }
+    };
 
-    if (all) {
-        return <div className="DatesGrid">{renderTimes(props.eventDates)}</div>;
-    } else if (junction) {
-        return (
-            <div className="DatesGrid">
-                {renderTimes(props.eventDatesJunction)}
-            </div>
-        );
-    } else if (volunteer) {
-        return (
-            <div className="DatesGrid">
-                {renderTimes(props.eventDatesVolunteer)}
-            </div>
-        );
-    }
+    return <div className="DatesGrid">{renderTimes()}</div>;
 };
 
-const mapStateToProps = state => ({
-    eventDates: ContentSelectors.eventDates(state),
-    eventDatesJunction: ContentSelectors.eventDatesJunctionWeek(state),
-    eventDatesVolunteer: ContentSelectors.eventDatesVolunteer(state)
-});
+const mapStateToProps = (state, ownProps) => {
+    return {
+        type: ownProps.type,
+        eventDates: ContentSelectors.eventDates(state),
+        eventDatesJunction: ContentSelectors.eventDatesJunctionWeek(state),
+        eventDatesVolunteer: ContentSelectors.eventDatesVolunteerDates(state)
+    };
+};
 
-export default connect(
-    mapStateToProps,
-    { updateEventDates }
-)(DatesGrid);
+export default connect(mapStateToProps)(DatesGrid);

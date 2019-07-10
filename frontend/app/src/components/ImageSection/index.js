@@ -1,6 +1,5 @@
 import React from 'react';
 
-import SingleColumnSection from '../SingleColumnSection';
 import Image from '../Image';
 import Markdown from '../Markdown';
 
@@ -8,18 +7,18 @@ import './style.scss';
 
 const ImageSection = ({ image, title, content }) => {
     return (
-        <SingleColumnSection className="ImageSection">
-            <div className="ImageSection--container">
-                <Image
-                    image={image}
-                    className="ImageSection--container__image"
-                />
+        <div className="ImageSection">
+            <div className="ImageSection--left">
+                <Image image={image} className="ImageSection--left__image" />
+            </div>
+            <div className="ImageSection--right">
+                <h4 className="ImageSection--right__title">{title}</h4>
                 <Markdown
                     source={content}
-                    className="ImageSection--container__content"
+                    className="ImageSection--right__content"
                 />
             </div>
-        </SingleColumnSection>
+        </div>
     );
 };
 export default ImageSection;

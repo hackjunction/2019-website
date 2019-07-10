@@ -20,6 +20,9 @@
     },
     "duringJunctionWeek": {
       "type": "boolean"
+    },
+    "isVolunteerDate": {
+      "type": "boolean"
     }
   }
 }

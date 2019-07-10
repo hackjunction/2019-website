@@ -8,7 +8,7 @@ import * as ContentSelectors from '../../redux/staticcontent/selectors';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
-import VolunteerSchedule from '../../components/VolunteerSchedule';
+import DatesGrid from '../../components/DatesGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import VolunteerGuidelines from '../../components/VolunteerGuidelines';
 import ImageSection from '../../components/ImageSection';
@@ -25,7 +25,7 @@ class VolunteerPage extends Component {
                     title={getText('volunteerPageScheduleTitle')}
                     subtitle={getText('volunteerPageScheduleSubtitle')}
                 >
-                    <VolunteerSchedule />
+                    <DatesGrid type="volunteer" />
                 </BasicSection>
 
                 <Divider md />
@@ -49,25 +49,9 @@ class VolunteerPage extends Component {
                     <VolunteerGuidelines />
                 </SingleColumnSection>
                 <Divider md />
-
-                {/*----------------------------------------------*/}
-                {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
-                {/* <SingleColumnSection>
-                    <div className="VolunteerPage-interested">
-                        <Markdown className="VolunteerPage-interested-img">
-                            {getMedia('volunteerPageInterestedImage')}
-                        </Markdown>
-
-                        <Markdown
-                            className="VolunteerPage-interested-text"
-                            source={getText('volunteerPageInterestedContent')}
-                        />
-                    </div>
-                </SingleColumnSection> */}
-                {/*THIS SECTION WILL BE TURNED IN TO A COMPONENT*/}
-                {/*----------------------------------------------*/}
                 <ImageSection
                     image={getMedia('volunteerPageInterestedImage')}
+                    title={getText('volunteerPageInterestedTitle')}
                     content={getText('volunteerPageInterestedContent')}
                 />
                 <Divider lg />

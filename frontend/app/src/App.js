@@ -16,9 +16,11 @@ import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
+import * as DynamicContentActions from './redux/dynamiccontent/actions';
 
 class App extends Component {
     async componentDidMount() {
+        this.props.updateDynamicContent();
         this.props.updateStaticContent();
     }
 
@@ -54,5 +56,8 @@ class App extends Component {
 
 export default connect(
     null,
-    { updateStaticContent: StaticContentActions.updateStaticContent }
+    {
+        updateDynamicContent: DynamicContentActions.updateDynamicContent,
+        updateStaticContent: StaticContentActions.updateStaticContent
+    }
 )(App);

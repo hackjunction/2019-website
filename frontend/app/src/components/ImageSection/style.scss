@@ -1,18 +1,49 @@
+@import '../../styles/variables.scss';
 .ImageSection {
     display: flex;
-    flex-direction: row;
-    &--container {
-        display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
+
+    @include bp-full {
         flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &--left {
+        width: 100%;
+        max-width: 20rem;
+        flex-direction: column;
+        align-items: flex-start;
+
         &__image {
             width: 100%;
-            max-width: 20rem;
             object-fit: contain;
             margin-right: 1rem;
         }
+    }
 
+    &--right {
+        width: 100%;
+        max-width: 620px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include bp-full {
+            margin-left: 25px;
+            align-items: flex-start;
+        }
+        &__title {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Montserrat';
+        }
         &__content {
-            padding-left: 10px;
             font-size: 18px;
             font-family: 'Lato';
         }

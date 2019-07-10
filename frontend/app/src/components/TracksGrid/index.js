@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import { updateTracks } from '../../redux/dynamiccontent/actions';
+//import { updateTracks } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import './style.scss';
 
 const TracksGrid = props => {
-    useEffect(() => {
+    /* useEffect(() => {
         console.log('Rendered for the first time');
         props.updateTracks();
-    }, []);
+    }, []); */
     const renderTracks = () => {
         return props.tracks.map(track => {
             return (
-                <div className="TrackGridItem">
+                <div className="TrackGridItem" key={track._id}>
                     <button className="TrackGridItem--button">
                         {track.name}
                     </button>
@@ -28,7 +28,4 @@ const mapStateToProps = state => ({
     tracks: ContentSelectors.tracks(state)
 });
 
-export default connect(
-    mapStateToProps,
-    { updateTracks }
-)(TracksGrid);
+export default connect(mapStateToProps)(TracksGrid);

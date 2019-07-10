@@ -7,3 +7,5 @@ export const UPDATE_VOLUNTEERDATES = 'dynamiccontent/UPDATE_VOLUNTEERDATES';
 export const UPDATE_VOLUNTEERGUIDELINES =
     'dynamiccontent/UPDATE_VOLUNTEERGUIDELINES';
 export const UPDATE_SOCIALMEDIAS = 'dynamiccontent/UPDATE_SOCIALMEDIAS';
+
+export const UPDATE_DYNAMIC_CONTENT = 'dynamiccontent/UPDATE_DYNAMIC_CONTENT';

@@ -24,7 +24,6 @@ import Page from '../PageHOC';
 class HomePage extends Component {
     render() {
         const { getMedia, getText } = this.props;
-
         return (
             <Page className="HomePage">
                 <HeroImage image={getMedia('homePageHeaderImage')}>
@@ -69,7 +68,7 @@ class HomePage extends Component {
                     title={getText('homePageJourneyTitle')}
                     subtitle={getText('homePageJourneySubtitle')}
                 >
-                    <DatesGrid all />
+                    <DatesGrid />
                 </BasicSection>
                 <Divider lg />
                 <SingleColumnSection

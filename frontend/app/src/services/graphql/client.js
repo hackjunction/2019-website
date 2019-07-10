@@ -11,22 +11,74 @@ const client = new ApolloClient({
  */
 
 export const getStaticContent = () => {
-    return client
-        .query({
-            query: gql`
-                query {
-                    textfields {
-                        key
-                        content
-                    }
-                    mediafields {
-                        key
-                        media {
-                            url
-                            public_id
-                        }
+    return client.query({
+        query: gql`
+            query {
+                textfields {
+                    key
+                    content
+                }
+                mediafields {
+                    key
+                    media {
+                        url
+                        public_id
                     }
                 }
-            `
-        })
+            }
+        `
+    });
+};
+
+export const getDynamicContent = () => {
+    return client.query({
+        query: gql`
+            query {
+                faqs {
+                    _id
+                    question
+                    answer
+                }
+                partners {
+                    _id
+                    name
+                    logo {
+                        url
+                        public_id
+                    }
+                }
+                socialmedias {
+                    _id
+                    name
+                    link
+                    icon {
+                        url
+                        public_id
+                    }
+                }
+                stats {
+                    _id
+                    label
+                    value
+                }
+                tracks {
+                    _id
+                    name
+                    showInList
+                }
+                volunteerguidelines {
+                    _id
+                    title
+                    content
+                }
+                eventdates {
+                    _id
+                    name
+                    date
+                    duringJunctionWeek
+                    isVolunteerDate
+                }
+            }
+        `
+    });
 };
