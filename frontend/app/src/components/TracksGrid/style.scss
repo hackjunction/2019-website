@@ -1,43 +1,16 @@
+@import '../../styles/variables.scss';
 .TracksGrid {
     width: 100%;
     max-width: 980px;
-    margin: 0 auto;
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
-    :nth-child(even) {
-        .TrackGridItem--button {
-            background: linear-gradient(
-                124deg,
-                rgba(243, 129, 0, 0.23) 0%,
-                rgba(122, 65, 0, 0.22) 100%
-            );
-        }
-    }
-}
+    margin: 0 auto;
 
-.TrackGridItem {
-    width: 100%;
-    max-width: 470px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1%;
-
-    &--button {
-        font-weight: bold;
-        font-size: 20px;
-        font-family: Montserrat;
-        text-transform: uppercase;
-        height: 60px;
-        border-radius: 10px;
-        border: none;
-        color: white;
-        background: linear-gradient(
-            136deg,
-            rgba(178, 0, 183, 0.3) 0%,
-            rgba(178, 0, 183, 0.2) 100%
-        );
+    &--container {
+        width: 100%;
+        max-width: 470px;
+        margin-bottom: -1em;
     }
 }

@@ -13,21 +13,25 @@ import Divider from '../../components/Divider';
 
 import DatesGrid from '../../components/DatesGrid';
 import ButtonLink from '../../components/ButtonLink';
-//import HeaderImage from '../../components/HeaderImage';
+import HeroImage from '../../components/HeroImage';
+import BasicHeader from '../../components/BasicHeader';
 
 class JunctionWeekPage extends Component {
     render() {
-        const { /*getMedia,*/ getText } = this.props;
+        const { getMedia, getText } = this.props;
 
         return (
             <Page className="JunctionWeekPage">
-                {/*  <HeaderImage
+                <HeroImage
                     image={getMedia('junctionWeekPageHeaderImage')}
                     alt="Header image"
                 >
-                    <Markdown source={getText('junctionWeekPageIntroText')} />
-                </HeaderImage>
-                */}
+                    <BasicHeader
+                        title={getText('junctionWeekPageHeaderTitle')}
+                        body={getText('junctionWeekPageHeaderContent')}
+                    />
+                </HeroImage>
+
                 <Divider md />
                 <BasicSection
                     title={getText('junctionWeekPageWeekTitle')}
@@ -58,8 +62,38 @@ class JunctionWeekPage extends Component {
                     <Markdown
                         source={getText('junctionWeekPageHeltechContent')}
                     />
-                    <button className="readMoreButton" />
+                    <ButtonLink
+                        text={getText('junctionWeekPageHeltechButton')}
+                        link={getText('junctionWeekPageHeltechButtonLink')}
+                        size="sm"
+                        align="left"
+                    />
                 </BasicSection>
+                <BasicSection
+                    title={getText('junctionWeekPage2019Title')}
+                    subtitle={getText('junctionWeekPage2019Subtitle')}
+                >
+                    <Markdown source={getText('junctionWeekPage2019Content')} />
+                    <ButtonLink
+                        text={getText('junctionWeekPage2019Button')}
+                        link={getText('junctionWeekPage2019ButtonLink')}
+                        size="sm"
+                        align="left"
+                    />
+                </BasicSection>
+                <BasicSection
+                    title={getText('junctionWeekPageElseTitle')}
+                    subtitle={getText('junctionWeekPageElseSubtitle')}
+                >
+                    <Markdown source={getText('junctionWeekPageElseContent')} />
+                    <ButtonLink
+                        text={getText('junctionWeekPageElseButton')}
+                        link={getText('junctionWeekPageElseButtonLink')}
+                        size="sm"
+                        align="left"
+                    />
+                </BasicSection>
+                <Divider lg />
             </Page>
         );
     }

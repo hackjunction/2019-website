@@ -11,17 +11,19 @@ const VolunteerGuidelines = props => {
     const renderGuidelines = () => {
         return props.volunteerGuidelines.map(guideline => {
             return (
-                <div
-                    className="VolunteerGuidelines-container"
-                    key={guideline._id}
-                >
-                    <div className="VolunteerGuidelines-container-guideline">
-                        <span className="VolunteerGuidelines-container-guideline-title">
+                <div>
+                    {/* There's no reason for this to exist but for 
+                    some reason needs to be here for the styling to work*/}
+                    <div
+                        className="VolunteerGuidelines--container"
+                        key={guideline._id}
+                    >
+                        <span className="VolunteerGuidelines--container__title">
                             {guideline.title}
                         </span>
                         <Markdown
                             source={guideline.content}
-                            className="VolunteerGuidelines-container-guideline-content"
+                            className="VolunteerGuidelines--container__content"
                         />
                     </div>
                 </div>

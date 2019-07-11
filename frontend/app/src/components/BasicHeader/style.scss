@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+.BasicHeader {
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include bp-full {
+        align-items: stretch;
+    }
+
+    &--title {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 650px;
+        margin: 0;
+        text-align: center;
+        font-size: 40px;
+        padding: $padding-double;
+
+        -webkit-animation: fadein-left 0.5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein-left 0.5s; /* Firefox < 16 */
+        -ms-animation: fadein-left 0.5s; /* Internet Explorer */
+        -o-animation: fadein-left 0.5s; /* Opera < 12.1 */
+        animation: fadein-left 0.5s;
+
+        @include bp-med {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        @include bp-full {
+            margin-top: 100px;
+            text-align: left;
+            align-items: flex-start;
+            align-self: flex-start;
+        }
+    }
+
+    &--body {
+        flex: 2;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 650px;
+        align-self: flex-end;
+        margin: 0;
+        display: none;
+
+        -webkit-animation: fadein-bottom 0.8s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein-bottom 0.8s; /* Firefox < 16 */
+        -ms-animation: fadein-bottom 0.8s; /* Internet Explorer */
+        -o-animation: fadein-bottom 0.8s; /* Opera < 12.1 */
+        animation: fadein-bottom 0.8s;
+
+        @include bp-full {
+            display: flex;
+        }
+    }
+    &--children {
+        max-width: 650px;
+
+        width: 100%;
+        flex: 3;
+        margin-top: -6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: flex-end;
+        align-items: flex-start;
+    }
+}

@@ -16,7 +16,6 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
 import DatesGrid from '../../components/DatesGrid';
 import PartnersGrid from '../../components/PartnersGrid';
-//import NewsLetterForm from '../../components/NewsLetterForm';
 import ButtonLink from '../../components/ButtonLink';
 
 import Page from '../PageHOC';
@@ -76,6 +75,7 @@ class HomePage extends Component {
                     subtitle={getText('tracksSubtitle')}
                 />
                 <TracksGrid />
+
                 <Divider md />
                 <SingleColumnSection>
                     <Markdown source={getText('homePageVideoLink')} />

@@ -14,6 +14,7 @@ import InfoPage from './Pages/Info';
 import JunctionWeekPage from './Pages/Junction-week';
 import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
+import TeamPage from './Pages/Team';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -43,6 +44,7 @@ class App extends Component {
                                 path="/volunteer"
                                 component={VolunteerPage}
                             />
+                            <Route exact path="/team" component={TeamPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </main>

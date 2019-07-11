@@ -1,21 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-//import { updateTracks } from '../../redux/dynamiccontent/actions';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
+
+import ButtonLink from '../ButtonLink';
+
 import './style.scss';
 
 const TracksGrid = props => {
-    /* useEffect(() => {
-        console.log('Rendered for the first time');
-        props.updateTracks();
-    }, []); */
     const renderTracks = () => {
-        return props.tracks.map(track => {
+        return props.tracks.map((track, index) => {
             return (
-                <div className="TrackGridItem" key={track._id}>
-                    <button className="TrackGridItem--button">
-                        {track.name}
-                    </button>
+                <div className="TracksGrid--container">
+                    <ButtonLink
+                        text={track.name}
+                        link={track.link}
+                        className="TracksGrid--container__button"
+                        color={index % 2 === 1 ? 'brown' : 'purple'}
+                    />
                 </div>
             );
         });

@@ -12,6 +12,9 @@ import DatesGrid from '../../components/DatesGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import VolunteerGuidelines from '../../components/VolunteerGuidelines';
 import ImageSection from '../../components/ImageSection';
+import HeroImage from '../../components/HeroImage';
+import BasicHeader from '../../components/BasicHeader';
+import ButtonLink from '../../components/ButtonLink';
 
 import Page from '../PageHOC';
 
@@ -20,6 +23,20 @@ class VolunteerPage extends Component {
         const { getMedia, getText } = this.props;
         return (
             <Page className="VolunteerPage">
+                <HeroImage image={getMedia('volunteerPageHeaderImage')}>
+                    <Divider sm />
+                    <BasicHeader
+                        title={getText('volunteerPageHeaderTitle')}
+                        body={getText('volunteerPageHeaderContent')}
+                    >
+                        <ButtonLink
+                            text={getText('volunteerPageHeaderButton')}
+                            link={getText('volunteerPageHeaderButtonLink')}
+                            color="purple"
+                            size="md"
+                        />
+                    </BasicHeader>
+                </HeroImage>
                 <Divider sm />
                 <BasicSection
                     title={getText('volunteerPageScheduleTitle')}

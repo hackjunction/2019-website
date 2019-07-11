@@ -2,16 +2,21 @@
 
 .VolunteerGuidelines {
     :nth-child(even) {
-        .VolunteerGuidelines-container-guideline {
+        .VolunteerGuidelines--container {
             background: $brown-gradient;
         }
     }
-    &-container {
-        width: 100%;
-    }
 }
 
-.VolunteerGuidelines-container-guideline {
+.VolunteerGuidelines--container {
+    display: flex;
+
+    @include bp-full {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
     max-width: $content-max-width;
     margin-bottom: 2%;
     width: 100%;
@@ -19,24 +24,19 @@
     border-radius: $border-radius;
     color: $text-light;
     background: $purple-gradient;
-    text-align: center;
 
-    &-title {
-        padding-top: 39px;
-        display: flex;
-        margin-top: 10px;
-        margin-left: 15%;
+    &__title {
         text-align: center;
+        padding-right: 1rem;
+        width: 100%;
+        max-width: 20rem;
         font-size: 20px;
         font-family: $font-title;
         font-weight: bold;
     }
-    &-content {
-        margin-top: -60px;
-        display: flex;
-        flex-direction: column;
-        margin-left: 37%;
-        margin-right: 10%;
+    &__content {
+        width: 100%;
+        max-width: 620px;
         font-size: 18px;
         font-family: $font-body;
     }

@@ -8,13 +8,14 @@ import * as ContentSelectors from '../../redux/staticcontent/selectors';
 import Page from '../PageHOC';
 
 import HeroImage from '../../components/HeroImage';
-import HeroCTA from '../../components/HeroCTA';
+//import HeroCTA from '../../components/HeroCTA';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
 import FaqGrid from '../../components/FaqGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import ButtonLink from '../../components/ButtonLink';
+import BasicHeader from '../../components/BasicHeader';
 
 class InfoPage extends Component {
     render() {
@@ -23,11 +24,9 @@ class InfoPage extends Component {
         return (
             <Page className="InfoPage">
                 <HeroImage image={getMedia('infoPageHeaderImage')}>
-                    <HeroCTA
-                        image={getMedia('infoPageHeroCtaLogo')}
-                        subtitle={getText('infoPageHeroCtaSubtitle')}
-                        ctaText={getText('infoPageHeroCtaText')}
-                        ctaLink={getText('infoPageHeroCtaLink')}
+                    <BasicHeader
+                        title={getText('infoPageHeaderTitle')}
+                        body={getText('infoPageHeaderContent')}
                     />
                 </HeroImage>
 

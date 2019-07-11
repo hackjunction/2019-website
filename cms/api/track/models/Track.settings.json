@@ -20,6 +20,9 @@
     "showInList": {
       "default": true,
       "type": "boolean"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
