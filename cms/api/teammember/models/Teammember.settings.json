@@ -1,0 +1,45 @@
+{
+  "connection": "default",
+  "collectionName": "teammember",
+  "info": {
+    "name": "teammember",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "gif": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "teamFinland": {
+      "type": "boolean"
+    },
+    "teamGlobal": {
+      "type": "boolean"
+    }
+  }
+}

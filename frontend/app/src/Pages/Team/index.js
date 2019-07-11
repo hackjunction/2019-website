@@ -9,6 +9,7 @@ import * as ContentSelectors from '../../redux/staticcontent/selectors';
 import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
 import SingleColumnSection from '../../components/SingleColumnSection';
+import TeamMemberGrid from '../../components/TeamMemberGrid';
 
 import Page from '../PageHOC';
 
@@ -24,8 +25,7 @@ class TeamPage extends Component {
                     />
                 </HeroImage>
                 <SingleColumnSection title={getText('teamPageTeamTitle')} />
-
-                <p>Hello</p>
+                <TeamMemberGrid type="finland" />
             </Page>
         );
     }

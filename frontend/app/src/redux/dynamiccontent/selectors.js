@@ -18,6 +18,10 @@ export const volunteerGuidelines = state =>
 export const socialMedias = state =>
     state.dynamicContent.content.socialmedias || [];
 
+export const teamMembers = state =>
+    state.dynamicContent.content.teammembers || [];
+
+//----------------------------------------------------------------
 export const shouldUpdate = createSelector(
     contentUpdated,
     updated => {
@@ -59,5 +63,26 @@ export const eventDatesVolunteerDates = createSelector(
     eventDates,
     data => {
         return filter(data, 'isVolunteerDate');
+    }
+);
+
+export const teamMembersByPriority = createSelector(
+    teamMembers,
+    data => {
+        return sortBy(data, 'priority');
+    }
+);
+
+export const finlandByTeamPriority = createSelector(
+    teamMembersByPriority,
+    data => {
+        return filter(data, 'teamFinland');
+    }
+);
+
+export const globalByTeamPriority = createSelector(
+    teamMembersByPriority,
+    data => {
+        return filter(data, 'teamGlobal');
     }
 );

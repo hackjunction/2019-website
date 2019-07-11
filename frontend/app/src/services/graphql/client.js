@@ -78,6 +78,23 @@ export const getDynamicContent = () => {
                     duringJunctionWeek
                     isVolunteerDate
                 }
+                teammembers {
+                    _id
+                    fullName
+                    email
+                    title
+                    priority
+                    teamFinland
+                    teamGlobal
+                    gif {
+                        url
+                        public_id
+                    }
+                    image {
+                        url
+                        public_id
+                    }
+                }
             }
         `
     });
