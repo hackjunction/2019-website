@@ -23,6 +23,9 @@
     },
     "isVolunteerDate": {
       "type": "boolean"
+    },
+    "showOnFrontPage": {
+      "type": "boolean"
     }
   }
 }

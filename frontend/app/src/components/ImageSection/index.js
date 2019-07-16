@@ -5,9 +5,10 @@ import Markdown from '../Markdown';
 
 import './style.scss';
 
-const ImageSection = ({ image, title, content }) => {
+const ImageSection = ({ image, title, content, fontColor = 'white' }) => {
+    let className = `ImageSection ImageSection--fontColor__${fontColor}`;
     return (
-        <div className="ImageSection">
+        <div className={className}>
             <div className="ImageSection--left">
                 <Image image={image} className="ImageSection--left__image" />
             </div>

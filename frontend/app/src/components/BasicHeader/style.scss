@@ -8,7 +8,7 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
     @include bp-full {
         align-items: stretch;
@@ -47,6 +47,7 @@
     }
 
     &--body {
+        display: flex;
         flex: 2;
         flex-direction: column;
         justify-content: flex-start;
@@ -55,8 +56,6 @@
         max-width: 650px;
         align-self: flex-end;
         margin: 0;
-        display: none;
-
         -webkit-animation: fadein-bottom 0.8s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein-bottom 0.8s; /* Firefox < 16 */
         -ms-animation: fadein-bottom 0.8s; /* Internet Explorer */

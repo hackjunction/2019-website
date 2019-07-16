@@ -18,6 +18,10 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "partner"
     }
   }
 }

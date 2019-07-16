@@ -11,10 +11,11 @@ import Footer from './components/Footer';
 
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
-import JunctionWeekPage from './Pages/Junction-week';
+import JunctionWeekPage from './Pages/JunctionWeek';
 import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
+import TracksAndChallengesPage from './Pages/TracksAndChallenges';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -36,7 +37,7 @@ class App extends Component {
                             <Route exact path="/info" component={InfoPage} />
                             <Route
                                 exact
-                                path="/junction-week"
+                                path="/junctionweek"
                                 component={JunctionWeekPage}
                             />
                             <Route
@@ -45,6 +46,12 @@ class App extends Component {
                                 component={VolunteerPage}
                             />
                             <Route exact path="/team" component={TeamPage} />
+                            <Route
+                                exact
+                                path="/tracksAndChallenges"
+                                component={TracksAndChallengesPage}
+                            />
+
                             <Route component={NotFound} />
                         </Switch>
                     </main>

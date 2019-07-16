@@ -21,29 +21,25 @@ const DatesGrid = props => {
             return <TimeItem {...date} key={date._id} />;
         });
     };
-    const renderTimes = () => {
-        switch (props.type) {
-            case 'junction': {
-                return renderDate(props.eventDatesJunction);
-            }
-            case 'volunteer': {
-                return renderDate(props.eventDatesVolunteer);
-            }
-            default:
-                return renderDate(props.eventDates);
-        }
-    };
-
-    return <div className="DatesGrid">{renderTimes()}</div>;
+    return <div className="DatesGrid">{renderDate(props.eventDates)}</div>;
 };
 
 const mapStateToProps = (state, ownProps) => {
-    return {
-        type: ownProps.type,
-        eventDates: ContentSelectors.eventDates(state),
-        eventDatesJunction: ContentSelectors.eventDatesJunctionWeek(state),
-        eventDatesVolunteer: ContentSelectors.eventDatesVolunteerDates(state)
-    };
+    const type = ownProps.type;
+    switch (type) {
+        case 'junction':
+            return {
+                eventDates: ContentSelectors.eventDatesJunctionWeek(state)
+            };
+        case 'volunteer':
+            return {
+                eventDates: ContentSelectors.eventDatesVolunteerDates(state)
+            };
+        case 'frontPage':
+            return { eventDates: ContentSelectors.eventDatesFrontPage(state) };
+        default:
+            return { eventDates: ContentSelectors.eventDates(state) };
+    }
 };
 
 export default connect(mapStateToProps)(DatesGrid);

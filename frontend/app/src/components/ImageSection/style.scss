@@ -48,4 +48,27 @@
             font-family: 'Lato';
         }
     }
+
+    &--fontColor {
+        &__white {
+            .ImageSection--right {
+                &__title {
+                    color: white;
+                }
+                &__content {
+                    color: white;
+                }
+            }
+        }
+        &__black {
+            .ImageSection--right {
+                &__content {
+                    color: black;
+                }
+                &__title {
+                    color: black;
+                }
+            }
+        }
+    }
 }

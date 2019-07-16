@@ -29,16 +29,17 @@ class HomePage extends Component {
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
-                    />
+                    >
+                        <ButtonLink
+                            text={getText('homePageApplyButton')}
+                            link={getText('homePageApplyButtonLink')}
+                            size="lg"
+                            color="purple"
+                            align="center"
+                        />
+                    </HeroCTA>
                 </HeroImage>
-                <ButtonLink
-                    text={getText('homePageApplyButton')}
-                    link={getText('homePageApplyButtonLink')}
-                    size="lg"
-                    color="purple"
-                    align="center"
-                />
-                <Divider lg />
+
                 <SingleColumnSection center>
                     <ButtonLink
                         text={getText('homePageInfoButton')}
@@ -67,12 +68,12 @@ class HomePage extends Component {
                     title={getText('homePageJourneyTitle')}
                     subtitle={getText('homePageJourneySubtitle')}
                 >
-                    <DatesGrid />
+                    <DatesGrid type="frontPage" />
                 </BasicSection>
                 <Divider lg />
                 <SingleColumnSection
-                    title={getText('tracksTitle')}
-                    subtitle={getText('tracksSubtitle')}
+                    title={getText('homePageTracksTitle')}
+                    subtitle={getText('homePageTracksSubtitle')}
                 />
                 <TracksGrid />
 

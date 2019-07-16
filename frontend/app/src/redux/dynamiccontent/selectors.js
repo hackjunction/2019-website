@@ -21,6 +21,7 @@ export const socialMedias = state =>
 export const teamMembers = state =>
     state.dynamicContent.content.teammembers || [];
 
+export const challenges = state => state.dynamicContent.challenges || [];
 //----------------------------------------------------------------
 export const shouldUpdate = createSelector(
     contentUpdated,
@@ -63,6 +64,12 @@ export const eventDatesVolunteerDates = createSelector(
     eventDates,
     data => {
         return filter(data, 'isVolunteerDate');
+    }
+);
+export const eventDatesFrontPage = createSelector(
+    eventDates,
+    data => {
+        return filter(data, 'showOnFrontPage');
     }
 );
 

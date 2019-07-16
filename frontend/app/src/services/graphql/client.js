@@ -64,7 +64,17 @@ export const getDynamicContent = () => {
                 tracks {
                     _id
                     name
-                    showInList
+                    description
+                    challenges {
+                        name
+                        content
+                        partner {
+                            logo {
+                                url
+                                public_id
+                            }
+                        }
+                    }
                 }
                 volunteerguidelines {
                     _id
@@ -77,6 +87,7 @@ export const getDynamicContent = () => {
                     date
                     duringJunctionWeek
                     isVolunteerDate
+                    showOnFrontPage
                 }
                 teammembers {
                     _id
@@ -93,6 +104,18 @@ export const getDynamicContent = () => {
                     image {
                         url
                         public_id
+                    }
+                }
+                challenges {
+                    _id
+                    name
+                    content
+                    contentShort
+                    partner {
+                        logo {
+                            url
+                            public_id
+                        }
                     }
                 }
             }

@@ -10,7 +10,7 @@ const TracksGrid = props => {
     const renderTracks = () => {
         return props.tracks.map((track, index) => {
             return (
-                <div className="TracksGrid--container">
+                <div className="TracksGrid--container" key={track._id}>
                     <ButtonLink
                         text={track.name}
                         link={track.link}

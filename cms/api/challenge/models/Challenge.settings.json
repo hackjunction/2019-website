@@ -1,8 +1,8 @@
 {
   "connection": "default",
-  "collectionName": "track",
+  "collectionName": "challenge",
   "info": {
-    "name": "track",
+    "name": "challenge",
     "description": ""
   },
   "options": {
@@ -14,18 +14,21 @@
   "attributes": {
     "name": {
       "required": true,
-      "unique": true,
       "type": "string"
     },
-    "link": {
-      "type": "string"
-    },
-    "description": {
+    "content": {
       "type": "text"
     },
-    "challenges": {
-      "collection": "challenge",
-      "via": "track"
+    "partner": {
+      "model": "partner",
+      "via": "challenges"
+    },
+    "contentShort": {
+      "type": "text"
+    },
+    "track": {
+      "model": "track",
+      "via": "challenges"
     }
   }
 }
