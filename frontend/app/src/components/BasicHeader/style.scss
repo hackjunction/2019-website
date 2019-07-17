@@ -8,7 +8,7 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
 
     @include bp-full {
         align-items: stretch;
@@ -35,7 +35,7 @@
 
         @include bp-med {
             text-align: center;
-            font-size: 60px;
+            font-size: 80px;
         }
 
         @include bp-full {

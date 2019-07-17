@@ -118,6 +118,15 @@ export const getDynamicContent = () => {
                         }
                     }
                 }
+                footerimages {
+                    _id
+                    text
+                    link
+                    image {
+                        url
+                        public_id
+                    }
+                }
             }
         `
     });

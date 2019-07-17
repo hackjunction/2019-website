@@ -21,7 +21,10 @@ export const socialMedias = state =>
 export const teamMembers = state =>
     state.dynamicContent.content.teammembers || [];
 
-export const challenges = state => state.dynamicContent.challenges || [];
+export const challenges = state =>
+    state.dynamicContent.content.challenges || [];
+export const footerImages = state =>
+    state.dynamicContent.content.footerimages || [];
 //----------------------------------------------------------------
 export const shouldUpdate = createSelector(
     contentUpdated,

@@ -8,6 +8,7 @@ import './App.scss';
 import Header from './components/Header';
 import EditorTools from './components/EditorTools';
 import Footer from './components/Footer';
+import FooterImageButtons from './components/FooterImageButtons';
 
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
@@ -55,6 +56,7 @@ class App extends Component {
                             <Route component={NotFound} />
                         </Switch>
                     </main>
+                    <FooterImageButtons />
                     <Footer />
                     <EditorTools />
                 </div>
