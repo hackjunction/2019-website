@@ -1,4 +1,4 @@
-@import '../../../styles/variables';
+@import '../../../styles/variables.scss';
 
 .SubmitButton {
     display: flex;
@@ -8,11 +8,11 @@
     flex: 1;
 
     &--button {
-        background: transparent;
-        width: 280px;
-        height: 42px;
+        background: $brown-gradient;
+        width: 310px;
+        height: 60px;
         border-radius: 7px;
-        border: 2px solid $white;
+        border: none;
         cursor: pointer;
         transition: all 0.2s ease;
 

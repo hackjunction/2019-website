@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import './style.scss';
 
@@ -18,102 +18,99 @@ import * as ContentSelectors from '../../redux/staticcontent/selectors';
 import NewsLetterService from '../../services/newsletter';
 import countries from '../../data/countries.json';
 
-class NewsLetterForm extends Component {
-    render() {
-        const { getMedia, getText } = this.props;
-        const fields = {
-            email: {
-                ...useFormField('', value => {
-                    if (!isEmail(value)) {
-                        return 'This is not a valid email';
-                    }
+const NewsLetterForm = props => {
+    const { getText } = props;
+    const fields = {
+        email: {
+            ...useFormField('', value => {
+                if (!isEmail(value)) {
+                    return 'This is not a valid email';
+                }
 
-                    return null;
-                })
-            },
-            country: {
-                ...useFormField('', value => {
-                    if (!isCountry(value)) {
-                        return 'Please choose a country';
-                    }
+                return null;
+            })
+        },
+        country: {
+            ...useFormField('', value => {
+                if (!isCountry(value)) {
+                    return 'Please choose a country';
+                }
 
-                    return null;
-                })
-            }
-        };
-
-        const [formLoading, setFormLoading] = useState(false);
-        const [formError, setFormError] = useState(false);
-        const [formSuccess, setFormSuccess] = useState(false);
-
-        async function handleFormSuccess(data) {
-            setFormLoading(true);
-
-            minDelay(NewsLetterService.create(data), 1000)
-                .then(() => {
-                    setFormSuccess(true);
-                    setFormLoading(false);
-                })
-                .catch(e => {
-                    console.log('Form error', e);
-                    setFormError(true);
-                    setFormLoading(false);
-                });
+                return null;
+            })
         }
+    };
 
-        function handleFormError(errors) {
-            console.log('ERROR', errors);
-        }
+    const [formLoading, setFormLoading] = useState(false);
+    const [formError, setFormError] = useState(false);
+    const [formSuccess, setFormSuccess] = useState(false);
 
-        const options = countries.map(c => ({ value: c, label: c }));
+    async function handleFormSuccess(data) {
+        setFormLoading(true);
 
-        return (
-            <BasicSection
-                titleKey={getText('newsletterFormTitle')}
-                subtitleKey={getText('newsletterFormSubtitle')}
-            >
-                <Form
-                    fields={fields}
-                    onError={handleFormError}
-                    onSuccess={handleFormSuccess}
-                    loading={formLoading}
-                    error={formError}
-                    success={formSuccess}
-                    errorTitle={'Oops, something went wrong'}
-                    errorMessage={
-                        'Are you connected to the internet? Please try again.'
-                    }
-                    successTitle={'Thanks for subscribing!'}
-                    successMessage={''}
-                >
-                    <FormRow>
-                        <TextInput
-                            name="email"
-                            placeholder="Email"
-                            label="Email"
-                            {...fields.email}
-                        />
-                        <DropDown
-                            name="country"
-                            placeholder="Choose country"
-                            label="Country"
-                            options={options}
-                            {...fields.country}
-                        />
-                    </FormRow>
-                    <FormRow>
-                        <SubmitButton text="Subscribe" />
-                    </FormRow>
-                </Form>
-            </BasicSection>
-        );
+        minDelay(NewsLetterService.create(data), 1000)
+            .then(() => {
+                setFormSuccess(true);
+                setFormLoading(false);
+            })
+            .catch(e => {
+                console.log('Form Error', e);
+                setFormError(true);
+                setFormLoading(false);
+            });
     }
-}
+    function handleFormError(errors) {
+        console.log('ERROR: ' + errors);
+    }
+
+    const options = countries.map(c => ({ value: c, label: c }));
+
+    return (
+        <BasicSection
+            title={getText('newsletterFormTitle')}
+            subtitle={getText('newsletterFormSubtitle')}
+        >
+            <Form
+                fields={fields}
+                onError={handleFormError}
+                onSuccess={handleFormSuccess}
+                loading={formLoading}
+                error={formError}
+                success={formSuccess}
+                errorTitle={'Oops, something went wrong'}
+                errorMessage={
+                    'Are you connected to the internet? Please try again.'
+                }
+                successTitle={'Thanks for subscribing!'}
+                successMessage={''}
+            >
+                <FormRow>
+                    <TextInput
+                        name="email"
+                        placeholder="Email"
+                        label="Email"
+                        {...fields.email}
+                    />
+                    <DropDown
+                        name="country"
+                        placeholder="Choose country"
+                        label="Country"
+                        options={options}
+                        {...fields.country}
+                    />
+                </FormRow>
+                <FormRow>
+                    <SubmitButton text={getText('newsletterSubmitButton')} />
+                </FormRow>
+            </Form>
+        </BasicSection>
+    );
+};
 
 const mapStateToProps = state => {
     return {
-        getText: ContentSelectors.buildGetText(state),
-        getMedia: ContentSelectors.buildGetMedia(state)
+        getText: ContentSelectors.buildGetText(state)
     };
 };
+
 export default connect(mapStateToProps)(NewsLetterForm);

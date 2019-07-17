@@ -105,7 +105,7 @@ class HomePage extends Component {
                         align="center"
                     />
                 </SingleColumnSection>
-                <Divider lg />
+                <Divider md />
             </Page>
         );
     }

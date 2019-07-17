@@ -9,6 +9,8 @@ import Header from './components/Header';
 import EditorTools from './components/EditorTools';
 import Footer from './components/Footer';
 import FooterImageButtons from './components/FooterImageButtons';
+import NewsLetterForm from './components/NewsLetterForm';
+import Divider from './components/Divider';
 
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
@@ -55,7 +57,11 @@ class App extends Component {
 
                             <Route component={NotFound} />
                         </Switch>
+
+                        <NewsLetterForm />
+                        <Divider md />
                     </main>
+
                     <FooterImageButtons />
                     <Footer />
                     <EditorTools />
