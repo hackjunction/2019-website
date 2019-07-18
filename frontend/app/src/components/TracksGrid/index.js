@@ -12,8 +12,9 @@ const TracksGrid = props => {
             return (
                 <div className="TracksGrid--container" key={track._id}>
                     <ButtonLink
+                        type="anchor"
                         text={track.name}
-                        link={track.link}
+                        link={'/tracksandchallenges#' + track.name}
                         className="TracksGrid--container__button"
                         color={index % 2 === 1 ? 'brown' : 'purple'}
                     />
@@ -25,8 +26,10 @@ const TracksGrid = props => {
     return <div className="TracksGrid">{renderTracks()}</div>;
 };
 
-const mapStateToProps = state => ({
-    tracks: ContentSelectors.tracks(state)
-});
+const mapStateToProps = state => {
+    return {
+        tracks: ContentSelectors.tracks(state)
+    };
+};
 
 export default connect(mapStateToProps)(TracksGrid);
