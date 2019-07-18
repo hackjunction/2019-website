@@ -21,12 +21,12 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+
         max-width: 650px;
         margin: 0;
         text-align: center;
         font-size: 40px;
         padding: $padding-double;
-
         -webkit-animation: fadein-left 0.5s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein-left 0.5s; /* Firefox < 16 */
         -ms-animation: fadein-left 0.5s; /* Internet Explorer */
@@ -39,6 +39,7 @@
         }
 
         @include bp-full {
+            line-height: 80px;
             margin-top: 100px;
             text-align: left;
             align-items: flex-start;
