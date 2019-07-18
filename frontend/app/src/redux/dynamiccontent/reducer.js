@@ -5,7 +5,11 @@ const initialState = {
     content: {},
     loading: false,
     error: false,
-    lastUpdate: 0
+    lastUpdate: 0,
+    nav: {
+        sidebarOpen: false,
+        navTitle: 'Hack the Future'
+    }
 };
 
 export default function reducer(state = initialState, action) {
@@ -28,6 +32,21 @@ export default function reducer(state = initialState, action) {
                 }
             });
         }
+        case ActionTypes.TOGGLE_SIDEBAR: {
+            return {
+                ...state,
+                nav: { sidebarOpen: action.payload }
+            };
+        }
+        case ActionTypes.SET_NAV_TITLE: {
+            return {
+                ...state,
+                nav: {
+                    navTitle: action.payload
+                }
+            };
+        }
+
         default:
             return state;
     }
