@@ -81,13 +81,7 @@ class Footer extends PureComponent {
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/story"
-                            >
-                                Story
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/junction-week"
+                                to="/junctionweek"
                             >
                                 Junction Week
                             </Link>
@@ -95,7 +89,28 @@ class Footer extends PureComponent {
                                 className="FooterInner--right__section-link"
                                 to="/info"
                             >
-                                Participant info
+                                Participant Info
+                            </Link>
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/team"
+                            >
+                                Team
+                            </Link>
+
+                            {/*this.renderExtraPageLinks(homePages)*/}
+                        </div>
+                        <div className="FooterInner--right__section">
+                            <Link to="/info">
+                                <h5 className="FooterInner--right__section-title">
+                                    Info
+                                </h5>
+                            </Link>
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/tracksandchallenges"
+                            >
+                                Tracks & Challenges
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
@@ -103,30 +118,10 @@ class Footer extends PureComponent {
                             >
                                 Volunteer Info
                             </Link>
-                            {/*this.renderExtraPageLinks(homePages)*/}
-                        </div>
-                        <div className="FooterInner--right__section">
-                            <Link to="/concepts">
-                                <h5 className="FooterInner--right__section-title">
-                                    Info
-                                </h5>
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/tracks"
-                            >
-                                Tracks & Challenges
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/trasportation"
-                            >
-                                Transportation
-                            </Link>
                             {/*this.renderConceptLinks(eventConcepts)*/}
                             {/*this.renderExtraPageLinks(eventPages)*/}
                         </div>
-                        <div className="FooterInner--right__section">
+                        {/* <div className="FooterInner--right__section">
                             <h5 className="FooterInner--right__section-title">
                                 Live
                             </h5>
@@ -154,7 +149,7 @@ class Footer extends PureComponent {
                             >
                                 For organizers
                             </Link>
-                            {/*this.renderExtraPageLinks(communityPages)*/}
+                            this.renderExtraPageLinks(communityPages)
                         </div>
                         <div className="FooterInner--right__section">
                             <a
@@ -197,7 +192,7 @@ class Footer extends PureComponent {
                             >
                                 Terms & Conditions
                             </Link>
-                        </div>
+                        </div> */}
                     </nav>
                 </div>
                 <div className="FooterBottom">

@@ -21,3 +21,10 @@
     align-items: stretch;
     min-height: 1000px;
 }
+
+.Page {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}

@@ -21,7 +21,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-
+        line-height: 35px;
         max-width: 650px;
         margin: 0;
         text-align: center;
@@ -36,10 +36,10 @@
         @include bp-med {
             text-align: center;
             font-size: 80px;
+            line-height: 80px;
         }
 
         @include bp-full {
-            line-height: 80px;
             margin-top: 100px;
             text-align: left;
             align-items: flex-start;
@@ -57,6 +57,7 @@
         max-width: 650px;
         align-self: flex-end;
         margin: 0;
+        padding-left: 1rem;
         -webkit-animation: fadein-bottom 0.8s; /* Safari, Chrome and Opera > 12.1 */
         -moz-animation: fadein-bottom 0.8s; /* Firefox < 16 */
         -ms-animation: fadein-bottom 0.8s; /* Internet Explorer */

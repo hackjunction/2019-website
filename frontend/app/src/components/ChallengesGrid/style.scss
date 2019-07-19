@@ -4,7 +4,8 @@
         width: 100%;
         max-width: 980px;
         margin: 0 auto;
-
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         &__challenge {
             background: white;
             border-radius: 30px;
@@ -13,6 +14,11 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+            @include bp-full {
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: center;
+            }
             &-coming {
                 text-align: center;
                 font-weight: lighter;
@@ -20,19 +26,20 @@
                 font-family: 'Montserrat';
                 margin: 0;
             }
-            @include bp-full {
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: center;
-            }
+
             &-image {
                 width: 100%;
-                object-fit: contain;
-                max-width: 20rem;
+                object-fit: cover;
+                padding-top: 10px;
+                padding-bottom: -10px;
                 flex-direction: column;
                 align-items: flex-start;
-                max-height: 255px;
-                max-width: 255px;
+                max-height: 100px;
+
+                @include bp-full {
+                    max-height: 255px;
+                    max-width: 255px;
+                }
             }
             &-right {
                 width: 100%;
@@ -56,6 +63,10 @@
                     @extend %font-body;
                     color: black;
                     padding-bottom: 1rem;
+                    padding-left: 1rem;
+                    @include bp-full {
+                        padding-left: 0;
+                    }
                 }
             }
         }

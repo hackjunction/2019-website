@@ -1,7 +1,15 @@
 @import '../../styles/variables';
 
 .HeroImage {
-    width: 100%;
+    align-self: stretch;
+    margin-left: -$padding-page;
+    margin-right: -$padding-page;
+    height: 600px;
+
+    z-index: 5;
+    overflow: hidden;
+    transition: height 0.2s ease;
+
     padding-top: 56.25%;
     min-height: 600px;
     position: relative;
@@ -13,8 +21,13 @@
     -webkit-mask-size: cover;
     -webkit-mask-position: bottom;
 
+    @include bp-med {
+        height: 600px;
+    }
+
     @include bp-full {
         padding-top: 800px;
+        height: 900px;
         // padding-top: $bp-full * 0.5625;
     }
 
@@ -24,8 +37,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 1;
         object-fit: cover;
+        object-position: center;
+        transition: opacity 0.5s ease;
+        z-index: 1;
     }
 
     &--content {
