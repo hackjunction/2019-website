@@ -28,19 +28,18 @@ const ChallengesGrid = props => {
         };
         return tracks.map(track => {
             return (
-                <div
-                    className="ChallengesGrid--track"
-                    key={track._id}
-                    id={track.name}
-                >
-                    <SingleColumnSection
-                        title={track.name}
-                        subtitle={track.description}
-                    />
-
+                <div id={track.name}>
                     <Divider sm />
-                    <div>{renderChallenges(track.challenges)}</div>
-                    <Divider md />
+                    <div className="ChallengesGrid--track" key={track._id}>
+                        <SingleColumnSection
+                            title={track.name}
+                            subtitle={track.description}
+                        />
+
+                        <Divider sm />
+                        <div>{renderChallenges(track.challenges)}</div>
+                        <Divider md />
+                    </div>
                 </div>
             );
         });

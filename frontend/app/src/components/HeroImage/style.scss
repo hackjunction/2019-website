@@ -6,6 +6,13 @@
     min-height: 600px;
     position: relative;
 
+    mask-image: url('../../assets/misc/wave-mask.png');
+    mask-size: cover;
+    mask-position: bottom;
+    -webkit-mask-image: url('../../assets/misc/wave-mask.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+
     @include bp-full {
         padding-top: 800px;
         // padding-top: $bp-full * 0.5625;
