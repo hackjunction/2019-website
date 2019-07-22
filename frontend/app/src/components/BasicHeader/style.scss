@@ -20,6 +20,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
         width: 100%;
         line-height: 35px;
         max-width: 650px;
@@ -71,23 +72,11 @@
 
        
     }
-    &--children {
-        
+    &--children { 
       flex:1;
       width: 100%;
       @include bp-med{
-          flex: 3;
+            flex: 3;
       }
-        /* width: 100%;
-        flex: 3;    
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-self: flex-end;
-        align-items: flex-start;
-        @include bp-med{
-            margin-top: -6rem;
-            max-width: 650px;
-        } */
     }
 }

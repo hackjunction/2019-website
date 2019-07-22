@@ -69,7 +69,7 @@ const NewsLetterForm = props => {
         <BasicSection
             title={getText('newsletterFormTitle')}
             subtitle={getText('newsletterFormSubtitle')}
-            className="newsLetter"
+           
         >
             <Form
                 fields={fields}
@@ -85,7 +85,7 @@ const NewsLetterForm = props => {
                 successTitle={'Thanks for subscribing!'}
                 successMessage={''}
             >
-                <FormRow>
+                <FormRow  className="newsLetter">
                     <TextInput
                         name="email"
                         placeholder="Email"

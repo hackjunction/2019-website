@@ -27,6 +27,8 @@
         "redux-thunk": "^2.3.0",
         "remark-breaks": "^1.0.3",
         "reselect": "^4.0.0",
+        "to-camel-case": "^1.0.0",
+        "to-snake-case": "^1.0.0",
         "webfontloader": "^1.6.28"
     },
     "scripts": {
