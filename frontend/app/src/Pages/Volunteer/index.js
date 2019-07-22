@@ -54,7 +54,7 @@ class VolunteerPage extends Component {
                         className="VolunteerPage-family"
                         source={getText('volunteerPageFamilyContent')}
                     />
-                    <Divider mlg />
+                    <Divider md />
                     <Markdown source={getText('volunteerPageVideo')} />
                 </SingleColumnSection>
                 <Divider lg />

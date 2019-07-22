@@ -41,19 +41,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(FooterImageButtons);
-/*<div
-                    className={`ImageButtons--button Color--${
-                        index % 2 === 1 ? 'red' : 'blue'
-                    }`}
-                >
-                    <Link to={image.link}>
-                        <Image
-                            className="ImageButtons--button__image"
-                            image={image.image}
-                        />
-                        <div className="ImageButtons--button__text"><span className="ImageButtons--button__text-content">
-                            {image.text}
-                        </span></div>
-                        
-                    </Link>
-                </div>*/
+

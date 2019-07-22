@@ -11,12 +11,10 @@ const VolunteerGuidelines = props => {
     const renderGuidelines = () => {
         return props.volunteerGuidelines.map(guideline => {
             return (
-                <div>
-                    {/* There's no reason for this to exist but for 
-                    some reason needs to be here for the styling to work*/}
+                <div key={guideline._id}>
                     <div
                         className="VolunteerGuidelines--container"
-                        key={guideline._id}
+                       
                     >
                         <span className="VolunteerGuidelines--container__title">
                             {guideline.title}
