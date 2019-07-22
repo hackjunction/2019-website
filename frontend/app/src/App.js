@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import './fontello/css/fontello.css';
 import './App.scss';
 
+import config from './config';
+
 import Header from './components/Header';
 import EditorTools from './components/EditorTools';
 import Footer from './components/Footer';
@@ -64,7 +66,8 @@ class App extends Component {
 
                     <FooterImageButtons />
                     <Footer />
-                    <EditorTools />
+                    {config.IS_DEBUG ? <EditorTools />: null }
+                    
                 </div>
             </Router>
         );

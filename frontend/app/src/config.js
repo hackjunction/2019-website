@@ -1,6 +1,6 @@
 const config = {
-    //CLOUDINARY_CLOUD_NAME: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
-    CLOUDINARY_CLOUD_NAME: 'dwvybqdgo',
+    CLOUDINARY_CLOUD_NAME: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
+   /*  CLOUDINARY_CLOUD_NAME: 'dwvybqdgo', */
     API_BASE_URL: process.env.REACT_APP_API_BASE_URL || '',
     GRAPHQL_BASE_URL: process.env.REACT_APP_GRAPHQL_BASE_URL || '',
 
@@ -10,7 +10,7 @@ const config = {
      * which are not intended for the live site. You can make this depend on e.g. the current url,
      * like below:
      */
-    IS_DEBUG: window.location.hostname !== 'www.yourlivesite.com'
+    IS_DEBUG: window.location.hostname !== '2019-test.hackjunction.com'
 };
 
 export default config;

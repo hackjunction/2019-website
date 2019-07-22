@@ -39,7 +39,7 @@ class HomePage extends Component {
                         />
                     </HeroCTA>
                 </HeroImage>
-                <h1>Hello</h1>
+               
                 <SingleColumnSection center>
                     <ButtonLink
                         text={getText('homePageInfoButton')}
