@@ -58,15 +58,14 @@
                     font-size: 24px;
                     color: black;
                     padding-bottom: 1rem;
+                    padding-left: 1rem;
                 }
                 &-content {
                     @extend %font-body;
                     color: black;
                     padding-bottom: 1rem;
                     padding-left: 1rem;
-                    @include bp-full {
-                        padding-left: 0;
-                    }
+                    padding-right: 5px;
                 }
             }
         }

@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import snake from 'to-snake-case';
 
 import ChallengeItem from './ChallengeItem';
 import SingleColumnSection from '../SingleColumnSection';
 import Divider from '../Divider';
+
 
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import * as StaticSelectors from '../../redux/staticcontent/selectors';
@@ -15,7 +17,7 @@ const ChallengesGrid = props => {
         const renderChallenges = challenges => {
             const mapChallenges = () => {
                 return challenges.map(challenge => {
-                    return <ChallengeItem {...challenge} />;
+                    return <ChallengeItem {...challenge} key={snake(challenge.name)}/>;
                 });
             };
             return challenges.length ? (
@@ -28,7 +30,7 @@ const ChallengesGrid = props => {
         };
         return tracks.map(track => {
             return (
-                <div id={track.name}>
+                <div id={snake(track.name)}>
                     <Divider sm />
                     <div className="ChallengesGrid--track" key={track._id}>
                         <SingleColumnSection

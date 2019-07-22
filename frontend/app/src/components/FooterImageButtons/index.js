@@ -10,13 +10,14 @@ const FooterImageButtons = props => {
     const renderButtons = images => {
         return images.map(image => {
             return (
-                <div className="ImageButtons--button">
+                <div className="ImageButtons--button" key={image._id}>
                     <Image
                         className="ImageButtons--button__image"
                         image={image.image}
                         width={600}
                         height={200}
                         crop={'fill'}
+                        alt={image.text}
                     />
                     <Link
                         className="ImageButtons--button__link"

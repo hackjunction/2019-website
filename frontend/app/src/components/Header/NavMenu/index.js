@@ -3,18 +3,9 @@ import './style.scss';
 
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { map } from 'lodash-es';
-
-//import {eventconceptsForNav} from '../../../redux/eventconcepts/selector'
 
 import { toggleSidebar } from '../../../redux/dynamiccontent/actions';
 import { isSidebarOpen } from '../../../redux/dynamiccontent/selectors';
-
-/* import {
-    homePages,
-    eventPages,
-    communityPages
-} from '../../../redux/pages/selectors'; */
 
 const NavMenuInner = memo(({ filler }) => {
     return (
@@ -43,7 +34,7 @@ const NavMenuInner = memo(({ filler }) => {
                 <h6 className="NavMenu--inner__menu-title">Info</h6>
                 <Link
                     className="NavMenu--inner__menu-item"
-                    to="tracksandchallenges"
+                    to="/challenges"
                 >
                     Tracks & Challenges
                 </Link>

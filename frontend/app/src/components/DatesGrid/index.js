@@ -1,19 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
-
 import TimeItem from './TimeItem';
-
 import './style.scss';
-
-/*
---USAGE--
-<DatesGrid type="junction" />
-            OR
-type="volunteer"
---USAGE-- 
-*/
 
 const DatesGrid = props => {
     const renderDate = dates => {

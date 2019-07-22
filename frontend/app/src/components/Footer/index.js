@@ -8,47 +8,10 @@ import SocialMediaIcons from '../SocialMediaIcons';
 import Divider from '../Divider';
 
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
-/*
-import {
-    homePages,
-    eventPages,
-    communityPages
-} from '../../redux/pages/selectors';
-
-import { eventconceptsByPriority } from '../../redux/eventconcepts/selectors';*/
 
 class Footer extends PureComponent {
-    /*renderConceptLinks(eventConcepts) {
-        return eventConcepts.map(concept => {
-            return (
-                <Link
-                    key={concept.slug}
-                    className="FooterInner--right__section-link"
-                    to={`/concepts/${concept.slug}`}
-                >
-                    {concept.name}
-                </Link>
-            );
-        });
-    }
-
-    renderExtraPageLinks(pages) {
-        return pages.map(page => {
-            return (
-                <Link
-                    key={page.slug}
-                    className="FooterInner--right__section-link"
-                    to={`/${page.slug}`}
-                >
-                    {page.navTitle}
-                </Link>
-            );
-        });
-    }*/
-
     render() {
-        const { getMedia, getText } = this.props;
-        const { homePages, eventPages, communityPages } = this.props;
+        const { getText } = this.props;
 
         return (
             <footer className="Footer">
@@ -108,7 +71,7 @@ class Footer extends PureComponent {
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/tracksandchallenges"
+                                to="/challenges"
                             >
                                 Tracks & Challenges
                             </Link>
@@ -118,81 +81,7 @@ class Footer extends PureComponent {
                             >
                                 Volunteer Info
                             </Link>
-                            {/*this.renderConceptLinks(eventConcepts)*/}
-                            {/*this.renderExtraPageLinks(eventPages)*/}
                         </div>
-                        {/* <div className="FooterInner--right__section">
-                            <h5 className="FooterInner--right__section-title">
-                                Live
-                            </h5>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/schedule"
-                            >
-                                Schedule
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/submission"
-                            >
-                                Submission
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/volunteers"
-                            >
-                                For volunteers
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/organizers"
-                            >
-                                For organizers
-                            </Link>
-                            this.renderExtraPageLinks(communityPages)
-                        </div>
-                        <div className="FooterInner--right__section">
-                            <a
-                                href="https://blog.hackjunction.com"
-                                alt="medium"
-                            >
-                                <h5 className="FooterInner--right__section-title">
-                                    Blog
-                                </h5>
-                            </a>
-                            <a
-                                href="https://www.flickr.com/photos/151708924@N07/albums/"
-                                alt="flickr"
-                            >
-                                <h5 className="FooterInner--right__section-title">
-                                    Photo Gallery
-                                </h5>
-                            </a>
-                            <Link
-                                to="/press"
-                                className="FooterInner--right__section-link"
-                            >
-                                Press kit (eng)
-                            </Link>
-                            <Link
-                                to="/media"
-                                className="FooterInner--right__section-link"
-                            >
-                                Press kit (fin)
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/policy"
-                            >
-                                Privacy Policy
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
-                                to="/terms"
-                            >
-                                Terms & Conditions
-                            </Link>
-                        </div> */}
                     </nav>
                 </div>
                 <div className="FooterBottom">

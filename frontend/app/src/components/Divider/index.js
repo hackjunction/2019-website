@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './Divider.module.scss';
 
-const Divider = ({ sm = false, md = false, mlg = false, lg = false }) => {
+const Divider = ({ xs = false, sm = false, md = false, mlg = false, lg = false }) => {
 	return (
-		<div className={`${sm ? styles.sm : ''}${md ? styles.md : ''}${mlg ? styles.mlg : ''}${lg ? styles.lg : ''}`} />
+		<div className={`Divider ${xs ? styles.xs : ''}${sm ? styles.sm : ''}${md ? styles.md : ''}${mlg ? styles.mlg : ''}${lg ? styles.lg : ''}`} />
 	)
 }
 

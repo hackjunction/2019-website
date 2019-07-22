@@ -14,20 +14,20 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import Divider from '../../components/Divider';
 import ChallengesGrid from '../../components/ChallengesGrid';
 
-class TracksAndChallengesPage extends Component {
+class ChallengesPage extends Component {
     render() {
         const { getMedia, getText } = this.props;
         return (
-            <Page className="TracksAndChallengesPage">
-                <HeroImage image={getMedia('tcPageHeaderImage')}>
+            <Page className="ChallengesPage">
+                <HeroImage image={getMedia('challengesPageHeaderImage')}>
                     <BasicHeader
-                        title={getText('tcPageHeaderTitle')}
-                        body={getText('tcHeaderContent')}
+                        title={getText('challengesPageHeaderTitle')}
+                        body={getText('challengesHeaderContent')}
                     />
                 </HeroImage>
                 <SingleColumnSection
-                    title={getText('tcPageTracksTitle')}
-                    subtitle={getText('tcPageTracksSubtitle')}
+                    title={getText('challengesPageTracksTitle')}
+                    subtitle={getText('challengesPageTracksSubtitle')}
                 />
                 <TracksGrid />
                 <Divider md />
@@ -47,4 +47,4 @@ const mapStateToProps = state => {
 export default connect(
     mapStateToProps,
     { updateStaticContent }
-)(TracksAndChallengesPage);
+)(ChallengesPage);

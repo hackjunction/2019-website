@@ -7,7 +7,40 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    .Divider {
+        display: none;
+    }
+    @include bp-custom(800px){
+        flex-direction: row;
+        .Divider {
+            display: block;
+        }
+    }
+    &--column__left{
+        flex: 1;
+        .FaqGridItem{
+            background: linear-gradient(
+                130deg,
+                rgba(178, 0, 183, 0.25) 0%,
+                rgba(178, 0, 183, 0.15) 100%
+            );
+        }
+        
+        
+    }
+    &--column__right{
+        flex: 1;
+        .FaqGridItem {
+            background: linear-gradient(
+                145deg,
+                rgba(243, 129, 0, 0.15) 0%,
+                rgba(122, 65, 0, 0.15) 100%
+            );
+            &--question i {
+                color: rgba(243, 129, 0, 0.6);
+            }
+        }
+    }
 
     @include bp-custom(800px) {
         flex-direction: row;
@@ -31,23 +64,7 @@
     border-radius: 10px;
     padding: $padding-double;
 
-    &:nth-child(even) {
-        background: linear-gradient(
-            145deg,
-            rgba(243, 129, 0, 0.15) 0%,
-            rgba(122, 65, 0, 0.15) 100%
-        );
-        .FaqGridItem {
-            &--question i {
-                color: rgba(243, 129, 0, 0.6);
-            }
-        }
-    }
-
-    @include bp-custom(800px) {
-        width: 49%;
-        align-self: flex-start;
-    }
+  
 
     &-expanded {
         .FaqGridItem {

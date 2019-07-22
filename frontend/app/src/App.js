@@ -18,7 +18,7 @@ import JunctionWeekPage from './Pages/JunctionWeek';
 import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
-import TracksAndChallengesPage from './Pages/TracksAndChallenges';
+import ChallengesPage from './Pages/Challenges';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -51,8 +51,8 @@ class App extends Component {
                             <Route exact path="/team" component={TeamPage} />
                             <Route
                                 exact
-                                path="/tracksAndChallenges"
-                                component={TracksAndChallengesPage}
+                                path="/challenges"
+                                component={ChallengesPage}
                             />
 
                             <Route component={NotFound} />

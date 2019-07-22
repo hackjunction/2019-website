@@ -2,7 +2,6 @@ import React from 'react';
 import './style.scss';
 
 import Image from '../Image';
-import GradientLink from '../GradientLink';
 import Divider from '../Divider';
 
 const HeroCTA = props => {

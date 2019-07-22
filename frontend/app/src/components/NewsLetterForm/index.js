@@ -69,6 +69,7 @@ const NewsLetterForm = props => {
         <BasicSection
             title={getText('newsletterFormTitle')}
             subtitle={getText('newsletterFormSubtitle')}
+            className="newsLetter"
         >
             <Form
                 fields={fields}
