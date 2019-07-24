@@ -43,6 +43,7 @@ export const getDynamicContent = () => {
                     _id
                     name
                     trackMentorDescription
+                    showOnFrontPage
                     logo {
                         url
                         public_id

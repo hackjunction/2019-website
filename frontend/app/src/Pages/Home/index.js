@@ -72,7 +72,7 @@ class HomePage extends Component {
                     subtitle={getText('partnersSubtitle')}
                 >
                     <Divider sm />
-                    <PartnersGrid />
+                    <PartnersGrid type="front" />
                     <Divider sm />
                     <ButtonLink
                         text={getText('homePagePartnerInfoButton')}

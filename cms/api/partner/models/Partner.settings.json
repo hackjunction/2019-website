@@ -32,6 +32,9 @@
     },
     "trackMentorDescription": {
       "type": "text"
+    },
+    "showOnFrontPage": {
+      "type": "boolean"
     }
   }
 }

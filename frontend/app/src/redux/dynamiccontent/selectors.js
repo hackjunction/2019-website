@@ -99,3 +99,10 @@ export const globalByTeamPriority = createSelector(
         return filter(data, 'teamGlobal');
     }
 );
+
+export const partnersOnFrontPage = createSelector(
+    partners,
+    data => {
+        return filter(data, 'showOnFrontPage');
+    }
+);

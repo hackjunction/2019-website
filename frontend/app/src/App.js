@@ -21,6 +21,7 @@ import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
+import PartnersPage from './Pages/Partners';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -56,6 +57,11 @@ class App extends Component {
                                 path="/challenges"
                                 component={ChallengesPage}
                             />
+                            <Route
+                                exact
+                                path="/partners"
+                                component={PartnersPage}
+                            />
 
                             <Route component={NotFound} />
                         </Switch>
@@ -66,8 +72,7 @@ class App extends Component {
 
                     <FooterImageButtons />
                     <Footer />
-                    {config.IS_DEBUG ? <EditorTools />: null }
-                    
+                    {config.IS_DEBUG ? <EditorTools /> : null}
                 </div>
             </Router>
         );
