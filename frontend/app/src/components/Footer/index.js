@@ -60,8 +60,6 @@ class Footer extends PureComponent {
                             >
                                 Team
                             </Link>
-
-                            {/*this.renderExtraPageLinks(homePages)*/}
                         </div>
                         <div className="FooterInner--right__section">
                             <Link to="/info">
@@ -80,6 +78,12 @@ class Footer extends PureComponent {
                                 to="/volunteer"
                             >
                                 Volunteer Info
+                            </Link>
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/partners"
+                            >
+                                Partners
                             </Link>
                         </div>
                     </nav>

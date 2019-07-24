@@ -43,6 +43,9 @@ const NavMenuInner = memo(({ getMedia } = this.props) => {
                 <Link className="NavMenu--inner__menu-item" to="/volunteer">
                     Volunteer Info
                 </Link>
+                <Link className="NavMenu--inner__menu-item" to="/partners">
+                    Partners
+                </Link>
             </nav>
             <Divider sm />
             <h6 className="NavMenu--inner__menu-title">
