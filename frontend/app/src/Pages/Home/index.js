@@ -15,7 +15,6 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
 import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
-import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';
 
@@ -83,7 +82,6 @@ class HomePage extends Component {
                     />
                 </SingleColumnSection>
                 <Divider md />
-                <NewsLetterForm />
             </Page>
         );
     }
