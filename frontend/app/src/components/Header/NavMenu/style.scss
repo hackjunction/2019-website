@@ -96,4 +96,10 @@
             }
         }
     }
+    &--bottom {
+        flex-direction: flex-end;
+        &-logo {
+            width: 80%;
+        }
+    }
 }
