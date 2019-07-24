@@ -32,7 +32,6 @@ class JunctionWeekPage extends Component {
                     />
                 </HeroImage>
 
-                
                 <BasicSection
                     title={getText('junctionWeekPageWeekTitle')}
                     subtitle={getText('junctionWeekPageWeekSubtitle')}

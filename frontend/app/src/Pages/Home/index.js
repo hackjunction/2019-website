@@ -13,9 +13,9 @@ import Divider from '../../components/Divider';
 import TracksGrid from '../../components/TracksGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
-import DatesGrid from '../../components/DatesGrid';
 import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';
 
@@ -83,6 +83,7 @@ class HomePage extends Component {
                     />
                 </SingleColumnSection>
                 <Divider md />
+                <NewsLetterForm />
             </Page>
         );
     }

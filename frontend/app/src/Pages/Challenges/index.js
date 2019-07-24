@@ -32,6 +32,7 @@ class ChallengesPage extends Component {
                 <TracksGrid />
                 <Divider md />
                 <ChallengesGrid />
+                <Divider md />
             </Page>
         );
     }
