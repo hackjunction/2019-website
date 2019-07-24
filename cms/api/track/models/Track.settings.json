@@ -23,6 +23,11 @@
     "challenges": {
       "collection": "challenge",
       "via": "track"
+    },
+    "mentors": {
+      "collection": "partner",
+      "dominant": true,
+      "via": "tracks"
     }
   }
 }

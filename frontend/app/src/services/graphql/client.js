@@ -42,6 +42,7 @@ export const getDynamicContent = () => {
                 partners {
                     _id
                     name
+                    trackMentorDescription
                     logo {
                         url
                         public_id
@@ -73,6 +74,14 @@ export const getDynamicContent = () => {
                                 url
                                 public_id
                             }
+                        }
+                    }
+                    mentors {
+                        name
+                        trackMentorDescription
+                        logo {
+                            url
+                            public_id
                         }
                     }
                 }

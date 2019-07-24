@@ -11,7 +11,6 @@ import './style.scss';
 const TracksGrid = props => {
     const renderTracks = () => {
         return props.tracks.map((track, index) => {
-            /* const snakedName= snake(track.name) */
             return (
                 <div className="TracksGrid--container" key={track._id}>
                     <ButtonLink

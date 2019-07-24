@@ -7,8 +7,8 @@ import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import Page from '../PageHOC';
 
+import DatesGrid from '../../components/DatesGrid';
 import HeroImage from '../../components/HeroImage';
-//import HeroCTA from '../../components/HeroCTA';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
@@ -35,6 +35,13 @@ class InfoPage extends Component {
                     subtitle={getText('infoPageApplySubtitle')}
                 >
                     <Markdown source={getText('infoPageApplyContent')} />
+                </BasicSection>
+                <Divider md />
+                <BasicSection
+                    title={getText('infoPageJourneyTitle')}
+                    subtitle={getText('infoPageJourneySubtitle')}
+                >
+                    <DatesGrid type="frontPage" />
                 </BasicSection>
                 <Divider md />
                 <BasicSection

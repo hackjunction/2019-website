@@ -7,7 +7,7 @@ const ButtonLink = ({
     text,
     link,
     color = 'purple', //purple or brown
-    size = 'md', //sm / md / lg
+    size = 'md', //sm / md / lg /fp
     align = 'center', //left / center / right
     type = 'link'
 }) => {

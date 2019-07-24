@@ -19,15 +19,15 @@
     "content": {
       "type": "text"
     },
-    "partner": {
-      "model": "partner",
-      "via": "challenges"
-    },
     "contentShort": {
       "type": "text"
     },
     "track": {
       "model": "track",
+      "via": "challenges"
+    },
+    "partner": {
+      "model": "partner",
       "via": "challenges"
     }
   }

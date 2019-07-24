@@ -11,7 +11,7 @@
     transition: height 0.2s ease;
 
     padding-top: 56.25%;
-    min-height: 500px;
+    min-height: 600px;
     position: relative;
 
     mask-image: url('../../assets/misc/wave-mask.png');
@@ -22,12 +22,12 @@
     -webkit-mask-position: bottom;
 
     @include bp-med {
-        height: 600px;
+        height: 700px;
     }
 
     @include bp-full {
-        padding-top: 800px;
-        height: 800px;
+        padding-top: 700px;
+        height: 900px;
         // padding-top: $bp-full * 0.5625;
     }
 

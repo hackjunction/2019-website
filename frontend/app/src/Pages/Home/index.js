@@ -10,7 +10,6 @@ import HeroCTA from '../../components/HeroCTA';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
-import StatBlocks from '../../components/StatBlocks';
 import TracksGrid from '../../components/TracksGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
@@ -33,27 +32,13 @@ class HomePage extends Component {
                         <ButtonLink
                             text={getText('homePageApplyButton')}
                             link={getText('homePageApplyButtonLink')}
-                            size="lg"
+                            size="fp"
                             color="purple"
                             align="center"
                         />
                     </HeroCTA>
                 </HeroImage>
-               
-                <SingleColumnSection center>
-                    <ButtonLink
-                        text={getText('homePageInfoButton')}
-                        link={getText('homePageInfoButtonLink')}
-                        color="brown"
-                        size="md"
-                        align="center"
-                    />
-                    <ButtonLink
-                        text={getText('homePageVolunteerButton')}
-                        link={getText('homePageVolunteerButtonLink')}
-                    />
-                </SingleColumnSection>
-                <Divider md />
+                <Divider lg />
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
 
                 <BasicSection
@@ -61,22 +46,14 @@ class HomePage extends Component {
                     subtitle={getText('junctionMainSubtitle')}
                 >
                     <Markdown source={getText('homePageIntroText')} />
-                    <StatBlocks />
                 </BasicSection>
-                <Divider md />
-                <BasicSection
-                    title={getText('homePageJourneyTitle')}
-                    subtitle={getText('homePageJourneySubtitle')}
-                >
-                    <DatesGrid type="frontPage" />
-                </BasicSection>
+
                 <Divider lg />
                 <SingleColumnSection
                     title={getText('homePageTracksTitle')}
                     subtitle={getText('homePageTracksSubtitle')}
                 />
                 <TracksGrid />
-
                 <Divider md />
                 <SingleColumnSection>
                     <Markdown source={getText('homePageVideoLink')} />

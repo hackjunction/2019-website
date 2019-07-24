@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "partner",
   "info": {
     "name": "partner",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -22,6 +25,13 @@
     "challenges": {
       "collection": "challenge",
       "via": "partner"
+    },
+    "tracks": {
+      "collection": "track",
+      "via": "mentors"
+    },
+    "trackMentorDescription": {
+      "type": "text"
     }
   }
 }
