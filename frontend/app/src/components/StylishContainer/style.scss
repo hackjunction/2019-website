@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+.StylishContainer {
+    align-self: stretch;
+    margin-left: -$padding-page;
+    margin-right: -$padding-page;
+    overflow: visible;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 10%;
+        height: 100%;
+        @include bp-full {
+            width: 30%;
+        }
+    }
+    &-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        object-fit: cover;
+        width: 10%;
+        height: 100%;
+        @include bp-full {
+            width: 30%;
+        }
+    }
+    &-children {
+        width: 980px;
+    }
+}

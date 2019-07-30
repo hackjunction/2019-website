@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.Ready {
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+
+    &--title {
+        width: 100%;
+        max-width: 900px;
+        font-size: 80px;
+        font-weight: bold;
+        font-family: $font-title;
+        text-align: center;
+    }
+    &--description {
+        font-size: 24px;
+        font-family: $font-title;
+        font-weight: bold;
+    }
+}

@@ -15,6 +15,7 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
 import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
+import AreYouReady from '../../components/AreYouReady';
 
 import Page from '../PageHOC';
 
@@ -46,7 +47,14 @@ class HomePage extends Component {
                 >
                     <Markdown source={getText('homePageIntroText')} />
                 </BasicSection>
-
+                <Divider sm />
+                <AreYouReady
+                    title={getText('homePageReadyTitle')}
+                    button={getText('homePageReadyButton')}
+                    buttonHover={getText('homePageReadyButtonHover')}
+                    description={getText('homePageReadyDescription')}
+                    link={getText('homePageReadyLink')}
+                />
                 <Divider lg />
                 <SingleColumnSection
                     title={getText('homePageTracksTitle')}

@@ -4,6 +4,36 @@
     font-size: 40px;
     width: 36rem;
 }
+.ButtonLinkReady {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    a {
+        &:hover {
+            .ButtonLinkReady {
+                &--text {
+                    display: none;
+                }
+                &--hoverText {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    &--text {
+        @extend %font-button;
+        font-size: 40px;
+        width: 100%;
+    }
+    &--hoverText {
+        display: none;
+        @extend %font-button;
+        font-size: 40px;
+        width: 100%;
+    }
+}
 
 .ButtonLink {
     display: flex;
