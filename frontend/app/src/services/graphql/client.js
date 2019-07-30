@@ -49,15 +49,7 @@ export const getDynamicContent = () => {
                         public_id
                     }
                 }
-                socialmedias {
-                    _id
-                    name
-                    link
-                    icon {
-                        url
-                        public_id
-                    }
-                }
+
                 stats {
                     _id
                     label

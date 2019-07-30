@@ -1,7 +1,6 @@
 import axios from './axios';
-import config from './config';
 
-const URL = config.API_BASE_URL + '/api/newsletter';
+const URL = 'https://cms.www.hackjunction.com/api/newsletter';
 
 const NewsLetterService = {
     create: formData => {

@@ -4,7 +4,7 @@ import './style.scss';
 import { connect } from 'react-redux';
 import SocialMediaIcon from './SocialmediaIcon';
 
-import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
+import * as ContentSelectors from '../../redux/socialmedias/selectors';
 
 const SocialMediaIcons = props => {
     const renderIcons = () => {
@@ -24,7 +24,7 @@ const SocialMediaIcons = props => {
 };
 
 const mapStateToProps = state => ({
-    data: ContentSelectors.socialMedias(state)
+    data: ContentSelectors.socialmedias(state)
 });
 
 export default connect(mapStateToProps)(SocialMediaIcons);
