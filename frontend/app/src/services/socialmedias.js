@@ -1,4 +1,4 @@
-import axios from './jsonAxios';
+import axios from './axios';
 
 const URL = 'https://cms.www.hackjunction.com/api/socialmedias';
 

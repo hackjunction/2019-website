@@ -10,7 +10,6 @@ export const updateSocialMedias = () => (dispatch, getState) => {
     if (!socialMediasShouldUpdate(getState())) {
         return;
     }
-
     dispatch({
         type: ActionTypes.UPDATE_SOCIAL_MEDIAS,
         promise: SocialMediaService.getAll(),

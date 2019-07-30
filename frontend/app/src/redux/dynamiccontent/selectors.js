@@ -14,9 +14,6 @@ export const partners = state => state.dynamicContent.content.partners || [];
 export const eventDates = state =>
     state.dynamicContent.content.eventdates || [];
 
-export const socialMedias = state =>
-    state.dynamicContent.content.socialmedias || [];
-
 export const teamMembers = state =>
     state.dynamicContent.content.teammembers || [];
 

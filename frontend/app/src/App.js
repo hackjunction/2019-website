@@ -24,11 +24,13 @@ import PartnersPage from './Pages/Partners';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
+import * as SocialMediaActions from './redux/socialmedias/actions';
 
 class App extends Component {
     async componentDidMount() {
         this.props.updateDynamicContent();
         this.props.updateStaticContent();
+        this.props.updateSocialMedias();
     }
 
     render() {
@@ -81,6 +83,7 @@ export default connect(
     null,
     {
         updateDynamicContent: DynamicContentActions.updateDynamicContent,
-        updateStaticContent: StaticContentActions.updateStaticContent
+        updateStaticContent: StaticContentActions.updateStaticContent,
+        updateSocialMedias: SocialMediaActions.updateSocialMedias
     }
 )(App);
