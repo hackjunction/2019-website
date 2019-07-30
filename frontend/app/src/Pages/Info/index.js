@@ -15,6 +15,7 @@ import FaqGrid from '../../components/FaqGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import ButtonLink from '../../components/ButtonLink';
 import BasicHeader from '../../components/BasicHeader';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 class InfoPage extends Component {
     render() {
@@ -86,6 +87,7 @@ class InfoPage extends Component {
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />
+                <NewsLetterForm />
             </Page>
         );
     }

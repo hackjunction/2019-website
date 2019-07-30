@@ -13,7 +13,9 @@ const ButtonLink = ({
     hover = 'no',
     hoverText = ''
 }) => {
-    let className = `ButtonLink--link ButtonLink--link-color__${color} ButtonLink--link-size__${size}  ButtonLink--link-align__${align}`;
+    let className = `ButtonLink--link ButtonLink--link-color__${color} ButtonLink--link-size__${size}  ButtonLink--link-align__${align} ${
+        text ? '' : 'ButtonHide'
+    }`;
 
     if (type === 'link') {
         return (

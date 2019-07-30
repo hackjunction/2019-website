@@ -33,11 +33,10 @@
                     padding-bottom: -10px;
                     flex-direction: column;
                     align-items: flex-start;
-                    max-height: 100px;
+                    max-height: 150px;
 
                     @include bp-full {
-                        max-height: 255px;
-                        max-width: 255px;
+                        max-width: 150px;
                     }
                 }
                 &-right {
@@ -53,7 +52,7 @@
                     &-content {
                         @extend %font-body;
                         color: black;
-                        padding-bottom: 1rem;
+                        margin-bottom: 1rem;
                         padding-left: 1rem;
                         padding-right: 5px;
                     }
@@ -83,16 +82,16 @@
 
             &-image {
                 width: 100%;
-                object-fit: cover;
+                object-fit: contain;
                 padding-top: 10px;
                 padding-bottom: -10px;
                 flex-direction: column;
                 align-items: flex-start;
-                max-height: 100px;
+                max-height: 200px;
 
                 @include bp-full {
-                    max-height: 255px;
-                    max-width: 255px;
+                    max-height: 150px;
+                    max-width: 150px;
                 }
             }
             &-right {
@@ -117,7 +116,7 @@
                 &-content {
                     @extend %font-body;
                     color: black;
-                    padding-bottom: 1rem;
+                    margin-bottom: 1rem;
                     padding-left: 1rem;
                     padding-right: 5px;
                 }

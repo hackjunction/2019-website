@@ -8,6 +8,9 @@ import BasicHeader from '../../components/BasicHeader';
 import Divider from '../../components/Divider';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import PartnersGrid from '../../components/PartnersGrid';
+import ButtonLink from '../../components/ButtonLink';
+import BasicSection from '../../components/BasicSection';
+import Markdown from '../../components/Markdown';
 
 import Page from '../PageHOC';
 
@@ -21,15 +24,29 @@ class PartnerPage extends Component {
                     <BasicHeader
                         title={getText('partnerPageHeaderTitle')}
                         body={getText('partnerPageHeaderContent')}
-                    />
+                    >
+                        <ButtonLink
+                            text={getText('partnerPageHeaderButton')}
+                            type="anchor"
+                            link="#contact"
+                        />
+                    </BasicHeader>
                 </HeroImage>
-                <Divider sm />
+                <BasicSection
+                    title={getText('partnerPageInfoTitle')}
+                    subtitle={getText('partnerPageInfoSubtitle')}
+                >
+                    <Markdown source={getText('partnerPageInfoContent')} />
+                </BasicSection>
+                <Divider md />
+
                 <SingleColumnSection
                     title={getText('partnerPageTitle')}
                     subtitle={getText('partnerPageSubtitle')}
                 >
                     <PartnersGrid />
                 </SingleColumnSection>
+                <div key="contact">paspasp</div>
             </Page>
         );
     }

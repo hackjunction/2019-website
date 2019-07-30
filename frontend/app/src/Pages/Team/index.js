@@ -9,6 +9,7 @@ import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import TeamMemberGrid from '../../components/TeamMemberGrid';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';
 
@@ -25,6 +26,7 @@ class TeamPage extends Component {
                 </HeroImage>
                 <SingleColumnSection title={getText('teamPageTeamTitle')} />
                 <TeamMemberGrid type="finland" />
+                <NewsLetterForm />
             </Page>
         );
     }

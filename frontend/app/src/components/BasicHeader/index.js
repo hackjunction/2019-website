@@ -5,8 +5,10 @@ const BasicHeader = ({ title, body, children }) => {
     return (
         <div className="BasicHeader">
             <h2 className="BasicHeader--title">{title}</h2>
-            <p className="BasicHeader--body">{body}</p>
-            <span className="BasicHeader--children">{children}</span>
+            <p className="BasicHeader--body">
+                {body}
+                {children}
+            </p>
         </div>
     );
 };

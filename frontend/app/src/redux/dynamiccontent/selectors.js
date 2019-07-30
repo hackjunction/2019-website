@@ -13,8 +13,7 @@ export const faqs = state => state.dynamicContent.content.faqs || [];
 export const partners = state => state.dynamicContent.content.partners || [];
 export const eventDates = state =>
     state.dynamicContent.content.eventdates || [];
-export const volunteerGuidelines = state =>
-    state.dynamicContent.content.volunteerguidelines || [];
+
 export const socialMedias = state =>
     state.dynamicContent.content.socialmedias || [];
 

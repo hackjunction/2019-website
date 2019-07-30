@@ -9,11 +9,11 @@ import Markdown from '../../components/Markdown';
 import Divider from '../../components/Divider';
 import DatesGrid from '../../components/DatesGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
-import VolunteerGuidelines from '../../components/VolunteerGuidelines';
 import ImageSection from '../../components/ImageSection';
 import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
 import ButtonLink from '../../components/ButtonLink';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';
 
@@ -56,21 +56,21 @@ class VolunteerPage extends Component {
                     <Divider md />
                     <Markdown source={getText('volunteerPageVideo')} />
                 </SingleColumnSection>
-                <Divider lg />
-                <SingleColumnSection
-                    title={getText('volunteerPageInfoTitle')}
-                    subtitle={getText('volunteerPageInfoSubtitle')}
-                >
-                    <Divider sm />
-                    <VolunteerGuidelines />
-                </SingleColumnSection>
+
                 <Divider md />
                 <ImageSection
                     image={getMedia('volunteerPageInterestedImage')}
                     title={getText('volunteerPageInterestedTitle')}
                     content={getText('volunteerPageInterestedContent')}
-                />
+                >
+                    <ButtonLink
+                        text={getText('volunteerPageFormButton')}
+                        link={getText('volunteerPageFormButtonLink')}
+                        align="left"
+                    />
+                </ImageSection>
                 <Divider lg />
+                <NewsLetterForm />
             </Page>
         );
     }

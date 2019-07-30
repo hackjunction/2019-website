@@ -86,6 +86,40 @@ class Footer extends PureComponent {
                                 Partners
                             </Link>
                         </div>
+                        <div className="FooterInner--right__section">
+                            <a
+                                href="https://www.flickr.com/photos/151708924@N07/albums/"
+                                alt="flickr"
+                            >
+                                <h5 className="FooterInner--right__section-title">
+                                    Photo Gallery
+                                </h5>
+                            </a>
+                            <a
+                                href="https://www.hackjunction.com/press"
+                                className="FooterInner--right__section-link"
+                            >
+                                Press kit (eng)
+                            </a>
+                            <a
+                                href="https://www.hackjunction.com/media"
+                                className="FooterInner--right__section-link"
+                            >
+                                Press kit (fin)
+                            </a>
+                            <a
+                                className="FooterInner--right__section-link"
+                                href="https://www.hackjunction.com/policy"
+                            >
+                                Privacy Policy
+                            </a>
+                            <a
+                                className="FooterInner--right__section-link"
+                                href="https://www.hackjunction.com/terms"
+                            >
+                                Terms & Conditions
+                            </a>
+                        </div>
                     </nav>
                 </div>
                 <div className="FooterBottom">

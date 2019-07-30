@@ -1,5 +1,9 @@
 @import '../../styles/variables.scss';
 
+.ButtonHide {
+    display: none;
+}
+
 %largened {
     font-size: 40px;
     width: 36rem;
@@ -58,6 +62,7 @@
             }
             &__md {
                 margin: 1rem;
+                height: 55px;
             }
             &__lg {
                 width: 36rem;

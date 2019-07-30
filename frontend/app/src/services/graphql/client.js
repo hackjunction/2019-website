@@ -86,11 +86,7 @@ export const getDynamicContent = () => {
                         }
                     }
                 }
-                volunteerguidelines {
-                    _id
-                    title
-                    content
-                }
+
                 eventdates {
                     _id
                     name

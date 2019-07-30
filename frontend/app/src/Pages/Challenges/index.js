@@ -12,6 +12,7 @@ import TracksGrid from '../../components/TracksGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import Divider from '../../components/Divider';
 import ChallengesGrid from '../../components/ChallengesGrid';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 class ChallengesPage extends Component {
     render() {
@@ -32,6 +33,7 @@ class ChallengesPage extends Component {
                 <Divider md />
                 <ChallengesGrid />
                 <Divider md />
+                <NewsLetterForm />
             </Page>
         );
     }

@@ -20,7 +20,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
         width: 100%;
         line-height: 35px;
         max-width: 650px;
@@ -51,14 +51,14 @@
     &--body {
         display: none;
 
-        @include bp-med{
-            display:flex;
+        @include bp-med {
+            display: flex;
         }
-        
+
         flex: 2;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-end;
+        align-items: flex-start;
         width: 100%;
         max-width: 650px;
         align-self: flex-end;
@@ -69,14 +69,5 @@
         -ms-animation: fadein-bottom 0.8s; /* Internet Explorer */
         -o-animation: fadein-bottom 0.8s; /* Opera < 12.1 */
         animation: fadein-bottom 0.8s;
-
-       
-    }
-    &--children { 
-      flex:1;
-      width: 100%;
-      @include bp-med{
-            flex: 3;
-      }
     }
 }

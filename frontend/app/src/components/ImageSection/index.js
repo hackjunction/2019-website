@@ -5,7 +5,13 @@ import Markdown from '../Markdown';
 
 import './style.scss';
 
-const ImageSection = ({ image, title, content, fontColor = 'white' }) => {
+const ImageSection = ({
+    image,
+    title,
+    content,
+    fontColor = 'white',
+    children
+}) => {
     let className = `ImageSection ImageSection--fontColor__${fontColor}`;
     return (
         <div className={className}>
@@ -18,6 +24,7 @@ const ImageSection = ({ image, title, content, fontColor = 'white' }) => {
                     source={content}
                     className="ImageSection--right__content"
                 />
+                {children}
             </div>
         </div>
     );

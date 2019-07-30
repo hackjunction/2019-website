@@ -14,6 +14,7 @@ import DatesGrid from '../../components/DatesGrid';
 import ButtonLink from '../../components/ButtonLink';
 import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
+import NewsLetterForm from '../../components/NewsLetterForm';
 
 class JunctionWeekPage extends Component {
     render() {
@@ -92,6 +93,7 @@ class JunctionWeekPage extends Component {
                     />
                 </BasicSection>
                 <Divider lg />
+                <NewsLetterForm />
             </Page>
         );
     }
