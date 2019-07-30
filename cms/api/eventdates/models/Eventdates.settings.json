@@ -15,7 +15,7 @@
     "name": {
       "type": "string"
     },
-    "date": {
+    "displayDate": {
       "type": "string"
     },
     "duringJunctionWeek": {
@@ -26,6 +26,11 @@
     },
     "showOnFrontPage": {
       "type": "boolean"
+    },
+    "date": {
+      "type": "date",
+      "required": true,
+      "default": "2019-01-31T00:00:00.000Z"
     }
   }
 }

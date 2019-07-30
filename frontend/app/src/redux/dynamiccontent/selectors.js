@@ -55,26 +55,6 @@ export const tracksListAlphabetically = createSelector(
     }
 );
 
-export const eventDatesJunctionWeek = createSelector(
-    eventDates,
-    data => {
-        return filter(data, 'duringJunctionWeek');
-    }
-);
-
-export const eventDatesVolunteerDates = createSelector(
-    eventDates,
-    data => {
-        return filter(data, 'isVolunteerDate');
-    }
-);
-export const eventDatesFrontPage = createSelector(
-    eventDates,
-    data => {
-        return filter(data, 'showOnFrontPage');
-    }
-);
-
 export const teamMembersByPriority = createSelector(
     teamMembers,
     data => {
@@ -98,6 +78,31 @@ export const globalByTeamPriority = createSelector(
 
 export const partnersOnFrontPage = createSelector(
     partners,
+    data => {
+        return filter(data, 'showOnFrontPage');
+    }
+);
+export const datesInOrder = createSelector(
+    eventDates,
+    data => {
+        return sortBy(data, 'date');
+    }
+);
+export const eventDatesJunctionWeek = createSelector(
+    datesInOrder,
+    data => {
+        return filter(data, 'duringJunctionWeek');
+    }
+);
+
+export const eventDatesVolunteerDates = createSelector(
+    datesInOrder,
+    data => {
+        return filter(data, 'isVolunteerDate');
+    }
+);
+export const eventDatesFrontPage = createSelector(
+    datesInOrder,
     data => {
         return filter(data, 'showOnFrontPage');
     }

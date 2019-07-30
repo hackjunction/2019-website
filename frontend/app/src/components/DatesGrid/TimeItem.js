@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TimeItem = ({ name, date } = this.props) => {
+const TimeItem = ({ name, displayDate } = this.props) => {
     return (
         <div className="DatesGrid--itemContainer">
             <div className="DatesGrid--itemContainer__item">
                 <span className="DatesGrid--itemContainer__item-date">
-                    {date}
+                    {displayDate}
                 </span>
                 <span className="DatesGrid--itemContainer__item-name">
                     {name}
