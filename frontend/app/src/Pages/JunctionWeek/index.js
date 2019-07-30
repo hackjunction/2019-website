@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.scss';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import Page from '../PageHOC';
@@ -105,7 +104,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(JunctionWeekPage);
+export default connect(mapStateToProps)(JunctionWeekPage);

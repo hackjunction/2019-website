@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import './style.scss';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
@@ -38,7 +37,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(TeamPage);
+export default connect(mapStateToProps)(TeamPage);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
@@ -43,7 +42,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(PartnerPage);
+export default connect(mapStateToProps)(PartnerPage);

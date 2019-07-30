@@ -1,3 +1,19 @@
+@import '../../styles/variables.scss';
 .NotFoundPage {
-    padding-top: 100px;
+    padding-top: 150px;
+    text-align: center;
+    &--title {
+        font-size: 30px;
+        @include bp-full {
+            font-size: 60px;
+            margin-left: -20rem;
+        }
+    }
+    &--subtitle {
+        font-size: 16px;
+        @include bp-full {
+            margin-left: 20rem;
+            font-size: 20px;
+        }
+    }
 }

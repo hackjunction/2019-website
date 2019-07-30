@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.scss';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
@@ -29,13 +28,13 @@ class HomePage extends Component {
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
                     >
-                        <ButtonLink
+                        {/* <ButtonLink
                             text={getText('homePageApplyButton')}
                             link={getText('homePageApplyButtonLink')}
                             size="fp"
                             color="purple"
                             align="center"
-                        />
+                        /> */}
                     </HeroCTA>
                 </HeroImage>
                 <Divider lg />
@@ -102,7 +101,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(HomePage);
+export default connect(mapStateToProps)(HomePage);

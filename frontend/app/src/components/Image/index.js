@@ -20,13 +20,23 @@ class Image extends PureComponent {
     }
 
     render() {
-        const { image = {}, alt, className, width, height, crop = 'fill', gravity = 'center' } = this.props;
+        const {
+            image = {},
+            alt,
+            className,
+            width,
+            height,
+            crop = 'fill',
+            gravity = 'center'
+        } = this.props;
         const { loaded } = this.state;
 
         if (image !== null && image.public_id) {
             return (
                 <CloudinaryImage
-                    className={`Image ${className} ${loaded ? '' : 'Image-loading'}`}
+                    className={`Image ${className} ${
+                        loaded ? '' : 'Image-loading'
+                    }`}
                     alt={alt}
                     publicId={image.public_id}
                     onLoad={this.setLoaded}
@@ -46,7 +56,9 @@ class Image extends PureComponent {
             <img
                 src={image ? image.url : ''}
                 alt={alt}
-                className={`Image ${className} ${loaded ? '' : 'Image-loading'}`}
+                className={`Image ${className} ${
+                    loaded ? '' : 'Image-loading'
+                }`}
                 width={width}
                 height={height}
                 onLoad={this.setLoaded}

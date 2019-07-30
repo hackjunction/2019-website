@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.scss';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import BasicSection from '../../components/BasicSection';
@@ -84,7 +83,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(VolunteerPage);
+export default connect(mapStateToProps)(VolunteerPage);

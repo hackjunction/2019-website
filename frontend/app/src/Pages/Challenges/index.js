@@ -4,7 +4,6 @@ import Page from '../PageHOC';
 
 import './style.scss';
 
-import { updateStaticContent } from '../../redux/staticcontent/actions';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
@@ -45,7 +44,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { updateStaticContent }
-)(ChallengesPage);
+export default connect(mapStateToProps)(ChallengesPage);
