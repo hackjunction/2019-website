@@ -5,6 +5,7 @@ import './style.scss';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
+import HeaderVideo from '../../components/HeaderVideo';
 import HeroCTA from '../../components/HeroCTA';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
@@ -29,18 +30,29 @@ class HomePage extends Component {
                 metaDesc={getText('whoAreWeBody')}
                 ogImageKey={getMedia('homePageHeaderImage')}
             >
+                {/* VIDEO */}
+                {/* <HeaderVideo video={getMedia('homePageHeaderVideo')}>
+                    <HeroCTA
+                        subtitle={getText('homePageHeroCtaSubtitle')}
+                        image={getMedia('homePageHeroCtaImage')}
+                    >
+                        
+                    </HeroCTA>
+                </HeaderVideo> */}
+
+                {/* IMAGE  */}
                 <HeroImage image={getMedia('homePageHeaderImage')}>
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
                     >
-                        {/* <ButtonLink
+                        <ButtonLink
                             text={getText('homePageApplyButton')}
                             link={getText('homePageApplyButtonLink')}
                             size="fp"
                             color="purple"
                             align="center"
-                        /> */}
+                        />
                     </HeroCTA>
                 </HeroImage>
 

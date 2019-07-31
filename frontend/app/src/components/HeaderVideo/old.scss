@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+
+.HeaderVideo {
+    align-self: stretch;
+    margin-left: -$padding-page;
+    margin-right: -$padding-page;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    transition: height 0.2s ease;
+    height: 380px;
+    opacity: 1;
+    background: black;
+    mask-image: url('../../assets/misc/wave-mask.png');
+    mask-size: cover;
+    mask-position: bottom;
+    -webkit-mask-image: url('../../assets/misc/wave-mask.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: bottom;
+
+    @include bp-med {
+        height: 600px;
+    }
+
+    @include bp-full {
+        height: 900px;
+    }
+
+    &-visible {
+        .HeaderVideo--video {
+            opacity: 0.6;
+        }
+    }
+
+    .vjs-loading-spinner {
+        display: none !important;
+    }
+
+    &--video {
+        opacity: 0;
+        transition: opacity 1.5s ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        pointer-events: none;
+
+        video {
+            object-fit: cover;
+        }
+
+        &-visible {
+            opacity: 0.2;
+        }
+    }
+
+    &--logo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--logo {
+        width: 800px;
+        max-width: 80%;
+        object-fit: contain;
+
+        @include bp-full {
+            position: relative;
+            top: -50px;
+        }
+    }
+}
