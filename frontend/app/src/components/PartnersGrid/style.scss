@@ -3,7 +3,7 @@
     width: 100%;
     max-width: 980px;
     margin: 0 auto;
-    object-fit: cover;
+    object-fit: contain;
     display: flex;
     flex-direction: row;
     /* justify-content: center; */
@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: row;
     &-img {
-        width: 200px;
-        //width: 196px;
+        max-height: 200px;
+        max-width: 200px;
     }
 }

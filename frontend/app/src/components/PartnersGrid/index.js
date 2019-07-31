@@ -15,8 +15,6 @@ const PartnersGrid = props => {
                     <Image
                         image={partner.logo}
                         className="PartnersGrid-partner-img"
-                        width={200}
-                        height={200}
                         crop={'fill'}
                     />
                 </div>
