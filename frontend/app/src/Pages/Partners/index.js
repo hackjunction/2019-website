@@ -11,6 +11,7 @@ import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
+import ContactForm from '../../components/ContactForm';
 
 import Page from '../PageHOC';
 
@@ -39,14 +40,15 @@ class PartnerPage extends Component {
                     <Markdown source={getText('partnerPageInfoContent')} />
                 </BasicSection>
                 <Divider md />
-
                 <SingleColumnSection
                     title={getText('partnerPageTitle')}
                     subtitle={getText('partnerPageSubtitle')}
                 >
                     <PartnersGrid />
                 </SingleColumnSection>
-                <div key="contact">paspasp</div>
+                <Divider md />
+                <div id="contact" />>
+                <ContactForm />
             </Page>
         );
     }

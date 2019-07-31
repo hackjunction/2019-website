@@ -38,7 +38,7 @@ class HomePage extends Component {
                         /> */}
                     </HeroCTA>
                 </HeroImage>
-                <Divider lg />
+
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
 
                 <BasicSection
