@@ -52,9 +52,9 @@
                     &-content {
                         @extend %font-body;
                         color: black;
-                        margin-bottom: 1rem;
-                        padding-left: 1rem;
-                        padding-right: 5px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        margin-right: -2rem;
                     }
                 }
             }
@@ -65,7 +65,7 @@
             margin-bottom: 1rem;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-evenly;
             align-items: center;
             @include bp-full {
                 flex-direction: row;
@@ -82,16 +82,17 @@
 
             &-image {
                 width: 100%;
-                object-fit: contain;
                 padding-top: 10px;
-                padding-bottom: -10px;
+                object-fit: cover;
                 flex-direction: column;
                 align-items: flex-start;
+                align-self: center;
                 max-height: 200px;
 
                 @include bp-full {
-                    max-height: 150px;
-                    max-width: 150px;
+                    margin-left: -10px;
+                    max-height: 200px;
+                    max-width: 200px;
                 }
             }
             &-right {
@@ -100,8 +101,9 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                padding-left: 10px;
+
                 @include bp-full {
-                    margin-left: 3rem;
                     align-items: flex-start;
                 }
                 &-name {
@@ -111,14 +113,12 @@
                     font-size: 24px;
                     color: black;
                     padding-bottom: 1rem;
-                    padding-left: 1rem;
                 }
                 &-content {
                     @extend %font-body;
                     color: black;
-                    margin-bottom: 1rem;
-                    padding-left: 1rem;
-                    padding-right: 5px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
                 }
             }
         }
