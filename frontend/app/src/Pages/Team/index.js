@@ -17,7 +17,12 @@ class TeamPage extends Component {
     render() {
         const { getMedia, getText } = this.props;
         return (
-            <Page className="TeamPage">
+            <Page
+                className="TeamPage"
+                pageTitle="Team"
+                metaDesc={getText('teamPageHeaderContent')}
+                ogImage={getMedia('teamPageHeaderImage')}
+            >
                 <HeroImage image={getMedia('teamPageHeaderImage')}>
                     <BasicHeader
                         title={getText('teamPageHeaderTitle')}

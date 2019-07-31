@@ -20,7 +20,12 @@ class PartnerPage extends Component {
         const { getMedia, getText } = this.props;
 
         return (
-            <Page className="PartnerPage">
+            <Page
+                className="PartnerPage"
+                pageTitle="Partners"
+                metaDesc={getText('partnerPageHeaderContent')}
+                ogImage={getMedia('partnerPageHeaderImage')}
+            >
                 <HeroImage image={getMedia('partnerPageHeaderImage')}>
                     <BasicHeader
                         title={getText('partnerPageHeaderTitle')}

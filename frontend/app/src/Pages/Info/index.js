@@ -22,7 +22,12 @@ class InfoPage extends Component {
         const { getMedia, getText } = this.props;
 
         return (
-            <Page className="InfoPage">
+            <Page
+                className="InfoPage"
+                pageTitle="Information"
+                metaDescKey={getText('infoPageHeaderContent')}
+                ogImage={getMedia('infoPageHeaderImage')}
+            >
                 <HeroImage image={getMedia('infoPageHeaderImage')}>
                     <BasicHeader
                         title={getText('infoPageHeaderTitle')}

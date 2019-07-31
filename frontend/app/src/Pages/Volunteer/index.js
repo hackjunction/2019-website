@@ -21,7 +21,12 @@ class VolunteerPage extends Component {
     render() {
         const { getMedia, getText } = this.props;
         return (
-            <Page className="VolunteerPage">
+            <Page
+                className="VolunteerPage"
+                pageTitle="Volunteers"
+                metaDesc={getText('volunteerPageHeaderContent')}
+                ogImage={getMedia('volunteerPageHeaderImage')}
+            >
                 <HeroImage image={getMedia('volunteerPageHeaderImage')}>
                     <Divider sm />
                     <BasicHeader

@@ -23,7 +23,12 @@ class HomePage extends Component {
     render() {
         const { getMedia, getText } = this.props;
         return (
-            <Page className="HomePage">
+            <Page
+                className="HomePage"
+                pageTitle="Hack the Future"
+                metaDesc={getText('whoAreWeBody')}
+                ogImageKey={getMedia('homePageHeaderImage')}
+            >
                 <HeroImage image={getMedia('homePageHeaderImage')}>
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}

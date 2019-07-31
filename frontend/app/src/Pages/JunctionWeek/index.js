@@ -21,7 +21,12 @@ class JunctionWeekPage extends Component {
         const { getMedia, getText } = this.props;
 
         return (
-            <Page className="JunctionWeekPage">
+            <Page
+                className="JunctionWeekPage"
+                pageTitle="Junction Week"
+                metaDesc={getText('junctionWeekPageHeaderContent')}
+                ogImage={getMedia('junctionWeekPageHeaderImage')}
+            >
                 <HeroImage
                     image={getMedia('junctionWeekPageHeaderImage')}
                     alt="Header image"

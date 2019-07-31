@@ -18,7 +18,12 @@ class ChallengesPage extends Component {
     render() {
         const { getMedia, getText } = this.props;
         return (
-            <Page className="ChallengesPage">
+            <Page
+                className="ChallengesPage"
+                pageTitle="Challenges"
+                metaDesc={getText('challengesHeaderContent')}
+                ogImage={getMedia('challengesPageHeaderImage')}
+            >
                 <HeroImage image={getMedia('challengesPageHeaderImage')}>
                     <BasicHeader
                         title={getText('challengesPageHeaderTitle')}
