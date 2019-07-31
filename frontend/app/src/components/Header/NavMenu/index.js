@@ -12,7 +12,8 @@ import { isSidebarOpen } from '../../../redux/dynamiccontent/selectors';
 import Image from '../../Image';
 import Divider from '../../Divider';
 
-const NavMenuInner = memo(({ getMedia } = this.props) => {
+const NavMenuInner = memo(props => {
+    const { getMedia } = props;
     return (
         <div className="NavMenu--inner">
             <Link to="/">

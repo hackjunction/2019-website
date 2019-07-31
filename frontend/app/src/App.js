@@ -5,7 +5,13 @@ import { connect } from 'react-redux';
 import './fontello/css/fontello.css';
 import './App.scss';
 
+import ReactGA from 'react-ga';
+import ReactPixel from 'react-facebook-pixel';
+
 import config from './config';
+
+import ScrollToTop from './components/ScrollToTop';
+import GlobalLifecycle from './GlobalLifecycle';
 
 import Header from './components/Header';
 import EditorTools from './components/EditorTools';
@@ -32,7 +38,15 @@ class App extends Component {
         this.props.updateStaticContent();
         this.props.updateSocialMedias();
     }
+    handleRouteChange(location) {
+        if (config.GOOGLE_ANALYTICS_ID) {
+            ReactGA.pageview(location.pathname);
+        }
 
+        if (config.FACEBOOK_PIXEL_ID) {
+            ReactPixel.pageView();
+        }
+    }
     render() {
         return (
             <Router>
@@ -72,6 +86,8 @@ class App extends Component {
 
                     <FooterImageButtons />
                     <Footer />
+                    <ScrollToTop />
+                    <GlobalLifecycle />
                     {config.IS_DEBUG ? <EditorTools /> : null}
                 </div>
             </Router>
