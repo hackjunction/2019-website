@@ -12,7 +12,7 @@ import { toggleSidebar } from './redux/dynamiccontent/actions';
  */
 
 class GlobalLifecycle extends Component {
-    componentDidMount() {
+    async componentDidMount() {
         this.props.toggleSidebar();
     }
 
