@@ -27,4 +27,8 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
+
+    &--wrapper {
+        padding: 0 $padding-page;
+    }
 }

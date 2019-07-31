@@ -26,13 +26,13 @@
     }
 
     @include bp-full {
-        padding-top: 700px;
         height: 900px;
+        padding-top: 700px;
         // padding-top: $bp-full * 0.5625;
     }
 
     &--img {
-        opacity: 0.6;
+        opacity: 0.5;
         position: absolute;
         top: 0;
         left: 0;
