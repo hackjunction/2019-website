@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { isEmpty } from 'lodash-es';
 import { HashLink } from 'react-router-hash-link';
 import classNames from 'classnames';
 import './Style.scss';
@@ -12,13 +13,13 @@ const ButtonLink = ({
     type = 'link', //link for inside website || anchor to specific object in page || outside for linking outside website (www.google.com)
     hoverText = ''
 }) => {
-    let className = `ButtonLink--link ButtonLink--link-color__${color} ButtonLink--link-size__${size}  ButtonLink--link-align__${align} ${
-        text ? '' : 'ButtonHide'
-    }`;
     const className = classNames({
-        `ButtonLink--link` : true, `ButtonLink--link-color__${color}` : true, `ButtonLink--link-size__${size}` : true,
-    }) 
-
+        [`ButtonLink--link`]: true,
+        [`ButtonLink--link-color__${color}`]: true,
+        [`ButtonLink--link-size__${size}`]: true,
+        [`ButtonLink--link-align__${align}`]: true,
+        ButtonHide: isEmpty(text)
+    });
 
     if (type === 'link') {
         return (
@@ -43,9 +44,7 @@ const ButtonLink = ({
             <div className="ButtonLinkReady">
                 <a href={link} className={className}>
                     <span className={`ButtonLinkReady--text `}>{text}</span>
-                    <span className={`ButtonLinkReady--hoverText `}>
-                        {hoverText}
-                    </span>
+                    <span className={`ButtonLinkReady--hoverText `}>{hoverText}</span>
                 </a>
             </div>
         );
