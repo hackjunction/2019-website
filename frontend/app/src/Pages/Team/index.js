@@ -32,7 +32,7 @@ class TeamPage extends Component {
                 </HeroImage>
                 <SingleColumnSection title={getText('teamPageTeamTitle')} />
                 <TeamMemberGrid type="finland" />
-
+                <div id="contact" />
                 <Divider sm />
                 <ContactForm />
             </Page>
