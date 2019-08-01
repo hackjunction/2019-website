@@ -7,7 +7,7 @@ export const updateDynamicContent = () => (dispatch, getState) => {
     if (!shouldUpdate(getState())) {
         return;
     }
-    console.log('UpdateDynamicContent action');
+
     dispatch({
         type: ActionTypes.UPDATE_DYNAMIC_CONTENT,
         promise: GraphqlService.getDynamicContent(),

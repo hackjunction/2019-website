@@ -8,7 +8,7 @@ const ChallengeItem = ({ name, partner, content, alt } = this.props) => {
             <Image
                 className="ChallengesGrid--track__challenge-image"
                 image={partner.logo}
-                alt={alt}
+                alt="Track Partner"
             />
             <div className="ChallengesGrid--track__challenge-right">
                 <span className="ChallengesGrid--track__challenge-right-name">

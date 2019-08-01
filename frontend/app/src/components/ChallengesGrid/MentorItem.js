@@ -8,7 +8,7 @@ const MentorItem = ({ trackMentorDescription, logo, alt } = this.props) => {
             <Image
                 className="ChallengesGrid--track__mentor-item-image"
                 image={logo}
-                alt={alt}
+                alt="Track Mentor"
             />
             <div className="ChallengesGrid--track__mentor-item-right">
                 <span className="ChallengesGrid--track__mentor-item-right-content">
