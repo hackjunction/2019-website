@@ -3,6 +3,7 @@ import './style.scss';
 
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 import * as StaticSelectors from '../../../redux/staticcontent/selectors';
 
@@ -39,9 +40,9 @@ const NavMenuInner = memo(props => {
                     Partners
                 </Link>
 
-                <Link to="/team">
+                <HashLink to="/team#contact">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
-                </Link>
+                </HashLink>
             </nav>
 
             <h6 className="NavMenu--inner__menu-title">

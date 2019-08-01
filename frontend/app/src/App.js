@@ -22,7 +22,6 @@ import Footer from './components/Footer';
 import FooterImageButtons from './components/FooterImageButtons';
 import Divider from './components/Divider';
 
-import AnimatedPage from './Pages/AnimatedPage';
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
 import JunctionWeekPage from './Pages/JunctionWeek';
@@ -43,7 +42,11 @@ class App extends Component {
         this.props.updateSocialMedias();
 
         if (config.FACEBOOK_PIXEL_ID) {
-            ReactPixel.init(config.FACEBOOK_PIXEL_ID, {}, { autoConfig: true, debug: false });
+            ReactPixel.init(
+                config.FACEBOOK_PIXEL_ID,
+                {},
+                { autoConfig: true, debug: false }
+            );
         }
 
         if (config.GOOGLE_ANALYTICS_ID) {
@@ -82,11 +85,27 @@ class App extends Component {
                         <Switch location={location} key={location.pathname}>
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/info" component={InfoPage} />
-                            <Route exact path="/junction-week" component={JunctionWeekPage} />
-                            <Route exact path="/volunteer" component={VolunteerPage} />
+                            <Route
+                                exact
+                                path="/junction-week"
+                                component={JunctionWeekPage}
+                            />
+                            <Route
+                                exact
+                                path="/volunteer"
+                                component={VolunteerPage}
+                            />
                             <Route exact path="/team" component={TeamPage} />
-                            <Route exact path="/challenges" component={ChallengesPage} />
-                            <Route exact path="/partners" component={PartnersPage} />
+                            <Route
+                                exact
+                                path="/challenges"
+                                component={ChallengesPage}
+                            />
+                            <Route
+                                exact
+                                path="/partners"
+                                component={PartnersPage}
+                            />
 
                             <Route component={NotFound} />
                         </Switch>
