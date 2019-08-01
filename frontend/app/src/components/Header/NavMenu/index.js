@@ -40,7 +40,7 @@ const NavMenuInner = memo(props => {
                     Partners
                 </Link>
 
-                <HashLink to="/team#contact">
+                <HashLink to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
                 </HashLink>
             </nav>
