@@ -57,6 +57,8 @@ class HomePage extends Component {
                         <ButtonLink
                             text={getText('homePageReadyButton')}
                             size="lg"
+                            type="hover"
+                            hoverText={getText('homePageReadyButtonHover')}
                         />
                         <p className={styles.stylishContainerDescription}>
                             {getText('homePageReadyDescription')}

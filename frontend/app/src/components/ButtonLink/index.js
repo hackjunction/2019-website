@@ -39,7 +39,11 @@ const ButtonLink = ({
                 <HashLink
                     to={link}
                     scroll={el =>
-                        el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start', inline: 'nearest' })
+                        el.scrollIntoView({
+                            behavior: smooth ? 'smooth' : 'auto',
+                            block: 'start',
+                            inline: 'nearest'
+                        })
                     }
                     className={className}
                 >
@@ -51,7 +55,12 @@ const ButtonLink = ({
     if (type === 'mainsite') {
         return (
             <div className="ButtonLink">
-                <a href={link} className={className} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={link}
+                    className={className}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {text}
                 </a>
             </div>
@@ -62,7 +71,21 @@ const ButtonLink = ({
             <div className="ButtonLinkReady">
                 <a href={link} className={className}>
                     <span className={`ButtonLinkReady--text `}>{text}</span>
-                    <span className={`ButtonLinkReady--hoverText `}>{hoverText}</span>
+                    <span className={`ButtonLinkReady--hoverText `}>
+                        {hoverText}
+                    </span>
+                </a>
+            </div>
+        );
+    }
+    if (type === 'hover') {
+        return (
+            <div className="ButtonLinkHover">
+                <a href={link} className={className}>
+                    <span className={`ButtonLinkHover--text `}>{text}</span>
+                    <span className={`ButtonLinkHover--hoverText `}>
+                        {hoverText}
+                    </span>
                 </a>
             </div>
         );
