@@ -96,5 +96,9 @@
                 margin-left: auto;
             }
         }
+
+        &-block {
+            max-width: none !important;
+        }
     }
 }

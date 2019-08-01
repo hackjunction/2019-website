@@ -14,6 +14,7 @@ const TracksGrid = props => {
             return (
                 <div className="TracksGrid--container" key={track._id}>
                     <ButtonLink
+                        block
                         type="anchor"
                         text={track.name}
                         link={'/challenges#' + snake(track.name)}

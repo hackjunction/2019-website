@@ -11,13 +11,15 @@ const ButtonLink = ({
     size = 'md', //sm / md / lg /fp
     align = 'center', //left / center / right
     type = 'link', //link for inside website || anchor to specific object in page || outside for linking outside website (www.google.com)
-    hoverText = ''
+    hoverText = '',
+    block = false
 }) => {
     const className = classNames({
         [`ButtonLink--link`]: true,
         [`ButtonLink--link-color__${color}`]: true,
         [`ButtonLink--link-size__${size}`]: true,
         [`ButtonLink--link-align__${align}`]: true,
+        'ButtonLink--link-block': block,
         ButtonHide: isEmpty(text)
     });
 
