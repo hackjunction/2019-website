@@ -44,7 +44,7 @@ class Footer extends PureComponent {
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/junctionweek"
+                                to="/junction-week"
                             >
                                 Junction Week
                             </Link>

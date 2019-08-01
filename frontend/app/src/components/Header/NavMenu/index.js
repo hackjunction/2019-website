@@ -26,7 +26,7 @@ const NavMenuInner = memo(props => {
                 <Link to="/">
                     <h6 className="NavMenu--inner__menu-title">Home</h6>
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/junctionWeek">
+                <Link className="NavMenu--inner__menu-item" to="/junction-week">
                     Junction Week
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/info">

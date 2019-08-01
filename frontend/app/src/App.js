@@ -58,7 +58,7 @@ class App extends Component {
                             <Route exact path="/info" component={InfoPage} />
                             <Route
                                 exact
-                                path="/junctionweek"
+                                path="/junction-week"
                                 component={JunctionWeekPage}
                             />
                             <Route
