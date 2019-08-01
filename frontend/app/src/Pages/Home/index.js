@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import './style.scss';
+import styles from './Home.module.scss';
 
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
@@ -42,10 +42,7 @@ class HomePage extends Component {
 
                 {/* IMAGE  */}
                 <HeroImage image={getMedia('homePageHeaderImage')}>
-                    <HeroCTA
-                        subtitle={getText('homePageHeroCtaSubtitle')}
-                        image={getMedia('homePageHeroCtaImage')}
-                    >
+                    <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')}>
                         {/* <ButtonLink
                             text={getText('homePageApplyButton')}
                             link={getText('homePageApplyButtonLink')}
@@ -57,52 +54,39 @@ class HomePage extends Component {
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
-
-                <BasicSection
-                    title={getText('junctionMainTitle')}
-                    subtitle={getText('junctionMainSubtitle')}
-                >
-                    <Markdown source={getText('homePageIntroText')} />
-                </BasicSection>
                 <Divider sm />
 
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
-                    <h1>{getText('homePageReadyTitle')}</h1>
-                    <ButtonLink text={getText('homePageReadyButton')} />
-                    <Markdown source={getText('homePageReadyDescription')} />
+                    <div className={styles.stylishContainer}>
+                        <BasicSection title={getText('junctionMainTitle')} subtitle={getText('junctionMainSubtitle')}>
+                            <Markdown source={getText('homePageIntroText')} />
+                        </BasicSection>
+                        <Divider lg />
+                        <h1 className={styles.stylishContainerTitle}>{getText('homePageReadyTitle')}</h1>
+                        <ButtonLink text={getText('homePageReadyButton')} size="lg" />
+                        <p className={styles.stylishContainerDescription}>{getText('homePageReadyDescription')}</p>
+                        <Divider lg />
+                        <SingleColumnSection
+                            title={getText('homePageTracksTitle')}
+                            subtitle={getText('homePageTracksSubtitle')}
+                        />
+                        <TracksGrid />
+                    </div>
                 </StylishContainer>
 
-                {/*  <AreYouReady
-                    title={getText('homePageReadyTitle')}
-                    button={getText('homePageReadyButton')}
-                    buttonHover={getText('homePageReadyButtonHover')}
-                    description={getText('homePageReadyDescription')}
-                    link={getText('homePageReadyLink')}
-                /> */}
                 <Divider lg />
-                <SingleColumnSection
-                    title={getText('homePageTracksTitle')}
-                    subtitle={getText('homePageTracksSubtitle')}
-                />
-                <TracksGrid />
                 <Divider md />
                 <SingleColumnSection>
                     <Markdown source={getText('homePageVideoLink')} />
                 </SingleColumnSection>
                 <Divider lg />
-                <SingleColumnSection
-                    title={getText('faqTitle')}
-                    subtitle={getText('faqSubtitle')}
-                >
+                <SingleColumnSection title={getText('faqTitle')} subtitle={getText('faqSubtitle')}>
                     <Divider sm />
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />
-                <SingleColumnSection
-                    title={getText('partnersTitle')}
-                    subtitle={getText('partnersSubtitle')}
-                >
+                <SingleColumnSection title={getText('partnersTitle')} subtitle={getText('partnersSubtitle')}>
                     <Divider sm />
                 </SingleColumnSection>
                 <PartnersGrid type="front" />
