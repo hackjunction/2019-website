@@ -2,7 +2,7 @@
 .PartnersGrid {
     margin-left: -$padding-page;
     margin-right: -$padding-page;
-    background: rgb(240, 240, 240);
+
     padding: $padding-page;
 
     &--inner {
@@ -13,6 +13,7 @@
         align-items: center;
         margin: 0 auto;
         max-width: 980px;
+        background: rgb(240, 240, 240);
     }
 }
 
