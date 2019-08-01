@@ -30,7 +30,7 @@ const NavMenuInner = memo(props => {
                     Junction Week
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/info">
-                    Practical information
+                    Practical Info
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/challenges">
                     Tracks & Challenges
