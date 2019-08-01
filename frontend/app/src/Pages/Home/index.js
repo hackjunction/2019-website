@@ -28,27 +28,8 @@ class HomePage extends Component {
                 metaDesc={getText('whoAreWeBody')}
                 ogImageKey={getMedia('homePageHeaderImage')}
             >
-                {/* VIDEO */}
-                {/* <HeaderVideo video={getMedia('homePageHeaderVideo')}>
-                    <HeroCTA
-                        subtitle={getText('homePageHeroCtaSubtitle')}
-                        image={getMedia('homePageHeroCtaImage')}
-                    >
-                        
-                    </HeroCTA>
-                </HeaderVideo> */}
-
-                {/* IMAGE  */}
                 <HeroImage image={getMedia('homePageHeaderImage')} isVideo>
-                    <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')}>
-                        {/* <ButtonLink
-                            text={getText('homePageApplyButton')}
-                            link={getText('homePageApplyButtonLink')}
-                            size="fp"
-                            color="purple"
-                            align="center"
-                        /> */}
-                    </HeroCTA>
+                    <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')} />
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
@@ -56,21 +37,21 @@ class HomePage extends Component {
 
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
+                    <BasicSection title={getText('junctionMainTitle')} subtitle={getText('junctionMainSubtitle')}>
+                        <Markdown source={getText('homePageIntroText')} />
+                    </BasicSection>
+                    <Divider lg />
                     <div className={styles.stylishContainer}>
-                        <BasicSection title={getText('junctionMainTitle')} subtitle={getText('junctionMainSubtitle')}>
-                            <Markdown source={getText('homePageIntroText')} />
-                        </BasicSection>
-                        <Divider lg />
                         <h1 className={styles.stylishContainerTitle}>{getText('homePageReadyTitle')}</h1>
                         <ButtonLink text={getText('homePageReadyButton')} size="lg" />
                         <p className={styles.stylishContainerDescription}>{getText('homePageReadyDescription')}</p>
-                        <Divider lg />
-                        <SingleColumnSection
-                            title={getText('homePageTracksTitle')}
-                            subtitle={getText('homePageTracksSubtitle')}
-                        />
-                        <TracksGrid />
                     </div>
+                    <Divider lg />
+                    <SingleColumnSection
+                        title={getText('homePageTracksTitle')}
+                        subtitle={getText('homePageTracksSubtitle')}
+                    />
+                    <TracksGrid />
                 </StylishContainer>
 
                 <Divider lg />

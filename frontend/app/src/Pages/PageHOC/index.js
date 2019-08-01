@@ -31,32 +31,18 @@ class PageHOC extends Component {
         }
     }
     render() {
-        const {
-            className,
-            children,
-            pageTitle,
-            metaDesc,
-            ogImageUrl,
-            ogImageTwitterUrl
-        } = this.props;
-        const canonicalUrl =
-            'https://' + window.location.hostname + window.location.pathname;
+        const { className, children, pageTitle, metaDesc, ogImageUrl, ogImageTwitterUrl } = this.props;
+        const canonicalUrl = 'https://' + window.location.hostname + window.location.pathname;
         return (
             <div className={'Page--wrapper ' + className}>
-                <Helmet
-                    defaultTitle="Junction 2019 | Hack the Future"
-                    titleTemplate="Junction 2019 | %s"
-                >
+                <Helmet defaultTitle="Junction 2019 | Hack the Future" titleTemplate="Junction 2019 | %s">
                     <link rel="canonical" href={canonicalUrl} />
                     <meta property="og:url" content={canonicalUrl} />
                     <title>{pageTitle}</title>
                     <meta name="robots" content="index,follow" />
                     <meta name="description" content={metaDesc} />
                     {/* OpenGraph properties */}
-                    <meta
-                        property="og:title"
-                        content={'Junction | ' + pageTitle}
-                    />
+                    <meta property="og:title" content={'Junction 2019 | ' + pageTitle} />
                     <meta property="og:description" content={metaDesc} />
                     <meta property="og:type" content="website" />
                     <meta property="og:image" content={ogImageUrl} />
@@ -66,10 +52,7 @@ class PageHOC extends Component {
                     <meta name="twitter:card" content="summary_large_image" />
                     <meta name="twitter:site" content="@hackJunction" />
                     <meta name="twitter:creator" content="@hackJunction" />
-                    <meta
-                        name="twitter:title"
-                        content={'Junction | ' + pageTitle}
-                    />
+                    <meta name="twitter:title" content={'Junction 2019 | ' + pageTitle} />
                     <meta name="twitter:description" content={metaDesc} />
                     <meta name="twitter:image" content={ogImageTwitterUrl} />
                 </Helmet>

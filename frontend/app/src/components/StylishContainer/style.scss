@@ -11,6 +11,7 @@
         align-self: stretch;
         flex: 1;
         position: relative;
+        overflow: hidden;
     }
     &-right__image {
         position: absolute;
