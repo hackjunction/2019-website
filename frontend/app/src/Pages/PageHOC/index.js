@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import cloudinary from 'cloudinary-core';
 
-import config from '../../services/config';
+import config from '../../config';
 
 import * as NavActions from '../../redux/dynamiccontent/actions';
 
