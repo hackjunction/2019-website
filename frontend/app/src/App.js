@@ -22,6 +22,7 @@ import Footer from './components/Footer';
 import FooterImageButtons from './components/FooterImageButtons';
 import Divider from './components/Divider';
 
+import AnimatedPage from './Pages/AnimatedPage';
 import HomePage from './Pages/Home';
 import InfoPage from './Pages/Info';
 import JunctionWeekPage from './Pages/JunctionWeek';
@@ -72,13 +73,13 @@ class App extends Component {
     }
 
     render() {
-        console.log('PROPS', this.props);
+        const { location } = this.props;
         return (
             <div className="App">
                 <Header />
                 <main className="App--main">
                     <AnimatePresence>
-                        <Switch>
+                        <Switch location={location} key={location.pathname}>
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/info" component={InfoPage} />
                             <Route exact path="/junction-week" component={JunctionWeekPage} />

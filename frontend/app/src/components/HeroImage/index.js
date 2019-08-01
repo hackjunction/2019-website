@@ -39,7 +39,7 @@ const HeroImage = props => {
         <div className="HeroImage">
             <Image image={props.image} className="HeroImage--img" />
             {props.isVideo && <Video />}
-            <span className="HeroImage--content">{props.children}</span>
+            <div className="HeroImage--content">{props.children}</div>
         </div>
     );
 };
