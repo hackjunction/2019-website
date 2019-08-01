@@ -8,7 +8,11 @@ const SingleColumnSection = ({ title, subtitle, children, center = false }) => {
         <div className="SingleColumnSection">
             <h3 className="SingleColumnSection--title">{title}</h3>
             <Markdown source={subtitle} />
-            <div className={`SingleColumnSection--content ${center ? 'SingleColumnSection--content-center' : ''}`}>
+            <div
+                className={`SingleColumnSection--content ${
+                    center ? 'SingleColumnSection--content-center' : ''
+                }`}
+            >
                 {children}
             </div>
         </div>
