@@ -28,8 +28,11 @@ class HomePage extends Component {
                 metaDesc={getText('whoAreWeBody')}
                 ogImageKey={getMedia('homePageHeaderImage')}
             >
-                <HeroImage image={getMedia('homePageHeaderImage')} isVideo>
-                    <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')} />
+                <HeroImage isVideo>
+                    <HeroCTA
+                        subtitle={getText('homePageHeroCtaSubtitle')}
+                        image={getMedia('homePageHeroCtaImage')}
+                    />
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
@@ -37,14 +40,24 @@ class HomePage extends Component {
 
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
-                    <BasicSection title={getText('junctionMainTitle')} subtitle={getText('junctionMainSubtitle')}>
+                    <BasicSection
+                        title={getText('junctionMainTitle')}
+                        subtitle={getText('junctionMainSubtitle')}
+                    >
                         <Markdown source={getText('homePageIntroText')} />
                     </BasicSection>
                     <Divider lg />
                     <div className={styles.stylishContainer}>
-                        <h1 className={styles.stylishContainerTitle}>{getText('homePageReadyTitle')}</h1>
-                        <ButtonLink text={getText('homePageReadyButton')} size="lg" />
-                        <p className={styles.stylishContainerDescription}>{getText('homePageReadyDescription')}</p>
+                        <h1 className={styles.stylishContainerTitle}>
+                            {getText('homePageReadyTitle')}
+                        </h1>
+                        <ButtonLink
+                            text={getText('homePageReadyButton')}
+                            size="lg"
+                        />
+                        <p className={styles.stylishContainerDescription}>
+                            {getText('homePageReadyDescription')}
+                        </p>
                     </div>
                     <Divider lg />
                     <SingleColumnSection
@@ -60,12 +73,18 @@ class HomePage extends Component {
                     <Markdown source={getText('homePageVideoLink')} />
                 </SingleColumnSection>
                 <Divider lg />
-                <SingleColumnSection title={getText('faqTitle')} subtitle={getText('faqSubtitle')}>
+                <SingleColumnSection
+                    title={getText('faqTitle')}
+                    subtitle={getText('faqSubtitle')}
+                >
                     <Divider sm />
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />
-                <SingleColumnSection title={getText('partnersTitle')} subtitle={getText('partnersSubtitle')}>
+                <SingleColumnSection
+                    title={getText('partnersTitle')}
+                    subtitle={getText('partnersSubtitle')}
+                >
                     <Divider sm />
                 </SingleColumnSection>
                 <PartnersGrid type="front" />
