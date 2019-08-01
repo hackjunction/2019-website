@@ -8,6 +8,7 @@
         "classnames": "^2.2.6",
         "cloudinary-core": "^2.6.3",
         "cloudinary-react": "^1.1.1",
+        "framer-motion": "^1.4.2",
         "graphql": "^14.3.1",
         "lodash-es": "^4.17.11",
         "node-sass": "^4.11.0",

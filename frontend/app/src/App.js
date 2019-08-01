@@ -9,6 +9,7 @@ import ReactGA from 'react-ga';
 import ReactPixel from 'react-facebook-pixel';
 import { hotjar } from 'react-hotjar';
 import { withRouter } from 'react-router';
+import { AnimatePresence } from 'framer-motion';
 
 import config from './config';
 
@@ -69,22 +70,26 @@ class App extends Component {
             ReactPixel.pageView();
         }
     }
+
     render() {
+        console.log('PROPS', this.props);
         return (
             <div className="App">
                 <Header />
                 <main className="App--main">
-                    <Switch>
-                        <Route exact path="/" component={HomePage} />
-                        <Route exact path="/info" component={InfoPage} />
-                        <Route exact path="/junction-week" component={JunctionWeekPage} />
-                        <Route exact path="/volunteer" component={VolunteerPage} />
-                        <Route exact path="/team" component={TeamPage} />
-                        <Route exact path="/challenges" component={ChallengesPage} />
-                        <Route exact path="/partners" component={PartnersPage} />
+                    <AnimatePresence>
+                        <Switch>
+                            <Route exact path="/" component={HomePage} />
+                            <Route exact path="/info" component={InfoPage} />
+                            <Route exact path="/junction-week" component={JunctionWeekPage} />
+                            <Route exact path="/volunteer" component={VolunteerPage} />
+                            <Route exact path="/team" component={TeamPage} />
+                            <Route exact path="/challenges" component={ChallengesPage} />
+                            <Route exact path="/partners" component={PartnersPage} />
 
-                        <Route component={NotFound} />
-                    </Switch>
+                            <Route component={NotFound} />
+                        </Switch>
+                    </AnimatePresence>
 
                     <Divider md />
                 </main>
