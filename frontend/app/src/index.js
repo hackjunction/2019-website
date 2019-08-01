@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { CloudinaryContext } from 'cloudinary-react';
 import WebFont from 'webfontloader';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 //GraphQL
 import { ApolloProvider } from 'react-apollo';
@@ -40,7 +41,9 @@ ReactDOM.render(
         <PersistGate loading={null} persistor={persistor}>
             <ApolloProvider client={client}>
                 <CloudinaryContext cloudName={config.CLOUDINARY_CLOUD_NAME}>
-                    <App />
+                    <Router>
+                        <App />
+                    </Router>
                 </CloudinaryContext>
             </ApolloProvider>
         </PersistGate>

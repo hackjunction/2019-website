@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './fontello/css/fontello.css';
@@ -71,32 +71,30 @@ class App extends Component {
     }
     render() {
         return (
-            <Router>
-                <div className="App">
-                    <Header />
-                    <main className="App--main">
-                        <Switch>
-                            <Route exact path="/" component={HomePage} />
-                            <Route exact path="/info" component={InfoPage} />
-                            <Route exact path="/junction-week" component={JunctionWeekPage} />
-                            <Route exact path="/volunteer" component={VolunteerPage} />
-                            <Route exact path="/team" component={TeamPage} />
-                            <Route exact path="/challenges" component={ChallengesPage} />
-                            <Route exact path="/partners" component={PartnersPage} />
+            <div className="App">
+                <Header />
+                <main className="App--main">
+                    <Switch>
+                        <Route exact path="/" component={HomePage} />
+                        <Route exact path="/info" component={InfoPage} />
+                        <Route exact path="/junction-week" component={JunctionWeekPage} />
+                        <Route exact path="/volunteer" component={VolunteerPage} />
+                        <Route exact path="/team" component={TeamPage} />
+                        <Route exact path="/challenges" component={ChallengesPage} />
+                        <Route exact path="/partners" component={PartnersPage} />
 
-                            <Route component={NotFound} />
-                        </Switch>
+                        <Route component={NotFound} />
+                    </Switch>
 
-                        <Divider md />
-                    </main>
+                    <Divider md />
+                </main>
 
-                    <FooterImageButtons />
-                    <Footer />
-                    <ScrollToTop />
-                    <GlobalLifecycle />
-                    {config.IS_DEBUG ? <EditorTools /> : null}
-                </div>
-            </Router>
+                <FooterImageButtons />
+                <Footer />
+                <ScrollToTop />
+                <GlobalLifecycle />
+                {config.IS_DEBUG ? <EditorTools /> : null}
+            </div>
         );
     }
 }
