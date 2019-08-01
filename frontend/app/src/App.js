@@ -7,6 +7,8 @@ import './App.scss';
 
 import ReactGA from 'react-ga';
 import ReactPixel from 'react-facebook-pixel';
+import { hotjar } from 'react-hotjar';
+import { withRouter } from 'react-router';
 
 import config from './config';
 
@@ -33,11 +35,31 @@ import * as DynamicContentActions from './redux/dynamiccontent/actions';
 import * as SocialMediaActions from './redux/socialmedias/actions';
 
 class App extends Component {
-    async componentDidMount() {
+    componentDidMount() {
         this.props.updateDynamicContent();
         this.props.updateStaticContent();
         this.props.updateSocialMedias();
+
+        if (config.FACEBOOK_PIXEL_ID) {
+            ReactPixel.init(config.FACEBOOK_PIXEL_ID, {}, { autoConfig: true, debug: false });
+        }
+
+        if (config.GOOGLE_ANALYTICS_ID) {
+            ReactGA.initialize(config.GOOGLE_ANALYTICS_ID);
+        }
+
+        if (config.HOTJAR_ID && config.HOTJAR_SV) {
+            hotjar.initialize(config.HOTJAR_ID, config.HOTJAR_SV);
+        }
+
+        this.handleRouteChange(this.props.history.location);
+        this.unlisten = this.props.history.listen(this.handleRouteChange);
     }
+
+    componentWillUnmount() {
+        this.unlisten();
+    }
+
     handleRouteChange(location) {
         if (config.GOOGLE_ANALYTICS_ID) {
             ReactGA.pageview(location.pathname);
@@ -56,27 +78,11 @@ class App extends Component {
                         <Switch>
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/info" component={InfoPage} />
-                            <Route
-                                exact
-                                path="/junction-week"
-                                component={JunctionWeekPage}
-                            />
-                            <Route
-                                exact
-                                path="/volunteer"
-                                component={VolunteerPage}
-                            />
+                            <Route exact path="/junction-week" component={JunctionWeekPage} />
+                            <Route exact path="/volunteer" component={VolunteerPage} />
                             <Route exact path="/team" component={TeamPage} />
-                            <Route
-                                exact
-                                path="/challenges"
-                                component={ChallengesPage}
-                            />
-                            <Route
-                                exact
-                                path="/partners"
-                                component={PartnersPage}
-                            />
+                            <Route exact path="/challenges" component={ChallengesPage} />
+                            <Route exact path="/partners" component={PartnersPage} />
 
                             <Route component={NotFound} />
                         </Switch>
@@ -102,4 +108,4 @@ export default connect(
         updateStaticContent: StaticContentActions.updateStaticContent,
         updateSocialMedias: SocialMediaActions.updateSocialMedias
     }
-)(App);
+)(withRouter(App));
