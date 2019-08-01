@@ -68,7 +68,9 @@ class HomePage extends Component {
 
                 {/* STYLISH CONTAINER */}
                 <StylishContainer className="HomePage--ready">
-                    <h1>{getText('homePageReadyTitle')}</h1>
+                    <span className="HomePage--ready__title">
+                        {getText('homePageReadyTitle')}
+                    </span>
                 </StylishContainer>
 
                 {/*  <AreYouReady
