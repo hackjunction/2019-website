@@ -95,6 +95,7 @@ class JunctionWeekPage extends Component {
                         link={getText('junctionWeekPageElseButtonLink')}
                         size="sm"
                         align="left"
+                        type="mainsite"
                     />
                 </BasicSection>
                 <Divider lg />

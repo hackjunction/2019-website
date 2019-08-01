@@ -52,7 +52,7 @@ const ChallengesGrid = props => {
         return tracks.map(track => {
             return (
                 <div id={snake(track.name)}>
-                    <Divider sm />
+                    <Divider md />
                     <div className="ChallengesGrid--track" key={track._id}>
                         <SingleColumnSection
                             title={track.name}
