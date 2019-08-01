@@ -61,8 +61,12 @@
                 margin: 1rem;
             }
             &__md {
+                width: 20rem;
                 margin: 1rem;
                 height: 55px;
+                @include bp-full {
+                    width: 25rem;
+                }
             }
             &__lg {
                 width: 36rem;

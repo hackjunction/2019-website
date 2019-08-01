@@ -46,13 +46,13 @@ class HomePage extends Component {
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
                     >
-                        <ButtonLink
+                        {/* <ButtonLink
                             text={getText('homePageApplyButton')}
                             link={getText('homePageApplyButtonLink')}
                             size="fp"
                             color="purple"
                             align="center"
-                        />
+                        /> */}
                     </HeroCTA>
                 </HeroImage>
 
@@ -65,13 +65,13 @@ class HomePage extends Component {
                     <Markdown source={getText('homePageIntroText')} />
                 </BasicSection>
                 <Divider sm />
-                <AreYouReady
+                {/* <AreYouReady
                     title={getText('homePageReadyTitle')}
                     button={getText('homePageReadyButton')}
                     buttonHover={getText('homePageReadyButtonHover')}
                     description={getText('homePageReadyDescription')}
                     link={getText('homePageReadyLink')}
-                />
+                /> */}
                 <Divider lg />
                 <SingleColumnSection
                     title={getText('homePageTracksTitle')}

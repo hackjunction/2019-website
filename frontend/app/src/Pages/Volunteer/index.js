@@ -72,6 +72,7 @@ class VolunteerPage extends Component {
                         text={getText('volunteerPageFormButton')}
                         link={getText('volunteerPageFormButtonLink')}
                         align="left"
+                        size="md"
                     />
                 </ImageSection>
                 <Divider lg />

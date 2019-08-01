@@ -10,7 +10,6 @@ const ButtonLink = ({
     size = 'md', //sm / md / lg /fp
     align = 'center', //left / center / right
     type = 'link', //link for inside website || anchor to specific object in page || outside for linking outside website (www.google.com)
-    hover = 'no',
     hoverText = ''
 }) => {
     let className = `ButtonLink--link ButtonLink--link-color__${color} ButtonLink--link-size__${size}  ButtonLink--link-align__${align} ${
