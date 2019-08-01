@@ -5,7 +5,6 @@ import styles from './Home.module.scss';
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import HeroImage from '../../components/HeroImage';
-import HeaderVideo from '../../components/HeaderVideo';
 import HeroCTA from '../../components/HeroCTA';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
@@ -15,7 +14,6 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import FaqGrid from '../../components/FaqGrid';
 import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
-import AreYouReady from '../../components/AreYouReady';
 import NewsLetterForm from '../../components/NewsLetterForm';
 import StylishContainer from '../../components/StylishContainer';
 import Page from '../PageHOC';
@@ -41,7 +39,7 @@ class HomePage extends Component {
                 </HeaderVideo> */}
 
                 {/* IMAGE  */}
-                <HeroImage image={getMedia('homePageHeaderImage')}>
+                <HeroImage image={getMedia('homePageHeaderImage')} isVideo>
                     <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')}>
                         {/* <ButtonLink
                             text={getText('homePageApplyButton')}
