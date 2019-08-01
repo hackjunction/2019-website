@@ -6,9 +6,12 @@
     &--title {
         width: 100%;
         max-width: 900px;
-        font-size: 40px;
+        font-size: 30px;
         text-align: center;
         margin: 0;
+        @include bp-med {
+            font-size: 40px;
+        }
     }
     &--subtitle {
         text-align: center;
