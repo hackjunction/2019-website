@@ -2,13 +2,13 @@ import React from 'react';
 
 import Image from '../Image';
 
-const ChallengeItem = ({ name, partner, content } = this.props) => {
+const ChallengeItem = ({ name, partner, content, alt } = this.props) => {
     return (
         <div className="ChallengesGrid--track__challenge">
             <Image
                 className="ChallengesGrid--track__challenge-image"
                 image={partner.logo}
-                alt={`Partner logo ${partner.logo}`}
+                alt={alt}
             />
             <div className="ChallengesGrid--track__challenge-right">
                 <span className="ChallengesGrid--track__challenge-right-name">

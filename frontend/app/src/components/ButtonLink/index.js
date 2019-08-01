@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-
+import classNames from 'classnames';
 import './Style.scss';
 const ButtonLink = ({
     text,
@@ -15,6 +15,10 @@ const ButtonLink = ({
     let className = `ButtonLink--link ButtonLink--link-color__${color} ButtonLink--link-size__${size}  ButtonLink--link-align__${align} ${
         text ? '' : 'ButtonHide'
     }`;
+    const className = classNames({
+        `ButtonLink--link` : true, `ButtonLink--link-color__${color}` : true, `ButtonLink--link-size__${size}` : true,
+    }) 
+
 
     if (type === 'link') {
         return (
@@ -28,7 +32,7 @@ const ButtonLink = ({
     if (type === 'anchor') {
         return (
             <div className="ButtonLink">
-                <HashLink to={link} className={className}>
+                <HashLink smooth to={link} className={className}>
                     {text}
                 </HashLink>
             </div>

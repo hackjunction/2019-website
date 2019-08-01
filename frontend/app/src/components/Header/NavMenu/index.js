@@ -48,7 +48,11 @@ const NavMenuInner = memo(props => {
             <h6 className="NavMenu--inner__menu-title">
                 Junction main website
             </h6>
-            <a href="https://hackjunction.com">
+            <a
+                href="https://hackjunction.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 <Image
                     className="NavMenu--bottom-logo"
                     image={getMedia('navMenuBottomLogo')}

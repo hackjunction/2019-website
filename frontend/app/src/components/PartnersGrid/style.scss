@@ -1,18 +1,19 @@
 @import '../../styles/variables.scss';
 .PartnersGrid {
-    width: 100%;
-    max-width: 980px;
-    margin: 0 auto;
-    object-fit: contain;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: center; */
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
+    margin-left: -$padding-page;
+    margin-right: -$padding-page;
     background: rgb(240, 240, 240);
-    border-radius: 30px;
-    padding-bottom: 10px;
+    padding: $padding-page;
+
+    &--inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        max-width: 980px;
+    }
 }
 
 .PartnersGrid-partner {

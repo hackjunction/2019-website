@@ -90,6 +90,8 @@ class Footer extends PureComponent {
                             <a
                                 href="https://www.flickr.com/photos/151708924@N07/albums/"
                                 alt="flickr"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <h5 className="FooterInner--right__section-title">
                                     Photo Gallery
@@ -98,24 +100,32 @@ class Footer extends PureComponent {
                             <a
                                 href="https://www.hackjunction.com/press"
                                 className="FooterInner--right__section-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Press kit (eng)
                             </a>
                             <a
                                 href="https://www.hackjunction.com/media"
                                 className="FooterInner--right__section-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Press kit (fin)
                             </a>
                             <a
                                 className="FooterInner--right__section-link"
                                 href="https://www.hackjunction.com/policy"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Privacy Policy
                             </a>
                             <a
                                 className="FooterInner--right__section-link"
                                 href="https://www.hackjunction.com/terms"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Terms & Conditions
                             </a>

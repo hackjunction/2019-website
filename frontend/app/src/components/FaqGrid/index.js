@@ -9,16 +9,20 @@ import Divider from '../Divider';
 import './style.scss';
 
 const FaqsGrid = props => {
-    const renderFaqs = (faqs) => {
+    const renderFaqs = faqs => {
         return faqs.map(faq => <FaqGridItem {...faq} key={faq._id} />);
     };
 
     const count = props.faqs.length;
     return (
         <div className="FaqGrid">
-            <div className="FaqGrid--column__left">{renderFaqs(props.faqs.slice(0, count / 2))}</div>
+            <div className="FaqGrid--column__left">
+                {renderFaqs(props.faqs.slice(0, count / 2))}
+            </div>
             <Divider xs />
-            <div className="FaqGrid--column__right">{renderFaqs(props.faqs.slice(count / 2))}</div>
+            <div className="FaqGrid--column__right">
+                {renderFaqs(props.faqs.slice(count / 2))}
+            </div>
         </div>
     );
 };

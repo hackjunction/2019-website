@@ -1,5 +1,27 @@
 @import '../../styles/variables.scss';
 
+%faqGridItem-brown {
+    background: linear-gradient(
+        145deg,
+        rgba(243, 129, 0, 0.15) 0%,
+        rgba(122, 65, 0, 0.15) 100%
+    );
+    i {
+        color: rgba(243, 129, 0, 0.6);
+    }
+}
+
+%faqGridItem-purple {
+    background: linear-gradient(
+        130deg,
+        rgba(178, 0, 183, 0.25) 0%,
+        rgba(178, 0, 183, 0.15) 100%
+    );
+    i {
+        color: rgba(178, 0, 183, 0.8);
+    }
+}
+
 .FaqGrid {
     width: 100%;
     max-width: 980px;
@@ -7,46 +29,75 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
 
     .Divider {
         display: none;
     }
     @include bp-custom(800px) {
         flex-direction: row;
+        align-items: flex-start;
         .Divider {
             display: block;
         }
     }
     &--column__left {
         flex: 1;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include bp-custom(800px) {
+            align-self: initial;
+        }
         .FaqGridItem {
             cursor: pointer;
-            background: linear-gradient(
-                130deg,
-                rgba(178, 0, 183, 0.25) 0%,
-                rgba(178, 0, 183, 0.15) 100%
-            );
+            @extend %faqGridItem-purple;
+            &:nth-child(even) {
+                @extend %faqGridItem-brown;
+            }
+            @include bp-custom(800px) {
+                &:nth-child(even) {
+                    background: linear-gradient(
+                        130deg,
+                        rgba(178, 0, 183, 0.25) 0%,
+                        rgba(178, 0, 183, 0.15) 100%
+                    );
+                    i {
+                        color: rgba(178, 0, 183, 0.8);
+                    }
+                }
+            }
         }
     }
     &--column__right {
         flex: 1;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include bp-custom(800px) {
+            align-self: initial;
+        }
         .FaqGridItem {
             cursor: pointer;
-            background: linear-gradient(
-                145deg,
-                rgba(243, 129, 0, 0.15) 0%,
-                rgba(122, 65, 0, 0.15) 100%
-            );
-            &--question i {
-                color: rgba(243, 129, 0, 0.6);
+            @extend %faqGridItem-brown;
+            &:nth-child(odd) {
+                @extend %faqGridItem-purple;
+            }
+            @include bp-custom(800px) {
+                &:nth-child(odd) {
+                    background: linear-gradient(
+                        145deg,
+                        rgba(243, 129, 0, 0.15) 0%,
+                        rgba(122, 65, 0, 0.15) 100%
+                    );
+                    i {
+                        color: rgba(243, 129, 0, 0.6);
+                    }
+                }
             }
         }
-    }
-
-    @include bp-custom(800px) {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
     }
 }
 
@@ -56,11 +107,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background: linear-gradient(
-        130deg,
-        rgba(178, 0, 183, 0.25) 0%,
-        rgba(178, 0, 183, 0.15) 100%
-    );
     margin-bottom: $padding-base;
     border-radius: 10px;
     padding: $padding-double;
@@ -85,7 +131,7 @@
         i {
             transform: rotateZ(-90deg);
             transition: 0.2s transform ease;
-            color: rgba(178, 0, 183, 0.8);
+
             font-size: 2em;
             width: 30px;
             height: 30px;

@@ -12,5 +12,8 @@
         width: 100%;
         max-width: 470px;
         margin-bottom: -1em;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
     }
 }

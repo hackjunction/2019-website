@@ -48,11 +48,11 @@ class PartnerPage extends Component {
                 <SingleColumnSection
                     title={getText('partnerPageTitle')}
                     subtitle={getText('partnerPageSubtitle')}
-                >
-                    <PartnersGrid />
-                </SingleColumnSection>
+                />
+                <Divider sm />
+                <PartnersGrid />
+                <div id="contact" />
                 <Divider md />
-                <div id="contact" />>
                 <ContactForm />
             </Page>
         );

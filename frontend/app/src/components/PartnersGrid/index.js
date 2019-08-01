@@ -22,7 +22,13 @@ const PartnersGrid = props => {
         });
     };
 
-    return <div className="PartnersGrid">{renderPartners(props.partners)}</div>;
+    return (
+        <div className="PartnersGrid">
+            <div className="PartnersGrid--inner">
+                {renderPartners(props.partners)}
+            </div>
+        </div>
+    );
 };
 
 const mapStateToProps = (state, ownProps) => {

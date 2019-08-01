@@ -67,10 +67,10 @@ class HomePage extends Component {
                 <Divider sm />
 
                 {/* STYLISH CONTAINER */}
-                <StylishContainer className="HomePage--ready">
-                    <span className="HomePage--ready__title">
-                        {getText('homePageReadyTitle')}
-                    </span>
+                <StylishContainer>
+                    <h1>{getText('homePageReadyTitle')}</h1>
+                    <ButtonLink text={getText('homePageReadyButton')} />
+                    <Markdown source={getText('homePageReadyDescription')} />
                 </StylishContainer>
 
                 {/*  <AreYouReady
@@ -104,8 +104,9 @@ class HomePage extends Component {
                     subtitle={getText('partnersSubtitle')}
                 >
                     <Divider sm />
-                    <PartnersGrid type="front" />
-                    <Divider sm />
+                </SingleColumnSection>
+                <PartnersGrid type="front" />
+                <SingleColumnSection>
                     <ButtonLink
                         text={getText('homePagePartnerInfoButton')}
                         link={getText('homePagePartnerInfoButtonLink')}

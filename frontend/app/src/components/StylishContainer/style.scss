@@ -1,40 +1,40 @@
 @import '../../styles/variables.scss';
 
 .StylishContainer {
-    align-self: stretch;
     margin-left: -$padding-page;
     margin-right: -$padding-page;
-    overflow: visible;
-    min-height: 400px;
-    position: relative;
+    min-height: 100px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    &-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        width: 10%;
-        height: 100%;
-        @include bp-full {
-            width: 30%;
-        }
-    }
+    &-left,
     &-right {
+        background: red;
+        align-self: stretch;
+        overflow: hidden;
+        flex: 1;
+        position: relative;
+    }
+    &-right__image {
         position: absolute;
+        left: 0;
         top: 0;
-        right: 0;
-        object-fit: cover;
-        width: 10%;
+        bottom: 0;
         height: 100%;
-        @include bp-full {
-            width: 30%;
-        }
+    }
+    &-left__image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
     }
     &-children {
+        background: blue;
+        min-height: 400px;
+        justify-content: center;
+        display: flex;
         width: 980px;
         margin: 0 auto;
+        flex-direction: column;
     }
 }

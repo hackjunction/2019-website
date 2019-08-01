@@ -7,17 +7,21 @@ const imageRight = require('../../assets/misc/readyRight.png');
 const StylishContainer = ({ children }) => {
     return (
         <div className="StylishContainer">
-            <img
-                src={imageLeft}
-                alt="background"
-                className="StylishContainer-left"
-            />
+            <div className="StylishContainer-left">
+                <img
+                    src={imageLeft}
+                    alt="background"
+                    className="StylishContainer-left__image"
+                />
+            </div>
             <div className="StylishContainer-children">{children}</div>
-            <img
-                src={imageRight}
-                alt="background"
-                className="StylishContainer-right"
-            />
+            <div className="StylishContainer-right">
+                <img
+                    src={imageRight}
+                    alt="background"
+                    className="StylishContainer-right__image"
+                />
+            </div>
         </div>
     );
 };
