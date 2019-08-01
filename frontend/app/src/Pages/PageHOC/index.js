@@ -5,6 +5,7 @@ import { getText, getMedia } from '../../redux/staticcontent/helpers';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import cloudinary from 'cloudinary-core';
+import { motion } from 'framer-motion';
 
 import config from '../../config';
 
@@ -33,8 +34,34 @@ class PageHOC extends Component {
     render() {
         const { className, children, pageTitle, metaDesc, ogImageUrl, ogImageTwitterUrl } = this.props;
         const canonicalUrl = 'https://' + window.location.hostname + window.location.pathname;
+        const animations = {
+            initial: {
+                opacity: 0,
+                transition: {
+                    duration: 3
+                }
+            },
+            visible: {
+                opacity: 1,
+                transition: {
+                    duration: 0.7
+                }
+            },
+            exit: {
+                opacity: 0,
+                transition: {
+                    duration: 0.3
+                }
+            }
+        };
         return (
-            <div className={'Page--wrapper ' + className}>
+            <motion.div
+                initial="initial"
+                animate="visible"
+                exit="exit"
+                variants={animations}
+                className={'Page--wrapper ' + className}
+            >
                 <Helmet defaultTitle="Junction 2019 | Hack the Future" titleTemplate="Junction 2019 | %s">
                     <link rel="canonical" href={canonicalUrl} />
                     <meta property="og:url" content={canonicalUrl} />
@@ -57,7 +84,7 @@ class PageHOC extends Component {
                     <meta name="twitter:image" content={ogImageTwitterUrl} />
                 </Helmet>
                 {children}
-            </div>
+            </motion.div>
         );
     }
 }

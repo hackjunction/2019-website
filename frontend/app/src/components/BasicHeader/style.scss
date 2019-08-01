@@ -28,11 +28,6 @@
         text-align: center;
         font-size: 40px;
         padding: $padding-double;
-        -webkit-animation: fadein-left 0.5s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein-left 0.5s; /* Firefox < 16 */
-        -ms-animation: fadein-left 0.5s; /* Internet Explorer */
-        -o-animation: fadein-left 0.5s; /* Opera < 12.1 */
-        animation: fadein-left 0.5s;
 
         @include bp-med {
             text-align: center;
@@ -64,10 +59,5 @@
         align-self: flex-end;
         margin: 0;
         padding-left: 1rem;
-        -webkit-animation: fadein-bottom 0.8s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein-bottom 0.8s; /* Firefox < 16 */
-        -ms-animation: fadein-bottom 0.8s; /* Internet Explorer */
-        -o-animation: fadein-bottom 0.8s; /* Opera < 12.1 */
-        animation: fadein-bottom 0.8s;
     }
 }
