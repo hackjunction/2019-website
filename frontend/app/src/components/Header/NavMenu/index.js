@@ -10,7 +10,6 @@ import { toggleSidebar } from '../../../redux/dynamiccontent/actions';
 import { isSidebarOpen } from '../../../redux/dynamiccontent/selectors';
 
 import Image from '../../Image';
-import Divider from '../../Divider';
 
 const NavMenuInner = memo(props => {
     const { getMedia } = props;

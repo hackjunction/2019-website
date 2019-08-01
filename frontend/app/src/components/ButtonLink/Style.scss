@@ -47,6 +47,7 @@
     &--link {
         @extend %size-button;
         @extend %font-button;
+        padding: 0;
         &-color {
             &__purple {
                 @extend %purple-button;

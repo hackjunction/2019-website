@@ -45,7 +45,6 @@ export const getDynamicContent = () => {
                     trackMentorDescription
                     showOnFrontPage
                     logo {
-                        alt
                         url
                         public_id
                     }
@@ -65,7 +64,6 @@ export const getDynamicContent = () => {
                         content
                         partner {
                             logo {
-                                alt
                                 url
                                 public_id
                             }
@@ -75,7 +73,6 @@ export const getDynamicContent = () => {
                         name
                         trackMentorDescription
                         logo {
-                            alt
                             url
                             public_id
                         }
