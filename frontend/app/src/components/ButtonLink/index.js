@@ -41,6 +41,20 @@ const ButtonLink = ({
             </div>
         );
     }
+    if (type === 'mainsite') {
+        return (
+            <div className="ButtonLink">
+                <a
+                    href={link}
+                    className={className}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    {text}
+                </a>
+            </div>
+        );
+    }
     if (type === 'outside') {
         return (
             <div className="ButtonLinkReady">

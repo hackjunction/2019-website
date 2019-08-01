@@ -40,12 +40,15 @@ class HomePage extends Component {
 
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
-                    <BasicSection
-                        title={getText('junctionMainTitle')}
-                        subtitle={getText('junctionMainSubtitle')}
-                    >
-                        <Markdown source={getText('homePageIntroText')} />
-                    </BasicSection>
+                    <div className={styles.padding}>
+                        <BasicSection
+                            title={getText('junctionMainTitle')}
+                            subtitle={getText('junctionMainSubtitle')}
+                        >
+                            <Markdown source={getText('homePageIntroText')} />
+                        </BasicSection>
+                    </div>
+
                     <Divider lg />
                     <div className={styles.stylishContainer}>
                         <h1 className={styles.stylishContainerTitle}>
