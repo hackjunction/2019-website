@@ -59,7 +59,17 @@
         padding: $padding-page;
 
         &__logo {
-            width: 100%;
+            //width: 100%;
+            max-width: 200px;
+            @include bp-custom(400px) {
+                max-width: 250px;
+            }
+            @include bp-custom(600px) {
+                max-width: 300px;
+            }
+            @include bp-full {
+                max-width: 380px;
+            }
         }
 
         &__menu {

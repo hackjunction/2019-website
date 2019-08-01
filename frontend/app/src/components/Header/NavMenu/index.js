@@ -31,24 +31,20 @@ const NavMenuInner = memo(props => {
                     Junction Week
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/info">
-                    Participant Info
+                    Practical information
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/team">
-                    Team
-                </Link>
-
-                <h6 className="NavMenu--inner__menu-title">Info</h6>
                 <Link className="NavMenu--inner__menu-item" to="/challenges">
                     Tracks & Challenges
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/volunteer">
-                    Volunteer Info
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
+
+                <Link to="/team">
+                    <h6 className="NavMenu--inner__menu-title">Contact</h6>
+                </Link>
             </nav>
-            <Divider sm />
+
             <h6 className="NavMenu--inner__menu-title">
                 Junction main website
             </h6>

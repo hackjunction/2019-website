@@ -17,7 +17,7 @@ import PartnersGrid from '../../components/PartnersGrid';
 import ButtonLink from '../../components/ButtonLink';
 import AreYouReady from '../../components/AreYouReady';
 import NewsLetterForm from '../../components/NewsLetterForm';
-
+import StylishContainer from '../../components/StylishContainer';
 import Page from '../PageHOC';
 
 class HomePage extends Component {
@@ -65,7 +65,13 @@ class HomePage extends Component {
                     <Markdown source={getText('homePageIntroText')} />
                 </BasicSection>
                 <Divider sm />
-                {/* <AreYouReady
+
+                {/* STYLISH CONTAINER */}
+                <StylishContainer className="HomePage--ready">
+                    <h1>{getText('homePageReadyTitle')}</h1>
+                </StylishContainer>
+
+                {/*  <AreYouReady
                     title={getText('homePageReadyTitle')}
                     button={getText('homePageReadyButton')}
                     buttonHover={getText('homePageReadyButtonHover')}
