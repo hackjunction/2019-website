@@ -15,6 +15,7 @@ const TracksGrid = props => {
                 <div className="TracksGrid--container" key={track._id}>
                     <ButtonLink
                         block
+                        smooth={props.smoothScroll || false}
                         type="anchor"
                         text={track.name}
                         link={'/challenges#' + snake(track.name)}

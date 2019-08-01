@@ -34,7 +34,7 @@ class ChallengesPage extends Component {
                     title={getText('challengesPageTracksTitle')}
                     subtitle={getText('challengesPageTracksSubtitle')}
                 />
-                <TracksGrid />
+                <TracksGrid smoothScroll={true} />
                 <Divider md />
                 <ChallengesGrid />
                 <Divider md />

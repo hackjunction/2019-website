@@ -12,7 +12,8 @@ const ButtonLink = ({
     align = 'center', //left / center / right
     type = 'link', //link for inside website || anchor to specific object in page || outside for linking outside website (www.google.com)
     hoverText = '',
-    block = false
+    block = false,
+    smooth = false
 }) => {
     const className = classNames({
         [`ButtonLink--link`]: true,
@@ -35,7 +36,13 @@ const ButtonLink = ({
     if (type === 'anchor') {
         return (
             <div className="ButtonLink">
-                <HashLink smooth to={link} className={className}>
+                <HashLink
+                    to={link}
+                    scroll={el =>
+                        el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start', inline: 'nearest' })
+                    }
+                    className={className}
+                >
                     {text}
                 </HashLink>
             </div>
@@ -44,12 +51,7 @@ const ButtonLink = ({
     if (type === 'mainsite') {
         return (
             <div className="ButtonLink">
-                <a
-                    href={link}
-                    className={className}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a href={link} className={className} target="_blank" rel="noopener noreferrer">
                     {text}
                 </a>
             </div>
@@ -60,9 +62,7 @@ const ButtonLink = ({
             <div className="ButtonLinkReady">
                 <a href={link} className={className}>
                     <span className={`ButtonLinkReady--text `}>{text}</span>
-                    <span className={`ButtonLinkReady--hoverText `}>
-                        {hoverText}
-                    </span>
+                    <span className={`ButtonLinkReady--hoverText `}>{hoverText}</span>
                 </a>
             </div>
         );
