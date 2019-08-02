@@ -2,7 +2,7 @@ import React from 'react';
 
 import Image from '../Image';
 
-const ChallengeItem = ({ name, partner, content, alt } = this.props) => {
+const ChallengeItem = ({ name, partner, content } = this.props) => {
     return (
         <div className="ChallengesGrid--track__challenge">
             <Image

@@ -77,12 +77,14 @@ class HomePage extends Component {
                 <SingleColumnSection>
                     <Markdown source={getText('homePageVideoLink')} />
                 </SingleColumnSection>
-                <Divider lg />
+                <Divider md />
+                <div id="faq" />
+                <Divider md />
                 <SingleColumnSection
                     title={getText('faqTitle')}
                     subtitle={getText('faqSubtitle')}
                 >
-                    <Divider sm id="faq" />
+                    <Divider sm />
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />

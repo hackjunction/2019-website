@@ -83,9 +83,9 @@ class InfoPage extends Component {
                 >
                     <Markdown source={getText('infoPageViolationContent')} />
                 </BasicSection>
+                <div id="faq" />
                 <Divider md />
                 <SingleColumnSection
-                    id="faq"
                     title={getText('faqTitle')}
                     subtitle={getText('faqSubtitle')}
                 >
