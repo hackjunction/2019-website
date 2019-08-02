@@ -53,7 +53,7 @@ class Footer extends PureComponent {
                                 className="FooterInner--right__section-link"
                                 to="/info"
                             >
-                                Participant Info
+                                Practical Info
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"

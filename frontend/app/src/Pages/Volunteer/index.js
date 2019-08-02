@@ -38,6 +38,7 @@ class VolunteerPage extends Component {
                             link={getText('volunteerPageHeaderButtonLink')}
                             color="purple"
                             size="md"
+                            type="mainsite"
                         />
                     </BasicHeader>
                 </HeroImage>
@@ -73,6 +74,7 @@ class VolunteerPage extends Component {
                         link={getText('volunteerPageFormButtonLink')}
                         align="left"
                         size="md"
+                        type="mainsite"
                     />
                 </ImageSection>
                 <Divider lg />
