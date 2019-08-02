@@ -32,10 +32,7 @@ const TracksGrid = props => {
                             block
                             type="mainsite"
                             text={track.name}
-                            link={
-                                '2019.hackjunction.com/challenges#' +
-                                snake(track.name)
-                            }
+                            link={'/challenges#' + snake(track.name)}
                             className="TracksGrid--container__button"
                             color={index % 2 === 1 ? 'brown' : 'purple'}
                         />
