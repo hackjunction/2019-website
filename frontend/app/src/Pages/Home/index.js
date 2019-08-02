@@ -89,9 +89,8 @@ class HomePage extends Component {
                 <SingleColumnSection
                     title={getText('partnersTitle')}
                     subtitle={getText('partnersSubtitle')}
-                >
-                    <Divider sm />
-                </SingleColumnSection>
+                />
+                <Divider sm />
                 <PartnersGrid type="front" />
                 <SingleColumnSection>
                     <ButtonLink
