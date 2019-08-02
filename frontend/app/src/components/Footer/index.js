@@ -57,34 +57,29 @@ class Footer extends PureComponent {
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/team"
-                            >
-                                Team
-                            </Link>
-                        </div>
-                        <div className="FooterInner--right__section">
-                            <Link to="/info">
-                                <h5 className="FooterInner--right__section-title">
-                                    Info
-                                </h5>
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
                                 to="/challenges"
                             >
                                 Tracks & Challenges
                             </Link>
                             <Link
                                 className="FooterInner--right__section-link"
-                                to="/volunteer"
-                            >
-                                Volunteer Info
-                            </Link>
-                            <Link
-                                className="FooterInner--right__section-link"
                                 to="/partners"
                             >
                                 Partners
+                            </Link>
+                        </div>
+                        <div className="FooterInner--right__section">
+                            <Link to="/team">
+                                <h5 className="FooterInner--right__section-title">
+                                    Contact
+                                </h5>
+                            </Link>
+
+                            <Link
+                                className="FooterInner--right__section-link"
+                                to="/volunteer"
+                            >
+                                Volunteer Info
                             </Link>
                         </div>
                         <div className="FooterInner--right__section">
