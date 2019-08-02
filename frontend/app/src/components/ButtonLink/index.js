@@ -67,6 +67,15 @@ const ButtonLink = ({
             </div>
         );
     }
+    if (type === 'challenge') {
+        return (
+            <div className="ButtonLink">
+                <a href={link} className={className}>
+                    {text}
+                </a>
+            </div>
+        );
+    }
     if (type === 'outside') {
         return (
             <div className="ButtonLinkReady">

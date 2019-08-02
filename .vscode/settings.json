@@ -2,5 +2,6 @@
     "prettier.tabWidth": 4,
     "prettier.eslintIntegration": true,
     "prettier.jsxSingleQuote": true,
-    "prettier.singleQuote": true
+    "prettier.singleQuote": true,
+    "VSCodeCounter.showInStatusBar": true
 }

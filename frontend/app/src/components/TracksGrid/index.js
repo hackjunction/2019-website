@@ -30,7 +30,7 @@ const TracksGrid = props => {
                     <div className="TracksGrid--container" key={track.id}>
                         <ButtonLink
                             block
-                            type="mainsite"
+                            type="challenge"
                             text={track.name}
                             link={'/challenges#' + snake(track.name)}
                             className="TracksGrid--container__button"
