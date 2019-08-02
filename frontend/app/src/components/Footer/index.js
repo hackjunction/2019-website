@@ -6,20 +6,21 @@ import { Link } from 'react-router-dom';
 
 import SocialMediaIcons from '../SocialMediaIcons';
 import Divider from '../Divider';
+import Image from '../Image';
 
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 class Footer extends PureComponent {
     render() {
-        const { getText } = this.props;
+        const { getText, getMedia } = this.props;
 
         return (
             <footer className="Footer">
                 <div className="FooterInner">
                     <div className="FooterInner--left">
-                        <img
+                        <Image
                             className="FooterInner--left__logo"
-                            src={require('../../assets/logos/wordmark_black.png')}
+                            image={getMedia('navMenuTopLogo')}
                             alt="Junction logo"
                         />
                         <p className="FooterInner--left__slogan">
