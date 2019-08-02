@@ -85,6 +85,7 @@ class InfoPage extends Component {
                 </BasicSection>
                 <Divider md />
                 <SingleColumnSection
+                    id="faq"
                     title={getText('faqTitle')}
                     subtitle={getText('faqSubtitle')}
                 >
