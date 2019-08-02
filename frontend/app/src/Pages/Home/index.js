@@ -82,7 +82,7 @@ class HomePage extends Component {
                     title={getText('faqTitle')}
                     subtitle={getText('faqSubtitle')}
                 >
-                    <Divider sm />
+                    <Divider sm id="faq" />
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />
