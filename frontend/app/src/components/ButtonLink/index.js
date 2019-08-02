@@ -21,6 +21,7 @@ const ButtonLink = ({
         [`ButtonLink--link-size__${size}`]: true,
         [`ButtonLink--link-align__${align}`]: true,
         'ButtonLink--link-block': block,
+        'ButtonLink--link-noLink': type === 'hover',
         ButtonHide: isEmpty(text)
     });
 
@@ -81,12 +82,12 @@ const ButtonLink = ({
     if (type === 'hover') {
         return (
             <div className="ButtonLinkHover">
-                <a href={link} className={className}>
+                <div href={link} className={className}>
                     <span className={`ButtonLinkHover--text `}>{text}</span>
                     <span className={`ButtonLinkHover--hoverText `}>
                         {hoverText}
                     </span>
-                </a>
+                </div>
             </div>
         );
     }

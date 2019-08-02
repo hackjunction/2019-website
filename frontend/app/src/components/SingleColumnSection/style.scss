@@ -17,7 +17,9 @@
     &--subtitle {
         max-width: 980px;
         width: 100%;
-        text-align: center;
+        * {
+            text-align: center !important;
+        }
     }
     &--content {
         max-width: 980px;

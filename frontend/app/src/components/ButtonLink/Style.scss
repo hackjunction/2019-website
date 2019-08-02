@@ -13,18 +13,6 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    a {
-        &:hover {
-            .ButtonLinkHover {
-                &--text {
-                    display: none;
-                }
-                &--hoverText {
-                    display: inline;
-                }
-            }
-        }
-    }
 
     &--text {
         @extend %font-button;
@@ -54,7 +42,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        &-noLink {
+            &:hover {
+                .ButtonLinkHover {
+                    &--text {
+                        display: none;
+                    }
+                    &--hoverText {
+                        display: inline;
+                    }
+                }
+            }
+        }
         &-color {
             &__purple {
                 @extend %purple-button;
