@@ -11,19 +11,37 @@ import './style.scss';
 const TracksGrid = props => {
     const renderTracks = () => {
         return props.tracks.map((track, index) => {
-            return (
-                <div className="TracksGrid--container" key={track._id}>
-                    <ButtonLink
-                        block
-                        smooth={props.smoothScroll || false}
-                        type="anchor"
-                        text={track.name}
-                        link={'/challenges#' + snake(track.name)}
-                        className="TracksGrid--container__button"
-                        color={index % 2 === 1 ? 'brown' : 'purple'}
-                    />
-                </div>
-            );
+            if (props.smoothScroll) {
+                return (
+                    <div className="TracksGrid--container" key={track._id}>
+                        <ButtonLink
+                            block
+                            smooth={props.smoothScroll || false}
+                            type="anchor"
+                            text={track.name}
+                            link={'/challenges#' + snake(track.name)}
+                            className="TracksGrid--container__button"
+                            color={index % 2 === 1 ? 'brown' : 'purple'}
+                        />
+                    </div>
+                );
+            } else {
+                return (
+                    <div className="TracksGrid--container" key={track.id}>
+                        <ButtonLink
+                            block
+                            type="mainsite"
+                            text={track.name}
+                            link={
+                                '2019.hackjunction.com/challenges#' +
+                                snake(track.name)
+                            }
+                            className="TracksGrid--container__button"
+                            color={index % 2 === 1 ? 'brown' : 'purple'}
+                        />
+                    </div>
+                );
+            }
         });
     };
 
