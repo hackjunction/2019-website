@@ -71,12 +71,11 @@
             }
             &__md {
                 width: 100%;
-                max-width: 20rem;
-                margin: 1rem;
+                // max-width: 20rem;
+                // margin: 1rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
                 height: 55px;
-                @include bp-full {
-                    width: 25rem;
-                }
             }
             &__lg {
                 width: 100%;
