@@ -12,7 +12,6 @@ const FaqsGrid = props => {
     const renderFaqs = faqs => {
         return faqs.map(faq => <FaqGridItem {...faq} key={faq._id} />);
     };
-    console.log('PROPS !!' + JSON.stringify(props));
     const count = props.faqs.length;
     return (
         <div className="FaqGrid">

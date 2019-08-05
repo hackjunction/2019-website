@@ -13,6 +13,7 @@ import BasicSection from '../../../components/BasicSection';
 import Markdown from '../../../components/Markdown';
 import SingleColumnSection from '../../../components/SingleColumnSection';
 import FaqGrid from '../../../components/FaqGrid';
+import NewsLetterForm from '../../../components/NewsLetterForm';
 
 class TransportationPage extends Component {
     render() {
@@ -35,12 +36,25 @@ class TransportationPage extends Component {
                 <SingleColumnSection
                     title={getText('transportationPageAddress')}
                 />
-                <Divider sm />
+                <Divider md />
                 <SingleColumnSection
                     title={getText('transportationPageFaqTitle')}
                     subtitle={getText('transportationPageFaqSubtitle')}
                 />
                 <FaqGrid type="transport" />
+                <Divider md />
+                <BasicSection
+                    title={getText('transportationPageRegistrationTitle')}
+                    subtitle={getText('transportationPageRegistrationSubtitle')}
+                >
+                    <Markdown
+                        source={getText(
+                            'transportationPageRegistrationContent'
+                        )}
+                    />
+                </BasicSection>
+                <Divider md />
+                <NewsLetterForm />
             </Page>
         );
     }
