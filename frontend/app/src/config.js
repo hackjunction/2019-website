@@ -1,4 +1,8 @@
-const DEBUG_HOSTNAMES = ['edit.2019-test.hackjunction.com', 'edit.2019.hackjunction.com'];
+const DEBUG_HOSTNAMES = [
+    'edit.2019-test.hackjunction.com',
+    'edit.2019.hackjunction.com',
+    'localhost'
+];
 
 const config = {
     CLOUDINARY_CLOUD_NAME: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,

@@ -12,7 +12,7 @@ const FaqsGrid = props => {
     const renderFaqs = faqs => {
         return faqs.map(faq => <FaqGridItem {...faq} key={faq._id} />);
     };
-
+    console.log('PROPS !!' + JSON.stringify(props));
     const count = props.faqs.length;
     return (
         <div className="FaqGrid">
@@ -27,8 +27,20 @@ const FaqsGrid = props => {
     );
 };
 
-const mapStateToProps = state => ({
-    faqs: ContentSelectors.faqs(state)
-});
+const mapStateToProps = (state, ownProps) => {
+    const type = ownProps.type;
+    switch (type) {
+        case 'transport':
+            return {
+                faqs: ContentSelectors.transportFaqs(state)
+            };
+        case '':
+            return {
+                faqs: ContentSelectors.normalFaqs(state)
+            };
+        default:
+            return { faqs: ContentSelectors.normalFaqs(state) };
+    }
+};
 
 export default connect(mapStateToProps)(FaqsGrid);

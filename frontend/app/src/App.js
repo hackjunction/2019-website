@@ -30,6 +30,7 @@ import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
 import PartnersPage from './Pages/Partners';
+import TransportationPage from './Pages/Info/Transportation';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -106,7 +107,11 @@ class App extends Component {
                                 path="/partners"
                                 component={PartnersPage}
                             />
-
+                            <Route
+                                exact
+                                path="/transportation"
+                                component={TransportationPage}
+                            />
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>

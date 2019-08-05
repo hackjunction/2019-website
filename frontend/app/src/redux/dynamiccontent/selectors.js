@@ -107,3 +107,18 @@ export const eventDatesFrontPage = createSelector(
         return filter(data, 'showOnFrontPage');
     }
 );
+
+export const normalFaqs = createSelector(
+    faqs,
+    data => {
+        return filter(data, function(o) {
+            return !o.isTransportationFaq;
+        });
+    }
+);
+export const transportFaqs = createSelector(
+    faqs,
+    data => {
+        return filter(data, 'isTransportationFaq');
+    }
+);

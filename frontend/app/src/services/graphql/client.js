@@ -38,6 +38,7 @@ export const getDynamicContent = () => {
                     _id
                     question
                     answer
+                    isTransportationFaq
                 }
                 partners {
                     _id
