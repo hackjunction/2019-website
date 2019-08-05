@@ -8,7 +8,7 @@
     flex: 1;
 
     &--button {
-        background: $brown-gradient;
+        background: $main-gradient2;
         width: 310px;
         height: 60px;
         border-radius: 7px;
@@ -19,7 +19,7 @@
         &:hover,
         &:focus {
             outline: none;
-            background: $white;
+            background: rgba($white, 1);
 
             .SubmitButton--button__text {
                 color: $black;

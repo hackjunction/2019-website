@@ -10,11 +10,7 @@
     align-items: center;
     :nth-child(even) {
         .DatesGrid--itemContainer__item {
-            background: linear-gradient(
-                128deg,
-                rgba(243, 129, 0, 0.23) 0%,
-                rgba(122, 65, 0, 0.22) 100%
-            );
+            background: $main-gradient2;
         }
     }
     :last-child {
@@ -29,7 +25,7 @@
     width: 100%;
     i {
         margin-left: 47%;
-        color: rgba(178, 0, 183, 1);
+        color: $main-color1;
         font-size: 30px;
     }
     &__item {
@@ -45,8 +41,8 @@
 
         border: none;
         border-radius: 10px;
-        background: $purple-gradient;
-        color: #ffffff;
+        background: $main-gradient1;
+        color: $white;
 
         &-name {
             font-family: Montserrat;

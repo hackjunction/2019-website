@@ -2,6 +2,18 @@
 @import 'fonts';
 @import 'sizes';
 
+%brown-button {
+    background: $main-gradient2;
+    border: none;
+    border-radius: $border-radius;
+}
+
+%purple-button {
+    background: $main-gradient1;
+    border: none;
+    border-radius: $border-radius;
+}
+
 %button-purple {
     @extend %font-button;
     @extend %size-button;

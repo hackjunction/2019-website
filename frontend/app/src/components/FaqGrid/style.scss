@@ -1,24 +1,16 @@
 @import '../../styles/variables.scss';
 
 %faqGridItem-brown {
-    background: linear-gradient(
-        145deg,
-        rgba(243, 129, 0, 0.15) 0%,
-        rgba(122, 65, 0, 0.15) 100%
-    );
+    background: $main-gradient2;
     i {
-        color: rgba(243, 129, 0, 0.6);
+        color: $main-color2;
     }
 }
 
 %faqGridItem-purple {
-    background: linear-gradient(
-        130deg,
-        rgba(178, 0, 183, 0.25) 0%,
-        rgba(178, 0, 183, 0.15) 100%
-    );
+    background: $main-gradient1;
     i {
-        color: rgba(178, 0, 183, 0.8);
+        color: $main-color1;
     }
 }
 
@@ -58,13 +50,9 @@
             }
             @include bp-custom(800px) {
                 &:nth-child(even) {
-                    background: linear-gradient(
-                        130deg,
-                        rgba(178, 0, 183, 0.25) 0%,
-                        rgba(178, 0, 183, 0.15) 100%
-                    );
+                    background: $main-gradient1;
                     i {
-                        color: rgba(178, 0, 183, 0.8);
+                        color: $main-color1;
                     }
                 }
             }
@@ -87,13 +75,9 @@
             }
             @include bp-custom(800px) {
                 &:nth-child(odd) {
-                    background: linear-gradient(
-                        145deg,
-                        rgba(243, 129, 0, 0.15) 0%,
-                        rgba(122, 65, 0, 0.15) 100%
-                    );
+                    background: $main-gradient2;
                     i {
-                        color: rgba(243, 129, 0, 0.6);
+                        color: $main-color2;
                     }
                 }
             }

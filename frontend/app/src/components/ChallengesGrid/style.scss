@@ -13,7 +13,7 @@
                 font-weight: bold;
             }
             &-item {
-                background: white;
+                background: $white;
                 border-radius: 30px;
                 margin-bottom: 1rem;
                 display: flex;
@@ -52,7 +52,7 @@
                     }
                     &-content {
                         @extend %font-body;
-                        color: black;
+                        color: $black;
                         padding-top: 10px;
                         padding-bottom: 10px;
                     }
@@ -60,7 +60,7 @@
             }
         }
         &__challenge {
-            background: white;
+            background: $white;
             border-radius: 30px;
             margin-bottom: 1rem;
             display: flex;
@@ -110,12 +110,12 @@
                     font-family: $font-title;
                     font-weight: bold;
                     font-size: 24px;
-                    color: black;
+                    color: $black;
                     padding-bottom: 1rem;
                 }
                 &-content {
                     @extend %font-body;
-                    color: black;
+                    color: $black;
                     padding-top: 10px;
                     padding-bottom: 10px;
                 }
