@@ -24,7 +24,7 @@ class TransportationPage extends Component {
                 className="TransportationPage"
                 pageTitle="Transportation."
                 metaDesc={getText('transportationPageHeaderContent')}
-                ogImage={getMedia('transportationPageHeaderImage')}
+                ogImageUrl={getMedia('transportationPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('transportationPageHeaderImage')}>
                     <BasicHeader

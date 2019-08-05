@@ -22,7 +22,7 @@ class ChallengesPage extends Component {
                 className="ChallengesPage"
                 pageTitle="Challenges"
                 metaDesc={getText('challengesHeaderContent')}
-                ogImage={getMedia('challengesPageHeaderImage')}
+                ogImageUrl={getMedia('challengesPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('challengesPageHeaderImage')}>
                     <BasicHeader

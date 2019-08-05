@@ -26,7 +26,7 @@ class InfoPage extends Component {
                 className="InfoPage"
                 pageTitle="Information"
                 metaDesc={getText('infoPageHeaderContent')}
-                ogImage={getMedia('infoPageHeaderImage')}
+                ogImageUrl={getMedia('infoPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('infoPageHeaderImage')}>
                     <BasicHeader

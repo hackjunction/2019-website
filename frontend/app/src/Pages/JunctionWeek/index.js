@@ -25,7 +25,7 @@ class JunctionWeekPage extends Component {
                 className="JunctionWeekPage"
                 pageTitle="Junction Week"
                 metaDesc={getText('junctionWeekPageHeaderContent')}
-                ogImage={getMedia('junctionWeekPageHeaderImage')}
+                ogImageUrl={getMedia('junctionWeekPageHeaderImage').url}
             >
                 <HeroImage
                     image={getMedia('junctionWeekPageHeaderImage')}

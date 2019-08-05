@@ -26,7 +26,7 @@ class HomePage extends Component {
                 className="HomePage"
                 pageTitle="Hack the Future"
                 metaDesc={getText('whoAreWeBody')}
-                ogImage={getMedia('homePageHeaderImage')}
+                ogImageUrl={getMedia('homePageHeaderImage').url}
             >
                 <HeroImage isVideo>
                     <HeroCTA

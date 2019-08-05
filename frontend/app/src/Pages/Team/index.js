@@ -22,7 +22,7 @@ class TeamPage extends Component {
                 className="TeamPage"
                 pageTitle="Team"
                 metaDesc={getText('teamPageHeaderContent')}
-                ogImage={getMedia('teamPageHeaderImage')}
+                ogImageUrl={getMedia('teamPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('teamPageHeaderImage')}>
                     <BasicHeader

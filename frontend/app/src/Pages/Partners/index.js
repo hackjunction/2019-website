@@ -24,18 +24,31 @@ class PartnerPage extends Component {
                 className="PartnerPage"
                 pageTitle="Partners"
                 metaDesc={getText('partnerPageHeaderContent')}
-                ogImage={getMedia('partnerPageHeaderImage')}
+                ogImageUrl={getMedia('partnerPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('partnerPageHeaderImage')}>
-                    <BasicHeader title={getText('partnerPageHeaderTitle')} body={getText('partnerPageHeaderContent')}>
-                        <ButtonLink text={getText('partnerPageHeaderButton')} type="anchor" link="#contact" />
+                    <BasicHeader
+                        title={getText('partnerPageHeaderTitle')}
+                        body={getText('partnerPageHeaderContent')}
+                    >
+                        <ButtonLink
+                            text={getText('partnerPageHeaderButton')}
+                            type="anchor"
+                            link="#contact"
+                        />
                     </BasicHeader>
                 </HeroImage>
-                <BasicSection title={getText('partnerPageInfoTitle')} subtitle={getText('partnerPageInfoSubtitle')}>
+                <BasicSection
+                    title={getText('partnerPageInfoTitle')}
+                    subtitle={getText('partnerPageInfoSubtitle')}
+                >
                     <Markdown source={getText('partnerPageInfoContent')} />
                 </BasicSection>
                 <Divider md />
-                <SingleColumnSection title={getText('partnerPageTitle')} subtitle={getText('partnerPageSubtitle')} />
+                <SingleColumnSection
+                    title={getText('partnerPageTitle')}
+                    subtitle={getText('partnerPageSubtitle')}
+                />
                 <Divider sm />
                 <PartnersGrid />
                 <div id="contact" />

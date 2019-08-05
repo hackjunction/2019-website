@@ -25,7 +25,7 @@ class VolunteerPage extends Component {
                 className="VolunteerPage"
                 pageTitle="Volunteers"
                 metaDesc={getText('volunteerPageHeaderContent')}
-                ogImage={getMedia('volunteerPageHeaderImage')}
+                ogImageUrl={getMedia('volunteerPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('volunteerPageHeaderImage')}>
                     <Divider sm />
