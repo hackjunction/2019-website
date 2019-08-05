@@ -87,7 +87,6 @@ const mapStateToProps = (state, ownProps) => {
         default:
             break;
     }
-    console.log('YEETUS' + teamMembers);
     return {
         teamMembers
     };

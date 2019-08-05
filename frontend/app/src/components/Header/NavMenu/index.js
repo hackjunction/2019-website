@@ -24,6 +24,7 @@ const NavMenuInner = memo(props => {
                 />
             </Link>
             <nav className="NavMenu--inner__menu">
+                {/* HOME */}
                 <Link to="/">
                     <h6 className="NavMenu--inner__menu-title">Home</h6>
                 </Link>
@@ -39,10 +40,52 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
+                {/* INFO */}
+                {/* <Link to="/info">
+                    <h6 className="NavMenu--inner__menu-title">Info</h6>
+                </Link>
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/transportation"
+                >
+                    transportation
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/demo-expo">
+                    Demo Expo
+                </Link>
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/continuity-toolkit"
+                >
+                    Continuity Toolkit 
+                </Link> */}
+                {/* LIVE */}
+                {/* <Link to="/live">
+                    <h6 className="NavMenu--inner__menu-title">Live</h6>
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/event101">
+                    Event 101
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/schedule">
+                    Schedule
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/submission">
+                    Submission
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/food-info">
+                    Food Info
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/map">
+                    Venue Map
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/hardware">
+                    Hardware
+                </Link> */}
 
-                <HashLink to="/team">
+                {/* BOTTOM */}
+                <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
-                </HashLink>
+                </Link>
             </nav>
 
             <h6 className="NavMenu--inner__menu-title">

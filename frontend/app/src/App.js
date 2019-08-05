@@ -107,11 +107,11 @@ class App extends Component {
                                 path="/partners"
                                 component={PartnersPage}
                             />
-                            <Route
+                            {/* <Route
                                 exact
                                 path="/transportation"
                                 component={TransportationPage}
-                            />
+                            /> */}
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>
