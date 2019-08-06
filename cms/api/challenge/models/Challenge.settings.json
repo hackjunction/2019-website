@@ -19,9 +19,6 @@
     "content": {
       "type": "text"
     },
-    "contentShort": {
-      "type": "text"
-    },
     "track": {
       "model": "track",
       "via": "challenges"
@@ -29,6 +26,32 @@
     "partner": {
       "model": "partner",
       "via": "challenges"
+    },
+    "description": {
+      "type": "text"
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "whatWeBring": {
+      "type": "text"
+    },
+    "extraDetails": {
+      "type": "text"
+    },
+    "problems": {
+      "type": "text"
+    },
+    "judging": {
+      "type": "text"
+    },
+    "prize": {
+      "type": "text"
+    },
+    "videoLink": {
+      "type": "string"
     }
   }
 }

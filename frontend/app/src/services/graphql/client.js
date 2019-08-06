@@ -110,8 +110,19 @@ export const getDynamicContent = () => {
                     _id
                     name
                     content
-                    contentShort
+                    description
+                    headerImage {
+                        url
+                        public_id
+                    }
+                    whatWeBring
+                    extraDetails
+                    problems
+                    judging
+                    prize
+                    videoLink
                     partner {
+                        about
                         logo {
                             url
                             public_id

@@ -29,8 +29,9 @@ import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
+import ChallengePage from './Pages/Challenge';
 import PartnersPage from './Pages/Partners';
-import TransportationPage from './Pages/Info/Transportation';
+//import TransportationPage from './Pages/Info/Transportation';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -112,6 +113,13 @@ class App extends Component {
                                 path="/transportation"
                                 component={TransportationPage}
                             /> */}
+
+                            {/* Challenges */}
+                            <Route
+                                path="/challenges/:slug"
+                                component={ChallengePage}
+                            />
+
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>

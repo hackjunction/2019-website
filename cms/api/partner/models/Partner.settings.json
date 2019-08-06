@@ -22,10 +22,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "challenges": {
-      "collection": "challenge",
-      "via": "partner"
-    },
     "tracks": {
       "collection": "track",
       "via": "mentors"
@@ -35,6 +31,13 @@
     },
     "showOnFrontPage": {
       "type": "boolean"
+    },
+    "about": {
+      "type": "text"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "partner"
     }
   }
 }
