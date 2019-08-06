@@ -121,6 +121,7 @@ export const getDynamicContent = () => {
                     judging
                     prize
                     videoLink
+                    slug
                     partner {
                         about
                         logo {

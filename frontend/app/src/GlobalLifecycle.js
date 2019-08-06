@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { toggleSidebar } from './redux/dynamiccontent/actions';
 /** A component which renders nothing, but you can use its lifecycle methods to do things affecting the whole app, such as:
  *
  * - Fetch content from the API and store it in Redux
@@ -12,9 +11,7 @@ import { toggleSidebar } from './redux/dynamiccontent/actions';
  */
 
 class GlobalLifecycle extends Component {
-    async componentDidMount() {
-        this.props.toggleSidebar();
-    }
+    async componentDidMount() {}
 
     render() {
         return null;
@@ -22,9 +19,7 @@ class GlobalLifecycle extends Component {
 }
 
 const mapStateToProps = state => ({});
-const mapDispatchToProps = dispatch => ({
-    toggleSidebar: open => dispatch(toggleSidebar(open))
-});
+const mapDispatchToProps = dispatch => ({});
 
 export default connect(
     mapStateToProps,

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import './style.module.scss';
 
 import { connect } from 'react-redux';
 import { find } from 'lodash-es';
@@ -9,13 +8,13 @@ import NotFoundPage from '../NotFound';
 import Page from '../PageHOC';
 
 import HeroImage from '../../components/HeroImage';
-import BasicHeader from '../../components/BasicHeader';
 import TracksGrid from '../../components/TracksGrid';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import Divider from '../../components/Divider';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
 import ButtonLink from '../../components/ButtonLink';
+import HeaderImage from '../../components/HeaderImage';
 
 import * as DynamicSelectors from '../../redux/dynamiccontent/selectors';
 import * as StaticSelectors from '../../redux/staticcontent/selectors';
@@ -36,9 +35,10 @@ class ChallengePage extends PureComponent {
                 ogImageUrl={challenge.headerImage.url}
             >
                 <HeroImage image={challenge.headerImage}>
-                    <BasicHeader
+                    <HeaderImage
                         title={challenge.name}
                         body={challenge.description}
+                        image={challenge.partner.logo}
                     />
                 </HeroImage>
 
@@ -87,6 +87,10 @@ class ChallengePage extends PureComponent {
                 <ButtonLink>previous</ButtonLink>
                 <ButtonLink>Next</ButtonLink>
                 <Divider md />
+                <SingleColumnSection
+                    title={getText('homePageTracksTitle')}
+                    subtitle={getText('homePageTracksSubtitle')}
+                />
                 <TracksGrid />
                 <Divider md />
             </Page>

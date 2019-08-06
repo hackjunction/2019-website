@@ -3,7 +3,6 @@ import './style.scss';
 
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 
 import * as StaticSelectors from '../../../redux/staticcontent/selectors';
 

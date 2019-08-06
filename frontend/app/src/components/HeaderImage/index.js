@@ -1,9 +1,10 @@
 import React from 'react';
-import './style.scss';
+import styles from './style.module.scss';
 
 import { motion } from 'framer-motion';
 
 import Markdown from '../Markdown';
+import Image from '../Image';
 
 const fadeIn = {
     initial: {
@@ -29,26 +30,21 @@ const slideUp = {
     }
 };
 
-const BasicHeader = ({ title, body, children, center = false }) => {
+const BasicHeader = ({ title, body, children, image }) => {
     return (
-        <motion.div variants={fadeIn} className="BasicHeader">
-            <motion.h2
-                variants={slideUp}
-                className={
-                    center ? 'BasicHeader--title__center' : 'BasicHeader--title'
-                }
-            >
+        <motion.div variants={fadeIn} className={styles.HeaderImage}>
+            <Image
+                image={image}
+                className={styles.HeaderImageImage}
+                crop="fill"
+            />
+            <motion.h2 variants={slideUp} className={styles.HeaderImageTitle}>
                 {title}
             </motion.h2>
-            <motion.div
-                variants={slideUp}
-                className={
-                    center ? 'BasicHeader--body__center' : 'BasicHeader--body'
-                }
-            >
+            <motion.div variants={slideUp} className={styles.HeaderImageBody}>
                 <Markdown
                     source={body}
-                    className={center ? 'BasicHeader--body-content' : ''}
+                    className={styles.HeaderImageBodyContent}
                 />
                 {children}
             </motion.div>

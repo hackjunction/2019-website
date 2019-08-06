@@ -52,6 +52,11 @@
     },
     "videoLink": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true,
+      "required": true
     }
   }
 }

@@ -41,14 +41,23 @@
             align-items: flex-start;
             align-self: flex-start;
         }
+
+        &__center {
+            @include bp-med {
+                text-align: center;
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @include bp-full {
+                margin-top: 100px;
+            }
+            align-items: center;
+            align-self: center;
+        }
     }
 
     &--body {
         display: none;
-
-        @include bp-med {
-            display: flex;
-        }
 
         flex: 2;
         flex-direction: column;
@@ -59,5 +68,21 @@
         align-self: flex-end;
         margin: 0;
         padding-left: 1rem;
+        @include bp-med {
+            display: flex;
+        }
+
+        &__center {
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+        &-content {
+            max-width: 980px;
+            width: 100%;
+            * {
+                text-align: center !important;
+            }
+        }
     }
 }
