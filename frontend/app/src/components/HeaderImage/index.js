@@ -33,11 +33,14 @@ const slideUp = {
 const BasicHeader = ({ title, body, children, image }) => {
     return (
         <motion.div variants={fadeIn} className={styles.HeaderImage}>
-            <Image
-                image={image}
-                className={styles.HeaderImageImage}
-                crop="fill"
-            />
+            <motion.div variants={slideUp} className={styles.HeaderImageImage}>
+                <Image
+                    image={image}
+                    className={styles.HeaderImageImageImage}
+                    crop="fill"
+                />
+            </motion.div>
+
             <motion.h2 variants={slideUp} className={styles.HeaderImageTitle}>
                 {title}
             </motion.h2>
