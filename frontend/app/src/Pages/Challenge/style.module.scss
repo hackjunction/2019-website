@@ -1,9 +1,19 @@
 @import '../../styles/variables.scss';
 .ChallengePage {
+    &Next,
     &Previous {
         color: $white;
+        cursor: pointer;
+        font-size: 24px;
+        line-height: 32px;
     }
-    &Next {
-        color: $white;
+
+    &PrevNext {
+        margin: 0 auto;
+        max-width: 980px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 }

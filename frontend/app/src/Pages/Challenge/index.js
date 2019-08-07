@@ -90,25 +90,27 @@ class ChallengePage extends PureComponent {
                 </BasicSection>
                 <Divider md />
 
-                {previousChallenge ? (
-                    <Link
-                        to={'/challenges/' + previousChallenge.slug}
-                        className={styles.ChallengePagePrevious}
-                    >
-                        {`< ${previousChallenge.name}`}
-                    </Link>
-                ) : null}
+                <div className={styles.ChallengePagePrevNext}>
+                    {previousChallenge ? (
+                        <Link
+                            to={'/challenges/' + previousChallenge.slug}
+                            className={styles.ChallengePagePrevious}
+                        >
+                            {`< ${previousChallenge.name}`}
+                        </Link>
+                    ) : null}
 
-                <Divider sm />
+                    <Divider sm />
 
-                {nextChallenge ? (
-                    <Link
-                        to={'/challenges/' + nextChallenge.slug}
-                        className={styles.ChallengePageNext}
-                    >
-                        {`${nextChallenge.name} >`}
-                    </Link>
-                ) : null}
+                    {nextChallenge ? (
+                        <Link
+                            to={'/challenges/' + nextChallenge.slug}
+                            className={styles.ChallengePageNext}
+                        >
+                            {`${nextChallenge.name} >`}
+                        </Link>
+                    ) : null}
+                </div>
 
                 <Divider md />
                 <SingleColumnSection
@@ -126,10 +128,9 @@ const mapStateToProps = (state, ownProps) => {
     const { match } = ownProps;
     const challenges = DynamicSelectors.challenges(state);
     const challenge = find(challenges, c => c.slug === match.params.slug);
-    const challengeCount = DynamicSelectors.challengesCount;
     const challengeIndex = parseInt(challenges.indexOf(challenge));
 
-    if (challengeIndex + 1 > challengeCount) {
+    if (challengeIndex + 1 === challenges.length) {
         return {
             previousChallenge: challenges[challengeIndex - 1],
             nextChallenge: null,
@@ -140,6 +141,13 @@ const mapStateToProps = (state, ownProps) => {
     if (challengeIndex - 1 < 0) {
         return {
             previousChallenge: null,
+            nextChallenge: challenges[challengeIndex + 1],
+            challenge: challenge,
+            getText: StaticSelectors.buildGetText(state)
+        };
+    } else {
+        return {
+            previousChallenge: challenges[challengeIndex - 1],
             nextChallenge: challenges[challengeIndex + 1],
             challenge: challenge,
             getText: StaticSelectors.buildGetText(state)
