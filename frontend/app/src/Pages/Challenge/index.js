@@ -112,7 +112,7 @@ class ChallengePage extends PureComponent {
                     ) : null}
                 </div>
 
-                <Divider md />
+                <Divider mlg />
                 <SingleColumnSection
                     title={getText('homePageTracksTitle')}
                     subtitle={getText('homePageTracksSubtitle')}
