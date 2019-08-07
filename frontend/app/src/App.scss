@@ -7,16 +7,11 @@
     align-items: stretch;
 }
 a {
-    color: #f38100;
+    color: $link-colour;
 }
 .App--main {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(
-        152deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 1) 15%,
-        rgba(20, 0, 21, 1) 100%
-    );
+    background: $background;
+    background: $background-gradient;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;

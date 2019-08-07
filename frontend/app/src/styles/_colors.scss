@@ -1,26 +1,47 @@
 @import './sizes';
-@import './styles';
 
+/* EDIT THESE TO CHANGE SITE COLOURING */
+
+/* Main colouring of site */
 $main-color1: rgba(178, 0, 183, 0.8);
 $main-color2: rgba(243, 129, 0, 0.6);
 
+/* Gradient based on main-color1*/
 $main-gradient1: linear-gradient(
     136deg,
     rgba(178, 0, 183, 0.3),
     rgba(178, 0, 183, 0.2) 100%
 );
 
+/* Gradient based on main-color2 */
 $main-gradient2: linear-gradient(
     128deg,
     rgba(243, 129, 0, 0.23) 0%,
     rgba(122, 65, 0, 0.22) 100%
 );
 
+/* Site background colour */
+$background: rgb(0, 0, 0);
+
+/* Site background gradient */
+$background-gradient: linear-gradient(
+    152deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(20, 0, 21, 1) 100%
+);
+
+/* Colour of links in texts */
+$link-colour: #f38100;
+
+/* EDIT THESE TO CHANGE TEXT COLOURING */
 $black: #131313;
 $white: #fbfbfb;
 $lightgrey: #eaeaea;
 $accent: #35e2df;
+/* ----------------------------------- */
 
+/* DON'T EDIT */
 $text-dark: $black;
 $text-dark-primary: rgba($text-dark, 0.92);
 $text-dark-secondary: rgba($text-dark, 0.8);
@@ -29,6 +50,7 @@ $text-light: $white;
 $text-light-primary: rgba($text-light, 0.92);
 $text-light-secondary: rgba($text-light, 0.8);
 
+/* Colours for Forms (NewsLetter/ContactForm) */
 $warning-orange: #ff6700;
 $error-red: #cc0000;
 $success-green: #a8ff00;
