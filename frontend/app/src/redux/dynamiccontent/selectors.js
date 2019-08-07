@@ -122,3 +122,5 @@ export const transportFaqs = createSelector(
         return filter(data, 'isTransportationFaq');
     }
 );
+
+export const challengesCount = challenges.length;
