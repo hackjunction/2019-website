@@ -19,7 +19,6 @@ const ImageSection = ({
                 <Image image={image} className="ImageSection--left__image" />
             </div>
             <div className="ImageSection--right">
-                <h4 className="ImageSection--right__title">{title}</h4>
                 <Markdown
                     source={content}
                     className="ImageSection--right__content"
