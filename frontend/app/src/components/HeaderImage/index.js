@@ -30,25 +30,48 @@ const slideUp = {
     }
 };
 
-const BasicHeader = ({ title, body, children, image }) => {
+const BasicHeader = ({
+    title,
+    subtitle,
+    body,
+    children,
+    image,
+    noBg = false
+}) => {
     return (
         <motion.div variants={fadeIn} className={styles.HeaderImage}>
             <motion.div variants={slideUp} className={styles.HeaderImageImage}>
                 <Image
                     image={image}
-                    className={styles.HeaderImageImageImage}
+                    className={` ${styles.HeaderImageImageImage} 
+                    ${noBg ? styles.NoBackground : ''} `}
                     crop="fill"
                 />
             </motion.div>
 
-            <motion.h2 variants={slideUp} className={styles.HeaderImageTitle}>
-                {title}
-            </motion.h2>
+            {title ? (
+                <motion.h2
+                    variants={slideUp}
+                    className={styles.HeaderImageTitle}
+                >
+                    {title}
+                </motion.h2>
+            ) : null}
+            {subtitle ? (
+                <motion.span
+                    variants={slideUp}
+                    className={styles.HeaderImageSubtitle}
+                >
+                    {subtitle}
+                </motion.span>
+            ) : null}
+
             <motion.div variants={slideUp} className={styles.HeaderImageBody}>
                 <Markdown
                     source={body}
                     className={styles.HeaderImageBodyContent}
                 />
+
                 {children}
             </motion.div>
         </motion.div>

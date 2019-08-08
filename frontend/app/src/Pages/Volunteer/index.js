@@ -53,12 +53,8 @@ class VolunteerPage extends Component {
                 <Divider md />
                 <SingleColumnSection
                     title={getText('volunteerPageFamilyTitle')}
-                    subtitle={getText('volunteerPageFamilySubtitle')}
+                    subtitle={getText('volunteerPageFamilyContent')}
                 >
-                    <Markdown
-                        className="VolunteerPage-family"
-                        source={getText('volunteerPageFamilyContent')}
-                    />
                     <Divider md />
                     <Markdown source={getText('volunteerPageVideo')} />
                 </SingleColumnSection>

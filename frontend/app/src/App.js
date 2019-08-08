@@ -31,6 +31,7 @@ import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
 import ChallengePage from './Pages/Challenge';
 import PartnersPage from './Pages/Partners';
+import TerminalPage from './Pages/Terminal';
 //import TransportationPage from './Pages/Info/Transportation';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
@@ -107,6 +108,11 @@ class App extends Component {
                                 exact
                                 path="/partners"
                                 component={PartnersPage}
+                            />
+                            <Route
+                                exact
+                                path="/terminal"
+                                component={TerminalPage}
                             />
                             {/* <Route
                                 exact
