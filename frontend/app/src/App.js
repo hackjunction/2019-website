@@ -29,7 +29,6 @@ import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
-import ChallengePage from './Pages/Challenge';
 import PartnersPage from './Pages/Partners';
 import TerminalPage from './Pages/Terminal';
 import TransportationPage from './Pages/Info/Transportation';
