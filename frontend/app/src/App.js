@@ -32,7 +32,7 @@ import ChallengesPage from './Pages/Challenges';
 import ChallengePage from './Pages/Challenge';
 import PartnersPage from './Pages/Partners';
 import TerminalPage from './Pages/Terminal';
-//import TransportationPage from './Pages/Info/Transportation';
+import TransportationPage from './Pages/Info/Transportation';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -109,22 +109,29 @@ class App extends Component {
                                 path="/partners"
                                 component={PartnersPage}
                             />
-                            <Route
-                                exact
-                                path="/terminal"
-                                component={TerminalPage}
-                            />
-                            {/* <Route
-                                exact
-                                path="/transportation"
-                                component={TransportationPage}
-                            /> */}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/terminal"
+                                    component={TerminalPage}
+                                />
+                            ) : null}
+
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/transportation"
+                                    component={TransportationPage}
+                                />
+                            ) : null}
 
                             {/* Challenges */}
-                            <Route
-                                path="/challenges/:slug"
-                                component={ChallengePage}
-                            />
+                            {/* {config.IS_DEBUG ? (
+                                <Route
+                                    path="/challenges/:slug"
+                                    component={ChallengePage}
+                                />
+                            ) : null} */}
 
                             <Route component={NotFound} />
                         </Switch>
