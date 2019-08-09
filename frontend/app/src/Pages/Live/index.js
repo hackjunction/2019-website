@@ -44,6 +44,11 @@ class LivePage extends Component {
                     subtitle={getText('livePageSection2Subtitle')}
                 />
                 <Divider lg />
+                <SingleColumnSection title="Schedule here" />
+                <Divider lg />
+
+                <Divider lg />
+                <Divider lg />
                 <BasicSection
                     title={getText('livePageSection3Title')}
                     subtitle={getText('livePageSection3Subtitle')}
@@ -72,6 +77,7 @@ class LivePage extends Component {
                         text={getText('livePageSection5Button')}
                         link={'livePageSection5ButtonLink'}
                         align="left"
+                        size="sm"
                     />
                 </BasicSection>
                 <Divider md />
