@@ -139,6 +139,15 @@ export const getDynamicContent = () => {
                         public_id
                     }
                 }
+                eventinfos {
+                    _id
+                    name
+                    content
+                    logo {
+                        url
+                        public_id
+                    }
+                }
             }
         `
     });

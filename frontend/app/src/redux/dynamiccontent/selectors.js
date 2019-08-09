@@ -11,6 +11,8 @@ export const tracks = state => state.dynamicContent.content.tracks || [];
 export const stats = state => state.dynamicContent.content.stats || [];
 export const faqs = state => state.dynamicContent.content.faqs || [];
 export const partners = state => state.dynamicContent.content.partners || [];
+export const eventInfos = state =>
+    state.dynamicContent.content.eventinfos || [];
 export const eventDates = state =>
     state.dynamicContent.content.eventdates || [];
 

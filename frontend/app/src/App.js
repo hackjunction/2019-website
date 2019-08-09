@@ -29,9 +29,11 @@ import NotFound from './Pages/NotFound';
 import VolunteerPage from './Pages/Volunteer';
 import TeamPage from './Pages/Team';
 import ChallengesPage from './Pages/Challenges';
+import ChallengePage from './Pages/Challenge';
 import PartnersPage from './Pages/Partners';
 import TerminalPage from './Pages/Terminal';
 import TransportationPage from './Pages/Info/Transportation';
+import LivePage from './Pages/Live';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -123,14 +125,20 @@ class App extends Component {
                                     component={TransportationPage}
                                 />
                             ) : null}
-
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/live"
+                                    component={LivePage}
+                                />
+                            ) : null}
                             {/* Challenges */}
-                            {/* {config.IS_DEBUG ? (
+                            {config.IS_DEBUG ? (
                                 <Route
                                     path="/challenges/:slug"
                                     component={ChallengePage}
                                 />
-                            ) : null} */}
+                            ) : null}
 
                             <Route component={NotFound} />
                         </Switch>
