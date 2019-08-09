@@ -50,12 +50,6 @@ export const getDynamicContent = () => {
                         public_id
                     }
                 }
-
-                stats {
-                    _id
-                    label
-                    value
-                }
                 tracks {
                     _id
                     name
