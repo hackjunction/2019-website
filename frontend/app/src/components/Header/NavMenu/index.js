@@ -1,6 +1,8 @@
 import React, { memo } from 'react';
 import './style.scss';
 
+import config from '../../../config';
+
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
@@ -39,6 +41,7 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
+
                 {/* INFO */}
                 {/* <Link to="/info">
                     <h6 className="NavMenu--inner__menu-title">Info</h6>
@@ -85,6 +88,24 @@ const NavMenuInner = memo(props => {
                 <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
                 </Link>
+                {config.IS_DEBUG ? (
+                    <h6 className="NavMenu--inner__menu-title">
+                        New sites not live yet
+                    </h6>
+                ) : null}
+                {config.IS_DEBUG ? (
+                    <Link className="NavMenu--inner__menu-item" to="/terminal">
+                        Terminal
+                    </Link>
+                ) : null}
+                {config.IS_DEBUG ? (
+                    <Link
+                        className="NavMenu--inner__menu-item"
+                        to="/transportation"
+                    >
+                        Transportation
+                    </Link>
+                ) : null}
             </nav>
 
             <h6 className="NavMenu--inner__menu-title">

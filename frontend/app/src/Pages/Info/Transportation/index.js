@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.module.scss';
 
+import config from '../../../config';
+
 import * as ContentSelectors from '../../../redux/staticcontent/selectors';
 
 import Page from '../../PageHOC';
@@ -41,6 +43,12 @@ class TransportationPage extends Component {
                     title={getText('transportationPageFaqTitle')}
                     subtitle={getText('transportationPageFaqSubtitle')}
                 />
+                {config.IS_DEBUG ? (
+                    <div>
+                        <h3> FaQ's where IsTransportationFaq = true</h3>
+                        <p>(this text isn't visible on the live pages)</p>
+                    </div>
+                ) : null}
                 <FaqGrid type="transport" />
                 <Divider md />
                 <BasicSection
