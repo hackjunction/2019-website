@@ -34,6 +34,7 @@ import PartnersPage from './Pages/Partners';
 import TerminalPage from './Pages/Terminal';
 import TransportationPage from './Pages/Info/Transportation';
 import LivePage from './Pages/Live';
+import DemoPage from './Pages/Demo';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -130,6 +131,13 @@ class App extends Component {
                                     exact
                                     path="/live"
                                     component={LivePage}
+                                />
+                            ) : null}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/demo"
+                                    component={DemoPage}
                                 />
                             ) : null}
                             {/* Challenges */}

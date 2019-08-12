@@ -27,7 +27,7 @@ const TracksGrid = props => {
                 );
             } else {
                 return (
-                    <div className="TracksGrid--container" key={track.id}>
+                    <div className="TracksGrid--container" key={track._id}>
                         <ButtonLink
                             block
                             type="challenge"
