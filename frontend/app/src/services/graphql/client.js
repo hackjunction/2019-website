@@ -142,6 +142,11 @@ export const getDynamicContent = () => {
                         public_id
                     }
                 }
+                guidelines {
+                    _id
+                    title
+                    content
+                }
             }
         `
     });

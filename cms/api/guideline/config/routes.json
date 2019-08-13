@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/guidelines",
+      "handler": "Guideline.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guidelines/count",
+      "handler": "Guideline.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/guidelines/:_id",
+      "handler": "Guideline.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/guidelines",
+      "handler": "Guideline.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/guidelines/:_id",
+      "handler": "Guideline.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/guidelines/:_id",
+      "handler": "Guideline.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

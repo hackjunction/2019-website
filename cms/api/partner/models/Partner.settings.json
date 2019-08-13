@@ -38,6 +38,9 @@
     "challenges": {
       "collection": "challenge",
       "via": "partner"
+    },
+    "showOnTerminalPage": {
+      "type": "boolean"
     }
   }
 }

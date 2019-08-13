@@ -13,6 +13,7 @@ import Markdown from '../../components/Markdown';
 import ButtonLink from '../../components/ButtonLink';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import Image from '../../components/Image';
+import Guidelines from '../../components/Guidelines';
 
 class DemoPage extends Component {
     render() {
@@ -71,6 +72,7 @@ class DemoPage extends Component {
                     title={getText('demoPagesection4Title')}
                     subtitle={getText('demoPageSection4Subtitle')}
                 />
+                <Guidelines />
             </Page>
         );
     }

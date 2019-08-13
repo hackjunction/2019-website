@@ -22,9 +22,12 @@ export const challenges = state =>
     state.dynamicContent.content.challenges || [];
 export const footerImages = state =>
     state.dynamicContent.content.footerimages || [];
+export const guidelines = state =>
+    state.dynamicContent.content.guidelines || [];
+
+//-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;
-
 //----------------------------------------------------------------
 export const shouldUpdate = createSelector(
     contentUpdated,
