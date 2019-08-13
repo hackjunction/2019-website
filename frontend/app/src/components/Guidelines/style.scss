@@ -9,6 +9,7 @@
 }
 
 .VolunteerGuidelines--container {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,7 @@
     padding-right: 1rem;
     margin-bottom: 1rem;
     width: 100%;
+    max-width: 980px;
     border-radius: $border-radius;
     color: $text-light;
     background: $main-gradient1;
@@ -29,6 +31,7 @@
 
     &__title {
         text-align: center;
+
         padding-right: 1rem;
         width: 100%;
         max-width: 20rem;
@@ -38,9 +41,11 @@
         text-transform: uppercase;
     }
     &__content {
+        align-self: flex-start;
         width: 100%;
         max-width: 620px;
         font-size: 18px;
         font-family: $font-body;
+        padding-top: 10px;
     }
 }

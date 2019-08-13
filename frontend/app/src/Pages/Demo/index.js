@@ -69,10 +69,32 @@ class DemoPage extends Component {
                 </SingleColumnSection>
                 <Divider md />
                 <SingleColumnSection
-                    title={getText('demoPagesection4Title')}
+                    title={getText('demoPageSection4Title')}
                     subtitle={getText('demoPageSection4Subtitle')}
                 />
                 <Guidelines />
+                <Divider md />
+                <BasicSection
+                    title={getText('demoPageSection5Title')}
+                    subtitle={getText('demoPageSection5Subtitle')}
+                >
+                    <Markdown source={getText('demoPageSection5Content')} />
+                </BasicSection>
+                <Divider md />
+                <BasicSection
+                    title={getText('demoPageSection6Title')}
+                    subtitle={getText('demoPageSection6Subtitle')}
+                >
+                    <Markdown source={getText('demoPageSection6Content')} />
+                    <ButtonLink
+                        text={getText('demoPageSection6Button')}
+                        link={getText('demoPageSection6ButtonLink')}
+                        size="sm"
+                        align="left"
+                        type="mainsite"
+                    />
+                </BasicSection>
+                <Divider md />
             </Page>
         );
     }
