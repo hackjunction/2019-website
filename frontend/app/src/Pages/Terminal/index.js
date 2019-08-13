@@ -36,6 +36,7 @@ class TerminalPage extends Component {
                             text={getText('terminalPageHeaderButton')}
                             link={getText('terminalPageHeaderButtonLink')}
                             size="sm"
+                            type="mainsite"
                         />
                     </HeaderImage>
 
