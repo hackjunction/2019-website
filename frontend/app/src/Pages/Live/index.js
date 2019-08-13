@@ -13,6 +13,7 @@ import ButtonLink from '../../components/ButtonLink';
 import NewsLetterForm from '../../components/NewsLetterForm';
 import Image from '../../components/Image';
 import EventInfoBlocks from '../../components/EventInfoBlocks';
+import VerticalSection from '../../components/VerticalSection';
 
 import Page from '../PageHOC';
 
@@ -66,6 +67,11 @@ class LivePage extends Component {
                     title={getText('livePageSection4Title')}
                     subtitle={getText('livePageSection4Subtitle')}
                 />
+                <VerticalSection>
+                    <Markdown source={getText('livePageMenu1')} />
+                    <Markdown source={getText('livePageMenu2')} />
+                    <Markdown source={getText('livePageMenu3')} />
+                </VerticalSection>
                 {/* FOOD MENU HERE */}
                 <Divider md />
                 <BasicSection

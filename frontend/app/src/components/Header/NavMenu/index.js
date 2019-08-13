@@ -41,6 +41,9 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
+                <Link className="NavMenu--inner__menu-item" to="/terminal">
+                    Terminal
+                </Link>
 
                 {/* INFO */}
                 {/* <Link to="/info">
@@ -52,7 +55,7 @@ const NavMenuInner = memo(props => {
                 >
                     transportation
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/demo-expo">
+                <Link className="NavMenu--inner__menu-item" to="/demo">
                     Demo Expo
                 </Link>
                 <Link
@@ -93,11 +96,7 @@ const NavMenuInner = memo(props => {
                         New sites not live yet
                     </h6>
                 ) : null}
-                {config.IS_DEBUG ? (
-                    <Link className="NavMenu--inner__menu-item" to="/terminal">
-                        Terminal
-                    </Link>
-                ) : null}
+
                 {config.IS_DEBUG ? (
                     <Link
                         className="NavMenu--inner__menu-item"
@@ -109,6 +108,11 @@ const NavMenuInner = memo(props => {
                 {config.IS_DEBUG ? (
                     <Link className="NavMenu--inner__menu-item" to="/Live">
                         Live
+                    </Link>
+                ) : null}
+                {config.IS_DEBUG ? (
+                    <Link className="NavMenu--inner__menu-item" to="/demo">
+                        Demo
                     </Link>
                 ) : null}
             </nav>

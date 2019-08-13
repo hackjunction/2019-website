@@ -111,13 +111,12 @@ class App extends Component {
                                 path="/partners"
                                 component={PartnersPage}
                             />
-                            {config.IS_DEBUG ? (
-                                <Route
-                                    exact
-                                    path="/terminal"
-                                    component={TerminalPage}
-                                />
-                            ) : null}
+
+                            <Route
+                                exact
+                                path="/terminal"
+                                component={TerminalPage}
+                            />
 
                             {config.IS_DEBUG ? (
                                 <Route
