@@ -36,8 +36,16 @@ const PartnersGrid = props => {
     const renderPartners = partners => {
         return partners.map(partner => {
             return (
-                <motion.div variants={imageAnim} className="PartnersGrid-partner" key={partner._id}>
-                    <Image image={partner.logo} className="PartnersGrid-partner-img" crop={'fill'} />
+                <motion.div
+                    variants={imageAnim}
+                    className="PartnersGrid-partner"
+                    key={partner._id}
+                >
+                    <Image
+                        image={partner.logo}
+                        className="PartnersGrid-partner-img"
+                        crop={'fill'}
+                    />
                 </motion.div>
             );
         });
@@ -58,6 +66,10 @@ const mapStateToProps = (state, ownProps) => {
         case 'front':
             return {
                 partners: ContentSelectors.partnersOnFrontPage(state)
+            };
+        case 'terminal':
+            return {
+                partners: ContentSelectors.partnersOnTerminalPage(state)
             };
         default:
             return { partners: ContentSelectors.partners(state) };

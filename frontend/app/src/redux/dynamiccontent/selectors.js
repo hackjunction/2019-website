@@ -86,6 +86,12 @@ export const partnersOnFrontPage = createSelector(
         return filter(data, 'showOnFrontPage');
     }
 );
+export const partnersOnTerminalPage = createSelector(
+    partners,
+    data => {
+        return filter(data, 'showOnTerminalPage');
+    }
+);
 export const datesInOrder = createSelector(
     eventDates,
     data => {

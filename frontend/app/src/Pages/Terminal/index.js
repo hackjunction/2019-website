@@ -53,7 +53,7 @@ class TerminalPage extends Component {
                     title={getText('terminalPagePartnerTitle')}
                     subtitle={getText('terminalPagePartnerSubtitle')}
                 />
-                <PartnersGrid type="front" />
+                <PartnersGrid type="terminal" />
                 <Divider md />
                 <BasicSection title={getText('terminalPageSection2Title')}>
                     <Markdown source={getText('terminalPageSection2Content')} />
