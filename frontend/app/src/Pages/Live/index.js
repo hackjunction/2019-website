@@ -70,28 +70,16 @@ class LivePage extends Component {
                 />
                 <VerticalSection>
                     <VerticalText
-                        title={getText('livePageMenu1Title') || 'Saturday'}
-                        content={
-                            getText('livePageMenu1Content') ||
-                            'LONGTEXTLONGTEXT LONGTEXT LONGTEXTLONGTEXT'
-                        }
+                        title={getText('livePageMenu1Title')}
+                        content={getText('livePageMenu1Content')}
                     />
                     <VerticalText
-                        title={getText('livePageMenu2Title') || 'Sunday'}
-                        content={
-                            getText('livePageMenu2Content') ||
-                            'LONGTEXTVLONGTEXT LONGTEXT LONGTEXTLONGTEXT LONGTEXT'
-                        }
+                        title={getText('livePageMenu2Title')}
+                        content={getText('livePageMenu2Content')}
                     />
                     <VerticalText
-                        title={
-                            getText('livePageMenu3Title') ||
-                            'Other food options'
-                        }
-                        content={
-                            getText('livePageMenu3Content') ||
-                            'LONGTEXTLONGTEXT LONGTEXTLONGTEXT LONGTEXT LONGTEXT'
-                        }
+                        title={getText('livePageMenu3Title')}
+                        content={getText('livePageMenu3Content')}
                     />
                 </VerticalSection>
 

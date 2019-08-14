@@ -35,6 +35,7 @@ import TerminalPage from './Pages/Terminal';
 import TransportationPage from './Pages/Info/Transportation';
 import LivePage from './Pages/Live';
 import DemoPage from './Pages/Demo';
+import HardwarePage from './Pages/Hardware';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -144,6 +145,12 @@ class App extends Component {
                                 <Route
                                     path="/challenges/:slug"
                                     component={ChallengePage}
+                                />
+                            ) : null}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    path="/hardware"
+                                    component={HardwarePage}
                                 />
                             ) : null}
 
