@@ -115,6 +115,11 @@ const NavMenuInner = memo(props => {
                         Demo
                     </Link>
                 ) : null}
+                {config.IS_DEBUG ? (
+                    <Link className="NavMenu--inner__menu-item" to="/hardware">
+                        Hardware Lab
+                    </Link>
+                ) : null}
             </nav>
 
             <h6 className="NavMenu--inner__menu-title">

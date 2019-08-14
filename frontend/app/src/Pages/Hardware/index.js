@@ -7,9 +7,7 @@ import Page from '../PageHOC';
 
 import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
-import BasicSection from '../../components/BasicSection';
-import Markdown from '../../components/Markdown';
-import Divider from '../../components/Divider';
+
 import SingleColumnSection from '../../components/SingleColumnSection';
 import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
