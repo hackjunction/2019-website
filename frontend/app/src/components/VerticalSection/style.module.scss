@@ -1,12 +1,12 @@
 .verticalSection {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-transform: uppercase;
     max-width: 980px;
     margin: 0 auto;
-    background: red;
-    &Children {
-        display: flex;
-        justify-content: flex-end;
-        color: red;
-        background: red;
+    * {
+        margin: 10px;
+        //background: rgba(255, 255, 255, 0.1);
     }
 }

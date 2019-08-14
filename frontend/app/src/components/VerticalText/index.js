@@ -7,7 +7,7 @@ const VerticalText = ({ title, content }) => {
     return (
         <div className={styles.VerticalText}>
             <span className={styles.VerticalTextTitle}>{title}</span>
-            <Markdown source={content} className={styles.VerticalTextContent} />
+            <Markdown className={styles.VerticalTextContent} source={content} />
         </div>
     );
 };

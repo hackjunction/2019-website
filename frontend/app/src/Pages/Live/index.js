@@ -14,6 +14,7 @@ import NewsLetterForm from '../../components/NewsLetterForm';
 import Image from '../../components/Image';
 import EventInfoBlocks from '../../components/EventInfoBlocks';
 import VerticalSection from '../../components/VerticalSection';
+import VerticalText from '../../components/VerticalText';
 
 import Page from '../PageHOC';
 
@@ -68,11 +69,32 @@ class LivePage extends Component {
                     subtitle={getText('livePageSection4Subtitle')}
                 />
                 <VerticalSection>
-                    <Markdown source={getText('livePageMenu1')} />
-                    <Markdown source={getText('livePageMenu2')} />
-                    <Markdown source={getText('livePageMenu3')} />
+                    <VerticalText
+                        title={getText('livePageMenu1Title') || 'Saturday'}
+                        content={
+                            getText('livePageMenu1Content') ||
+                            'LONGTEXTLONGTEXT LONGTEXT LONGTEXTLONGTEXT'
+                        }
+                    />
+                    <VerticalText
+                        title={getText('livePageMenu2Title') || 'Sunday'}
+                        content={
+                            getText('livePageMenu2Content') ||
+                            'LONGTEXTVLONGTEXT LONGTEXT LONGTEXTLONGTEXT LONGTEXT'
+                        }
+                    />
+                    <VerticalText
+                        title={
+                            getText('livePageMenu3Title') ||
+                            'Other food options'
+                        }
+                        content={
+                            getText('livePageMenu3Content') ||
+                            'LONGTEXTLONGTEXT LONGTEXTLONGTEXT LONGTEXT LONGTEXT'
+                        }
+                    />
                 </VerticalSection>
-                {/* FOOD MENU HERE */}
+
                 <Divider md />
                 <BasicSection
                     title={getText('livePageSection5Title')}
