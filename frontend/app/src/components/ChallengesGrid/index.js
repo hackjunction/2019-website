@@ -8,6 +8,8 @@ import MentorItem from './MentorItem';
 import SingleColumnSection from '../SingleColumnSection';
 import Divider from '../Divider';
 
+import config from '../../config';
+
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import * as StaticSelectors from '../../redux/staticcontent/selectors';
 import './style.scss';
@@ -60,9 +62,17 @@ const ChallengesGrid = props => {
                         />
 
                         <Divider sm />
-                        <div>{renderChallenges(track.challenges)}</div>
+                        <div>
+                            {config.IS_DEBUG
+                                ? renderChallenges(track.challenges)
+                                : null}
+                        </div>
                         <Divider sm />
-                        <div>{renderMentor(track.mentors)}</div>
+                        <div>
+                            {config.IS_DEBUG
+                                ? renderMentor(track.mentors)
+                                : null}
+                        </div>
                     </div>
                 </div>
             );

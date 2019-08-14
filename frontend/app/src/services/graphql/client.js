@@ -58,6 +58,7 @@ export const getDynamicContent = () => {
                     challenges {
                         name
                         content
+                        slug
                         partner {
                             logo {
                                 url
