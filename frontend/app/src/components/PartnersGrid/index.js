@@ -43,16 +43,16 @@ const PartnersGrid = props => {
                 >
                     <motion.div
                         variants={imageAnim}
-                        className="PartnersGrid-partner"
+                        className={
+                            partner.priority === 1
+                                ? 'PartnersGrid--partner__prio'
+                                : 'PartnersGrid--partner'
+                        }
                         key={partner._id}
                     >
                         <Image
                             image={partner.logo}
-                            className={
-                                partner.priority === 1
-                                    ? 'PartnersGrid-partner-prio'
-                                    : 'PartnersGrid-partner-img'
-                            }
+                            className="PartnersGrid--partner__img"
                             crop={'fill'}
                         />
                     </motion.div>
