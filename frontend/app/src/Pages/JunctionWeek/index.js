@@ -53,7 +53,10 @@ class JunctionWeekPage extends Component {
                     />
                     <ButtonLink
                         text={getText('junctionWeekPageTerminalButton')}
-                        link={getText('junctionWeekPageTerminalButtonLink')}
+                        link={
+                            getText('junctionWeekPageTerminalButtonLink') ||
+                            '/terminal'
+                        }
                         size="sm"
                         align="left"
                     />
