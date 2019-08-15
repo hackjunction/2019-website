@@ -37,6 +37,7 @@ const PartnersGrid = props => {
         return partners.map(partner => {
             return (
                 <a
+                    key={partner._id}
                     href={partner.link}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -48,7 +49,6 @@ const PartnersGrid = props => {
                                 ? 'PartnersGrid--partner__prio'
                                 : 'PartnersGrid--partner'
                         }
-                        key={partner._id}
                     >
                         <Image
                             image={partner.logo}

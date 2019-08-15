@@ -57,8 +57,6 @@ class InfoPage extends Component {
                     <ButtonLink
                         text={getText('infoPageTracksButton')}
                         link={getText('infoPageTracksButtonLink')}
-                        color="purple"
-                        size="md"
                         align="left"
                     />
                 </BasicSection>

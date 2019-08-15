@@ -55,7 +55,6 @@ class JunctionWeekPage extends Component {
                         text={getText('junctionWeekPageTerminalButton')}
                         link={getText('junctionWeekPageTerminalButtonLink')}
                         size="sm"
-                        color="purple"
                         align="left"
                     />
                 </BasicSection>
