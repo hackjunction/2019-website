@@ -45,7 +45,7 @@ const PartnersGrid = props => {
                     <motion.div
                         variants={imageAnim}
                         className={
-                            partner.priority === 1 || 2
+                            partner.priority === 1
                                 ? 'PartnersGrid--partner__prio'
                                 : 'PartnersGrid--partner'
                         }
