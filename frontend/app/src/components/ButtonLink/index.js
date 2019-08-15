@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import './Style.scss';
 const ButtonLink = ({
     text,
-    link = '/',
+    link,
     color = 'purple', //purple or brown
     size = 'md', //sm / md / lg /fp
     align = 'center', //left / center / right
