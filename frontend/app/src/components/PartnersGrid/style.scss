@@ -28,7 +28,12 @@
     width: 200px;
     &-img {
         object-fit: contain;
-        width: 80%;
-        height: 80%;
+        width: 70%;
+        height: 70%;
+    }
+    &-prio {
+        object-fit: contain;
+        width: 90%;
+        height: 90%;
     }
 }
