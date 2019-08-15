@@ -80,14 +80,20 @@ export const globalByTeamPriority = createSelector(
     }
 );
 
-export const partnersOnFrontPage = createSelector(
+export const partnersByPriority = createSelector(
     partners,
+    data => {
+        return sortBy(data, 'priority');
+    }
+);
+export const partnersOnFrontPage = createSelector(
+    partnersByPriority,
     data => {
         return filter(data, 'showOnFrontPage');
     }
 );
 export const partnersOnTerminalPage = createSelector(
-    partners,
+    partnersByPriority,
     data => {
         return filter(data, 'showOnTerminalPage');
     }

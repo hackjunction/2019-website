@@ -41,6 +41,12 @@
     },
     "showOnTerminalPage": {
       "type": "boolean"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

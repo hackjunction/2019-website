@@ -72,7 +72,7 @@ const mapStateToProps = (state, ownProps) => {
                 partners: ContentSelectors.partnersOnTerminalPage(state)
             };
         default:
-            return { partners: ContentSelectors.partners(state) };
+            return { partners: ContentSelectors.partnersByPriority(state) };
     }
 };
 
