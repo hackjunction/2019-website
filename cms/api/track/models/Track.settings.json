@@ -20,14 +20,14 @@
     "description": {
       "type": "text"
     },
-    "challenges": {
-      "collection": "challenge",
-      "via": "track"
-    },
     "mentors": {
       "collection": "partner",
       "dominant": true,
       "via": "tracks"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "track"
     }
   }
 }

@@ -57,6 +57,9 @@
     "partner": {
       "model": "partner",
       "via": "challenges"
+    },
+    "headerContent": {
+      "type": "text"
     }
   }
 }

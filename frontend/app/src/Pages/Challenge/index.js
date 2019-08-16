@@ -43,7 +43,7 @@ class ChallengePage extends PureComponent {
                 <HeroImage image={challenge.headerImage}>
                     <HeaderImage
                         title={challenge.name}
-                        body={challenge.description}
+                        body={challenge.headerContent}
                         image={challenge.partner.logo}
                     />
                 </HeroImage>
@@ -54,7 +54,9 @@ class ChallengePage extends PureComponent {
                         <Divider md />
                     </SingleColumnSection>
                 ) : null}
-
+                <BasicSection title={getText('challengeDescriptionTItle')}>
+                    <Markdown source={challenge.description} />
+                </BasicSection>
                 <BasicSection title={getText('challengeWhatWeBringTitle')}>
                     <Markdown source={challenge.whatWeBring} />
                 </BasicSection>

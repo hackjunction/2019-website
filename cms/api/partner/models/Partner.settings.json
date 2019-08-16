@@ -35,10 +35,6 @@
     "about": {
       "type": "text"
     },
-    "challenges": {
-      "collection": "challenge",
-      "via": "partner"
-    },
     "showOnTerminalPage": {
       "type": "boolean"
     },
@@ -47,6 +43,10 @@
     },
     "link": {
       "type": "string"
+    },
+    "challenges": {
+      "collection": "challenge",
+      "via": "partner"
     }
   }
 }
