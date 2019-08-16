@@ -128,33 +128,36 @@ class ChallengePage extends PureComponent {
 
 const mapStateToProps = (state, ownProps) => {
     const { match } = ownProps;
+
+    //Get all challenges
     const challenges = DynamicSelectors.challenges(state);
+
+    //See if challenge with the same slug (eg. /challenge-one) exists
     const challenge = find(challenges, c => c.slug === match.params.slug);
+
+    //Checks the index of current challenge in challenges.
     const challengeIndex = parseInt(challenges.indexOf(challenge));
 
-    if (challengeIndex + 1 === challenges.length) {
-        return {
-            previousChallenge: challenges[challengeIndex - 1],
-            nextChallenge: null,
-            challenge: challenge,
-            getText: StaticSelectors.buildGetText(state)
-        };
+    let previousChallenge = null;
+    let nextChallenge = null;
+
+    //If current challenge index + 1 is less or equal to amount of challenges, set next challenge button
+    if (challengeIndex + 1 <= challenges.length) {
+        nextChallenge = challenges[challengeIndex + 1];
     }
-    if (challengeIndex - 1 < 0) {
-        return {
-            previousChallenge: null,
-            nextChallenge: challenges[challengeIndex + 1],
-            challenge: challenge,
-            getText: StaticSelectors.buildGetText(state)
-        };
-    } else {
-        return {
-            previousChallenge: challenges[challengeIndex - 1],
-            nextChallenge: challenges[challengeIndex + 1],
-            challenge: challenge,
-            getText: StaticSelectors.buildGetText(state)
-        };
+
+    //If current challenge index -1 is more than or equal to 0, set previous challenge button
+    if (challengeIndex - 1 >= 0) {
+        previousChallenge = challenges[challengeIndex - 1];
     }
+
+    //Returns the values
+    return {
+        previousChallenge: previousChallenge,
+        nextChallenge: nextChallenge,
+        challenge: challenge,
+        getText: StaticSelectors.buildGetText(state)
+    };
 };
 
 export default connect(mapStateToProps)(ChallengePage);
