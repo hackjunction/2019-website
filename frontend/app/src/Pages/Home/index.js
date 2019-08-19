@@ -52,6 +52,13 @@ class HomePage extends Component {
                             type="outside"
                             link="https://app.hackjunction.com/events/junction-2019"
                         />
+                        <a
+                            href="https://app.hackjunction.com/events/junction-2019"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Or click here to apply
+                        </a>
                         <p className={styles.stylishContainerDescription}>{getText('homePageReadyDescription')}</p>
                     </div>
                     <Divider lg />
