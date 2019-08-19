@@ -29,10 +29,7 @@ class HomePage extends Component {
                 ogImageUrl={getMedia('homePageHeaderImage').url}
             >
                 <HeroImage isVideo>
-                    <HeroCTA
-                        subtitle={getText('homePageHeroCtaSubtitle')}
-                        image={getMedia('homePageHeroCtaImage')}
-                    />
+                    <HeroCTA subtitle={getText('homePageHeroCtaSubtitle')} image={getMedia('homePageHeroCtaImage')} />
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
@@ -41,28 +38,21 @@ class HomePage extends Component {
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
                     <div className={styles.padding}>
-                        <BasicSection
-                            title={getText('junctionMainTitle')}
-                            subtitle={getText('junctionMainSubtitle')}
-                        >
+                        <BasicSection title={getText('junctionMainTitle')} subtitle={getText('junctionMainSubtitle')}>
                             <Markdown source={getText('homePageIntroText')} />
                         </BasicSection>
                     </div>
 
                     <Divider lg />
                     <div className={styles.stylishContainer}>
-                        <h1 className={styles.stylishContainerTitle}>
-                            {getText('homePageReadyTitle')}
-                        </h1>
+                        <h1 className={styles.stylishContainerTitle}>{getText('homePageReadyTitle')}</h1>
                         <ButtonLink
                             text={getText('homePageReadyButton')}
                             size="lg"
-                            type="hover"
-                            hoverText={getText('homePageReadyButtonHover')}
+                            type="outside"
+                            link="https://app.hackjunction.com/events/junction-2019"
                         />
-                        <p className={styles.stylishContainerDescription}>
-                            {getText('homePageReadyDescription')}
-                        </p>
+                        <p className={styles.stylishContainerDescription}>{getText('homePageReadyDescription')}</p>
                     </div>
                     <Divider lg />
                     <SingleColumnSection
@@ -80,18 +70,12 @@ class HomePage extends Component {
                 <Divider md />
                 <div id="faq" />
                 <Divider md />
-                <SingleColumnSection
-                    title={getText('faqTitle')}
-                    subtitle={getText('faqSubtitle')}
-                >
+                <SingleColumnSection title={getText('faqTitle')} subtitle={getText('faqSubtitle')}>
                     <Divider sm />
                     <FaqGrid type="" />
                 </SingleColumnSection>
                 <Divider lg />
-                <SingleColumnSection
-                    title={getText('partnersTitle')}
-                    subtitle={getText('partnersSubtitle')}
-                />
+                <SingleColumnSection title={getText('partnersTitle')} subtitle={getText('partnersSubtitle')} />
                 <Divider sm />
                 <PartnersGrid type="front" />
                 <SingleColumnSection>
