@@ -1,28 +1,26 @@
 import React from 'react';
+import styles from './ChallengeItem.module.scss';
 
 import Image from '../Image';
 
-const ChallengeItem = ({ name, partner, content, slug } = this.props) => {
-    return (
-        <a href={`/challenges/${slug}`}>
-            <div className="ChallengesGrid--track__challenge">
-                <Image
-                    className="ChallengesGrid--track__challenge-image"
-                    image={partner.logo}
-                    alt="Track Partner"
-                />
-
-                <div className="ChallengesGrid--track__challenge-right">
-                    <span className="ChallengesGrid--track__challenge-right-name">
-                        {name}
-                    </span>
-                    <span className="ChallengesGrid--track__challenge-right-content">
-                        {content}
-                    </span>
-                </div>
+const ChallengeItem = ({ title, logo, content, slug } = this.props) => {
+    const inner = (
+        <div className={styles.wrapper}>
+            <div className={styles.logoWrapper}>
+                <Image className={styles.logo} image={logo} alt="Track Partner" />
             </div>
-        </a>
+            <div className={styles.contentWrapper}>
+                <span className={styles.challengeName}>{title}</span>
+                <p className={styles.challengeDescription}>{content}</p>
+            </div>
+        </div>
     );
+
+    if (slug) {
+        return <a href={`/challenges/${slug}`}>{inner}</a>;
+    }
+
+    return inner;
 };
 
 export default ChallengeItem;

@@ -17,3 +17,40 @@
         align-items: center;
     }
 }
+
+.headerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: rgba($black, 0.3);
+
+    .headerLogo {
+        max-width: 360px;
+        width: 80%;
+        height: 270px;
+        background: $white;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerTitle {
+        @extend %font-title;
+        color: $white;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+    }
+}

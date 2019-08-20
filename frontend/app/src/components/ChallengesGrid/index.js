@@ -1,84 +1,65 @@
 import React from 'react';
+import styles from './ChallengesGrid.module.scss';
 import { connect } from 'react-redux';
 import snake from 'to-snake-case';
 
 import ChallengeItem from './ChallengeItem';
-import MentorItem from './MentorItem';
 
 import SingleColumnSection from '../SingleColumnSection';
 import Divider from '../Divider';
 
-import config from '../../config';
-
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import * as StaticSelectors from '../../redux/staticcontent/selectors';
-import './style.scss';
 
 const ChallengesGrid = props => {
     const { getText } = props;
-    const renderTrack = tracks => {
-        const renderMentor = mentors => {
-            return mentors.length
-                ? mentors.map(mentor => {
-                      return (
-                          <div className="ChallengesGrid--track__mentor">
-                              <span className="ChallengesGrid--track__mentor-title">
-                                  {getText('trackMentor') || 'Track Mentor'}
-                              </span>
-                              <MentorItem {...mentor} key={mentor.name} />
-                          </div>
-                      );
-                  })
-                : '';
-        };
 
-        const renderChallenges = challenges => {
-            const mapChallenges = () => {
-                return challenges.map(challenge => {
-                    return (
-                        <ChallengeItem
-                            {...challenge}
-                            key={snake(challenge.name)}
-                        />
-                    );
-                });
-            };
-            return challenges.length ? (
-                mapChallenges()
-            ) : (
-                <h1 className="ChallengesGrid--track__challenge-coming">
-                    {getText('challengeComingSoon')}
-                </h1>
+    const renderMentors = mentors => {
+        if (mentors.length) {
+            return (
+                <React.Fragment>
+                    <h3 className={styles.mentorTitle}>{getText('trackMentor') || 'Track Mentor'}</h3>
+                    {mentors.map(mentor => (
+                        <ChallengeItem key={mentor.name} logo={mentor.logo} content={mentor.trackMentorDescription} />
+                    ))}
+                </React.Fragment>
             );
-        };
+        }
+    };
+
+    const renderChallenges = challenges => {
+        if (challenges.length) {
+            return challenges.map(challenge => (
+                <ChallengeItem
+                    key={snake(challenge.name)}
+                    logo={challenge.partner.logo}
+                    title={challenge.name}
+                    content={challenge.content}
+                    slug={challenge.slug}
+                />
+            ));
+        } else {
+            return <h1 className={styles.challengesPlaceholder}>{getText('challengeComingSoon')}</h1>;
+        }
+    };
+
+    const renderTracks = tracks => {
         return tracks.map(track => {
             return (
-                <div id={snake(track.name)}>
+                <div id={snake(track.name)} key={track._id}>
                     <Divider md />
-                    <div className="ChallengesGrid--track" key={track._id}>
-                        <SingleColumnSection
-                            title={track.name}
-                            subtitle={track.description}
-                        />
-
+                    <SingleColumnSection>
+                        <h2 className={styles.trackName}>{track.name}</h2>
+                        <p className={styles.trackDescription}>{track.description}</p>
                         <Divider sm />
-                        <div>
-                            {config.IS_DEBUG
-                                ? renderChallenges(track.challenges)
-                                : null}
-                        </div>
-                        <Divider sm />
-                        <div>
-                            {config.IS_DEBUG
-                                ? renderMentor(track.mentors)
-                                : null}
-                        </div>
-                    </div>
+                        {renderChallenges(track.challenges)}
+                        {renderMentors(track.mentors)}
+                    </SingleColumnSection>
                 </div>
             );
         });
     };
-    return <div className="ChallengesGrid">{renderTrack(props.tracks)}</div>;
+    return <div className={styles.wrapper}>{renderTracks(props.tracks)}</div>;
 };
 
 const mapStateToProps = state => ({

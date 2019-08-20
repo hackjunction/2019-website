@@ -36,25 +36,12 @@ const PartnersGrid = props => {
     const renderPartners = partners => {
         return partners.map(partner => {
             return (
-                <a
-                    key={partner._id}
-                    href={partner.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+                <a key={partner._id} href={partner.link} target="_blank" rel="noopener noreferrer">
                     <motion.div
                         variants={imageAnim}
-                        className={
-                            partner.priority === 1
-                                ? 'PartnersGrid--partner__prio'
-                                : 'PartnersGrid--partner'
-                        }
+                        className={partner.priority <= 1 ? 'PartnersGrid--partner__prio' : 'PartnersGrid--partner'}
                     >
-                        <Image
-                            image={partner.logo}
-                            className="PartnersGrid--partner__img"
-                            crop={'fill'}
-                        />
+                        <Image image={partner.logo} className="PartnersGrid--partner__img" crop={'fill'} />
                     </motion.div>
                 </a>
             );
