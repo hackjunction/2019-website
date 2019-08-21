@@ -34,6 +34,11 @@
     justify-content: center;
     width: 100%;
 
+    &--text {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
     &--link {
         @extend %size-button;
         @extend %font-button;

@@ -93,7 +93,6 @@ class App extends Component {
                             <Route exact path="/challenges" component={ChallengesPage} />
                             <Route path="/challenges/:slug" component={ChallengePage} />
                             <Route exact path="/partners" component={PartnersPage} />
-
                             <Route exact path="/terminal" component={TerminalPage} />
 
                             {config.IS_DEBUG ? (
