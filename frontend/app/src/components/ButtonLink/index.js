@@ -81,8 +81,8 @@ const ButtonLink = ({
         return (
             <div className="ButtonLink">
                 <a href={link} className={className}>
-                    <span className={`ButtonLinkReady--text `}>{text}</span>
-                    <span className={`ButtonLinkReady--hoverText `}>
+                    <span className={`ButtonLink--text `}>{text}</span>
+                    <span className={`ButtonLink--hoverText `}>
                         {hoverText}
                     </span>
                 </a>
