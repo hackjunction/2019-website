@@ -109,10 +109,6 @@ export const getDynamicContent = () => {
                     name
                     content
                     description
-                    headerImage {
-                        url
-                        public_id
-                    }
                     whatWeBring
                     extraDetails
                     problems
@@ -124,6 +120,12 @@ export const getDynamicContent = () => {
                     partner {
                         about
                         logo {
+                            url
+                            public_id
+                        }
+                    }
+                    track {
+                        headerImage {
                             url
                             public_id
                         }

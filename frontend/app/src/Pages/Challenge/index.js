@@ -15,7 +15,6 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import Divider from '../../components/Divider';
 import BasicSection from '../../components/BasicSection';
 import Markdown from '../../components/Markdown';
-import HeaderImage from '../../components/HeaderImage';
 import Image from '../../components/Image';
 
 import * as DynamicSelectors from '../../redux/dynamiccontent/selectors';
@@ -24,7 +23,12 @@ import * as StaticSelectors from '../../redux/staticcontent/selectors';
 class ChallengePage extends PureComponent {
     render() {
         console.log('GET TEXT', this.props.getText('challengePageWhatWeBring'));
-        const { challenge, previousChallenge, nextChallenge, getText } = this.props;
+        const {
+            challenge,
+            previousChallenge,
+            nextChallenge,
+            getText
+        } = this.props;
 
         console.log('THIS PROPS', this.props);
 
@@ -37,17 +41,28 @@ class ChallengePage extends PureComponent {
                 className="ChallengePage"
                 pageTitle={challenge.name}
                 metaDesc={challenge.description}
-                ogImageUrl={challenge.headerImage ? challenge.headerImage.url : null}
+                ogImageUrl={
+                    challenge.track.headerImage
+                        ? challenge.track.headerImage.url
+                        : null
+                }
             >
-                <HeroImage image={challenge.headerImage}>
+                <HeroImage image={challenge.track.headerImage}>
                     <div className={styles.headerWrapper}>
                         {challenge.partner && challenge.partner.logo && (
                             <div className={styles.headerLogo}>
-                                <Image image={challenge.partner.logo} width={220} height={220} crop="fit" />
+                                <Image
+                                    image={challenge.partner.logo}
+                                    width={220}
+                                    height={220}
+                                    crop="fit"
+                                />
                             </div>
                         )}
                         <Divider sm />
-                        <span className={styles.headerTitle}>{challenge.name}</span>
+                        <span className={styles.headerTitle}>
+                            {challenge.name}
+                        </span>
                     </div>
                 </HeroImage>
 
@@ -89,7 +104,10 @@ class ChallengePage extends PureComponent {
 
                 <div className={styles.ChallengePagePrevNext}>
                     {previousChallenge ? (
-                        <Link to={'/challenges/' + previousChallenge.slug} className={styles.ChallengePagePrevious}>
+                        <Link
+                            to={'/challenges/' + previousChallenge.slug}
+                            className={styles.ChallengePagePrevious}
+                        >
                             {`< ${previousChallenge.name}`}
                         </Link>
                     ) : null}
@@ -97,7 +115,10 @@ class ChallengePage extends PureComponent {
                     <Divider sm />
 
                     {nextChallenge ? (
-                        <Link to={'/challenges/' + nextChallenge.slug} className={styles.ChallengePageNext}>
+                        <Link
+                            to={'/challenges/' + nextChallenge.slug}
+                            className={styles.ChallengePageNext}
+                        >
                             {`${nextChallenge.name} >`}
                         </Link>
                     ) : null}
@@ -128,8 +149,12 @@ const mapStateToProps = (state, ownProps) => {
     const challenge = challenges[challengeIndex];
     const challengeCount = challenges.length;
 
-    const previousChallenge = challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
-    const nextChallenge = challengeIndex <= challengeCount - 1 ? challenges[challengeIndex + 1] : null;
+    const previousChallenge =
+        challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
+    const nextChallenge =
+        challengeIndex <= challengeCount - 1
+            ? challenges[challengeIndex + 1]
+            : null;
 
     //Returns the values
     return {

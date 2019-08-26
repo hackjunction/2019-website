@@ -22,8 +22,13 @@
     },
     "mentors": {
       "collection": "partner",
-      "dominant": true,
-      "via": "tracks"
+      "via": "tracks",
+      "dominant": true
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
     },
     "challenges": {
       "collection": "challenge",

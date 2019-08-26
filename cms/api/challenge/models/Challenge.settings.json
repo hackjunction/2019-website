@@ -19,17 +19,8 @@
     "content": {
       "type": "text"
     },
-    "track": {
-      "model": "track",
-      "via": "challenges"
-    },
     "description": {
       "type": "text"
-    },
-    "headerImage": {
-      "model": "file",
-      "via": "related",
-      "plugin": "upload"
     },
     "whatWeBring": {
       "type": "text"
@@ -60,6 +51,10 @@
     },
     "headerContent": {
       "type": "text"
+    },
+    "track": {
+      "model": "track",
+      "via": "challenges"
     }
   }
 }

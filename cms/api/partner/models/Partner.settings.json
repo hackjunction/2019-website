@@ -22,10 +22,6 @@
       "via": "related",
       "plugin": "upload"
     },
-    "tracks": {
-      "collection": "track",
-      "via": "mentors"
-    },
     "trackMentorDescription": {
       "type": "text"
     },
@@ -43,6 +39,10 @@
     },
     "link": {
       "type": "string"
+    },
+    "tracks": {
+      "collection": "track",
+      "via": "mentors"
     },
     "challenges": {
       "collection": "challenge",
