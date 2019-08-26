@@ -56,12 +56,18 @@ const ButtonLink = ({
     if (type === 'mainsite') {
         return (
             <div className="ButtonLink">
-                <a href={link} className={className} target="_blank" rel="noopener noreferrer">
+                <a
+                    href={link}
+                    className={className}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     {text}
                 </a>
             </div>
         );
     }
+
     if (type === 'challenge') {
         return (
             <div className="ButtonLink">
@@ -76,7 +82,9 @@ const ButtonLink = ({
             <div className="ButtonLink">
                 <a href={link} className={className}>
                     <span className={`ButtonLinkReady--text `}>{text}</span>
-                    <span className={`ButtonLinkReady--hoverText `}>{hoverText}</span>
+                    <span className={`ButtonLinkReady--hoverText `}>
+                        {hoverText}
+                    </span>
                 </a>
             </div>
         );
@@ -86,7 +94,9 @@ const ButtonLink = ({
             <div className="ButtonLinkHover">
                 <div href={link} className={className}>
                     <span className={`ButtonLinkHover--text `}>{text}</span>
-                    <span className={`ButtonLinkHover--hoverText `}>{hoverText}</span>
+                    <span className={`ButtonLinkHover--hoverText `}>
+                        {hoverText}
+                    </span>
                 </div>
             </div>
         );
