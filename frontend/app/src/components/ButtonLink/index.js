@@ -3,98 +3,83 @@ import { Link } from 'react-router-dom';
 import { isEmpty } from 'lodash-es';
 import { HashLink } from 'react-router-hash-link';
 import classNames from 'classnames';
-import './Style.scss';
+import styles from './styles.module.scss';
+
 const ButtonLink = ({
     text,
     link,
-    color = 'purple', //purple or brown
-    size = 'md', //sm / md / lg /fp
-    align = 'center', //left / center / right
-    type = 'link', //link for inside website || anchor to specific object in page || outside for linking outside website (www.google.com)
+    color = 'purple', //Purple or Brown
+    size = 'md', //Sm / Md / Lg /Fp
+    align = 'center', //Left / Center / Right
+    /*type: 
+        "mainsite" for link to open in new window, 
+        "link" for inside website(default), 
+        "anchor" for anchor links
+    */
+    type = 'link',
     hoverText = '',
     block = false,
     smooth = false
 }) => {
-    const className = classNames({
-        [`ButtonLink--link`]: true,
-        [`ButtonLink--link-color__${color}`]: true,
-        [`ButtonLink--link-size__${size}`]: true,
-        [`ButtonLink--link-align__${align}`]: true,
-        'ButtonLink--link-block': block,
-        'ButtonLink--link-noLink': type === 'hover',
-        ButtonHide: isEmpty(text)
-    });
+    const className = classNames(
+        styles.ButtonLinkLink,
+        [styles[`ButtonLinkLinkColor${color}`]],
+        [styles[`ButtonLinkLinkSize${size}`]],
+        [styles[`ButtonLinkLinkAlign${align}`]],
+        {
+            [styles.ButtonLinkLinkBlock]: block,
+            [styles.ButtonHide]: isEmpty(text)
+        }
+    );
 
-    if (type === 'link') {
+    /* If hover text is not empty, return hoverButton instead */
+    if (hoverText === '') {
         return (
-            <div className="ButtonLink">
-                <Link to={link} className={className}>
-                    {text}
-                </Link>
-            </div>
-        );
-    }
-    if (type === 'anchor') {
-        return (
-            <div className="ButtonLink">
-                <HashLink
-                    to={link}
-                    scroll={el =>
-                        el.scrollIntoView({
-                            behavior: smooth ? 'smooth' : 'auto',
-                            block: 'start',
-                            inline: 'nearest'
-                        })
-                    }
-                    className={className}
-                >
-                    {text}
-                </HashLink>
-            </div>
-        );
-    }
-    if (type === 'mainsite') {
-        return (
-            <div className="ButtonLink">
-                <a
-                    href={link}
-                    className={className}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    {text}
-                </a>
-            </div>
-        );
-    }
+            <div className={styles.ButtonLink}>
+                {/* Check type and return accordingly */}
 
-    if (type === 'challenge') {
-        return (
-            <div className="ButtonLink">
-                <a href={link} className={className}>
-                    {text}
-                </a>
+                {/* Used for linking inside website */}
+                {type === 'link' ? (
+                    <Link to={link} className={className}>
+                        {text}
+                    </Link>
+                ) : null}
+
+                {/* Used for anchor links */}
+                {type === 'anchor' ? (
+                    <HashLink
+                        to={link}
+                        scroll={el =>
+                            el.scrollIntoView({
+                                behavior: smooth ? 'smooth' : 'auto',
+                                block: 'start',
+                                inline: 'nearest'
+                            })
+                        }
+                        className={className}
+                    >
+                        {text}
+                    </HashLink>
+                ) : null}
+                {/* Link that opens in new window */}
+                {type === 'mainsite' ? (
+                    <a
+                        href={link}
+                        className={className}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {text}
+                    </a>
+                ) : null}
             </div>
         );
-    }
-    if (type === 'outside') {
+    } else {
         return (
-            <div className="ButtonLink">
-                <a href={link} className={className}>
-                    <span className={`ButtonLink--text `}>{text}</span>
-                    <span className={`ButtonLink--hoverText `}>
-                        {hoverText}
-                    </span>
-                </a>
-            </div>
-        );
-    }
-    if (type === 'hover') {
-        return (
-            <div className="ButtonLinkHover">
+            <div className={styles.ButtonLinkHover}>
                 <div href={link} className={className}>
-                    <span className={`ButtonLinkHover--text `}>{text}</span>
-                    <span className={`ButtonLinkHover--hoverText `}>
+                    <span className={styles.ButtonLinkHoverText}>{text}</span>
+                    <span className={styles.ButtonLinkHoverHover}>
                         {hoverText}
                     </span>
                 </div>

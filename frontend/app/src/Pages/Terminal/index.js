@@ -78,7 +78,6 @@ class TerminalPage extends Component {
                         text={getText('terminalPageImageSectionButton')}
                         link={getText('terminalPageImageSectionButtonLink')}
                         align="left"
-                        size="md"
                         type="mainsite"
                     />
                 </ImageSection>

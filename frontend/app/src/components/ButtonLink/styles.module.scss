@@ -8,25 +8,6 @@
     font-size: 40px;
     width: 36rem;
 }
-.ButtonLinkHover {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
-    &--text {
-        @extend %font-button;
-        font-size: 40px;
-        text-transform: uppercase;
-        width: 100%;
-    }
-    &--hoverText {
-        display: none;
-        @extend %font-button;
-        font-size: 30px;
-        width: 100%;
-    }
-}
 
 .ButtonLink {
     display: flex;
@@ -34,12 +15,7 @@
     justify-content: center;
     width: 100%;
 
-    &--text {
-        font-size: 40px;
-        font-weight: bold;
-    }
-
-    &--link {
+    &Link {
         @extend %size-button;
         @extend %font-button;
         padding: 0;
@@ -47,68 +23,74 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        &-noLink {
-            &:hover {
-                .ButtonLinkHover {
-                    &--text {
-                        display: none;
-                    }
-                    &--hoverText {
-                        display: inline;
-                    }
-                }
-            }
-        }
-        &-color {
-            &__purple {
+
+        &Color {
+            &purple {
                 @extend %purple-button;
             }
-            &__brown {
+            &brown {
                 @extend %brown-button;
             }
         }
-        &-size {
-            &__sm {
+        &Size {
+            &sm {
                 width: 100%;
                 max-width: 20rem;
                 margin: 1rem;
                 height: 40px;
             }
-            &__md {
-                width: 100%;
-                // max-width: 20rem;
-                // margin: 1rem;
+            &md {
                 margin-top: 1rem;
                 margin-bottom: 1rem;
                 height: 55px;
             }
-            &__lg {
+            &lg {
                 width: 100%;
                 max-width: 36rem;
                 font-size: 40px;
                 margin: 1rem;
                 height: 80px;
             }
-            &__fp {
+            &fp {
                 width: 100%;
                 max-width: 25rem;
                 font-size: 40px;
                 margin: 1rem;
             }
         }
-        &-align {
-            &__left {
+        &Align {
+            &left {
                 margin-right: auto;
                 margin-left: -1px;
             }
-            &__right {
+            &right {
                 margin-left: auto;
             }
         }
-
-        &-block {
+        &Block {
             width: 100%;
         }
     }
+
+    &Hover {
+        &Text {
+            @extend %font-button;
+            font-size: 40px;
+            width: 100%;
+        }
+        &Hover {
+            display: none;
+            @extend %font-button;
+            font-size: 30px;
+            width: 100%;
+        }
+        :hover {
+            &Text {
+                display: none;
+            }
+            &Hover {
+                display: inline;
+            }
+        }
+    }
 }
-/* comment */
