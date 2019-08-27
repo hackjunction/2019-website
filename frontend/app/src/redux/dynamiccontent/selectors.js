@@ -26,6 +26,8 @@ export const guidelines = state =>
     state.dynamicContent.content.guidelines || [];
 
 export const schedules = state => state.dynamicContent.content.schedules || [];
+export const openinghours = state =>
+    state.dynamicContent.content.openinghours || [];
 
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;

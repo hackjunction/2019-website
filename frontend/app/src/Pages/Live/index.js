@@ -16,6 +16,7 @@ import EventInfoBlocks from '../../components/EventInfoBlocks';
 import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
 import Schedules from '../../components/Schedules';
+import OpeningHours from '../../components/Schedules/OpeningHours';
 
 import Page from '../PageHOC';
 
@@ -48,28 +49,33 @@ class LivePage extends Component {
                 />
 
                 <BasicSection
-                    title={getText('livePageScheduleFridayTitle')}
+                    title={getText('livePageScheduleFridayTitle') || 'Friday'}
                     subtitle={getText('livePageScheduleFridaySubtitle')}
                 >
                     <Schedules date="friday" />
                 </BasicSection>
                 <BasicSection
-                    title={getText('livePageScheduleSaturdayTitle')}
+                    title={
+                        getText('livePageScheduleSaturdayTitle') || 'Saturday'
+                    }
                     subtitle={getText('livePageScheduleSaturdaySubtitle')}
                 >
                     <Schedules date="saturday" />
                 </BasicSection>
                 <BasicSection
-                    title={getText('livePageScheduleSundayTitle')}
+                    title={getText('livePageScheduleSundayTitle') || 'Sunday'}
                     subtitle={getText('livePageScheduleSundaySubtitle')}
                 >
                     <Schedules date="sunday" />
                 </BasicSection>
                 <BasicSection
-                    title={getText('livePageScheduleOthersTitle')}
+                    title={
+                        getText('livePageScheduleOthersTitle') ||
+                        'Other opening hours'
+                    }
                     subtitle={getText('livePageScheduleOthersSubtitle')}
                 >
-                    <div></div>
+                    <OpeningHours />
                 </BasicSection>
                 <Divider lg />
                 <BasicSection

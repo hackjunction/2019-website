@@ -7,12 +7,12 @@ const ScheduleItem = ({ color, name, location, starts, ends }) => {
 
     return (
         <div className={styles.Schedule}>
-            <div className={styles.ScheduleItem}>
+            <div className={styles.ScheduleItemLeft}>
                 <span className={styles.ScheduleItemTop}>{starts}</span>
                 <span className={styles.ScheduleItemBot}>{ends}</span>
             </div>
             <div className={dividerColor} />
-            <div className={styles.ScheduleItem}>
+            <div className={styles.ScheduleItemRight}>
                 <span className={styles.ScheduleItemTop}>{name}</span>
                 <span className={styles.ScheduleItemBot}>{location}</span>
             </div>

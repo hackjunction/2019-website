@@ -8,7 +8,6 @@ import ScheduleItem from './ScheduleItem';
 
 const Schedules = props => {
     const renderSchedules = schedules => {
-        console.log('Schedules: ' + JSON.stringify(schedules));
         return schedules.map(schedule => {
             return <ScheduleItem {...schedule} />;
         });

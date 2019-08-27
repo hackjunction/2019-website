@@ -163,6 +163,11 @@ export const getDynamicContent = () => {
                     ends
                     order
                 }
+                openinghours {
+                    name
+                    days
+                    hours
+                }
             }
         `
     });

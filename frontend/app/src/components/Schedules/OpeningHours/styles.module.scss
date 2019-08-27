@@ -1,46 +1,40 @@
-.Schedule {
+@import '../../../styles/variables.scss';
+.Hour {
     display: flex;
     flex-direction: row;
+    margin-bottom: 20px;
 
     &Item {
+        &Title {
+            font-family: 'Montserrat';
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+        }
         &Left,
         &Right {
             display: flex;
             flex-direction: column;
-
             margin: 10px;
         }
         &Left {
             width: 60px;
         }
-        &Top,
-        &Bot {
+        &Days,
+        &Hours {
             font-family: 'Lato';
             font-size: 18px;
             line-height: 20px;
         }
-        &Bot {
-            color: #adadad;
+        &Hours {
+            width: 120px;
         }
-    }
-    &Divider {
-        &Green,
-        &Purple,
-        &Orange {
+        &Divider {
             width: 2px;
             border-radius: 2px;
             margin-right: 10px;
-
-            align-self: center;
-            height: 40px;
-        }
-        &Green {
-            background: rgba(58, 175, 103, 1);
-        }
-        &Purple {
-            background: rgba(178, 0, 183, 1);
-        }
-        &Orange {
+            margin-top: 15px;
+            margin-bottom: 15px;
             background: rgba(243, 129, 0, 1);
         }
     }
