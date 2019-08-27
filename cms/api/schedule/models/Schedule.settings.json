@@ -22,9 +22,9 @@
     },
     "color": {
       "enum": [
-        "orange",
-        "green",
-        "purple",
+        "Orange",
+        "Green",
+        "Purple",
         ""
       ],
       "type": "enumeration"

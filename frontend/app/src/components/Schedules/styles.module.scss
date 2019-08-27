@@ -1,0 +1,41 @@
+.Schedules {
+}
+.Schedule {
+    display: flex;
+    flex-direction: row;
+
+    &Item {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        &Top,
+        &Bot {
+            font-family: 'Lato';
+            font-size: 18px;
+            line-height: 20px;
+        }
+        &Bot {
+            color: #adadad;
+        }
+    }
+    &Divider {
+        &Green,
+        &Purple,
+        &Orange {
+            width: 2px;
+            border-radius: 2px;
+            margin: 4px;
+            align-self: center;
+            height: 40px;
+        }
+        &Green {
+            background: green;
+        }
+        &Purple {
+            background: purple;
+        }
+        &Orange {
+            background: orange;
+        }
+    }
+}

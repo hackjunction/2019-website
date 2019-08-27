@@ -4,16 +4,13 @@ import { connect } from 'react-redux';
 import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 import styles from './styles.module.scss';
+import ScheduleItem from './ScheduleItem';
 
 const Schedules = props => {
     const renderSchedules = schedules => {
         console.log('Schedules: ' + JSON.stringify(schedules));
         return schedules.map(schedule => {
-            return (
-                <div>
-                    <p>{schedule.name}</p>
-                </div>
-            );
+            return <ScheduleItem {...schedule} />;
         });
     };
     return (
