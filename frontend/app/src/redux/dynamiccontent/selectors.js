@@ -25,6 +25,8 @@ export const footerImages = state =>
 export const guidelines = state =>
     state.dynamicContent.content.guidelines || [];
 
+export const schedules = state => state.dynamicContent.content.schedules || [];
+
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;
@@ -136,5 +138,32 @@ export const transportFaqs = createSelector(
     faqs,
     data => {
         return filter(data, 'isTransportationFaq');
+    }
+);
+
+export const schedulesInOrder = createSelector(
+    schedules,
+    data => {
+        return sortBy(data, 'order');
+    }
+);
+
+export const schedulesFriday = createSelector(
+    schedulesInOrder,
+    data => {
+        return filter(data, { day: 'friday' });
+    }
+);
+
+export const schedulesSaturday = createSelector(
+    schedulesInOrder,
+    data => {
+        return filter(data, { day: 'saturday' });
+    }
+);
+export const schedulesSunday = createSelector(
+    schedulesInOrder,
+    data => {
+        return filter(data, { day: 'sunday' });
     }
 );

@@ -15,6 +15,7 @@ import Image from '../../components/Image';
 import EventInfoBlocks from '../../components/EventInfoBlocks';
 import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
+import Schedules from '../../components/Schedules';
 
 import Page from '../PageHOC';
 
@@ -45,11 +46,31 @@ class LivePage extends Component {
                     title={getText('livePageSection2Title')}
                     subtitle={getText('livePageSection2Subtitle')}
                 />
-                <Divider lg />
-                <SingleColumnSection title="Schedule here" />
-                <Divider lg />
 
-                <Divider lg />
+                <BasicSection
+                    title={getText('livePageScheduleFridayTitle')}
+                    subtitle={getText('livePageScheduleFridaySubtitle')}
+                >
+                    <Schedules date="friday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('livePageScheduleSaturdayTitle')}
+                    subtitle={getText('livePageScheduleSaturdaySubtitle')}
+                >
+                    <Schedules date="saturday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('livePageScheduleSundayTitle')}
+                    subtitle={getText('livePageScheduleSundaySubtitle')}
+                >
+                    <Schedules date="sunday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('livePageScheduleOthersTitle')}
+                    subtitle={getText('livePageScheduleOthersSubtitle')}
+                >
+                    <div></div>
+                </BasicSection>
                 <Divider lg />
                 <BasicSection
                     title={getText('livePageSection3Title')}

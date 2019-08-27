@@ -154,6 +154,15 @@ export const getDynamicContent = () => {
                     title
                     content
                 }
+                schedules {
+                    day
+                    color
+                    name
+                    location
+                    starts
+                    ends
+                    order
+                }
             }
         `
     });

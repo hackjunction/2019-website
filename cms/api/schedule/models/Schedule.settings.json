@@ -1,0 +1,48 @@
+{
+  "connection": "default",
+  "collectionName": "schedule",
+  "info": {
+    "name": "schedule",
+    "description": "Schedules"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "day": {
+      "enum": [
+        "friday",
+        "saturday",
+        "sunday"
+      ],
+      "type": "enumeration"
+    },
+    "color": {
+      "enum": [
+        "orange",
+        "green",
+        "purple",
+        ""
+      ],
+      "type": "enumeration"
+    },
+    "name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "starts": {
+      "type": "string"
+    },
+    "ends": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}
