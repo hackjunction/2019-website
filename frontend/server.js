@@ -9,6 +9,25 @@ var express = require('express'),
 app.use(
     require('prerender-node')
         .set('prerenderToken', process.env.PRERENDER_TOKEN)
+        .whitelisted([
+            /** Match root route (empty string) */
+            '^(?![sS])',
+            /** Match root route with trailing slash */
+            '///ig',
+            /** Match static routes exactly */
+            '^/info$',
+            '^/junction-week$',
+            '^/volunteer$',
+            '^/team$',
+            '^/partners$',
+            '^/terminal$',
+            '^/transportation$',
+            '^/live$',
+            '^/demo$',
+            '^/hardware$',
+            /** Match dynamic routes so that they allow stuff to come after, e.g. challenges/cyber-challenge */
+            '^/challenges'
+        ])
         .blacklisted(['.html'])
 );
 
