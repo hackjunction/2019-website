@@ -7,6 +7,7 @@ import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 import ButtonLink from '../ButtonLink';
 
 import './style.scss';
+/* import styles from './style.module.scss'; */
 
 const TracksGrid = props => {
     const renderTracks = () => {
@@ -20,7 +21,6 @@ const TracksGrid = props => {
                             type="anchor"
                             text={track.name}
                             link={'/challenges#' + snake(track.name)}
-                            className="TracksGrid--container__button"
                             color={index % 2 === 1 ? 'brown' : 'purple'}
                         />
                     </div>
@@ -30,10 +30,9 @@ const TracksGrid = props => {
                     <div className="TracksGrid--container" key={track._id}>
                         <ButtonLink
                             block
-                            type="challenge"
+                            type="anchor"
                             text={track.name}
                             link={'/challenges#' + snake(track.name)}
-                            className="TracksGrid--container__button"
                             color={index % 2 === 1 ? 'brown' : 'purple'}
                         />
                     </div>
