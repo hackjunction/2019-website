@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .Markdown {
+    max-width: 980px;
     p {
         @extend %font-lato;
         margin-top: 0;

@@ -63,6 +63,9 @@ class ChallengePage extends PureComponent {
                         <span className={styles.headerTitle}>
                             {challenge.name}
                         </span>
+                        <SingleColumnSection
+                            subtitle={challenge.description}
+                        ></SingleColumnSection>
                     </div>
                 </HeroImage>
 
@@ -72,9 +75,7 @@ class ChallengePage extends PureComponent {
                         <Divider md />
                     </SingleColumnSection>
                 ) : null}
-                <SingleColumnSection>
-                    <Markdown source={challenge.description} />
-                </SingleColumnSection>
+                <SingleColumnSection></SingleColumnSection>
                 <BasicSection title="What we'll bring">
                     <Markdown source={challenge.whatWeBring} />
                     {challenge.extraDetails && (
