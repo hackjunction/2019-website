@@ -31,6 +31,9 @@
       "type": "date",
       "required": true,
       "default": "2019-01-31T00:00:00.000Z"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

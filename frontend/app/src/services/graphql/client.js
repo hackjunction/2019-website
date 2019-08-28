@@ -86,6 +86,7 @@ export const getDynamicContent = () => {
                     duringJunctionWeek
                     isVolunteerDate
                     showOnFrontPage
+                    link
                 }
                 teammembers {
                     _id

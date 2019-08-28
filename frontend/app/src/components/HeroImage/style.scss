@@ -22,11 +22,11 @@
     -webkit-mask-position: bottom;
 
     @include bp-med {
-        height: 700px;
+        height: 900px;
     }
 
     @include bp-full {
-        height: 900px;
+        height: 1000px;
         padding-top: 700px;
         // padding-top: $bp-full * 0.5625;
     }

@@ -2,6 +2,14 @@
 
 .Markdown {
     max-width: 980px;
+
+    * {
+        text-align: center;
+        @include bp-med {
+            text-align: left;
+        }
+    }
+
     p {
         @extend %font-lato;
         margin-top: 0;

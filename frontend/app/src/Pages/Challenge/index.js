@@ -63,12 +63,19 @@ class ChallengePage extends PureComponent {
                         <span className={styles.headerTitle}>
                             {challenge.name}
                         </span>
-                        <SingleColumnSection
-                            subtitle={challenge.description}
-                        ></SingleColumnSection>
+
+                        <Markdown
+                            source={challenge.description}
+                            className={styles.DescriptionFull}
+                        />
                     </div>
                 </HeroImage>
-
+                <SingleColumnSection>
+                    <Markdown
+                        source={challenge.description}
+                        className={styles.DescriptionMobile}
+                    />
+                </SingleColumnSection>
                 {challenge.videoLink ? (
                     <SingleColumnSection>
                         <Markdown source={challenge.videoLink} />

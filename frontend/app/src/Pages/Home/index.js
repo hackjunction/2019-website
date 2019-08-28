@@ -32,7 +32,13 @@ class HomePage extends Component {
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
-                    />
+                    >
+                        <ButtonLink
+                            text={getText('homePageApplyButton')}
+                            type="mainsite"
+                            link="https://app.hackjunction.com/events/junction-2019"
+                        />
+                    </HeroCTA>
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
@@ -55,7 +61,7 @@ class HomePage extends Component {
                             {getText('homePageReadyTitle')}
                         </h1>
                         <ButtonLink
-                            text={getText('homePageReadyButton')}
+                            text={getText('homePageApplyButton')}
                             size="lg"
                             type="mainsite"
                             link="https://app.hackjunction.com/events/junction-2019"

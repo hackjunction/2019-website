@@ -38,6 +38,8 @@ class ChallengesPage extends Component {
                 <Divider md />
                 <ChallengesGrid />
                 <Divider md />
+                <TracksGrid smoothScroll={true} />
+                <Divider md />
                 <NewsLetterForm />
             </Page>
         );

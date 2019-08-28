@@ -54,3 +54,25 @@
         text-align: center;
     }
 }
+.Description {
+    &Full,
+    &Mobile {
+        * {
+            text-align: center !important;
+        }
+    }
+    &Full {
+        display: none;
+    }
+    &Mobile {
+        display: initial;
+    }
+    @include bp-med {
+        &Full {
+            display: inline;
+        }
+        &Mobile {
+            display: none !important;
+        }
+    }
+}
