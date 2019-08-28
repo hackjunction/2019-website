@@ -27,6 +27,7 @@ class TerminalPage extends Component {
                 ogImageUrl={getMedia('terminalPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('terminalPageHeaderImage')}>
+                    <Divider md />
                     <HeaderImage
                         subtitle={getText('terminalPageHeaderContent')}
                         image={getMedia('terminalPageHeaderLogo')}
