@@ -14,11 +14,11 @@ export const getStaticContent = () => {
     return client.query({
         query: gql`
             query {
-                textfields {
+                textfields(limit: 2000) {
                     key
                     content
                 }
-                mediafields {
+                mediafields(limit: 2000) {
                     key
                     media {
                         url
