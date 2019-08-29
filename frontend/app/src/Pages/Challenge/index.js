@@ -83,7 +83,7 @@ class ChallengePage extends PureComponent {
                     </SingleColumnSection>
                 ) : null}
                 <SingleColumnSection></SingleColumnSection>
-                <BasicSection title="What we'll bring">
+                <BasicSection title={getText('challengePageWhatWeBring')}>
                     <Markdown source={challenge.whatWeBring} />
                     {challenge.extraDetails && (
                         <React.Fragment>
@@ -93,19 +93,19 @@ class ChallengePage extends PureComponent {
                     )}
                 </BasicSection>
                 <Divider md />
-                <BasicSection title="Problems of interest">
+                <BasicSection title={getText('challengeProblemsTitle')}>
                     <Markdown source={challenge.problems} />
                 </BasicSection>
                 <Divider md />
-                <BasicSection title="Judging criteria">
+                <BasicSection title={getText('challengeJudgingTitle')}>
                     <Markdown source={challenge.judging} />
                 </BasicSection>
                 <Divider md />
-                <BasicSection title="Prize">
+                <BasicSection title={getText('challengePrizeTitle')}>
                     <Markdown source={challenge.prize} />
                 </BasicSection>
                 <Divider md />
-                <BasicSection title="About the company">
+                <BasicSection title={getText('challengeAboutTitle')}>
                     <Markdown source={challenge.partner.about} />
                 </BasicSection>
                 <Divider md />

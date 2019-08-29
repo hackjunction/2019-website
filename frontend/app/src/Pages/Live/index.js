@@ -49,30 +49,25 @@ class LivePage extends Component {
                 />
 
                 <BasicSection
-                    title={getText('livePageScheduleFridayTitle') || 'Friday'}
+                    title={getText('livePageScheduleFridayTitle')}
                     subtitle={getText('livePageScheduleFridaySubtitle')}
                 >
                     <Schedules date="friday" />
                 </BasicSection>
                 <BasicSection
-                    title={
-                        getText('livePageScheduleSaturdayTitle') || 'Saturday'
-                    }
+                    title={getText('livePageScheduleSaturdayTitle')}
                     subtitle={getText('livePageScheduleSaturdaySubtitle')}
                 >
                     <Schedules date="saturday" />
                 </BasicSection>
                 <BasicSection
-                    title={getText('livePageScheduleSundayTitle') || 'Sunday'}
+                    title={getText('livePageScheduleSundayTitle')}
                     subtitle={getText('livePageScheduleSundaySubtitle')}
                 >
                     <Schedules date="sunday" />
                 </BasicSection>
                 <BasicSection
-                    title={
-                        getText('livePageScheduleOthersTitle') ||
-                        'Other opening hours'
-                    }
+                    title={getText('livePageScheduleOthersTitle')}
                     subtitle={getText('livePageScheduleOthersSubtitle')}
                 >
                     <OpeningHours />
