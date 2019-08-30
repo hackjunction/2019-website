@@ -18,6 +18,9 @@
     "jobs": {
       "collection": "job",
       "via": "jobskills"
+    },
+    "yes": {
+      "type": "boolean"
     }
   }
 }
