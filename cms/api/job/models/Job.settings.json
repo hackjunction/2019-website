@@ -27,13 +27,10 @@
     "partner": {
       "model": "partner"
     },
-    "yes": {
-      "type": "boolean"
-    },
     "jobskills": {
       "collection": "jobskill",
-      "dominant": true,
-      "via": "jobs"
+      "via": "jobs",
+      "dominant": true
     }
   }
 }
