@@ -1,0 +1,134 @@
+@import '../../styles/variables.scss';
+
+.wrapper,
+.jobItemLeft,
+.jobItemRight {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    background: $white;
+    margin-bottom: 2rem;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    align-items: center;
+    @include bp-custom(700px) {
+        flex-direction: row;
+        align-items: initial;
+    }
+    .logoWrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        .logo {
+            max-width: 200px;
+            max-height: 200px;
+            object-fit: contain;
+        }
+    }
+}
+
+.jobItemLeft {
+    padding-left: 1rem;
+    width: 80%;
+    * {
+        color: black;
+    }
+    align-items: center;
+    @include bp-custom(700px) {
+        width: 50%;
+        align-items: initial;
+    }
+}
+.jobItemRight {
+    width: 100%;
+    align-items: center;
+    * {
+        text-align: center;
+    }
+    @include bp-custom(700px) {
+        padding-left: 3rem;
+        align-items: initial;
+        * {
+            text-align: left;
+        }
+    }
+}
+
+.skillsTitle {
+    color: black;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    text-align: center;
+    @include bp-custom(700px) {
+        text-align: left;
+    }
+}
+
+.underline {
+    height: 1px;
+    background: black;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.endsTitle {
+    align-self: center;
+}
+.endsBlock {
+    background: black;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    &Date {
+        text-align: center;
+        color: white;
+        font-family: 'Montserrat';
+        font-weight: bold;
+    }
+}
+.jobSkills {
+    display: flex;
+    flex-direction: row;
+    :last-child {
+        .jobSkillsBlockDivider {
+            display: none;
+        }
+    }
+
+    &Block {
+        background: $main-color1;
+
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &Title {
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        &Divider {
+            background: white;
+            height: 20px;
+            width: 2px;
+        }
+    }
+}
+.description {
+    color: black;
+}
+.readmore {
+    margin-top: auto;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-size: 22px;
+}

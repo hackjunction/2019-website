@@ -7,7 +7,11 @@ const ChallengeItem = ({ title, logo, content, slug } = this.props) => {
     const inner = (
         <div className={styles.wrapper}>
             <div className={styles.logoWrapper}>
-                <Image className={styles.logo} image={logo} alt="Track Partner" />
+                <Image
+                    className={styles.logo}
+                    image={logo}
+                    alt="Track Partner"
+                />
             </div>
             <div className={styles.contentWrapper}>
                 <span className={styles.challengeName}>{title}</span>

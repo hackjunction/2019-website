@@ -28,7 +28,7 @@ export const guidelines = state =>
 export const schedules = state => state.dynamicContent.content.schedules || [];
 export const openinghours = state =>
     state.dynamicContent.content.openinghours || [];
-
+export const jobs = state => state.dynamicContent.content.jobs || [];
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;

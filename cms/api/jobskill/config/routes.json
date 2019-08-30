@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jobskills",
+      "handler": "Jobskill.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jobskills/count",
+      "handler": "Jobskill.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jobskills/:_id",
+      "handler": "Jobskill.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jobskills",
+      "handler": "Jobskill.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jobskills/:_id",
+      "handler": "Jobskill.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jobskills/:_id",
+      "handler": "Jobskill.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

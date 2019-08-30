@@ -25,6 +25,8 @@ app.use(
             '^/live$',
             '^/demo$',
             '^/hardware$',
+            '^/jobs$',
+
             /** Match dynamic routes so that they allow stuff to come after, e.g. challenges/cyber-challenge */
             '^/challenges'
         ])

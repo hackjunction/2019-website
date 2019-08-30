@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "jobskill",
+  "info": {
+    "name": "jobskill",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "jobs": {
+      "collection": "job",
+      "via": "jobskills"
+    }
+  }
+}

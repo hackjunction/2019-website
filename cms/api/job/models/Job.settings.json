@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "job",
+  "info": {
+    "name": "job",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "partner": {
+      "model": "partner"
+    },
+    "jobskills": {
+      "collection": "jobskill",
+      "dominant": true,
+      "via": "jobs"
+    }
+  }
+}

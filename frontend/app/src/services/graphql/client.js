@@ -169,6 +169,25 @@ export const getDynamicContent = () => {
                     days
                     hours
                 }
+                jobskills {
+                    title
+                }
+                jobs {
+                    title
+                    description
+                    endDate
+                    link
+                    jobskills {
+                        title
+                    }
+                    partner {
+                        name
+                        logo {
+                            url
+                            public_id
+                        }
+                    }
+                }
             }
         `
     });

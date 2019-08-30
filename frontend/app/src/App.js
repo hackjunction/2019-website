@@ -36,6 +36,7 @@ import TransportationPage from './Pages/Info/Transportation';
 import LivePage from './Pages/Live';
 import DemoPage from './Pages/Demo';
 import HardwarePage from './Pages/Hardware';
+import JobsPage from './Pages/Jobs';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -48,7 +49,11 @@ class App extends Component {
         this.props.updateSocialMedias();
 
         if (config.FACEBOOK_PIXEL_ID) {
-            ReactPixel.init(config.FACEBOOK_PIXEL_ID, {}, { autoConfig: true, debug: false });
+            ReactPixel.init(
+                config.FACEBOOK_PIXEL_ID,
+                {},
+                { autoConfig: true, debug: false }
+            );
         }
 
         if (config.GOOGLE_ANALYTICS_ID) {
@@ -87,21 +92,72 @@ class App extends Component {
                         <Switch location={location} key={location.pathname}>
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/info" component={InfoPage} />
-                            <Route exact path="/junction-week" component={JunctionWeekPage} />
-                            <Route exact path="/volunteer" component={VolunteerPage} />
+                            <Route
+                                exact
+                                path="/junction-week"
+                                component={JunctionWeekPage}
+                            />
+                            <Route
+                                exact
+                                path="/volunteer"
+                                component={VolunteerPage}
+                            />
                             <Route exact path="/team" component={TeamPage} />
-                            <Route exact path="/challenges" component={ChallengesPage} />
-                            <Route path="/challenges/:slug" component={ChallengePage} />
-                            <Route exact path="/partners" component={PartnersPage} />
-                            <Route exact path="/terminal" component={TerminalPage} />
+                            <Route
+                                exact
+                                path="/challenges"
+                                component={ChallengesPage}
+                            />
+                            <Route
+                                path="/challenges/:slug"
+                                component={ChallengePage}
+                            />
+                            <Route
+                                exact
+                                path="/partners"
+                                component={PartnersPage}
+                            />
+                            <Route
+                                exact
+                                path="/terminal"
+                                component={TerminalPage}
+                            />
 
                             {config.IS_DEBUG ? (
-                                <Route exact path="/transportation" component={TransportationPage} />
+                                <Route
+                                    exact
+                                    path="/transportation"
+                                    component={TransportationPage}
+                                />
                             ) : null}
-                            {config.IS_DEBUG ? <Route exact path="/live" component={LivePage} /> : null}
-                            {config.IS_DEBUG ? <Route exact path="/demo" component={DemoPage} /> : null}
-                            {config.IS_DEBUG ? <Route path="/hardware" component={HardwarePage} /> : null}
-
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/live"
+                                    component={LivePage}
+                                />
+                            ) : null}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/demo"
+                                    component={DemoPage}
+                                />
+                            ) : null}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/hardware"
+                                    component={HardwarePage}
+                                />
+                            ) : null}
+                            {config.IS_DEBUG ? (
+                                <Route
+                                    exact
+                                    path="/jobs"
+                                    component={JobsPage}
+                                />
+                            ) : null}
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>

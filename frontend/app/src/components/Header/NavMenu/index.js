@@ -45,48 +45,6 @@ const NavMenuInner = memo(props => {
                     Terminal
                 </Link>
 
-                {/* INFO */}
-                {/* <Link to="/info">
-                    <h6 className="NavMenu--inner__menu-title">Info</h6>
-                </Link>
-                <Link
-                    className="NavMenu--inner__menu-item"
-                    to="/transportation"
-                >
-                    transportation
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/demo">
-                    Demo Expo
-                </Link>
-                <Link
-                    className="NavMenu--inner__menu-item"
-                    to="/continuity-toolkit"
-                >
-                    Continuity Toolkit 
-                </Link> */}
-                {/* LIVE */}
-                {/* <Link to="/live">
-                    <h6 className="NavMenu--inner__menu-title">Live</h6>
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/event101">
-                    Event 101
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/schedule">
-                    Schedule
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/submission">
-                    Submission
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/food-info">
-                    Food Info
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/map">
-                    Venue Map
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/hardware">
-                    Hardware
-                </Link> */}
-
                 {/* BOTTOM */}
                 <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
@@ -118,6 +76,11 @@ const NavMenuInner = memo(props => {
                 {config.IS_DEBUG ? (
                     <Link className="NavMenu--inner__menu-item" to="/hardware">
                         Hardware Lab
+                    </Link>
+                ) : null}
+                {config.IS_DEBUG ? (
+                    <Link className="NavMenu--inner__menu-item" to="/jobs">
+                        Jobs
                     </Link>
                 ) : null}
             </nav>
