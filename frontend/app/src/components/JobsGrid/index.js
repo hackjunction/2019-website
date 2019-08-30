@@ -9,9 +9,8 @@ import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 const JobsGrid = props => {
     const renderJobs = jobs => {
-        console.log('JOBS: ' + jobs);
         return jobs.map(job => (
-            <div>
+            <div key={job.title}>
                 <JobItem {...job} />
                 <Divider md />
             </div>

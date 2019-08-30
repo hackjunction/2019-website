@@ -8,7 +8,7 @@ const JobItem = (
 ) => {
     const renderSkills = jobSkills => {
         return jobSkills.map(skill => (
-            <div className={styles.jobSkillsBlock}>
+            <div className={styles.jobSkillsBlock} key={skill.title}>
                 <p className={styles.jobSkillsBlockTitle}>{skill.title}</p>
                 <div className={styles.jobSkillsBlockDivider} />
             </div>

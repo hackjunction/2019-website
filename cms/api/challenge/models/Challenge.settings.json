@@ -49,9 +49,6 @@
       "model": "partner",
       "via": "challenges"
     },
-    "headerContent": {
-      "type": "text"
-    },
     "track": {
       "model": "track",
       "via": "challenges"

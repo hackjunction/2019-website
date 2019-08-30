@@ -117,7 +117,6 @@ export const getDynamicContent = () => {
                     prize
                     videoLink
                     slug
-                    headerContent
                     partner {
                         about
                         logo {
