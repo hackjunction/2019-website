@@ -23,12 +23,7 @@ import * as StaticSelectors from '../../redux/staticcontent/selectors';
 class ChallengePage extends PureComponent {
     render() {
         console.log('GET TEXT', this.props.getText('challengePageWhatWeBring'));
-        const {
-            challenge,
-            previousChallenge,
-            nextChallenge,
-            getText
-        } = this.props;
+        const { challenge, previousChallenge, nextChallenge, getText } = this.props;
 
         console.log('THIS PROPS', this.props);
 
@@ -41,17 +36,14 @@ class ChallengePage extends PureComponent {
                 className="ChallengePage"
                 pageTitle={challenge.name}
                 metaDesc={challenge.description}
-                ogImageUrl={
-                    challenge.track.headerImage
-                        ? challenge.track.headerImage.url
-                        : null
-                }
+                ogImageUrl={challenge.track.headerImage ? challenge.track.headerImage.url : null}
             >
                 <HeroImage image={challenge.track.headerImage}>
                     <div className={styles.headerWrapper}>
                         {challenge.partner && challenge.partner.logo && (
                             <div className={styles.headerLogo}>
                                 <Image
+                                    className={styles.headerLogoInner}
                                     image={challenge.partner.logo}
                                     width={220}
                                     height={220}
@@ -60,62 +52,49 @@ class ChallengePage extends PureComponent {
                             </div>
                         )}
                         <Divider sm />
-                        <span className={styles.headerTitle}>
-                            {challenge.name}
-                        </span>
-
-                        <Markdown
-                            source={challenge.description}
-                            className={styles.DescriptionFull}
-                        />
+                        <span className={styles.headerTitle}>{challenge.name}</span>
                     </div>
                 </HeroImage>
                 <SingleColumnSection>
-                    <Markdown
-                        source={challenge.description}
-                        className={styles.DescriptionMobile}
-                    />
+                    <Markdown source={challenge.description} className={styles.markdown} />
                 </SingleColumnSection>
                 {challenge.videoLink ? (
                     <SingleColumnSection>
-                        <Markdown source={challenge.videoLink} />
+                        <Markdown source={challenge.videoLink} className={styles.markdown} />
                         <Divider md />
                     </SingleColumnSection>
                 ) : null}
                 <SingleColumnSection></SingleColumnSection>
                 <BasicSection title={getText('challengePageWhatWeBring')}>
-                    <Markdown source={challenge.whatWeBring} />
+                    <Markdown source={challenge.whatWeBring} className={styles.markdown} />
                     {challenge.extraDetails && (
                         <React.Fragment>
                             <Divider md />
-                            <Markdown source={challenge.extraDetails} />
+                            <Markdown source={challenge.extraDetails} className={styles.markdown} />
                         </React.Fragment>
                     )}
                 </BasicSection>
                 <Divider md />
                 <BasicSection title={getText('challengeProblemsTitle')}>
-                    <Markdown source={challenge.problems} />
+                    <Markdown source={challenge.problems} className={styles.markdown} />
                 </BasicSection>
                 <Divider md />
                 <BasicSection title={getText('challengeJudgingTitle')}>
-                    <Markdown source={challenge.judging} />
+                    <Markdown source={challenge.judging} className={styles.markdown} />
                 </BasicSection>
                 <Divider md />
                 <BasicSection title={getText('challengePrizeTitle')}>
-                    <Markdown source={challenge.prize} />
+                    <Markdown source={challenge.prize} className={styles.markdown} />
                 </BasicSection>
                 <Divider md />
                 <BasicSection title={getText('challengeAboutTitle')}>
-                    <Markdown source={challenge.partner.about} />
+                    <Markdown source={challenge.partner.about} className={styles.markdown} />
                 </BasicSection>
                 <Divider md />
 
                 <div className={styles.ChallengePagePrevNext}>
                     {previousChallenge ? (
-                        <Link
-                            to={'/challenges/' + previousChallenge.slug}
-                            className={styles.ChallengePagePrevious}
-                        >
+                        <Link to={'/challenges/' + previousChallenge.slug} className={styles.ChallengePagePrevious}>
                             {`< ${previousChallenge.name}`}
                         </Link>
                     ) : null}
@@ -123,10 +102,7 @@ class ChallengePage extends PureComponent {
                     <Divider sm />
 
                     {nextChallenge ? (
-                        <Link
-                            to={'/challenges/' + nextChallenge.slug}
-                            className={styles.ChallengePageNext}
-                        >
+                        <Link to={'/challenges/' + nextChallenge.slug} className={styles.ChallengePageNext}>
                             {`${nextChallenge.name} >`}
                         </Link>
                     ) : null}
@@ -157,12 +133,8 @@ const mapStateToProps = (state, ownProps) => {
     const challenge = challenges[challengeIndex];
     const challengeCount = challenges.length;
 
-    const previousChallenge =
-        challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
-    const nextChallenge =
-        challengeIndex <= challengeCount - 1
-            ? challenges[challengeIndex + 1]
-            : null;
+    const previousChallenge = challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
+    const nextChallenge = challengeIndex <= challengeCount - 1 ? challenges[challengeIndex + 1] : null;
 
     //Returns the values
     return {

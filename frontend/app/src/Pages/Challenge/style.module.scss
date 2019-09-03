@@ -34,9 +34,7 @@
     background: rgba($black, 0.3);
 
     .headerLogo {
-        max-width: 360px;
-        width: 80%;
-        height: 270px;
+        padding: 20px 50px;
         background: $white;
         border-radius: 30px;
         display: flex;
@@ -45,34 +43,32 @@
         justify-content: center;
     }
 
+    .headerLogoInner {
+        width: 100px;
+        height: 100px;
+
+        @include bp-med {
+            width: 220px;
+            height: 220px;
+        }
+    }
+
     .headerTitle {
         @extend %font-title;
         color: $white;
         font-weight: bold;
-        font-size: 40px;
-        line-height: 44px;
+        font-size: 28px;
+        line-height: 30px;
         text-align: center;
+
+        @include bp-med {
+            font-size: 40px;
+            line-height: 44px;
+        }
     }
 }
-.Description {
-    &Full,
-    &Mobile {
-        * {
-            text-align: center !important;
-        }
-    }
-    &Full {
-        display: none;
-    }
-    &Mobile {
-        display: initial;
-    }
-    @include bp-med {
-        &Full {
-            display: inline;
-        }
-        &Mobile {
-            display: none !important;
-        }
+.markdown {
+    * {
+        text-align: justify;
     }
 }
