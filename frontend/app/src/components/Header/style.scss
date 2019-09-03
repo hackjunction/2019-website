@@ -51,8 +51,13 @@
         justify-content: center;
 
         &__text {
-            font-size: 18px;
+            font-size: 14px;
             margin: 0;
+            text-align: center;
+
+            @include bp-med {
+                font-size: 18px;
+            }
         }
     }
 
