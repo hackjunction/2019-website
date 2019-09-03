@@ -46,6 +46,7 @@
     .headerLogoInner {
         width: 100px;
         height: 100px;
+        object-fit: contain;
 
         @include bp-med {
             width: 220px;
