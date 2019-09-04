@@ -126,15 +126,30 @@ const mapStateToProps = (state, ownProps) => {
     //Get all challenges
     const challenges = DynamicSelectors.challenges(state);
 
-    //See if challenge with the same slug (eg. /challenge-one) exists
+    //See if challenge with the same slug (eg. /challenge-one) exists and returns its index
     const challengeIndex = findIndex(challenges, c => {
         return c.slug.trim() === slug.trim();
     });
+
+    //get challenge from challenges by using challengeIndex to get the index
     const challenge = challenges[challengeIndex];
+    //count challenges
     const challengeCount = challenges.length;
 
+<<<<<<< Updated upstream
     const previousChallenge = challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
     const nextChallenge = challengeIndex <= challengeCount - 1 ? challenges[challengeIndex + 1] : null;
+=======
+    //If current challengeIndex -1 = 0 return null, otherwise return current challenge -1
+    const previousChallenge =
+        challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
+    
+    //If current challengeIndex +1 = more than challengeLenght return null, otherwise return current challenge +1
+    const nextChallenge =
+        challengeIndex <= challengeCount - 1
+            ? challenges[challengeIndex + 1]
+            : null;
+>>>>>>> Stashed changes
 
     //Returns the values
     return {
