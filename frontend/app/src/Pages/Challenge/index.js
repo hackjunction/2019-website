@@ -136,10 +136,6 @@ const mapStateToProps = (state, ownProps) => {
     //count challenges
     const challengeCount = challenges.length;
 
-<<<<<<< Updated upstream
-    const previousChallenge = challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
-    const nextChallenge = challengeIndex <= challengeCount - 1 ? challenges[challengeIndex + 1] : null;
-=======
     //If current challengeIndex -1 = 0 return null, otherwise return current challenge -1
     const previousChallenge =
         challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
@@ -149,7 +145,6 @@ const mapStateToProps = (state, ownProps) => {
         challengeIndex <= challengeCount - 1
             ? challenges[challengeIndex + 1]
             : null;
->>>>>>> Stashed changes
 
     //Returns the values
     return {
