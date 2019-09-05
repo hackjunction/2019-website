@@ -1,12 +1,13 @@
+@import '../../styles/variables.scss';
+
 .verticalSection {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-
+    align-content: center;
+    flex-direction: column;
     max-width: 980px;
     margin: 0 auto;
-    * {
-        margin: 10px;
-        //background: rgba(255, 255, 255, 0.1);
+    @include bp-med {
+        flex-direction: row;
     }
 }

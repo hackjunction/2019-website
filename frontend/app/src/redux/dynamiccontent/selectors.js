@@ -29,6 +29,7 @@ export const schedules = state => state.dynamicContent.content.schedules || [];
 export const openinghours = state =>
     state.dynamicContent.content.openinghours || [];
 export const jobs = state => state.dynamicContent.content.jobs || [];
+export const hardwares = state => state.dynamicContent.content.hardwares || [];
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;
@@ -167,5 +168,24 @@ export const schedulesSunday = createSelector(
     schedulesInOrder,
     data => {
         return filter(data, { day: 'sunday' });
+    }
+);
+export const hardwareOne = createSelector(
+    hardwares,
+    data => {
+        return filter(data, { category: 'one' });
+    }
+);
+export const hardwareTwo = createSelector(
+    hardwares,
+    data => {
+        console.log('Hardwares:' + hardwares);
+        return filter(data, { category: 'two' });
+    }
+);
+export const hardwareThree = createSelector(
+    hardwares,
+    data => {
+        return filter(data, { category: 'three' });
     }
 );

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/hardwares",
+      "handler": "Hardware.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hardwares/count",
+      "handler": "Hardware.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/hardwares/:_id",
+      "handler": "Hardware.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/hardwares",
+      "handler": "Hardware.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/hardwares/:_id",
+      "handler": "Hardware.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/hardwares/:_id",
+      "handler": "Hardware.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

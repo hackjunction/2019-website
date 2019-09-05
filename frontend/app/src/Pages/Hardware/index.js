@@ -11,6 +11,7 @@ import BasicHeader from '../../components/BasicHeader';
 import SingleColumnSection from '../../components/SingleColumnSection';
 import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
+import HardwareGrid from '../../components/HardwareGrid';
 
 class HardwarePage extends PureComponent {
     render() {
@@ -35,17 +36,28 @@ class HardwarePage extends PureComponent {
                 />
                 <VerticalSection>
                     <VerticalText
-                        title={getText('hardwarePageVerticalLeftTitle')}
-                        content={getText('hardwarePageVerticalLeftContent')}
-                    />
+                        title={
+                            getText('hardwarePageLeftTitle') ||
+                            'MICRO CONTROLLERS/ SHIELDS'
+                        }
+                    >
+                        <HardwareGrid category={1} />
+                    </VerticalText>
+
                     <VerticalText
-                        title={getText('hardwarePageVerticalMiddleTitle')}
-                        content={getText('hardwarePageVerticalMiddleContent')}
-                    />
+                        title={getText('hardwarePageMiddleTitle') || 'SENSORS'}
+                    >
+                        <HardwareGrid category={2} />
+                    </VerticalText>
+
                     <VerticalText
-                        title={getText('hardwarePageVerticalRightTitle')}
-                        content={getText('hardwarePageVerticalRightContent')}
-                    />
+                        title={
+                            getText('hardwarePageRightTitle') ||
+                            'OTHER FOOD OPTIONS'
+                        }
+                    >
+                        <HardwareGrid category={3} />
+                    </VerticalText>
                 </VerticalSection>
             </Page>
         );

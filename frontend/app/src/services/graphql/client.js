@@ -187,6 +187,11 @@ export const getDynamicContent = () => {
                         }
                     }
                 }
+                hardwares {
+                    name
+                    category
+                    link
+                }
             }
         `
     });

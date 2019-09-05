@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "",
+  "info": {
+    "name": "hardware",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "",
+        "one",
+        "two",
+        "three"
+      ],
+      "type": "enumeration"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.Hardware {
+    padding-bottom: 50px;
+    &Grid {
+        display: flex;
+        flex-direction: column;
+        &Item {
+            text-align: center;
+            font-size: 18px;
+            line-height: 32px;
+            font-family: Lato;
+        }
+    }
+}
