@@ -17,6 +17,7 @@ import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
 import Schedules from '../../components/Schedules';
 import OpeningHours from '../../components/Schedules/OpeningHours';
+import FaqGrid from '../../components/FaqGrid';
 
 import Page from '../PageHOC';
 
@@ -130,6 +131,14 @@ class LivePage extends Component {
                 >
                     <Markdown source={getText('livePageSection6Content')} />
                 </BasicSection>
+
+                <Divider lg />
+                <SingleColumnSection
+                    title={getText('faqTitle')}
+                    subtitle={getText('faqSubtitle')}
+                >
+                    <FaqGrid />
+                </SingleColumnSection>
                 <Divider lg />
                 <NewsLetterForm />
             </Page>

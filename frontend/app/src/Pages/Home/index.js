@@ -72,8 +72,8 @@ class HomePage extends Component {
                     </div>
                     <Divider lg />
                     <SingleColumnSection
-                        title={getText('homePageTracksTitle')}
-                        subtitle={getText('homePageTracksSubtitle')}
+                        title={getText('tracksTitle')}
+                        subtitle={getText('tracksSubtitle')}
                     />
                     <TracksGrid />
                 </StylishContainer>

@@ -31,8 +31,8 @@ class ChallengesPage extends Component {
                     />
                 </HeroImage>
                 <SingleColumnSection
-                    title={getText('challengesPageTracksTitle')}
-                    subtitle={getText('challengesPageTracksSubtitle')}
+                    title={getText('tracksTitle')}
+                    subtitle={getText('tracksSubtitle')}
                 />
                 <TracksGrid smoothScroll={true} />
                 <Divider md />

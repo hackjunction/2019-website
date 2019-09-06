@@ -72,7 +72,6 @@ class VolunteerPage extends Component {
                 </ImageSection>
                 <Divider lg />
                 <NewsLetterForm />
-                <p>{getText('testText')}</p>
             </Page>
         );
     }
