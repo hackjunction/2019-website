@@ -10,6 +10,6 @@ const textfields = {
     infoPageTracksTitle: 'How the Tracks work',
     infoPageTracksSubtitle:
         'You can choose the challenges and track you want to compete in.',
-    testText: 'TEST TEST TEST TEST'
+    infoPageViolationSubtitle: ''
 };
 export default textfields;
