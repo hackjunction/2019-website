@@ -12,6 +12,7 @@ import { withRouter } from 'react-router';
 import { AnimatePresence } from 'framer-motion';
 
 import config from './config';
+import * as featuresList from './Pages/features';
 
 import ScrollToTop from './components/ScrollToTop';
 import GlobalLifecycle from './GlobalLifecycle';
@@ -41,6 +42,7 @@ import JobsPage from './Pages/Jobs';
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
 import * as SocialMediaActions from './redux/socialmedias/actions';
+import { Configuration } from 'cloudinary-core';
 
 class App extends Component {
     componentDidMount() {
@@ -82,76 +84,131 @@ class App extends Component {
         }
     }
 
+    setFeatures() {
+        let features;
+        let mode;
+        if (config.IS_DEBUG) {
+            mode = 'dev';
+        } else {
+            mode = 'noDev';
+        }
+
+        if (mode === 'dev') {
+            features = featuresList.allFeatures;
+        } else if (mode === 'noDev') {
+            features = featuresList.features;
+        }
+        return features;
+    }
+
     render() {
         const { location } = this.props;
+        const features = this.setFeatures();
         return (
             <div className="App">
                 <Header />
                 <main className="App--main">
                     <AnimatePresence>
                         <Switch location={location} key={location.pathname}>
-                            <Route exact path="/" component={HomePage} />
-                            <Route exact path="/info" component={InfoPage} />
-                            <Route
-                                exact
-                                path="/junction-week"
-                                component={JunctionWeekPage}
-                            />
-                            <Route
-                                exact
-                                path="/volunteer"
-                                component={VolunteerPage}
-                            />
-                            <Route exact path="/team" component={TeamPage} />
-                            <Route
-                                exact
-                                path="/challenges"
-                                component={ChallengesPage}
-                            />
-                            <Route
-                                path="/challenges/:slug"
-                                component={ChallengePage}
-                            />
-                            <Route
-                                exact
-                                path="/partners"
-                                component={PartnersPage}
-                            />
-                            <Route
-                                exact
-                                path="/terminal"
-                                component={TerminalPage}
-                            />
+                            {features.home === true ? (
+                                <Route exact path="/" component={HomePage} />
+                            ) : null}
 
-                            {config.IS_DEBUG ? (
+                            {features.info === true ? (
+                                <Route
+                                    exact
+                                    path="/info"
+                                    component={InfoPage}
+                                />
+                            ) : null}
+
+                            {features.junctionWeek === true ? (
+                                <Route
+                                    exact
+                                    path="/junction-week"
+                                    component={JunctionWeekPage}
+                                />
+                            ) : null}
+
+                            {features.volunteer === true ? (
+                                <Route
+                                    exact
+                                    path="/volunteer"
+                                    component={VolunteerPage}
+                                />
+                            ) : null}
+
+                            {features.team === true ? (
+                                <Route
+                                    exact
+                                    path="/team"
+                                    component={TeamPage}
+                                />
+                            ) : null}
+
+                            {features.challenges === true ? (
+                                <Route
+                                    exact
+                                    path="/challenges"
+                                    component={ChallengesPage}
+                                />
+                            ) : null}
+
+                            {features.challenge === true ? (
+                                <Route
+                                    path="/challenges/:slug"
+                                    component={ChallengePage}
+                                />
+                            ) : null}
+
+                            {features.partners === true ? (
+                                <Route
+                                    exact
+                                    path="/partners"
+                                    component={PartnersPage}
+                                />
+                            ) : null}
+
+                            {features.terminal === true ? (
+                                <Route
+                                    exact
+                                    path="/terminal"
+                                    component={TerminalPage}
+                                />
+                            ) : null}
+
+                            {features.transportation === true ? (
                                 <Route
                                     exact
                                     path="/transportation"
                                     component={TransportationPage}
                                 />
                             ) : null}
-                            {config.IS_DEBUG ? (
+
+                            {features.live === true ? (
                                 <Route
                                     exact
                                     path="/live"
                                     component={LivePage}
                                 />
                             ) : null}
-                            {config.IS_DEBUG ? (
+
+                            {features.demo === true ? (
                                 <Route
                                     exact
                                     path="/demo"
                                     component={DemoPage}
                                 />
                             ) : null}
-                            {config.IS_DEBUG ? (
+
+                            {features.hardware === true ? (
                                 <Route
                                     exact
                                     path="/hardware"
                                     component={HardwarePage}
                                 />
                             ) : null}
-                            {config.IS_DEBUG ? (
+                            {features.jobs === true ? (
                                 <Route
                                     exact
                                     path="/jobs"

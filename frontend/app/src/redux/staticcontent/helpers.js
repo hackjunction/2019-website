@@ -1,8 +1,10 @@
+import defaultText from '../../Pages/textfields';
+
 export const getText = (textfields, isEditor) => key => {
     if (textfields.hasOwnProperty(key)) {
         return `${isEditor ? key : textfields[key].content}`;
     } else {
-        return `${isEditor ? key : ''}`;
+        return `${isEditor ? key : defaultText[key]}`;
     }
 };
 
@@ -11,7 +13,9 @@ export const getMedia = (mediafields, isEditor) => key => {
         return mediafields[key].media;
     } else {
         return {
-            url: isEditor ? 'https://via.placeholder.com/1920x1080.png?text=' + key : ''
+            url: isEditor
+                ? 'https://via.placeholder.com/1920x1080.png?text=' + key
+                : ''
         };
     }
 };

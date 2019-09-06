@@ -6,7 +6,6 @@ import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 const HardwareGrid = props => {
     const renderHardware = hardware => {
-        console.log('hardware: ' + hardware);
         return hardware.map(h => (
             <div key={h.name} className={styles.HardwareGrid}>
                 {h.link ? (

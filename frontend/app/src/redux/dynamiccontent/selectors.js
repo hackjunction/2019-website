@@ -179,7 +179,6 @@ export const hardwareOne = createSelector(
 export const hardwareTwo = createSelector(
     hardwares,
     data => {
-        console.log('Hardwares:' + hardwares);
         return filter(data, { category: 'two' });
     }
 );
