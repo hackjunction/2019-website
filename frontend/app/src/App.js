@@ -42,7 +42,6 @@ import JobsPage from './Pages/Jobs';
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
 import * as SocialMediaActions from './redux/socialmedias/actions';
-import { Configuration } from 'cloudinary-core';
 
 class App extends Component {
     componentDidMount() {
