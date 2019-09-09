@@ -38,6 +38,7 @@ import LivePage from './Pages/Live';
 import DemoPage from './Pages/Demo';
 import HardwarePage from './Pages/Hardware';
 import JobsPage from './Pages/Jobs';
+import MarkdownExamplePage from './Pages/MarkdownExample';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -214,6 +215,7 @@ class App extends Component {
                                     component={JobsPage}
                                 />
                             ) : null}
+                            <Route exact path="/markdown-example" component={MarkdownExamplePage} />
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>
