@@ -23,7 +23,6 @@ const MarkdownExamplePage = () => {
     return (
         <div>
             <div style={{ height: '100px' }} />
-            <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheatsheet</a>
             <h1>Sample markdown with basic react-markdown:</h1>
             <div style={{ border: '1px solid red', padding: '20px' }}>
                 <ReactMarkdown source={sample} />
