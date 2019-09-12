@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/genericpages",
+      "handler": "Genericpage.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/genericpages/count",
+      "handler": "Genericpage.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/genericpages/:_id",
+      "handler": "Genericpage.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/genericpages",
+      "handler": "Genericpage.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/genericpages/:_id",
+      "handler": "Genericpage.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/genericpages/:_id",
+      "handler": "Genericpage.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

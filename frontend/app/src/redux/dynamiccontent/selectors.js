@@ -30,6 +30,8 @@ export const openinghours = state =>
     state.dynamicContent.content.openinghours || [];
 export const jobs = state => state.dynamicContent.content.jobs || [];
 export const hardwares = state => state.dynamicContent.content.hardwares || [];
+export const genericPages = state =>
+    state.dynamicContent.content.genericpages || [];
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;

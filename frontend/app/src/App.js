@@ -215,7 +215,10 @@ class App extends Component {
                                     component={JobsPage}
                                 />
                             ) : null}
-                            <Route exact path="/markdown-example" component={MarkdownExamplePage} />
+                            <Route
+                                path="/:slug"
+                                component={MarkdownExamplePage}
+                            />
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>

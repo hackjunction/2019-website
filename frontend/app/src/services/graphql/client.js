@@ -77,7 +77,6 @@ export const getDynamicContent = () => {
                         }
                     }
                 }
-
                 eventdates {
                     _id
                     name
@@ -191,6 +190,17 @@ export const getDynamicContent = () => {
                     name
                     category
                     link
+                }
+                genericpages {
+                    headerTitle
+                    headerContent
+                    content
+                    slug
+                    title
+                    headerImage {
+                        url
+                        public_id
+                    }
                 }
             }
         `

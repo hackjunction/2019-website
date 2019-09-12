@@ -1,64 +1,67 @@
-import React, { useState, useEffect } from 'react';
+import React, { PureComponent } from 'react';
 
 import ReactMarkdown from 'react-markdown';
 
-import SAMPLE from './sample.md';
-import ButtonLink from '../../components/ButtonLink';
-import FaqGrid from '../../components/FaqGrid';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { findIndex } from 'lodash-es';
 
-const MarkdownExamplePage = () => {
-    const [sample, setSample] = useState('');
+import * as DynamicSelectors from '../../redux/dynamiccontent/selectors';
 
-    useEffect(() => {
-        /** Load sample.md on first mount */
-        fetch(SAMPLE)
-            .then(data => {
-                return data.text();
-            })
-            .then(text => {
-                setSample(text);
-            });
-    }, []);
+import Markdown from '../../components/Markdown';
+import HeroImage from '../../components/HeroImage';
 
-    return (
-        <div>
-            <div style={{ height: '100px' }} />
-            <h1>Sample markdown with basic react-markdown:</h1>
-            <div style={{ border: '1px solid red', padding: '20px' }}>
-                <ReactMarkdown source={sample} />
-            </div>
-            <h1>Sample markdown with custom renderers</h1>
-            <div style={{ border: '1px solid blue', padding: '20px' }}>
-                <ReactMarkdown
-                    source={sample}
-                    renderers={{
-                        link: props => {
-                            console.log('LINK PROPS', props);
-                            if (props.href.length > 0 && props.href[0] === '$') {
-                                const element = props.href.slice(1);
-                                switch (element) {
-                                    case 'FAQ':
-                                        return <FaqGrid />;
-                                    default:
-                                        return null;
-                                }
-                            }
-                            return <a href={props.href}>{props.children}</a>;
-                        },
-                        inlineCode: props => {
-                            return <p>Custom renderer for code:</p>;
-                        },
-                        blockquote: props => {
-                            return <div style={{ background: 'orange' }}>{props.children}</div>;
-                        },
-                        table: props => {
-                            return <p>Table here</p>;
-                        }
-                    }}
-                />
-            </div>
-        </div>
-    );
+import Page from '../PageHOC';
+import NotFoundPage from '../NotFound';
+import BasicHeader from '../../components/BasicHeader';
+
+class MarkdownExamplePage extends PureComponent {
+    render() {
+        const { page } = this.props;
+
+        if (!page) {
+            return <NotFoundPage />;
+        }
+        return (
+            <Page
+                className="GenericPage"
+                pageTitle={page.title}
+                metaDesc={page.headerContent}
+                ogImageUrl={page.headerImage ? page.headerImage.url : null}
+            >
+                <HeroImage image={page.headerImage}>
+                    <BasicHeader
+                        title={page.headerTitle}
+                        body={page.headerContent}
+                    />
+                </HeroImage>
+                <div>
+                    <Markdown source={page.content} />
+                </div>
+            </Page>
+        );
+    }
+}
+
+const mapStateToProps = (state, ownProps) => {
+    const { match } = ownProps;
+    const { slug } = match.params;
+    console.log('Pages');
+    console.log(DynamicSelectors.genericPages(state));
+
+    //Get all pages
+    const genericPages = DynamicSelectors.genericPages(state);
+
+    //Get index of page with the same slug
+    const pageIndex = findIndex(genericPages, p => {
+        return p.slug.trim() === slug.trim();
+    });
+
+    //Get Page from genericPages with the index
+    const page = genericPages[pageIndex];
+    return {
+        page: page
+    };
 };
 
-export default MarkdownExamplePage;
+export default connect(mapStateToProps)(MarkdownExamplePage);

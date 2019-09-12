@@ -6,7 +6,14 @@ import YouTube from 'react-youtube';
 import breaks from 'remark-breaks';
 import { take } from 'lodash-es';
 
+import FaqGrid from '../FaqGrid';
+import ButtonLink from '../ButtonLink';
+import BasicSection from '../BasicSection';
+
 import { isYoutubeUrl } from '../../utils/regex';
+import SingleColumnSection from '../SingleColumnSection';
+import NewsLetterForm from '../NewsLetterForm';
+import Divider from '../Divider';
 
 class Markdown extends PureComponent {
     render() {
@@ -97,6 +104,80 @@ class Markdown extends PureComponent {
                             }
 
                             return result;
+                        },
+                        link: props => {
+                            console.log('LINK PROPS', props);
+                            if (
+                                props.href.length > 0 &&
+                                props.href[0] === '$'
+                            ) {
+                                const element = props.href.slice(1);
+                                const searchParams = new URLSearchParams(
+                                    props.href
+                                );
+
+                                if (element.startsWith('BasicSection')) {
+                                    return (
+                                        <BasicSection
+                                            title={searchParams.get('title')}
+                                            subtitle={searchParams.get(
+                                                'subtitle'
+                                            )}
+                                        >
+                                            <p>{searchParams.get('content')}</p>
+                                        </BasicSection>
+                                    );
+                                } else if (element.startsWith('ButtonLink')) {
+                                    for (let p of searchParams) {
+                                        console.log(p);
+                                    }
+                                    return (
+                                        <ButtonLink
+                                            text={searchParams.get('text')}
+                                            link={searchParams.get('link')}
+                                        />
+                                    );
+                                } else if (
+                                    element.startsWith('SingleColumnSection')
+                                ) {
+                                    return (
+                                        <SingleColumnSection
+                                            title={searchParams.get('title')}
+                                            subtitle={searchParams.get(
+                                                'subtitle'
+                                            )}
+                                        ></SingleColumnSection>
+                                    );
+                                } else if (element.startsWith('ButtonLink')) {
+                                    return (
+                                        <ButtonLink
+                                            type="mainsite"
+                                            text={searchParams.get('text')}
+                                            link={`https://${searchParams.get(
+                                                'link'
+                                            )}`}
+                                        />
+                                    );
+                                }
+                                switch (element) {
+                                    case 'FAQ':
+                                        return <FaqGrid />;
+                                    case 'NewsletterForm':
+                                        return <NewsLetterForm />;
+                                    case 'Divider':
+                                        return <Divider md />;
+                                    default:
+                                        return null;
+                                }
+                            }
+                            return <a href={props.href}>{props.children}</a>;
+                        },
+                        blockquote: props => {
+                            return (
+                                <div style={{ background: 'orange' }}>
+                                    {props.children}
+                                </div>
+                            );
                         }
                     }}
                 />

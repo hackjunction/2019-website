@@ -31,7 +31,7 @@ const ButtonLink = ({
             [styles.ButtonHide]: isEmpty(text)
         }
     );
-
+    console.log('BUTTON TYPE: ' + type);
     /* If hover text is not empty, return hoverButton instead */
     if (hoverText === '') {
         return (

@@ -15,3 +15,13 @@
 [A regular link here](https://google.com)
 
 [Some custom link logic]($FAQ)
+
+[]($BasicSection&title=hello&subtitle=HelloFriends&content=LongText)
+
+[]($ButtonLink&text=hello+hello&link=//www.google.com)
+
+[]($SingleColumnSection&title=Title&subtitle=Subtitle)
+
+[]($Divider)
+
+[]($NewsletterForm)

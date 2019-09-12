@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "genericpage",
+  "info": {
+    "name": "genericpage",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "headerTitle": {
+      "type": "string"
+    },
+    "headerContent": {
+      "type": "text"
+    },
+    "headerImage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "content": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
