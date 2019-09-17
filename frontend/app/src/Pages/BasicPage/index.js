@@ -3,6 +3,8 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { findIndex } from 'lodash-es';
 
+import styles from './style.module.scss';
+
 import * as DynamicSelectors from '../../redux/dynamiccontent/selectors';
 
 import Markdown from '../../components/Markdown';
@@ -33,7 +35,10 @@ class GenericPage extends PureComponent {
                     />
                 </HeroImage>
                 <div>
-                    <Markdown source={page.content} />
+                    <Markdown
+                        className={styles.content}
+                        source={page.content}
+                    />
                 </div>
             </Page>
         );
