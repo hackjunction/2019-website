@@ -153,9 +153,9 @@ class Markdown extends PureComponent {
                                         <ButtonLink
                                             type="mainsite"
                                             text={searchParams.get('text')}
-                                            link={`https://${searchParams.get(
+                                            link={searchParams.get(
                                                 'link'
-                                            )}`}
+                                            )}
                                         />
                                     );
                                 }
