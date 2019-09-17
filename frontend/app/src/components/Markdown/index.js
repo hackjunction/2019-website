@@ -127,16 +127,6 @@ class Markdown extends PureComponent {
                                             <p>{searchParams.get('content')}</p>
                                         </BasicSection>
                                     );
-                                } else if (element.startsWith('ButtonLink')) {
-                                    for (let p of searchParams) {
-                                        console.log(p);
-                                    }
-                                    return (
-                                        <ButtonLink
-                                            text={searchParams.get('text')}
-                                            link={searchParams.get('link')}
-                                        />
-                                    );
                                 } else if (
                                     element.startsWith('SingleColumnSection')
                                 ) {
@@ -151,11 +141,9 @@ class Markdown extends PureComponent {
                                 } else if (element.startsWith('ButtonLink')) {
                                     return (
                                         <ButtonLink
-                                            type="mainsite"
+                                            type={searchParams.get('type')}
                                             text={searchParams.get('text')}
-                                            link={searchParams.get(
-                                                'link'
-                                            )}
+                                            link={searchParams.get('link')}
                                         />
                                     );
                                 }
