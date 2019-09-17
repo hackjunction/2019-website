@@ -39,6 +39,7 @@ import DemoPage from './Pages/Demo';
 import HardwarePage from './Pages/Hardware';
 import JobsPage from './Pages/Jobs';
 import MarkdownExamplePage from './Pages/MarkdownExample';
+import BasicPage from './Pages/BasicPage';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -215,10 +216,7 @@ class App extends Component {
                                     component={JobsPage}
                                 />
                             ) : null}
-                            <Route
-                                path="/:slug"
-                                component={MarkdownExamplePage}
-                            />
+                            <Route path="/:slug" component={BasicPage} />
                             <Route component={NotFound} />
                         </Switch>
                     </AnimatePresence>
