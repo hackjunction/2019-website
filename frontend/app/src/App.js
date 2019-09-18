@@ -38,7 +38,6 @@ import LivePage from './Pages/Live';
 import DemoPage from './Pages/Demo';
 import HardwarePage from './Pages/Hardware';
 import JobsPage from './Pages/Jobs';
-import MarkdownExamplePage from './Pages/MarkdownExample';
 import BasicPage from './Pages/BasicPage';
 
 import * as StaticContentActions from './redux/staticcontent/actions';

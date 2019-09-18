@@ -144,6 +144,7 @@ class Markdown extends PureComponent {
                                             type={searchParams.get('type')}
                                             text={searchParams.get('text')}
                                             link={searchParams.get('link')}
+                                            size="sm"
                                         />
                                     );
                                 }
