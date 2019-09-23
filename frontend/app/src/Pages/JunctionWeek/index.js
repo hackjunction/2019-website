@@ -73,6 +73,7 @@ class JunctionWeekPage extends Component {
                         link={getText('junctionWeekPageHeltechButtonLink')}
                         size="sm"
                         align="left"
+                        type="mainsite"
                     />
                 </BasicSection>
                 <BasicSection
