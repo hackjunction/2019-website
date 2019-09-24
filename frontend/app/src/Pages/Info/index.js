@@ -16,7 +16,8 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import ButtonLink from '../../components/ButtonLink';
 import BasicHeader from '../../components/BasicHeader';
 import NewsLetterForm from '../../components/NewsLetterForm';
-
+import Schedules from '../../components/Schedules';
+import OpeningHours from '../../components/Schedules/OpeningHours';
 class InfoPage extends Component {
     render() {
         const { getMedia, getText } = this.props;
@@ -47,6 +48,37 @@ class InfoPage extends Component {
                     subtitle={getText('infoPageJourneySubtitle')}
                 >
                     <DatesGrid type="frontPage" />
+                </BasicSection>
+
+                <Divider md />
+                <SingleColumnSection
+                    title={getText('infoPageScheduleTitle')}
+                    subtitle={getText('infoPageScheduleSubtitle')}
+                />
+
+                <BasicSection
+                    title={getText('infoPageScheduleFridayTitle')}
+                    subtitle={getText('infoPageScheduleFridaySubtitle')}
+                >
+                    <Schedules date="friday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('infoPageScheduleSaturdayTitle')}
+                    subtitle={getText('infoPageScheduleSaturdaySubtitle')}
+                >
+                    <Schedules date="saturday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('infoPageScheduleSundayTitle')}
+                    subtitle={getText('infoPageScheduleSundaySubtitle')}
+                >
+                    <Schedules date="sunday" />
+                </BasicSection>
+                <BasicSection
+                    title={getText('infoPageScheduleOthersTitle')}
+                    subtitle={getText('infoPageScheduleOthersSubtitle')}
+                >
+                    <OpeningHours />
                 </BasicSection>
                 <Divider md />
                 <BasicSection
