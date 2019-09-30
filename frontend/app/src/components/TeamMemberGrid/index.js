@@ -2,12 +2,11 @@ import React from 'react';
 import './style.scss';
 
 import { connect } from 'react-redux';
-import {
-    globalByTeamPriority,
-    finlandByTeamPriority
-} from '../../redux/dynamiccontent/selectors';
+
+import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 
 import Image from '../Image';
+
 import Divider from '../Divider';
 
 const TeamMemberGrid = props => {
@@ -76,12 +75,12 @@ const mapStateToProps = (state, ownProps) => {
 
     switch (type) {
         case 'finland': {
-            teamMembers = finlandByTeamPriority(state);
+            teamMembers = ContentSelectors.finlandByTeamPriority(state);
 
             break;
         }
         case 'global': {
-            teamMembers = globalByTeamPriority(state);
+            teamMembers = ContentSelectors.globalByTeamPriority(state);
             break;
         }
         default:

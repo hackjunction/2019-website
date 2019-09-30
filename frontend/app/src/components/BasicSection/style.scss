@@ -61,6 +61,9 @@
             margin-left: 25px;
             margin-top: 0;
         }
+        * {
+            white-space: pre-wrap;
+        }
 
         & > p {
             margin: 0;
