@@ -44,6 +44,12 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/terminal">
                     Terminal
                 </Link>
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/transportation"
+                >
+                    Transportation
+                </Link>
 
                 {/* BOTTOM */}
                 <Link to="/team">
@@ -55,14 +61,6 @@ const NavMenuInner = memo(props => {
                     </h6>
                 ) : null}
 
-                {config.IS_DEBUG ? (
-                    <Link
-                        className="NavMenu--inner__menu-item"
-                        to="/transportation"
-                    >
-                        Transportation
-                    </Link>
-                ) : null}
                 {config.IS_DEBUG ? (
                     <Link className="NavMenu--inner__menu-item" to="/Live">
                         Live
