@@ -78,10 +78,6 @@ class App extends Component {
         if (config.GOOGLE_ANALYTICS_ID) {
             ReactGA.pageview(location.pathname);
         }
-
-        if (config.FACEBOOK_PIXEL_ID) {
-            ReactPixel.pageView();
-        }
     }
 
     setFeatures() {

@@ -1,3 +1,4 @@
+//Live
 export const features = {
     challenge: true,
     challenges: true,
@@ -5,7 +6,7 @@ export const features = {
     hardware: false,
     home: true,
     info: true,
-    transportation: false,
+    transportation: true,
     jobs: false,
     junctionWeek: true,
     live: false,
@@ -15,6 +16,7 @@ export const features = {
     volunteer: true
 };
 
+//Dev mode
 export const allFeatures = {
     challenge: true,
     challenges: true,

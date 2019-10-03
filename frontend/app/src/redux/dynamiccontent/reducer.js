@@ -35,7 +35,9 @@ export default function reducer(state = initialState, action) {
         case ActionTypes.TOGGLE_SIDEBAR: {
             return {
                 ...state,
-                nav: { sidebarOpen: action.payload }
+                nav: {
+                    sidebarOpen: action.payload
+                }
             };
         }
         case ActionTypes.SET_NAV_TITLE: {
