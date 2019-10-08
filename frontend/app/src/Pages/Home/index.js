@@ -32,13 +32,7 @@ class HomePage extends Component {
                     <HeroCTA
                         subtitle={getText('homePageHeroCtaSubtitle')}
                         image={getMedia('homePageHeroCtaImage')}
-                    >
-                        <ButtonLink
-                            text={getText('homePageApplyButton')}
-                            type="mainsite"
-                            link="https://app.hackjunction.com/events/junction-2019"
-                        />
-                    </HeroCTA>
+                    ></HeroCTA>
                 </HeroImage>
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
@@ -60,12 +54,12 @@ class HomePage extends Component {
                         <h1 className={styles.stylishContainerTitle}>
                             {getText('homePageReadyTitle')}
                         </h1>
-                        <ButtonLink
+                        {/* <ButtonLink
                             text={getText('homePageApplyButton')}
                             size="lg"
                             type="mainsite"
                             link="https://app.hackjunction.com/events/junction-2019"
-                        />
+                        /> */}
                         <p className={styles.stylishContainerDescription}>
                             {getText('homePageReadyDescription')}
                         </p>
