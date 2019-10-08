@@ -39,6 +39,7 @@ import DemoPage from './Pages/Demo';
 import HardwarePage from './Pages/Hardware';
 import JobsPage from './Pages/Jobs';
 import BasicPage from './Pages/BasicPage';
+import CommunityChallengePage from './Pages/CommunityChallenge';
 
 import * as StaticContentActions from './redux/staticcontent/actions';
 import * as DynamicContentActions from './redux/dynamiccontent/actions';
@@ -211,6 +212,11 @@ class App extends Component {
                                     component={JobsPage}
                                 />
                             ) : null}
+                            <Route
+                                exact
+                                path="/community-challenge"
+                                component={CommunityChallengePage}
+                            />
                             <Route path="/:slug" component={BasicPage} />
                             <Route component={NotFound} />
                         </Switch>
