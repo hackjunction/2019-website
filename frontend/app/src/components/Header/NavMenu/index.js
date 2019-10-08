@@ -50,7 +50,12 @@ const NavMenuInner = memo(props => {
                 >
                     Transportation
                 </Link>
-
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/community-challenge"
+                >
+                    Community Challenge 2019
+                </Link>
                 {/* BOTTOM */}
                 <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
