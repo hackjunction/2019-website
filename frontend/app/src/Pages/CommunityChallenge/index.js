@@ -29,7 +29,7 @@ class CommunityChallengePage extends Component {
                         body={getText('communityChallengeHeaderContent')}
                     />
                 </HeroImage>
-                <Divider md />
+
                 <SingleColumnSection
                     title={getText('communityChallengeSection1Title')}
                 >
