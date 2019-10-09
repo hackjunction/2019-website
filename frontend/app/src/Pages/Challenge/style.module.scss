@@ -61,6 +61,7 @@
         font-size: 28px;
         line-height: 30px;
         text-align: center;
+        max-width: 980px;
 
         @include bp-med {
             font-size: 40px;

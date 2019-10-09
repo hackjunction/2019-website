@@ -23,7 +23,12 @@ import * as StaticSelectors from '../../redux/staticcontent/selectors';
 class ChallengePage extends PureComponent {
     render() {
         console.log('GET TEXT', this.props.getText('challengePageWhatWeBring'));
-        const { challenge, previousChallenge, nextChallenge, getText } = this.props;
+        const {
+            challenge,
+            previousChallenge,
+            nextChallenge,
+            getText
+        } = this.props;
 
         console.log('THIS PROPS', this.props);
 
@@ -36,7 +41,11 @@ class ChallengePage extends PureComponent {
                 className="ChallengePage"
                 pageTitle={challenge.name}
                 metaDesc={challenge.description}
-                ogImageUrl={challenge.track.headerImage ? challenge.track.headerImage.url : null}
+                ogImageUrl={
+                    challenge.track.headerImage
+                        ? challenge.track.headerImage.url
+                        : null
+                }
             >
                 <HeroImage image={challenge.track.headerImage}>
                     <div className={styles.headerWrapper}>
@@ -52,49 +61,79 @@ class ChallengePage extends PureComponent {
                             </div>
                         )}
                         <Divider sm />
-                        <span className={styles.headerTitle}>{challenge.name}</span>
+                        <span className={styles.headerTitle}>
+                            {challenge.name}
+                        </span>
                     </div>
                 </HeroImage>
                 <SingleColumnSection>
-                    <Markdown source={challenge.description} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.description}
+                        className={styles.markdown}
+                    />
                 </SingleColumnSection>
                 {challenge.videoLink ? (
                     <SingleColumnSection>
-                        <Markdown source={challenge.videoLink} className={styles.markdown} />
-                        <Divider md />
+                        <Markdown
+                            source={challenge.videoLink}
+                            className={styles.markdown}
+                        />
+                        <Divider sm />
                     </SingleColumnSection>
                 ) : null}
                 <SingleColumnSection></SingleColumnSection>
+                <Divider sm />
                 <BasicSection title={getText('challengePageWhatWeBring')}>
-                    <Markdown source={challenge.whatWeBring} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.whatWeBring}
+                        className={styles.markdown}
+                    />
                     {challenge.extraDetails && (
                         <React.Fragment>
-                            <Divider md />
-                            <Markdown source={challenge.extraDetails} className={styles.markdown} />
+                            <Divider sm />
+                            <Markdown
+                                source={challenge.extraDetails}
+                                className={styles.markdown}
+                            />
                         </React.Fragment>
                     )}
                 </BasicSection>
-                <Divider md />
+                <Divider sm />
                 <BasicSection title={getText('challengeProblemsTitle')}>
-                    <Markdown source={challenge.problems} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.problems}
+                        className={styles.markdown}
+                    />
                 </BasicSection>
-                <Divider md />
+                <Divider sm />
                 <BasicSection title={getText('challengeJudgingTitle')}>
-                    <Markdown source={challenge.judging} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.judging}
+                        className={styles.markdown}
+                    />
                 </BasicSection>
-                <Divider md />
+                <Divider sm />
                 <BasicSection title={getText('challengePrizeTitle')}>
-                    <Markdown source={challenge.prize} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.prize}
+                        className={styles.markdown}
+                    />
                 </BasicSection>
-                <Divider md />
+                <Divider sm />
                 <BasicSection title={getText('challengeAboutTitle')}>
-                    <Markdown source={challenge.partner.about} className={styles.markdown} />
+                    <Markdown
+                        source={challenge.partner.about}
+                        className={styles.markdown}
+                    />
                 </BasicSection>
-                <Divider md />
+                <Divider sm />
 
                 <div className={styles.ChallengePagePrevNext}>
                     {previousChallenge ? (
-                        <Link to={'/challenges/' + previousChallenge.slug} className={styles.ChallengePagePrevious}>
+                        <Link
+                            to={'/challenges/' + previousChallenge.slug}
+                            className={styles.ChallengePagePrevious}
+                        >
                             {`< ${previousChallenge.name}`}
                         </Link>
                     ) : null}
@@ -102,7 +141,10 @@ class ChallengePage extends PureComponent {
                     <Divider sm />
 
                     {nextChallenge ? (
-                        <Link to={'/challenges/' + nextChallenge.slug} className={styles.ChallengePageNext}>
+                        <Link
+                            to={'/challenges/' + nextChallenge.slug}
+                            className={styles.ChallengePageNext}
+                        >
                             {`${nextChallenge.name} >`}
                         </Link>
                     ) : null}
@@ -139,7 +181,7 @@ const mapStateToProps = (state, ownProps) => {
     //If current challengeIndex -1 = 0 return null, otherwise return current challenge -1
     const previousChallenge =
         challengeIndex >= 1 ? challenges[challengeIndex - 1] : null;
-    
+
     //If current challengeIndex +1 = more than challengeLenght return null, otherwise return current challenge +1
     const nextChallenge =
         challengeIndex <= challengeCount - 1

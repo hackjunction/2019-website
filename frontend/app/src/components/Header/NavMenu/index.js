@@ -56,10 +56,14 @@ const NavMenuInner = memo(props => {
                 >
                     Community Challenge 2019
                 </Link>
+                <Link className="NavMenu--inner__menu-item" to="/volunteer">
+                    Volunteers
+                </Link>
                 {/* BOTTOM */}
                 <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
                 </Link>
+
                 {config.IS_DEBUG ? (
                     <h6 className="NavMenu--inner__menu-title">
                         New sites not live yet
