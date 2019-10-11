@@ -21,3 +21,10 @@
 .padding {
     padding: $padding-page;
 }
+
+.HomePageHeaderlinks {
+    display: flex;
+    flex-direction: row;
+    max-width: 980px;
+    margin: 0 auto;
+}

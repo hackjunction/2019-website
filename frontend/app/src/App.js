@@ -99,14 +99,13 @@ class App extends Component {
     }
 
     render() {
-        const { location } = this.props;
         const features = this.setFeatures();
         return (
             <div className="App">
                 <Header />
                 <main className="App--main">
                     <AnimatePresence>
-                        <Switch location={location} key={location.pathname}>
+                        <Switch >
                             {features.home === true ? (
                                 <Route exact path="/" component={HomePage} />
                             ) : null}

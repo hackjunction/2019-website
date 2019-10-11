@@ -133,6 +133,14 @@ class Footer extends PureComponent {
                             >
                                 Code of Conduct
                             </a>
+                            <a
+                                className="FooterInner--right__section-link"
+                                href="https://app.hackjunction.com/events/junction-2019"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Log In
+                            </a>
                         </div>
                     </nav>
                 </div>
