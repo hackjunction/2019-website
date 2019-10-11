@@ -38,6 +38,7 @@ class HomePage extends Component {
                                 text={'Practical Information'}
                                 link={'/info'}
                                 color="brown"
+                                size="fp"
                             />
                             <ButtonLink
                                 text={'Dashboard'}
@@ -45,6 +46,7 @@ class HomePage extends Component {
                                     'https://app.hackjunction.com/events/junction-2019'
                                 }
                                 type="mainsite"
+                                size="fp"
                             />
                         </div>
                     </HeroCTA>
