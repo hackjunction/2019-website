@@ -12,6 +12,7 @@ import { toggleSidebar } from '../../../redux/dynamiccontent/actions';
 import { isSidebarOpen } from '../../../redux/dynamiccontent/selectors';
 
 import Image from '../../Image';
+import Divider from '../../Divider';
 
 const NavMenuInner = memo(props => {
     const { getMedia } = props;
@@ -29,20 +30,21 @@ const NavMenuInner = memo(props => {
                 <Link to="/">
                     <h6 className="NavMenu--inner__menu-title">Home</h6>
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/junction-week">
-                    Junction Week
-                </Link>
-                <Link className="NavMenu--inner__menu-item" to="/info">
-                    Practical Info
-                </Link>
                 <Link className="NavMenu--inner__menu-item" to="/challenges">
                     Tracks & Challenges
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/terminal">
-                    Terminal
+                <Link className="NavMenu--inner__menu-item" to="/volunteer">
+                    Volunteers
+                </Link>
+                <Divider xs />
+                <Link className="NavMenu--inner__menu-item" to="/junction-week">
+                    Junction Week
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/info">
+                    Practical Info
                 </Link>
                 <Link
                     className="NavMenu--inner__menu-item"
@@ -50,15 +52,17 @@ const NavMenuInner = memo(props => {
                 >
                     Transportation
                 </Link>
+                <Divider xs />
+                <Link className="NavMenu--inner__menu-item" to="/terminal">
+                    Terminal
+                </Link>
                 <Link
                     className="NavMenu--inner__menu-item"
                     to="/community-challenge"
                 >
                     Community Challenge 2019
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/volunteer">
-                    Volunteers
-                </Link>
+
                 {/* BOTTOM */}
                 <Link to="/team">
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
