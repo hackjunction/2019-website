@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import './style.scss';
+
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import Page from '../PageHOC';
@@ -44,6 +46,7 @@ class CommunityChallengePage extends Component {
                 >
                     <Markdown
                         source={getText('communityChallengeSection2Body')}
+                        className="fixedFontSize"
                     />
                 </BasicSection>
                 <Markdown md />

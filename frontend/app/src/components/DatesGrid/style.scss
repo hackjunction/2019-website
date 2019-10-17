@@ -16,17 +16,17 @@
     :last-child {
         i {
             display: none;
-            font-size: 50px;
         }
     }
 }
 
 .DatesGrid--itemContainer {
     width: 100%;
+
     i {
-        margin-left: 47%;
         color: $main-color1;
         font-size: 30px;
+        margin-left: 45%;
     }
     &__item {
         width: 100%;
