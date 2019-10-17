@@ -1,6 +1,10 @@
+@import '../../styles/variables.scss';
 .trackName {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
+    @include bp-med {
+        font-size: 40px;
+    }
 }
 
 .trackDescription {

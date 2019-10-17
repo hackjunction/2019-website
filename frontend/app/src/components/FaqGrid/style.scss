@@ -104,6 +104,11 @@
         }
     }
 
+    &--answer {
+        * {
+            text-align: left;
+        }
+    }
     &--question {
         @extend %font-title;
         font-weight: bold;

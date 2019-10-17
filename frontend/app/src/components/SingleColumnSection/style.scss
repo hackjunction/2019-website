@@ -10,6 +10,7 @@
         font-size: 25px;
         text-align: center;
         margin: 0;
+        padding-bottom: 25px;
         @include bp-med {
             font-size: 40px;
         }

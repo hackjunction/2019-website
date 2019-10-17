@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+.JunctionWeekButton {
+    margin: 0 auto;
+    @include bp-full {
+        margin-right: auto;
+    }
+}

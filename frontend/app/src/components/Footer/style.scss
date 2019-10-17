@@ -1,4 +1,7 @@
 @import '../../styles/variables';
+.FooterDivider {
+    height: 10px;
+}
 
 .Footer {
     align-items: center;
@@ -70,9 +73,12 @@
             // margin-right: 110px;
             background: $lightgrey;
 
-            width: 320px;
+            width: 290px;
             height: 2px;
             margin: 60px 0;
+            @include bp-med {
+                width: 320px;
+            }
 
             @include bp-full {
                 height: 150px;

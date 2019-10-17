@@ -9,6 +9,7 @@
 
     @include bp-med {
         flex-direction: row;
+        height: 230px;
     }
 
     .logoWrapper {
@@ -16,11 +17,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 1.5rem;
+        padding-top: 1rem;
+        @include bp-med {
+            padding: 1.5rem;
+        }
 
         .logo {
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             object-fit: contain;
         }
     }
@@ -30,12 +34,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 1.5rem;
         flex: 1;
-
+        padding: 0 1.5rem 1.5rem 1.5rem;
         @include bp-med {
             align-items: flex-start;
             justify-content: center;
+            padding: 1.5rem;
         }
 
         .challengeName {
@@ -53,11 +57,7 @@
         .challengeDescription {
             color: $black;
             font-size: 18px;
-            text-align: center;
-
-            @include bp-med {
-                text-align: left;
-            }
+            text-align: left;
         }
     }
 }

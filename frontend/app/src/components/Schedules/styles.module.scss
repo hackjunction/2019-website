@@ -1,14 +1,27 @@
+@import '../../styles/variables.scss';
+.BottomDiv {
+    height: 20px;
+    background: red;
+}
+
+.Schedules {
+    margin-top: -50px;
+    @include bp-full {
+        margin-top: 0px;
+    }
+}
 .Schedule {
     display: flex;
     flex-direction: row;
 
+    height: 60px !important;
     &Item {
         &Left,
         &Right {
             display: flex;
             flex-direction: column;
-
             margin: 10px;
+            justify-content: center;
         }
         &Left {
             width: 60px;
@@ -17,7 +30,10 @@
         &Bot {
             font-family: 'Lato';
             font-size: 18px;
-            line-height: 20px;
+            line-height: 24px;
+        }
+        &Top {
+            font-weight: bold;
         }
         &Bot {
             color: #adadad;

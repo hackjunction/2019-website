@@ -54,7 +54,7 @@ class HomePage extends Component {
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
                 <Divider sm />
-
+                
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
                     <div className={styles.padding}>
@@ -109,7 +109,6 @@ class HomePage extends Component {
                     title={getText('partnersTitle')}
                     subtitle={getText('partnersSubtitle')}
                 />
-                <Divider sm />
                 <PartnersGrid type="front" />
                 <SingleColumnSection>
                     <ButtonLink
