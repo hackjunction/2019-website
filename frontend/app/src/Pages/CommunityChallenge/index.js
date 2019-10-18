@@ -46,7 +46,6 @@ class CommunityChallengePage extends Component {
                 >
                     <Markdown
                         source={getText('communityChallengeSection2Body')}
-                        className="fixedFontSize"
                     />
                 </BasicSection>
                 <Markdown md />

@@ -36,7 +36,8 @@ class TransportationPage extends Component {
                 </HeroImage>
 
                 <SingleColumnSection
-                    title={getText('transportationPageAddress')}
+                    title={getText('transportationPageAddressTitle')}
+                    subtitle={getText('transportationPageAddress')}
                 />
                 <Divider md />
                 <SingleColumnSection
