@@ -59,6 +59,17 @@
     }
 }
 
+.jobDescription {
+    color: $black;
+    * {
+        color: $black;
+    }
+
+    a {
+        color: $link-colour;
+    }
+}
+
 .skillsTitle {
     color: black;
 }

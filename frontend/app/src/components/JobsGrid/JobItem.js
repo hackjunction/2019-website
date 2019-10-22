@@ -2,10 +2,9 @@ import React from 'react';
 import styles from './style.module.scss';
 
 import Image from '../Image';
+import Markdown from '../Markdown';
 
-const JobItem = (
-    { title, description, endDate, link, jobskills, partner } = this.props
-) => {
+const JobItem = ({ title, description, endDate, link, jobskills, partner } = this.props) => {
     const renderSkills = jobSkills => {
         return jobSkills.map(skill => (
             <div className={styles.jobSkillsBlock} key={skill.title}>
@@ -19,11 +18,7 @@ const JobItem = (
         <div className={styles.wrapper}>
             <div className={styles.jobItemLeft}>
                 <div className={styles.logoWrapper}>
-                    <Image
-                        className={styles.logo}
-                        image={partner.logo}
-                        alt="Employer"
-                    />
+                    <Image className={styles.logo} image={partner.logo} alt="Employer" />
                 </div>
                 <span className={styles.lookingFor}>is looking for a</span>
                 <span className={styles.title}>{title}</span>
@@ -34,17 +29,15 @@ const JobItem = (
                 </div>
             </div>
             <div className={styles.jobItemRight}>
-                <h2 className={styles.skillsTitle}>SKILLS</h2>
-                <div className={styles.jobSkills}>
-                    {renderSkills(jobskills)}
-                </div>
-                <p className={styles.description}>{description}</p>
-                <a
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.readmore}
-                >
+                {jobskills.length > 0 && (
+                    <React.Fragment>
+                        <h2 className={styles.skillsTitle}>SKILLS</h2>
+                        <div className={styles.jobSkills}>{renderSkills(jobskills)}</div>
+                    </React.Fragment>
+                )}
+                <Markdown source={description} className={styles.jobDescription} />
+                {/* <p className={styles.description}>{description}</p> */}
+                <a href={link} target="_blank" rel="noopener noreferrer" className={styles.readmore}>
                     Read more
                 </a>
             </div>
