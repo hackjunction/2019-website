@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './style.module.scss';
 
-import config from '../../../config';
+import config from '../../../config/config';
 
 import * as ContentSelectors from '../../../redux/staticcontent/selectors';
 

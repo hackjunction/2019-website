@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import cloudinary from 'cloudinary-core';
 import { motion } from 'framer-motion';
 
-import config from '../../config';
+import config from '../../config/config';
 
 import * as NavActions from '../../redux/dynamiccontent/actions';
 

@@ -25,23 +25,20 @@ class JobsPage extends PureComponent {
                 ogImageUrl={getMedia('jobsPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('jobsPageHeaderImage')}>
-                    <BasicHeader
-                        title={getText('jobsPageHeaderTitle')}
-                        body={getText('jobsPageHeaderContent')}
-                    />
+                    <BasicHeader title={getText('jobsPageHeaderTitle')} body={getText('jobsPageHeaderContent')} />
                 </HeroImage>
-                <Divider sm />
+                {/* Took this away for now as there was no content,
+                    can be added back later
+                */}
+                {/* <Divider sm />
                 <BasicSection
                     title={getText('jobsPageSection1Title')}
                     subtitle={getText('jobsPageSection1Subtitle')}
                 >
                     <Markdown source={getText('jobsPageSection1Content')} />
-                </BasicSection>
-                <Divider md />
-                <SingleColumnSection
-                    title={getText('jobsTitle')}
-                    subtitle={getText('jobsSubtitle')}
-                >
+                </BasicSection> */}
+                {/* <Divider md /> */}
+                <SingleColumnSection title={getText('jobsTitle')} subtitle={getText('jobsSubtitle')}>
                     <JobsGrid />
                 </SingleColumnSection>
 

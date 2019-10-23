@@ -3,6 +3,7 @@ import styles from './style.module.scss';
 
 import Image from '../Image';
 import Markdown from '../Markdown';
+import ButtonLink from '../ButtonLink';
 
 const JobItem = ({ title, description, endDate, link, jobskills, partner } = this.props) => {
     const renderSkills = jobSkills => {
@@ -23,20 +24,14 @@ const JobItem = ({ title, description, endDate, link, jobskills, partner } = thi
                 <span className={styles.lookingFor}>is looking for a</span>
                 <span className={styles.title}>{title}</span>
                 <div className={styles.underline} />
-                <span className={styles.endsTitle}>APPLICATION ENDS</span>
                 <div className={styles.endsBlock}>
+                    <span className={styles.endsBlockTitle}>Application ends</span>
                     <span className={styles.endsBlockDate}>{endDate}</span>
                 </div>
             </div>
             <div className={styles.jobItemRight}>
-                {jobskills.length > 0 && (
-                    <React.Fragment>
-                        <h2 className={styles.skillsTitle}>SKILLS</h2>
-                        <div className={styles.jobSkills}>{renderSkills(jobskills)}</div>
-                    </React.Fragment>
-                )}
+                {jobskills.length > 0 && <div className={styles.jobSkills}>{renderSkills(jobskills)}</div>}
                 <Markdown source={description} className={styles.jobDescription} />
-                {/* <p className={styles.description}>{description}</p> */}
                 <a href={link} target="_blank" rel="noopener noreferrer" className={styles.readmore}>
                     Read more
                 </a>

@@ -10,28 +10,20 @@ export const contentError = state => state.dynamicContent.error;
 export const tracks = state => state.dynamicContent.content.tracks || [];
 export const faqs = state => state.dynamicContent.content.faqs || [];
 export const partners = state => state.dynamicContent.content.partners || [];
-export const eventInfos = state =>
-    state.dynamicContent.content.eventinfos || [];
-export const eventDates = state =>
-    state.dynamicContent.content.eventdates || [];
+export const eventInfos = state => state.dynamicContent.content.eventinfos || [];
+export const eventDates = state => state.dynamicContent.content.eventdates || [];
 
-export const teamMembers = state =>
-    state.dynamicContent.content.teammembers || [];
+export const teamMembers = state => state.dynamicContent.content.teammembers || [];
 
-export const challenges = state =>
-    state.dynamicContent.content.challenges || [];
-export const footerImages = state =>
-    state.dynamicContent.content.footerimages || [];
-export const guidelines = state =>
-    state.dynamicContent.content.guidelines || [];
+export const challenges = state => state.dynamicContent.content.challenges || [];
+export const footerImages = state => state.dynamicContent.content.footerimages || [];
+export const guidelines = state => state.dynamicContent.content.guidelines || [];
 
 export const schedules = state => state.dynamicContent.content.schedules || [];
-export const openinghours = state =>
-    state.dynamicContent.content.openinghours || [];
+export const openinghours = state => state.dynamicContent.content.openinghours || [];
 export const jobs = state => state.dynamicContent.content.jobs || [];
 export const hardwares = state => state.dynamicContent.content.hardwares || [];
-export const genericPages = state =>
-    state.dynamicContent.content.genericpages || [];
+export const genericPages = state => state.dynamicContent.content.genericpages || [];
 //-------------------------Nav------------------------------------
 export const isSidebarOpen = state => state.dynamicContent.nav.sidebarOpen;
 export const navTitle = state => state.dynamicContent.nav.navTitle;
@@ -87,8 +79,13 @@ export const globalByTeamPriority = createSelector(
     }
 );
 
-export const partnersByPriority = createSelector(
+export const partnersNotHidden = createSelector(
     partners,
+    data => filter(data, p => !p.hidden)
+);
+
+export const partnersByPriority = createSelector(
+    partnersNotHidden,
     data => {
         return sortBy(data, 'priority');
     }

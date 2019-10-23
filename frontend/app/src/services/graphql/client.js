@@ -1,6 +1,6 @@
 import ApolloClient from 'apollo-boost';
 import gql from 'graphql-tag';
-import config from '../../config';
+import config from '../../config/config';
 
 const client = new ApolloClient({
     uri: config.GRAPHQL_BASE_URL

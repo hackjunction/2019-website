@@ -7,7 +7,7 @@ export const features = {
     home: true,
     info: true,
     transportation: true,
-    jobs: false,
+    jobs: true,
     junctionWeek: true,
     live: false,
     partners: true,

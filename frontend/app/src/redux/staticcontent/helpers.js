@@ -1,4 +1,4 @@
-import defaultText from '../../Pages/textfields';
+import defaultText from '../../config/textfields';
 
 export const getText = (textfields, isEditor) => key => {
     if (textfields.hasOwnProperty(key)) {

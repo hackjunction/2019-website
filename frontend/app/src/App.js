@@ -11,8 +11,8 @@ import { hotjar } from 'react-hotjar';
 import { withRouter } from 'react-router';
 import { AnimatePresence } from 'framer-motion';
 
-import config from './config';
-import * as featuresList from './Pages/features';
+import config from './config/config';
+import * as featuresList from './config/features';
 
 import ScrollToTop from './components/ScrollToTop';
 import GlobalLifecycle from './GlobalLifecycle';

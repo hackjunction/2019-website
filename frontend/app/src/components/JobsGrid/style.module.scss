@@ -63,6 +63,7 @@
     color: $black;
     * {
         color: $black;
+        text-align: left;
     }
 
     a {
@@ -94,14 +95,24 @@
 }
 
 .endsTitle {
+    margin-top: 1rem;
     align-self: center;
 }
 .endsBlock {
     background: black;
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-self: stretch;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+
+    &Title {
+        color: white;
+    }
+
     &Date {
         text-align: center;
         color: white;
@@ -112,6 +123,8 @@
 .jobSkills {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1rem;
+
     :last-child {
         .jobSkillsBlockDivider {
             display: none;
@@ -142,7 +155,17 @@
 }
 .readmore {
     margin-top: auto;
-    margin-bottom: 20px;
-    text-decoration: underline;
+    margin-bottom: 1rem;
     font-size: 22px;
+    text-align: center;
+    background: $link-colour;
+    color: $white;
+    padding: 0.5rem;
+    min-width: 200px;
+    border-radius: 7px;
+    align-self: center;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

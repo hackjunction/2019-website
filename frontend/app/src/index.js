@@ -17,7 +17,7 @@ import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import configureStore from './redux/configureStore';
-import config from './config';
+import config from './config/config';
 
 const httpLink = createHttpLink({
     uri: config.GRAPHQL_BASE_URL

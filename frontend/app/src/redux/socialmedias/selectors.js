@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import config from '../../config';
+import config from '../../config/config';
 
 /* How often to update a given content type?
  *
