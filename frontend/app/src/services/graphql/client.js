@@ -48,6 +48,7 @@ export const getDynamicContent = () => {
                     showOnTerminalPage
                     link
                     priority
+                    hidden
                     logo {
                         url
                         public_id
