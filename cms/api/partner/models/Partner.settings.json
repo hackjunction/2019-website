@@ -6,10 +6,7 @@
     "description": ""
   },
   "options": {
-    "timestamps": [
-      "createdAt",
-      "updatedAt"
-    ]
+    "timestamps": ["createdAt", "updatedAt"]
   },
   "attributes": {
     "name": {
@@ -32,6 +29,9 @@
       "type": "text"
     },
     "showOnTerminalPage": {
+      "type": "boolean"
+    },
+    "showOnPartnersPage": {
       "type": "boolean"
     },
     "priority": {
