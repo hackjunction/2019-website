@@ -6,7 +6,10 @@
     "description": ""
   },
   "options": {
-    "timestamps": ["createdAt", "updatedAt"]
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {

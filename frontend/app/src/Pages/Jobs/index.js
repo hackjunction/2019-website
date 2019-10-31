@@ -7,11 +7,9 @@ import Page from '../PageHOC';
 
 import Divider from '../../components/Divider';
 import HeroImage from '../../components/HeroImage';
-import BasicSection from '../../components/BasicSection';
 import ContactForm from '../../components/ContactForm';
 import BasicHeader from '../../components/BasicHeader';
 import JobsGrid from '../../components/JobsGrid';
-import Markdown from '../../components/Markdown';
 import SingleColumnSection from '../../components/SingleColumnSection';
 
 class JobsPage extends PureComponent {
@@ -25,7 +23,10 @@ class JobsPage extends PureComponent {
                 ogImageUrl={getMedia('jobsPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('jobsPageHeaderImage')}>
-                    <BasicHeader title={getText('jobsPageHeaderTitle')} body={getText('jobsPageHeaderContent')} />
+                    <BasicHeader
+                        title={getText('jobsPageHeaderTitle')}
+                        body={getText('jobsPageHeaderContent')}
+                    />
                 </HeroImage>
                 {/* Took this away for now as there was no content,
                     can be added back later
@@ -38,7 +39,10 @@ class JobsPage extends PureComponent {
                     <Markdown source={getText('jobsPageSection1Content')} />
                 </BasicSection> */}
                 {/* <Divider md /> */}
-                <SingleColumnSection title={getText('jobsTitle')} subtitle={getText('jobsSubtitle')}>
+                <SingleColumnSection
+                    title={getText('jobsTitle')}
+                    subtitle={getText('jobsSubtitle')}
+                >
                     <JobsGrid />
                 </SingleColumnSection>
 
