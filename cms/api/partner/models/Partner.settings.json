@@ -47,12 +47,12 @@
       "collection": "track",
       "via": "mentors"
     },
-    "challenges": {
-      "collection": "challenge",
-      "via": "partner"
-    },
     "undefined": {
       "collection": "job",
+      "via": "partner"
+    },
+    "challenges": {
+      "collection": "challenge",
       "via": "partner"
     }
   }

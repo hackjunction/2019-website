@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './ChallengesGrid.module.scss';
 import { connect } from 'react-redux';
+
+import { createSelector } from 'reselect';
 import snake from 'to-snake-case';
+import sortBy from 'lodash-es';
 
 import ChallengeItem from './ChallengeItem';
 
@@ -18,9 +21,15 @@ const ChallengesGrid = props => {
         if (mentors.length) {
             return (
                 <React.Fragment>
-                    <h3 className={styles.mentorTitle}>{getText('trackMentor') || 'Track Mentor'}</h3>
+                    <h3 className={styles.mentorTitle}>
+                        {getText('trackMentor') || 'Track Mentor'}
+                    </h3>
                     {mentors.map(mentor => (
-                        <ChallengeItem key={mentor.name} logo={mentor.logo} content={mentor.trackMentorDescription} />
+                        <ChallengeItem
+                            key={mentor.name}
+                            logo={mentor.logo}
+                            content={mentor.trackMentorDescription}
+                        />
                     ))}
                 </React.Fragment>
             );
@@ -29,7 +38,13 @@ const ChallengesGrid = props => {
 
     const renderChallenges = challenges => {
         if (challenges.length) {
-            return challenges.map(challenge => (
+            /* const challengesSorted;
+            _.sortBy(challenges, 'priority');
+            console.log('Challenges Sorted:', challengesSorted); */
+            const challengesSorted = challenges.sort((a, b) =>
+                a.priority > b.priority ? 1 : -1
+            );
+            return challengesSorted.map(challenge => (
                 <ChallengeItem
                     key={snake(challenge.name)}
                     logo={challenge.partner.logo}
@@ -39,7 +54,11 @@ const ChallengesGrid = props => {
                 />
             ));
         } else {
-            return <h1 className={styles.challengesPlaceholder}>{getText('challengeComingSoon')}</h1>;
+            return (
+                <h1 className={styles.challengesPlaceholder}>
+                    {getText('challengeComingSoon')}
+                </h1>
+            );
         }
     };
 
@@ -50,7 +69,9 @@ const ChallengesGrid = props => {
                     <Divider md />
                     <SingleColumnSection>
                         <h2 className={styles.trackName}>{track.name}</h2>
-                        <p className={styles.trackDescription}>{track.description}</p>
+                        <p className={styles.trackDescription}>
+                            {track.description}
+                        </p>
                         <Divider sm />
                         {renderChallenges(track.challenges)}
                         {renderMentors(track.mentors)}

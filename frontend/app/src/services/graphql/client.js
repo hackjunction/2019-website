@@ -62,6 +62,7 @@ export const getDynamicContent = () => {
                         name
                         content
                         slug
+                        priority
                         partner {
                             logo {
                                 url
@@ -117,6 +118,7 @@ export const getDynamicContent = () => {
                     prize
                     videoLink
                     slug
+                    priority
                     partner {
                         about
                         logo {

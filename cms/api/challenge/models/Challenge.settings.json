@@ -52,6 +52,9 @@
     "track": {
       "model": "track",
       "via": "challenges"
+    },
+    "priority": {
+      "type": "integer"
     }
   }
 }

@@ -166,7 +166,7 @@ const mapStateToProps = (state, ownProps) => {
     const { match } = ownProps;
     const { slug } = match.params;
     //Get all challenges
-    const challenges = DynamicSelectors.challenges(state);
+    const challenges = DynamicSelectors.challengesByPriority(state);
 
     //See if challenge with the same slug (eg. /challenge-one) exists and returns its index
     const challengeIndex = findIndex(challenges, c => {
