@@ -33,11 +33,11 @@ class VolunteerPage extends Component {
                         title={getText('volunteerPageHeaderTitle')}
                         body={getText('volunteerPageHeaderContent')}
                     >
-                        <ButtonLink
+                        {/*  <ButtonLink
                             text={getText('volunteerPageHeaderButton')}
                             link={getText('volunteerPageHeaderButtonLink')}
                             type="mainsite"
-                        />
+                        /> */}
                     </BasicHeader>
                 </HeroImage>
                 <Divider sm />
@@ -63,12 +63,12 @@ class VolunteerPage extends Component {
                     title={getText('volunteerPageInterestedTitle')}
                     content={getText('volunteerPageInterestedContent')}
                 >
-                    <ButtonLink
+                    {/*  <ButtonLink
                         text={getText('volunteerPageFormButton')}
                         link={getText('volunteerPageFormButtonLink')}
                         align="left"
                         type="mainsite"
-                    />
+                    /> */}
                 </ImageSection>
                 <Divider lg />
                 <NewsLetterForm />
