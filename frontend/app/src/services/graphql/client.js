@@ -59,6 +59,7 @@ export const getDynamicContent = () => {
                     name
                     description
                     challenges {
+                        _id
                         name
                         content
                         slug

@@ -9,7 +9,12 @@ import ScheduleItem from './ScheduleItem';
 const Schedules = props => {
     const renderSchedules = schedules => {
         return schedules.map(schedule => {
-            return <ScheduleItem {...schedule} />;
+            return (
+                <ScheduleItem
+                    {...schedule}
+                    key={schedule.name + schedule.starts}
+                />
+            );
         });
     };
     return (

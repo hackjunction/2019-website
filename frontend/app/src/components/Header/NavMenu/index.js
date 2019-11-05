@@ -32,9 +32,6 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/partners">
                     Partners
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/volunteer">
-                    Volunteers
-                </Link>
                 <Link className="NavMenu--inner__menu-item" to="/jobs">
                     Jobs
                 </Link>

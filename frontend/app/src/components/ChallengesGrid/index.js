@@ -38,9 +38,6 @@ const ChallengesGrid = props => {
 
     const renderChallenges = challenges => {
         if (challenges.length) {
-            /* const challengesSorted;
-            _.sortBy(challenges, 'priority');
-            console.log('Challenges Sorted:', challengesSorted); */
             const challengesSorted = challenges.sort((a, b) =>
                 a.priority > b.priority ? 1 : -1
             );

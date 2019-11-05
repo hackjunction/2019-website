@@ -7,8 +7,8 @@ export const contentUpdated = state => state.dynamicContent.lastUpdate;
 export const contentLoading = state => state.dynamicContent.loading;
 export const contentError = state => state.dynamicContent.error;
 
-export const tracks = state => state.dynamicContent.content.tracks || [];
 export const faqs = state => state.dynamicContent.content.faqs || [];
+export const tracks = state => state.dynamicContent.content.tracks || [];
 export const partners = state => state.dynamicContent.content.partners || [];
 export const eventInfos = state =>
     state.dynamicContent.content.eventinfos || [];
@@ -43,13 +43,6 @@ export const shouldUpdate = createSelector(
 );
 
 //-----------------------------------------------------------------
-
-export const challengesByPriority = createSelector(
-    challenges,
-    data => {
-        return sortBy(data, 'priority');
-    }
-);
 
 export const tracksAlphabetically = createSelector(
     tracks,
