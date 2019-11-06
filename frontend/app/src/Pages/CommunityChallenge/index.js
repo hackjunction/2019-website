@@ -66,6 +66,42 @@ class CommunityChallengePage extends Component {
                         source={getText('communityChallengeSection4Body')}
                     />
                 </BasicSection>
+                <Markdown md />
+                <BasicSection
+                    title={getText('communityChallengeSection5Title')}
+                >
+                    <Markdown
+                        source={getText('communityChallengeSection5Body')}
+                    />
+                </BasicSection>
+                <BasicSection
+                    title={getText('communityChallengeSection6Title')}
+                >
+                    <Markdown
+                        source={getText('communityChallengeSection6Body')}
+                    />
+                </BasicSection>
+                <BasicSection
+                    title={getText('communityChallengeSection7Title')}
+                >
+                    <Markdown
+                        source={getText('communityChallengeSection7Body')}
+                    />
+                </BasicSection>
+                <BasicSection
+                    title={getText('communityChallengeSection8Title')}
+                >
+                    <Markdown
+                        source={getText('communityChallengeSection8Body')}
+                    />
+                </BasicSection>
+                <BasicSection
+                    title={getText('communityChallengeSection9Title')}
+                >
+                    <Markdown
+                        source={getText('communityChallengeSection9Body')}
+                    />
+                </BasicSection>
                 <Divider md />
             </Page>
         );
