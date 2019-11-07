@@ -117,12 +117,14 @@ class ChallengePage extends PureComponent {
                     />
                 </BasicSection>
                 <Divider sm />
-                <BasicSection title={getText('challengeAboutTitle')}>
-                    <Markdown
-                        source={challenge.partner.about}
-                        className={styles.markdown}
-                    />
-                </BasicSection>
+                {challenge.partner.about ? (
+                    <BasicSection title={getText('challengeAboutTitle')}>
+                        <Markdown
+                            source={challenge.partner.about}
+                            className={styles.markdown}
+                        />
+                    </BasicSection>
+                ) : null}
 
                 <Divider mlg />
                 <SingleColumnSection
