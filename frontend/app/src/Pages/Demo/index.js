@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import styles from './style.module.scss';
+
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import Page from '../PageHOC';
@@ -47,8 +49,12 @@ class DemoPage extends Component {
                 </BasicSection>
                 <Divider md />
                 <SingleColumnSection>
-                    <Image image={getMedia('demoPageImage1')} />
+                    <Image
+                        className={styles.DemoImage}
+                        image={getMedia('demoPageImage1')}
+                    />
                 </SingleColumnSection>
+
                 <Divider md />
                 <BasicSection
                     title={getText('demoPageSection2Title')}
@@ -65,8 +71,12 @@ class DemoPage extends Component {
                 </BasicSection>
                 <Divider md />
                 <SingleColumnSection>
-                    <Image image={getMedia('demoPageImage2')} />
+                    <Image
+                        className={styles.DemoImage}
+                        image={getMedia('demoPageImage2')}
+                    />
                 </SingleColumnSection>
+
                 <Divider md />
                 <SingleColumnSection
                     title={getText('demoPageSection4Title')}

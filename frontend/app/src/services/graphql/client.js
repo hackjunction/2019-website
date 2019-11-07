@@ -70,6 +70,12 @@ export const getDynamicContent = () => {
                                 public_id
                             }
                         }
+                        track {
+                            headerImage {
+                                url
+                                public_id
+                            }
+                        }
                     }
                     mentors {
                         name

@@ -21,19 +21,13 @@ import * as DynamicSelectors from '../../redux/dynamiccontent/selectors';
 import * as StaticSelectors from '../../redux/staticcontent/selectors';
 
 class ChallengePage extends PureComponent {
-    componentDidMount() {
-        // this.props.SortChallenges();
-    }
     render() {
-        console.log('GET TEXT', this.props.getText('challengePageWhatWeBring'));
         const {
             challenge,
             previousChallenge,
             nextChallenge,
             getText
         } = this.props;
-
-        console.log('THIS PROPS', this.props);
 
         if (!challenge) {
             return <NotFoundPage />;
@@ -130,7 +124,12 @@ class ChallengePage extends PureComponent {
                     />
                 </BasicSection>
                 <Divider sm />
-
+                <Divider mlg />
+                <SingleColumnSection
+                    title={getText('homePageTracksTitle')}
+                    subtitle={getText('homePageTracksSubtitle')}
+                />
+                <TracksGrid />
                 <div className={styles.ChallengePagePrevNext}>
                     {previousChallenge ? (
                         <Link
@@ -153,55 +152,23 @@ class ChallengePage extends PureComponent {
                     ) : null}
                 </div>
 
-                <Divider mlg />
-                <SingleColumnSection
-                    title={getText('homePageTracksTitle')}
-                    subtitle={getText('homePageTracksSubtitle')}
-                />
-                <TracksGrid />
                 <Divider md />
             </Page>
         );
     }
 }
 
-/*  const challengesSorted = challenges.sort((a, b) =>
-        a.priority > b.priority ? 1 : -1
-    ); 
-*/
-
 const mapStateToProps = (state, ownProps) => {
     const { match } = ownProps;
     const { slug } = match.params;
     //Get all challenges
     const tracks = DynamicSelectors.tracks(state);
-    const challenges = DynamicSelectors.challenges(state);
-    /*  const challenges = [];
-    const SortTracks = tracks => {
-        return challenges.push(
-            tracks.map(track => {
-                return track.challenges.sort((a, b) =>
-                    a.priority > b.priority ? 1 : -1
-                );
-            })
-        );
-    }; */
-    /*  const listOfChallenges = [];
-    const challenges = () => {
-        return mapChallengesFromTracks;
-    }; */
-
-    /*    const SortChallenges = () => {};
-    const mapChallengesFromTracks = tracks.map(track => {
-        const challengesSorted = track.challenges.sort((a, b) =>
+    //const challenges = DynamicSelectors.challenges(state);
+    const challenges = tracks.flatMap(track => {
+        return track.challenges.sort((a, b) =>
             a.priority > b.priority ? 1 : -1
         );
-
-        return listOfChallenges.concat(challengesSorted);
     });
-
-    const challengesList = listOfChallenges.push(mapChallengesFromTracks);
- */
     //See if challenge with the same slug (eg. /challenge-one) exists and returns its index
     const challengeIndex = findIndex(challenges, c => {
         return c.slug.trim() === slug.trim();
@@ -209,6 +176,7 @@ const mapStateToProps = (state, ownProps) => {
 
     //get challenge from challenges by using challengeIndex to get the index
     const challenge = challenges[challengeIndex];
+    console.log('CHALLENGE: ', challenge);
     //count challenges
     const challengeCount = challenges.length;
 
@@ -222,13 +190,14 @@ const mapStateToProps = (state, ownProps) => {
             ? challenges[challengeIndex + 1]
             : null;
 
+    console.log('CHALLENGE:');
+    console.log(challenge);
     //Returns the values
     return {
         previousChallenge: previousChallenge,
         nextChallenge: nextChallenge,
         challenge: challenge,
         getText: StaticSelectors.buildGetText(state)
-        //SortChallenges: SortChallenges()
     };
 };
 
