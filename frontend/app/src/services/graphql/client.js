@@ -62,6 +62,13 @@ export const getDynamicContent = () => {
                         _id
                         name
                         content
+                        description
+                        whatWeBring
+                        extraDetails
+                        problems
+                        judging
+                        prize
+                        videoLink
                         slug
                         priority
                         partner {

@@ -44,7 +44,7 @@ class ChallengePage extends PureComponent {
                         : null
                 }
             >
-                <HeroImage image={challenge.track.headerImage}>
+                <HeroImage image={challenge.track.headerImage || ''}>
                     <div className={styles.headerWrapper}>
                         {challenge.partner && challenge.partner.logo && (
                             <div className={styles.headerLogo}>
@@ -176,7 +176,6 @@ const mapStateToProps = (state, ownProps) => {
 
     //get challenge from challenges by using challengeIndex to get the index
     const challenge = challenges[challengeIndex];
-    console.log('CHALLENGE: ', challenge);
     //count challenges
     const challengeCount = challenges.length;
 
@@ -190,8 +189,6 @@ const mapStateToProps = (state, ownProps) => {
             ? challenges[challengeIndex + 1]
             : null;
 
-    console.log('CHALLENGE:');
-    console.log(challenge);
     //Returns the values
     return {
         previousChallenge: previousChallenge,
