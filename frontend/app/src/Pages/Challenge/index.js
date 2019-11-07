@@ -123,13 +123,14 @@ class ChallengePage extends PureComponent {
                         className={styles.markdown}
                     />
                 </BasicSection>
-                <Divider sm />
+
                 <Divider mlg />
                 <SingleColumnSection
                     title={getText('homePageTracksTitle')}
                     subtitle={getText('homePageTracksSubtitle')}
                 />
                 <TracksGrid />
+                <Divider md />
                 <div className={styles.ChallengePagePrevNext}>
                     {previousChallenge ? (
                         <Link
