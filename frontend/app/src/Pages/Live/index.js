@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import * as styles from './style.module.scss';
+
 import * as ContentSelectors from '../../redux/staticcontent/selectors';
 
 import BasicSection from '../../components/BasicSection';
@@ -80,8 +82,8 @@ class LivePage extends Component {
                 >
                     <Markdown source={getText('livePageSection3Content')} />
                     <ButtonLink
-                        text={'livePageSection3Button'}
-                        link={'livePageSection3ButtonLink'}
+                        text={getText('livePageSection3Button')}
+                        link={getText('livePageSection3ButtonLink')}
                         size="sm"
                         align="left"
                     />
@@ -121,7 +123,10 @@ class LivePage extends Component {
                 </BasicSection>
                 <Divider md />
                 <SingleColumnSection>
-                    <Image image={getMedia('livePageVenueMap')} />
+                    <Image
+                        className={styles.LiveImage}
+                        image={getMedia('livePageVenueMap')}
+                    />
                 </SingleColumnSection>
 
                 <Divider md />

@@ -2,8 +2,8 @@
 
 .verticalSection {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    //justify-content: flex-start;
+    //align-content: flex-start;
     flex-direction: column;
     max-width: 980px;
     margin: 0 auto;
