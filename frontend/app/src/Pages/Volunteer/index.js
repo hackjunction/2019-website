@@ -12,7 +12,6 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import ImageSection from '../../components/ImageSection';
 import HeroImage from '../../components/HeroImage';
 import BasicHeader from '../../components/BasicHeader';
-import ButtonLink from '../../components/ButtonLink';
 import NewsLetterForm from '../../components/NewsLetterForm';
 
 import Page from '../PageHOC';

@@ -72,6 +72,7 @@ export const getDynamicContent = () => {
                         slug
                         priority
                         partner {
+                            about
                             logo {
                                 url
                                 public_id

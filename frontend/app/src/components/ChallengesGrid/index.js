@@ -2,9 +2,7 @@ import React from 'react';
 import styles from './ChallengesGrid.module.scss';
 import { connect } from 'react-redux';
 
-import { createSelector } from 'reselect';
 import snake from 'to-snake-case';
-import sortBy from 'lodash-es';
 
 import ChallengeItem from './ChallengeItem';
 
