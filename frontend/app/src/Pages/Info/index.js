@@ -51,7 +51,7 @@ class InfoPage extends Component {
                 </BasicSection>
 
                 <Divider md />
-                <SingleColumnSection
+                {/*    <SingleColumnSection
                     title={getText('infoPageScheduleTitle')}
                     subtitle={getText('infoPageScheduleSubtitle')}
                 />
@@ -79,7 +79,7 @@ class InfoPage extends Component {
                     subtitle={getText('infoPageScheduleOthersSubtitle')}
                 >
                     <OpeningHours />
-                </BasicSection>
+                </BasicSection> */}
                 <Divider md />
                 <BasicSection
                     title={getText('infoPageTracksTitle')}

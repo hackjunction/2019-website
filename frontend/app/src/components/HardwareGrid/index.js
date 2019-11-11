@@ -15,6 +15,11 @@ const HardwareGrid = props => {
                 ) : (
                     <span className={styles.HardwareGridItem}>{h.name}</span>
                 )}
+                {h.amount ? (
+                    <span className={styles.HardwareGridAmount}>
+                        (x{h.amount})
+                    </span>
+                ) : null}
             </div>
         ));
     };

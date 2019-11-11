@@ -34,16 +34,9 @@ class HardwarePage extends PureComponent {
                     title={getText('hardwarePageSection1Title')}
                     subtitle={getText('hardwarePageSection1Subtitle')}
                 />
-                <VerticalSection>
-                    <VerticalText
-                        title={
-                            getText('hardwarePageListTitle') ||
-                            'MICRO CONTROLLERS/ SHIELDS'
-                        }
-                    >
-                        <HardwareGrid />
-                    </VerticalText>
-                </VerticalSection>
+                <SingleColumnSection title={getText('hardwarePageListTitle')}>
+                    <HardwareGrid />
+                </SingleColumnSection>
             </Page>
         );
     }

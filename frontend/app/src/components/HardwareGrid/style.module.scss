@@ -1,10 +1,21 @@
+@import '../../styles/variables.scss';
 .Hardware {
     padding-bottom: 50px;
-    max-height: 400px;
+    max-width: 980px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    @include bp-med {
+        justify-content: space-between;
+    }
     &Grid {
-        max-width: 100px;
+        padding: 10px;
+        width: 100%;
+        max-width: 240px;
+        //  display: flex;
         &Item {
-            text-align: center;
             font-size: 18px;
             line-height: 32px;
             font-family: Lato;
