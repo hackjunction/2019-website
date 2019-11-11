@@ -5,15 +5,12 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     flex-wrap: wrap;
-    @include bp-med {
-        justify-content: space-between;
-    }
     &Grid {
         padding: 10px;
         width: 100%;
-        max-width: 240px;
+        max-width: 300px;
         //  display: flex;
         &Item {
             font-size: 18px;
