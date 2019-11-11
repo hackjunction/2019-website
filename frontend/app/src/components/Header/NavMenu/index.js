@@ -19,12 +19,22 @@ const NavMenuInner = memo(props => {
     return (
         <div className="NavMenu--inner">
             <Link to="/">
-                <Image className="NavMenu--inner__logo" image={getMedia('navMenuTopLogo')} alt="Junction text logo" />
+                <Image
+                    className="NavMenu--inner__logo"
+                    image={getMedia('navMenuTopLogo')}
+                    alt="Junction text logo"
+                />
             </Link>
             <nav className="NavMenu--inner__menu">
                 {/* HOME */}
                 <Link to="/">
                     <h6 className="NavMenu--inner__menu-title">Home</h6>
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/live">
+                    Live
+                </Link>
+                <Link className="NavMenu--inner__menu-item" to="/demo">
+                    Demo
                 </Link>
                 <Link className="NavMenu--inner__menu-item" to="/challenges">
                     Tracks & Challenges
@@ -42,14 +52,20 @@ const NavMenuInner = memo(props => {
                 <Link className="NavMenu--inner__menu-item" to="/info">
                     Practical Info
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/transportation">
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/transportation"
+                >
                     Transportation
                 </Link>
                 <Divider xs />
                 <Link className="NavMenu--inner__menu-item" to="/terminal">
                     Terminal
                 </Link>
-                <Link className="NavMenu--inner__menu-item" to="/community-challenge">
+                <Link
+                    className="NavMenu--inner__menu-item"
+                    to="/community-challenge"
+                >
                     Community Challenge 2019
                 </Link>
 
@@ -58,28 +74,35 @@ const NavMenuInner = memo(props => {
                     <h6 className="NavMenu--inner__menu-title">Contact</h6>
                 </Link>
 
-                {config.IS_DEBUG ? <h6 className="NavMenu--inner__menu-title">New sites not live yet</h6> : null}
-
+                {/* NEW SITES NOT YET PUBLISHED */}
                 {config.IS_DEBUG ? (
-                    <Link className="NavMenu--inner__menu-item" to="/Live">
-                        Live
-                    </Link>
-                ) : null}
-                {config.IS_DEBUG ? (
-                    <Link className="NavMenu--inner__menu-item" to="/demo">
-                        Demo
-                    </Link>
-                ) : null}
-                {config.IS_DEBUG ? (
-                    <Link className="NavMenu--inner__menu-item" to="/hardware">
-                        Hardware Lab
-                    </Link>
+                    <div>
+                        <h6 className="NavMenu--inner__menu-title">
+                            New sites not live yet
+                        </h6>
+                        <Link
+                            className="NavMenu--inner__menu-item"
+                            to="/hardware"
+                        >
+                            Hardware Lab
+                        </Link>
+                    </div>
                 ) : null}
             </nav>
 
-            <h6 className="NavMenu--inner__menu-title">Junction main website</h6>
-            <a href="https://hackjunction.com" target="_blank" rel="noopener noreferrer">
-                <Image className="NavMenu--bottom-logo" image={getMedia('navMenuBottomLogo')} alt="Junction logo" />
+            <h6 className="NavMenu--inner__menu-title">
+                Junction main website
+            </h6>
+            <a
+                href="https://hackjunction.com"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Image
+                    className="NavMenu--bottom-logo"
+                    image={getMedia('navMenuBottomLogo')}
+                    alt="Junction logo"
+                />
             </a>
         </div>
     );
@@ -95,7 +118,9 @@ const NavMenu = ({ isSidebarOpen, toggleSidebar }) => {
     return (
         <div className="NavMenuWrapper">
             <div
-                className={`NavMenuOverlay ${isSidebarOpen ? 'NavMenuOverlay-open' : ''}`}
+                className={`NavMenuOverlay ${
+                    isSidebarOpen ? 'NavMenuOverlay-open' : ''
+                }`}
                 onClick={() => toggleSidebar(false)}
             />
             <div className={`NavMenu ${isSidebarOpen ? 'NavMenu-open' : ''}`}>
