@@ -43,6 +43,12 @@ export const shouldUpdate = createSelector(
 );
 
 //-----------------------------------------------------------------
+export const hardwareAlphabetically = createSelector(
+    hardwares,
+    data => {
+        return sortBy(data, d => d.name.toLowerCase());
+    }
+);
 
 export const tracksAlphabetically = createSelector(
     tracks,

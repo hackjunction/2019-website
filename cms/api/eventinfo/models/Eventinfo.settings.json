@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "eventinfo",
   "info": {
     "name": "eventinfo",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -19,6 +22,9 @@
       "model": "file",
       "via": "related",
       "plugin": "upload"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

@@ -161,6 +161,7 @@ export const getDynamicContent = () => {
                     _id
                     name
                     content
+                    link
                     logo {
                         url
                         public_id
@@ -206,7 +207,7 @@ export const getDynamicContent = () => {
                 }
                 hardwares {
                     name
-                    category
+                    amount
                     link
                 }
                 genericpages {

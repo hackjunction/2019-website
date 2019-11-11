@@ -39,6 +39,9 @@
         font-family: $font-title;
         font-weight: bold;
         text-transform: uppercase;
+        @include bp-med {
+            padding-top: initial;
+        }
     }
     &__content {
         align-self: flex-start;

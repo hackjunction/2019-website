@@ -1,8 +1,8 @@
 .Hardware {
     padding-bottom: 50px;
+    max-height: 400px;
     &Grid {
-        display: flex;
-        flex-direction: column;
+        max-width: 100px;
         &Item {
             text-align: center;
             font-size: 18px;

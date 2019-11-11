@@ -22,26 +22,8 @@ const HardwareGrid = props => {
         <div className={styles.Hardware}>{renderHardware(props.hardware)}</div>
     );
 };
-
-const mapStateToProps = (state, ownProps) => {
-    const category = ownProps.category;
-    let hardware;
-    switch (category) {
-        case 1:
-            hardware = ContentSelectors.hardwareOne(state);
-            break;
-        case 2:
-            hardware = ContentSelectors.hardwareTwo(state);
-            break;
-        case 3:
-            hardware = ContentSelectors.hardwareThree(state);
-            break;
-        default:
-            ContentSelectors.hardwares(state);
-    }
-    return {
-        hardware: hardware
-    };
-};
+const mapStateToProps = state => ({
+    hardware: ContentSelectors.hardwareAlphabetically(state)
+});
 
 export default connect(mapStateToProps)(HardwareGrid);

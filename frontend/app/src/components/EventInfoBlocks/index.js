@@ -11,7 +11,20 @@ const EventInfoBlocks = props => {
         return props.stats.map(stat => {
             return (
                 <div className="EventInfoBlock" key={stat._id}>
-                    <Image image={stat.logo} className="EventInfoBlock--logo" />
+                    {stat.link ? (
+                        <a href={stat.link}>
+                            <Image
+                                image={stat.logo}
+                                className="EventInfoBlock--logo"
+                            />
+                        </a>
+                    ) : (
+                        <Image
+                            image={stat.logo}
+                            className="EventInfoBlock--logo"
+                        />
+                    )}
+
                     <h6 className="EventInfoBlock--name">{stat.name}</h6>
                     <span className="EventInfoBlock--content">
                         {stat.content}

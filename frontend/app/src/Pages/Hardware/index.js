@@ -37,26 +37,11 @@ class HardwarePage extends PureComponent {
                 <VerticalSection>
                     <VerticalText
                         title={
-                            getText('hardwarePageLeftTitle') ||
+                            getText('hardwarePageListTitle') ||
                             'MICRO CONTROLLERS/ SHIELDS'
                         }
                     >
-                        <HardwareGrid category={1} />
-                    </VerticalText>
-
-                    <VerticalText
-                        title={getText('hardwarePageMiddleTitle') || 'SENSORS'}
-                    >
-                        <HardwareGrid category={2} />
-                    </VerticalText>
-
-                    <VerticalText
-                        title={
-                            getText('hardwarePageRightTitle') ||
-                            'OTHER FOOD OPTIONS'
-                        }
-                    >
-                        <HardwareGrid category={3} />
+                        <HardwareGrid />
                     </VerticalText>
                 </VerticalSection>
             </Page>

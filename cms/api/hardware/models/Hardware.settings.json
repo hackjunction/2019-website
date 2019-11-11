@@ -1,12 +1,15 @@
 {
   "connection": "default",
-  "collectionName": "",
+  "collectionName": "hardware",
   "info": {
     "name": "hardware",
     "description": ""
   },
   "options": {
-    "timestamps": true
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
   },
   "attributes": {
     "name": {
@@ -15,14 +18,8 @@
     "link": {
       "type": "string"
     },
-    "category": {
-      "enum": [
-        "",
-        "one",
-        "two",
-        "three"
-      ],
-      "type": "enumeration"
+    "amount": {
+      "type": "integer"
     }
   }
 }
