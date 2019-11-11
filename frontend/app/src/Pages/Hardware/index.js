@@ -12,6 +12,7 @@ import SingleColumnSection from '../../components/SingleColumnSection';
 import VerticalSection from '../../components/VerticalSection';
 import VerticalText from '../../components/VerticalText';
 import HardwareGrid from '../../components/HardwareGrid';
+import Divider from '../../components/Divider';
 
 class HardwarePage extends PureComponent {
     render() {
@@ -34,7 +35,11 @@ class HardwarePage extends PureComponent {
                     title={getText('hardwarePageSection1Title')}
                     subtitle={getText('hardwarePageSection1Subtitle')}
                 />
-                <SingleColumnSection title={getText('hardwarePageListTitle')}>
+                <Divider md />
+                <SingleColumnSection
+                    title={getText('hardwarePageListTitle')}
+                    subtitle={getText('hardwarePageListSubtitle')}
+                >
                     <HardwareGrid />
                 </SingleColumnSection>
             </Page>
