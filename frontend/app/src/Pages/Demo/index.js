@@ -78,11 +78,13 @@ class DemoPage extends Component {
                 </SingleColumnSection>
 
                 <Divider md />
-                <SingleColumnSection
+                <BasicSection
                     title={getText('demoPageSection4Title')}
                     subtitle={getText('demoPageSection4Subtitle')}
-                />
-                <Guidelines />
+                >
+                    <Guidelines />
+                </BasicSection>
+
                 <Divider md />
                 <BasicSection
                     title={getText('demoPageSection5Title')}
