@@ -46,6 +46,9 @@ const NavMenuInner = memo(props => {
                     Jobs
                 </Link>
                 <Divider xs />
+                <Link className="NavMenu--inner__menu-item" to="/hardware">
+                    Hardware Lab
+                </Link>
                 <Link className="NavMenu--inner__menu-item" to="/junction-week">
                     Junction Week
                 </Link>
@@ -80,12 +83,6 @@ const NavMenuInner = memo(props => {
                         <h6 className="NavMenu--inner__menu-title">
                             New sites not live yet
                         </h6>
-                        <Link
-                            className="NavMenu--inner__menu-item"
-                            to="/hardware"
-                        >
-                            Hardware Lab
-                        </Link>
                     </div>
                 ) : null}
             </nav>

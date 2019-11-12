@@ -35,17 +35,17 @@ class HomePage extends Component {
                     >
                         <div className={styles.HomePageHeaderlinks}>
                             <ButtonLink
-                                text={'Practical Information'}
-                                link={'/info'}
+                                text={'Junction App'}
+                                link={
+                                    'https://app.hackjunction.com/dashboard/junction-2019'
+                                }
                                 color="brown"
                                 size="fp"
+                                type="mainsite"
                             />
                             <ButtonLink
-                                text={'Dashboard'}
-                                link={
-                                    'https://app.hackjunction.com/events/junction-2019'
-                                }
-                                type="mainsite"
+                                text={'Live info'}
+                                link={'/info'}
                                 size="fp"
                             />
                         </div>
@@ -54,7 +54,7 @@ class HomePage extends Component {
 
                 <SingleColumnSection title={getText('junctionComingSlogan')} />
                 <Divider sm />
-                
+
                 {/* STYLISH CONTAINER */}
                 <StylishContainer>
                     <div className={styles.padding}>
