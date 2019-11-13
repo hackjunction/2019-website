@@ -28,8 +28,8 @@ class LivePage extends Component {
         const { getMedia, getText } = this.props;
         return (
             <Page
-                className="LivePage"
-                pageTitle="Live."
+                className='LivePage'
+                pageTitle='Live.'
                 metaDesc={getText('livePageHeaderContent')}
                 ogImageUlr={getMedia('volunteerPageHeaderImage').url}
             >
@@ -45,7 +45,9 @@ class LivePage extends Component {
                 >
                     <EventInfoBlocks />
                 </BasicSection>
+                <div id='schedule' />
                 <Divider md />
+
                 <SingleColumnSection
                     title={getText('livePageSection2Title')}
                     subtitle={getText('livePageSection2Subtitle')}
@@ -55,19 +57,19 @@ class LivePage extends Component {
                     title={getText('livePageScheduleFridayTitle')}
                     subtitle={getText('livePageScheduleFridaySubtitle')}
                 >
-                    <Schedules date="friday" />
+                    <Schedules date='friday' />
                 </BasicSection>
                 <BasicSection
                     title={getText('livePageScheduleSaturdayTitle')}
                     subtitle={getText('livePageScheduleSaturdaySubtitle')}
                 >
-                    <Schedules date="saturday" />
+                    <Schedules date='saturday' />
                 </BasicSection>
                 <BasicSection
                     title={getText('livePageScheduleSundayTitle')}
                     subtitle={getText('livePageScheduleSundaySubtitle')}
                 >
-                    <Schedules date="sunday" />
+                    <Schedules date='sunday' />
                 </BasicSection>
                 <BasicSection
                     title={getText('livePageScheduleOthersTitle')}
@@ -84,8 +86,8 @@ class LivePage extends Component {
                     <ButtonLink
                         text={getText('livePageSection3Button')}
                         link={getText('livePageSection3ButtonLink')}
-                        size="sm"
-                        align="left"
+                        size='sm'
+                        align='left'
                     />
                 </BasicSection>
                 <Divider md />
@@ -117,8 +119,8 @@ class LivePage extends Component {
                     <ButtonLink
                         text={getText('livePageSection5Button')}
                         link={'livePageSection5ButtonLink'}
-                        align="left"
-                        size="sm"
+                        align='left'
+                        size='sm'
                     />
                 </BasicSection>
                 <Divider md />

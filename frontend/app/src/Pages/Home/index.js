@@ -23,8 +23,8 @@ class HomePage extends Component {
         const { getMedia, getText } = this.props;
         return (
             <Page
-                className="HomePage"
-                pageTitle="Hack the Future"
+                className='HomePage'
+                pageTitle='Hack the Future'
                 metaDesc={getText('whoAreWeBody')}
                 ogImageUrl={getMedia('homePageHeaderImage').url}
             >
@@ -39,14 +39,14 @@ class HomePage extends Component {
                                 link={
                                     'https://app.hackjunction.com/dashboard/junction-2019'
                                 }
-                                color="brown"
-                                size="fp"
-                                type="mainsite"
+                                color='brown'
+                                size='fp'
+                                type='mainsite'
                             />
                             <ButtonLink
                                 text={'Live info'}
-                                link={'/info'}
-                                size="fp"
+                                link={'/live'}
+                                size='fp'
                             />
                         </div>
                     </HeroCTA>
@@ -71,12 +71,13 @@ class HomePage extends Component {
                         <h1 className={styles.stylishContainerTitle}>
                             {getText('homePageReadyTitle')}
                         </h1>
-                        {/* <ButtonLink
+                        <ButtonLink
+                            block
+                            type='anchor'
                             text={getText('homePageApplyButton')}
-                            size="lg"
-                            type="mainsite"
-                            link="https://app.hackjunction.com/events/junction-2019"
-                        /> */}
+                            size='lg'
+                            link='/live#schedule'
+                        />
                         <p className={styles.stylishContainerDescription}>
                             {getText('homePageReadyDescription')}
                         </p>
@@ -95,21 +96,21 @@ class HomePage extends Component {
                     <Markdown source={getText('homePageVideoLink')} />
                 </SingleColumnSection>
                 <Divider md />
-                <div id="faq" />
+                <div id='faq' />
                 <Divider md />
                 <SingleColumnSection
                     title={getText('faqTitle')}
                     subtitle={getText('faqSubtitle')}
                 >
                     <Divider sm />
-                    <FaqGrid type="" />
+                    <FaqGrid type='' />
                 </SingleColumnSection>
                 <Divider lg />
                 <SingleColumnSection
                     title={getText('partnersTitle')}
                     subtitle={getText('partnersSubtitle')}
                 />
-                <PartnersGrid type="front" />
+                <PartnersGrid type='front' />
                 <SingleColumnSection>
                     <ButtonLink
                         text={getText('homePagePartnerInfoButton')}
