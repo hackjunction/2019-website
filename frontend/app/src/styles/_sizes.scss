@@ -8,6 +8,12 @@ $bp-full: 1000px;
     }
 }
 
+@mixin bp-small {
+    @media (min-width: $bp-small) {
+        @content;
+    }
+}
+
 @mixin bp-med {
     @media (min-width: $bp-med) {
         @content;
