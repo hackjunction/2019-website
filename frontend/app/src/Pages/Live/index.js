@@ -88,6 +88,7 @@ class LivePage extends Component {
                         link={getText('livePageSection3ButtonLink')}
                         size='sm'
                         align='left'
+                        type='mainsite'
                     />
                 </BasicSection>
                 <Divider md />
