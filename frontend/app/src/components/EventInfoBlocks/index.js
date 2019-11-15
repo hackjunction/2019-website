@@ -9,32 +9,36 @@ import * as ContentSelectors from '../../redux/dynamiccontent/selectors';
 const EventInfoBlocks = props => {
     const renderBlocks = () => {
         return props.stats.map(stat => {
-            return (
-                <div className="EventInfoBlock" key={stat._id}>
-                    {stat.link ? (
-                        <a href={stat.link}>
-                            <Image
-                                image={stat.logo}
-                                className="EventInfoBlock--logo"
-                            />
-                        </a>
-                    ) : (
-                        <Image
-                            image={stat.logo}
-                            className="EventInfoBlock--logo"
-                        />
-                    )}
+            const content = (
+                <React.Fragment>
+                    <Image image={stat.logo} className='EventInfoBlock--logo' />
+                    <h6 className='EventInfoBlock--name'>{stat.name}</h6>
+                    <span className='EventInfoBlock--content'>{stat.content}</span>
+                </React.Fragment>
+            );
 
-                    <h6 className="EventInfoBlock--name">{stat.name}</h6>
-                    <span className="EventInfoBlock--content">
-                        {stat.content}
-                    </span>
+            if (stat.link) {
+                return (
+                    <a
+                        className='EventInfoBlock'
+                        key={stat._id}
+                        href={stat.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                    >
+                        {content}
+                    </a>
+                );
+            }
+            return (
+                <div className='EventInfoBlock' key={stat._id}>
+                    {content}
                 </div>
             );
         });
     };
 
-    return <div className="EventInfoBlocks">{renderBlocks()}</div>;
+    return <div className='EventInfoBlocks'>{renderBlocks()}</div>;
 };
 
 const mapStateToProps = state => ({
