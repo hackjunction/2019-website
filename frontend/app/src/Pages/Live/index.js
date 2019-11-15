@@ -34,15 +34,9 @@ class LivePage extends Component {
                 ogImageUlr={getMedia('volunteerPageHeaderImage').url}
             >
                 <HeroImage image={getMedia('livePageHeaderImage')}>
-                    <BasicHeader
-                        title={getText('livePageHeaderTitle')}
-                        body={getText('livePageHeaderContent')}
-                    />
+                    <BasicHeader title={getText('livePageHeaderTitle')} body={getText('livePageHeaderContent')} />
                 </HeroImage>
-                <BasicSection
-                    title={getText('livePageSection1Title')}
-                    subtitle={getText('livePageSection1Subtitle')}
-                >
+                <BasicSection title={getText('livePageSection1Title')} subtitle={getText('livePageSection1Subtitle')}>
                     <EventInfoBlocks />
                 </BasicSection>
                 <div id='schedule' />
@@ -78,10 +72,7 @@ class LivePage extends Component {
                     <OpeningHours />
                 </BasicSection>
                 <Divider lg />
-                <BasicSection
-                    title={getText('livePageSection3Title')}
-                    subtitle={getText('livePageSection3Subtitle')}
-                >
+                <BasicSection title={getText('livePageSection3Title')} subtitle={getText('livePageSection3Subtitle')}>
                     <Markdown source={getText('livePageSection3Content')} />
                     <ButtonLink
                         text={getText('livePageSection3Button')}
@@ -97,54 +88,33 @@ class LivePage extends Component {
                     subtitle={getText('livePageSection4Subtitle')}
                 />
                 <VerticalSection>
-                    <VerticalText
-                        title={getText('livePageMenu1Title')}
-                        content={getText('livePageMenu1Content')}
-                    />
-                    <VerticalText
-                        title={getText('livePageMenu2Title')}
-                        content={getText('livePageMenu2Content')}
-                    />
-                    <VerticalText
-                        title={getText('livePageMenu3Title')}
-                        content={getText('livePageMenu3Content')}
-                    />
+                    <VerticalText title={getText('livePageMenu1Title')} content={getText('livePageMenu1Content')} />
+                    <VerticalText title={getText('livePageMenu2Title')} content={getText('livePageMenu2Content')} />
+                    <VerticalText title={getText('livePageMenu3Title')} content={getText('livePageMenu3Content')} />
                 </VerticalSection>
 
                 <Divider md />
-                <BasicSection
-                    title={getText('livePageSection5Title')}
-                    subtitle={getText('livePageSection5Subtitle')}
-                >
+                <BasicSection title={getText('livePageSection5Title')} subtitle={getText('livePageSection5Subtitle')}>
                     <Markdown source={getText('livePageSection5Content')} />
                     <ButtonLink
                         text={getText('livePageSection5Button')}
-                        link={'livePageSection5ButtonLink'}
+                        link={getText('livePageSection5ButtonLink')}
                         align='left'
                         size='sm'
                     />
                 </BasicSection>
                 <Divider md />
                 <SingleColumnSection>
-                    <Image
-                        className={styles.LiveImage}
-                        image={getMedia('livePageVenueMap')}
-                    />
+                    <Image className={styles.LiveImage} image={getMedia('livePageVenueMap')} />
                 </SingleColumnSection>
 
                 <Divider md />
-                <BasicSection
-                    title={getText('livePageSection6Title')}
-                    subtitle={getText('livePageSection6Subtitle')}
-                >
+                <BasicSection title={getText('livePageSection6Title')} subtitle={getText('livePageSection6Subtitle')}>
                     <Markdown source={getText('livePageSection6Content')} />
                 </BasicSection>
 
                 <Divider lg />
-                <SingleColumnSection
-                    title={getText('faqTitle')}
-                    subtitle={getText('faqSubtitle')}
-                >
+                <SingleColumnSection title={getText('faqTitle')} subtitle={getText('faqSubtitle')}>
                     <FaqGrid />
                 </SingleColumnSection>
                 <Divider lg />
