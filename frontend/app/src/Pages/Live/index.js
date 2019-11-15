@@ -36,6 +36,9 @@ class LivePage extends Component {
                 <HeroImage image={getMedia('livePageHeaderImage')}>
                     <BasicHeader title={getText('livePageHeaderTitle')} body={getText('livePageHeaderContent')} />
                 </HeroImage>
+                <SingleColumnSection>
+                    <Markdown source={getText('livePageTopContent')} />
+                </SingleColumnSection>
                 <BasicSection title={getText('livePageSection1Title')} subtitle={getText('livePageSection1Subtitle')}>
                     <EventInfoBlocks />
                 </BasicSection>
