@@ -1,6 +1,6 @@
 import axios from './axios';
-
-const URL = 'https://cms.www.hackjunction.com/api/contactrequests';
+import config from '../config/config';
+const URL = config.API_BASE_URL + '/api/contactrequests';
 
 const ContactRequestService = {
     create: formData => {

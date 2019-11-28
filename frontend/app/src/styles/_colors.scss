@@ -31,15 +31,20 @@ $background-gradient: linear-gradient(
     rgba(20, 0, 21, 1) 100%
 );
 
-/* Colour of links in texts */
-$link-colour: #f38100;
-
 /* EDIT THESE TO CHANGE TEXT COLOURING */
 $black: #131313;
 $white: #fbfbfb;
 $lightgrey: #eaeaea;
 $accent: #35e2df;
+/* Colour of links in texts */
+$link-colour: #f38100;
+
 /* ----------------------------------- */
+
+/* Colours for Forms (NewsLetter/ContactForm) */
+$warning-orange: #ff6700;
+$error-red: #cc0000;
+$success-green: #a8ff00;
 
 /* DON'T EDIT */
 $text-dark: $black;
@@ -49,8 +54,3 @@ $text-dark-secondary: rgba($text-dark, 0.8);
 $text-light: $white;
 $text-light-primary: rgba($text-light, 0.92);
 $text-light-secondary: rgba($text-light, 0.8);
-
-/* Colours for Forms (NewsLetter/ContactForm) */
-$warning-orange: #ff6700;
-$error-red: #cc0000;
-$success-green: #a8ff00;

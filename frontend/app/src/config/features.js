@@ -1,4 +1,4 @@
-//Live
+//Live pages
 export const features = {
     challenge: true,
     challenges: true,
@@ -16,7 +16,7 @@ export const features = {
     volunteer: true
 };
 
-//Dev mode
+//DEV MODE, KEEP ALL ON TRUE!
 export const allFeatures = {
     challenge: true,
     challenges: true,

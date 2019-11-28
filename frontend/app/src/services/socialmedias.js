@@ -1,6 +1,11 @@
 import axios from './axios';
+import config from '../config/config';
 
-const URL = 'https://cms.www.hackjunction.com/api/socialmedias';
+//Set the URL for Social medias
+//Junction Socialmedia links: const URL = 'https://cms.www.hackjunction.com/api/socialmedias';
+
+//Get links from CMS:
+const URL = config.API_BASE_URL + '/api/socialmedias';
 
 const SocialMediaService = {
     count: () => {
